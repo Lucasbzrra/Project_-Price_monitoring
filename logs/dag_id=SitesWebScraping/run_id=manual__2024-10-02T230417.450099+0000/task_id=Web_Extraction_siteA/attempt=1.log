@@ -1,0 +1,315 @@
+[2024-10-02T23:04:19.821+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-10-02T23:04:19.841+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: SitesWebScraping.Web_Extraction_siteA manual__2024-10-02T23:04:17.450099+00:00 [queued]>
+[2024-10-02T23:04:19.850+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: SitesWebScraping.Web_Extraction_siteA manual__2024-10-02T23:04:17.450099+00:00 [queued]>
+[2024-10-02T23:04:19.851+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2024-10-02T23:04:19.867+0000] {taskinstance.py:2888} INFO - Executing <Task(OperatorSiteA): Web_Extraction_siteA> on 2024-10-02 23:04:17.450099+00:00
+[2024-10-02T23:04:19.872+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=4703) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-02T23:04:19.874+0000] {standard_task_runner.py:72} INFO - Started process 4704 to run task
+[2024-10-02T23:04:19.875+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'SitesWebScraping', 'Web_Extraction_siteA', 'manual__2024-10-02T23:04:17.450099+00:00', '--job-id', '849', '--raw', '--subdir', 'DAGS_FOLDER/DagWebScraping.py', '--cfg-path', '/tmp/tmpppk2o5hh']
+[2024-10-02T23:04:19.877+0000] {standard_task_runner.py:105} INFO - Job 849: Subtask Web_Extraction_siteA
+[2024-10-02T23:04:19.929+0000] {task_command.py:467} INFO - Running <TaskInstance: SitesWebScraping.Web_Extraction_siteA manual__2024-10-02T23:04:17.450099+00:00 [running]> on host f8603ea05473
+[2024-10-02T23:04:20.025+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='SitesWebScraping' AIRFLOW_CTX_TASK_ID='Web_Extraction_siteA' AIRFLOW_CTX_EXECUTION_DATE='2024-10-02T23:04:17.450099+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-02T23:04:17.450099+00:00'
+[2024-10-02T23:04:20.026+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-10-02T23:05:15.961+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Mancer Banshee, 8GB (1x8GB), DDR4, 3200MHz, C16, MCR-BSH8-3200', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.963+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.964+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.965+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Mancer Banshee, 8GB (1x8GB), DDR4, 3200MHz, C16, MCR-BSH8-3200', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.966+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Team Group T-Force Vulcan Pichau, 8GB (1x8), DDR4, 3200MHz, C16, Branca RTB, TLPBD48G3200HC16F01', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.967+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Mancer Dantalion Z, 8GB (1x8GB), DDR4, 3200MHz, C16, MCR-DTLZ-8GB', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.968+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Pichau Velvet, 16GB (1x16GB), DDR5, 5600MHz, C38, PCH-VVT16DDR5-5600', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.968+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Team Group T-Force Vulcan Pichau, 8GB (1x8GB), DDR4, 3000Mhz, Vermelha, TLPRD48G3000HC16F01', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.969+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Mancer Dantalion S, 8GB (1X8GB), DDR4, 3600MHz, C18, Preta e Branca, MCR-DTLS3600-8GB', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.969+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Team Group T-Force Vulcan Pichau, 8GB (1x8), DDR4, 3200MHz, C16, Vermelha, TLPRD48G3200HC16F01', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.969+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Team Group T-Force Vulcan Pichau RTB, 8GB, (1x8GB), DDR4, 3000MHz, Branca RTB, TLPBD48G3000HC16F01', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.970+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Mancer Lumina, RGB, 8GB (1x8GB), DDR4, 3200MHz, CL16, Preto, MCR-LMNRGB-8GB', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.970+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Team Group T-Force Delta RGB RTB, 8GB (1x8GB), DDR4, 3200MHz, TF12D48G3200HC16F01', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.971+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Pichau Velvet Pro, 16GB (1x16GB), DDR5, 6000MHz, C36, PCH-VVTPRO-16GB', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.971+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Team Group T-Force Pichau Delta RGB, 8GB (1x8GB), DDR4, 3000MHz, C16, TF11D48G3000HC16F01', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.971+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Mancer Banshee, 8GB, (1x8GB), DDR4, 2666MHz, C16, Preta, MCR-BSH8-2666', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.972+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Team Group Xtreem ARGB, 48GB (2X24GB), DDR5, 7600MHz, C36, Preto, FF9D548G7600HC36EDC01', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.972+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Team Group Xtreem ARGB, 48GB (2X24GB), DDR5, 8000MHz, C38, Preto, FF9D548G8000HC38EDC01', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.973+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Team Group Xtreem, 48GB (2X24GB), DDR5, 8000MHz, C38, Preto, FFXD548G8000HC38EDC01', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.973+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Team Group Xtreem, 48GB (2X24GB), DDR5, 7600MHz, C36, Preto, FFXD548G7600HC36EDC01', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.973+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Team Group Xtreem, 32GB, (2X16GB), DDR5, 8000MHz, C38, Preto, FFXD532G8000HC38DDC01', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.974+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Team Group Xtreem, 32GB, (2X16GB), DDR5, 7600MHz, C36, Preto, FFXD532G7600HC36FDC01', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.974+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Adata XPG Lancer RGB, 16GB (1x16GB), DDR5, 6800MT/s, C34, Preta, AX5U6800C3416G-CLARBK', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.974+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Adata XPG Lancer Blade, RGB, 32GB (1x32GB), DDR5, 6000MT/s, C30, Preta, AX5U6000C3032G-SLABRBK', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.975+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Adata XPG Lancer Blade, RGB, 32GB (1x32GB), DDR5, 6000MT/s, C30, Branca, AX5U6000C3032G-SLABRWH', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.975+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Adata XPG Gammix D45, 16GB (1x16GB), DDR4, 3600MHz, C18, Branca, AX4U360016G18I-CWHD45', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.975+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Adata XPG Lancer Blade, RGB, 16GB (1x16GB), DDR5, 6400MT/s, C32, Preta, AX5U6400C3216G-SLABRBK', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.975+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Adata XPG Lancer Blade, RGB, 16GB (1x16GB), DDR5, 6000MT/s, C30, Preta, AX5U6000C3016G-SLABRBK', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.976+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Adata XPG Lancer Blade, RGB, 16GB (1x16GB), DDR5, 6000MT/s, C30, Branca, AX5U6000C3016G-SLABRWH', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.976+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Adata XPG Lancer Blade, RGB, 16GB (1x16GB), DDR5, 6400MT/s, C32, Branca, AX5U6400C3216G-SLABRWH', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.976+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Adata XPG Lancer Blade, 16GB (1x16GB), DDR5, 5600MT/s, C46, Branca, AX5U5600C4616G-SLABWH', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.977+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Adata XPG Caster, 16GB (1x16GB), DDR5, 6400MT/s, C32, Cinza, AX5U6400C3216G-CCAGY', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.977+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Adata XPG Spectrix D50, RGB, 16GB (1x16GB), DDR4, 4133MHz, C19, Branca, AX4U413316G19J-SW50', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.977+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Adata XPG Gammix D45, 16GB (1x16GB), DDR4, 3600MHz, C18, Preta, AX4U360016G18I-CBKD45', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.978+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Adata XPG Gammix D45, 32GB (1x32GB), DDR4, 3200MHz, C16, Preta, AX4U320032G16A-CBKD45', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.978+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Adata XPG Spectrix D45G, RGB, 32GB (1x32GB), DDR4, 3600MHz, C18, Preta, AX4U360032G18I-CBKD45G', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.979+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Adata XPG Gammix D45, 8GB (1x8GB), DDR4, 3200MHz, C16, Branca, AX4U32008G16A-CWHD45', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.979+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Adata XPG Lancer RGB, 16GB (1x16GB), DDR5, 7200MT/s, C34, Preta, AX5U7200C3416G-CLARBK', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.979+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Adata XPG Lancer RGB, 16GB (1x16GB), DDR5, 5200MT/s, C38, Branca, AX5U5200C3816G-CLARWH', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.980+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.980+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.980+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.981+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.981+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.981+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.982+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.982+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.982+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.983+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.983+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.983+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.984+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.984+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Adata XPG Lancer RGB, 32GB (1x32GB), DDR5, 5600MT/s, C36, Branca, AX5U5600C3632G-CLARWH', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.984+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Adata XPG Lancer RGB, 32GB (1x32GB), DDR5, 5600MT/s, C36, Branca, AX5U5600C3632G-CLARWH', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.984+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Adata XPG Lancer RGB, 16GB (1x16GB), DDR5, 6000MT/s, C30, Branca, AX5U6000C3016G-CLARWH', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.985+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Adata XPG Lancer RGB, 32GB (1x32GB), DDR5, 6400MT/s, C32, Branca, AX5U6400C3232G-CLARWH', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.985+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Adata, 16GB (1x16GB), DDR5, 5600MHz, C46, AD5U560016G-S', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.985+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Adata, 8GB (1x8GB), DDR5, 5600MHz, C46, AD5U56008G-S', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.986+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Para Notebook Adata, 16GB (1x16GB), DDR5, 4800MHz, C40, AD5S480016G-S', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.986+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Para Notebook Adata, 16GB (1x16GB), DDR4, 3200MHz, C22, AD4S320016G22-SGN', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.986+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Para Notebook Adata, 8GB (1x8GB), DDR5, 4800MHz, C40, AD5S48008G-S', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.987+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Adata Lancer RGB, 16GB (1x16GB), DDR5, 6000MT/s, C30, Preta, AX5U6000C3016G-CLARBK', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.987+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Adata XPG Lancer Blade, 32 (1x32GB), DDR5, 6000MT/s, C30, Preta, AX5U6000C3032G-SLABBK', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.987+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Adata XPG Lancer Blade, 16GB (1x16GB), DDR5, 6000MT/s, C30, Preta, AX5U6000C3016G-SLABBK', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.988+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Adata XPG Lancer Blade, 16GB (1x16GB), DDR5, 6000MT/s, C30, Branca, AX5U6000C3016G-SLABWH', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.988+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Adata XPG Lancer RGB, 16GB (1x16GB), DDR5, 6800MT/s, C34, Branca, AX5U6800C3416G-CLARWH', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.988+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Adata XPG Lancer RGB, 16GB (1x16GB), DDR5, 5600MT/s, C36, Branca, AX5U5600C3616G-CLARWH', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.988+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Adata XPG Lancer RGB, 16GB (1x16GB), DDR5, 6400MT/s, C32, Preta, AX5U6400C3216G-CLARBK', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.989+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Adata XPG Lancer, 8GB (1x8GB), DDR5, 5200MT/s, C38, Branca, AX5U5200C388G-CLAWH', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.989+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Adata XPG Lancer, 16GB (1x16GB), DDR5, 6400MT/s, C32, Branca, AX5U6400C3216G-CLAWH', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.989+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Adata XPG Lancer, 32GB (1x32GB), DDR5, 6000MT/s, C30, Branca, AX5U6000C3032G-CLAWH', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.990+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Adata XPG Gammix D20, 32GB (1x32GB), DDR4, 3200MHz, CL16, Preta, AX4U320032G16A-CBK20', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.990+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Adata XPG Caster RGB, 16GB (1x16GB), DDR5, 6400MT/s, C32, Preta, AX5U6400C3216G-CCARGY', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.990+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Corsair Vengeance RGB, 32GB (2x16GB), DDR5, 6000MHz, C30 Preto, CMH32GX5M2B6000Z30K', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.991+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Corsair Vengeance RGB PRO, 16GB (2x8GB), DDR4, 3600MHz, C18, Branca, CMW16GX4M2D3600C18W', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.991+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Corsair Dominator Platinum RGB, 64GB (2x32GB), DDR5, 6000MHz, C30, Preta, CMT64GX5M2B6000Z30', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.991+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Corsair Dominator Platinum RGB, 32GB (2x16GB), DDR4, 3466MHz, C16, Preto, CMT32GX4M2C3466C16', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.992+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Para Notebook Corsair SODIMM DDR5, 16GB (1x16GB), DDR5, 5600MHz, C48, CMSX16GX5M1A5600C48', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.992+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Corsair WS DDR5 RDIMM, 64GB (4x16GB), DDR5, 6000MT/s, C40, Preta, CMA64GX5M4B6000C40', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.992+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Corsair Dominator Platinum RGB, 32GB (2x16GB), DDR4, 3600MHz, C18, Preto, CMT32GX4M2D3600C18', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.992+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Corsair Dominator Platinum RGB, 32GB (2x16GB), DDR4, 3600MHz, C18, Preto, CMT32GX4M2C3600C18', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.993+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Corsair Dominator Platinum RGB, 16GB (2x8GB), DDR4, 4000MHz, C18, Preta, CMT16GX4M2Z4000C18', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.993+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Corsair Dominator Platinum RGB, 16GB (2x8GB), DDR4, 3600MHz, C18, Branca, CMT16GX4M2D3600C18W', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.993+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Corsair Dominator Platinum RGB, 16GB (2x8GB), DDR4, 3600MHz, C18, Preta, CMT16GX4M2D3600C18', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.994+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Hiksemi Akira, RGB, (1x16G), DDR4, 3200MHz, Preto, HSC416U32Z4-16G', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.994+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Hiksemi Wave, RGB, (1x16GB), DDR4, 3600MHz, Branco, HSC416U36A02Z4-16G', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.994+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Hiksemi Wave, RGB, (1x8GB), DDR4, 3600MHz, Branco, HSC408U36A02Z4', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.995+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Hiksemi U100, RGB, (2x16GB), DDR4, 3600MHz, Branco, HSC432U36A02Z4', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.995+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Hiksemi Akira U100, RGB, (1x8GB), DDR4, 3200MHz, Preto, HSC408U32Z4', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.996+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.996+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.996+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.997+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.997+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.997+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.998+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.998+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.998+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.998+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.999+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.999+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:15.999+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.000+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Para Notebook Adata, (1X8GB), DDR4, 2666MHz, CL19, AD4S26668G19-SGN', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.000+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Para Notebook Adata, (1X8GB), DDR4, 2666MHz, CL19, AD4S26668G19-SGN', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.000+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Para Notebook Adata, (1X8GB), DDR4, 3200MHz, CL22, AD4S32008G22-SGN', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.001+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Para Notebook Adata, (1X16GB), DDR4, 2666MHz, 1.2V, AD4S266616G19-SGN', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.001+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Adata XPG Gammix D10, 16GB (2X8GB), DDR4, 3200MHz, CL16, Preto, AX4U32008G16A-DB10', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.001+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Adata XPG Caster, RGB, 16GB (1x16GB),DDR5, 6000MHz, CL30, Preto, AX5U6000C3016G-CCARGY', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.002+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Corsair Dominator Platinum RGB, 32GB (2x16GB), DDR5, 7200MHz, C34, Preta, CMT32GX5M2X7200C34', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.002+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Corsair Dominator Titanium RGB, 64GB (2x32GB), DDR5, 6400MT/s, C32, Branca, CMP64GX5M2B6400C32W', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.002+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Corsair Dominator Titanium RGB, 64GB (2x32GB), DDR5, 6400MT/s, C32, Preta, CMP64GX5M2B6400C32', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.003+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Corsair Dominator Titanium RGB, 96GB (2x48GB), DDR5, 6400MT/s, C32, Branca, CMP96GX5M2B6400C32W', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.003+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Corsair Dominator Titanium RGB, 32GB (2x16GB), DDR5, 7200MT/s, C34, Branca, CMP32GX5M2X7200C34W', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.003+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Corsair Dominator Titanium RGB, 32GB (2x16GB), DDR5, 7200MT/s, C34, Preta, CMP32GX5M2X7200C34', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.004+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Adata, 8GB (1x8GB), DDR5, 4800MHz, C40, Preto, AD5U48008G-S', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.004+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Notebook Corsair Vengeance, 4GB (1x4GB), DDR4, 2400MHz, C16, CMSX4GX4M1A2400C16', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.004+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Notebook Corsair Vengeance SODIMM, 16GB (1x16GB), DDR5, 4800MHz, C40, CMSX16GX5M1A4800C40', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.005+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Notebook Corsair Vengeance SODIMM, 16GB (1x16GB), DDR4, 3200MHz, C22, CMSX16GX4M1A3200C22', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.005+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Notebook Corsair Vengeance SODIMM, 32GB (1x32GB), DDR5, 4800MHz, C40, CMSX32GX5M1A4800C40', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.005+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Notebook Corsair Vengeance SODIMM, 32GB (2x16GB), DDR5, 5600MHz, C48, CMSX32GX5M2A5600C48', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.006+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Notebook Corsair Vengeance SODIMM, 8GB (1x8GB), DDR5, 4800MHz, C40, CMSX8GX5M1A4800C40', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.006+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Corsair Vengeance RGB RS, 8GB (1x8GB), DDR4, 3200MHz, C16, Preta, CMG8GX4M1E3200C16', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.006+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Corsair Vengeance, 96GB (2x48GB), DDR5, 5200MHz, C38, Preta, CMK96GX5M2B5200C38', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.006+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Corsair Vengeance, 32GB (2x16GB), DDR5, 7200MHz, C34, Preta, CMK32GX5M2X7200C34', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.007+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Corsair Vengeance RGB PRO SL, 16GB (2x8GB), DDR4, 3200MHz, C16, Preta, CMH16GX4M2E3200C16', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.007+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Corsair Vengeance RGB, 96GB (2x48GB), DDR5, 5200MHz, C38, Preta, CMH96GX5M2B5200C38', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.008+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Zadak Moab, RGB, 8GB (1x8GB), DDR4, 3000MHz, Cinza, ZD4-MO130C08-08GYG1', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.008+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Team Group T-Force Delta RGB, 8GB, (1x8GB), DDR4, 3600MHz, C18, Preto, TF3D48G3600HC18J01', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.008+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Redragon Magma, RGB, 8GB (1x8GB), DDR4, 3200MHz, C16, Preta, GM-801', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.009+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Redragon Solar, RGB, 8GB (1x8GB), DDR4, 3600MHz, C16, Preta e Dourada, GM-805', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.009+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Kingspec, RGB, 8GB (1x8GB), DDR4, 3200MHz, Preta, KS3200D4R13508G', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.009+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Para Notebook TGT Shiver 100, 4GB (1X4GB), DDR3, 1600MHz, C11, TGT-SVR100-4GB', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.010+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Mancer Dantalion Z, 32GB (1X32GB), DDR4, 3200MHz, C16, Preta e Branca, MCR-DTLZ-32GB', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.010+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Mancer Lumina, RGB, 16GB (2X8GB), DDR4, 3200MHz, C16, Preta, MCR-LMNRGB-2X8GB', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.010+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Mancer Dantalion S, 32GB (2X16GB), DDR4, 3200MHz, C16, Preta e Branca, MCR-DTLS-2X16GB', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.010+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Para Notebook Mancer Damon, 16GB (1X16GB), DDR4, 3200MHz, C19, MCR-DMN3200-16GB', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.011+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Para Notebook Mancer Damon, 8GB (1X8GB), DDR4, 3200MHz, C22, MCR-DMN3200-8GB', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.011+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Mancer Lumina, RGB, 16GB (1X16GB), DDR4, 3600MHz, C18, Preta, MCR-LMNRGB3600-16GB', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.012+0000] {logging_mixin.py:190} INFO - {'name': 'Memoria Mancer Lumina, RGB, 8GB (1X8GB), DDR4, 3600MHz, C18, Preta, MCR-LMNRGB3600-8GB', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.012+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.013+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.013+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.014+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.014+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.014+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.015+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.015+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.015+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.016+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.016+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.016+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.017+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.017+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i9-14900F, 24-Core, 32-Threads, 3.2GHz (5.8GHz Turbo), Cache 36MB, LGA1700, BX8071514900F', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.017+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i9-14900F, 24-Core, 32-Threads, 3.2GHz (5.8GHz Turbo), Cache 36MB, LGA1700, BX8071514900F', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.018+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i7-14700K, 20-Core, 28-Threads, 3.4GHz (5.6GHz Turbo), Cache 33MB, LGA1700, BX8071514700K-BR', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.018+0000] {logging_mixin.py:190} INFO - {'name': 'Processador AMD Ryzen 7 5700X3D, 8-Core, 16-Threads, 3.0GHz (4.1GHz Turbo), Cache 100MB, AM4, 100-100001503WOF-BR', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.018+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i5-12400F, 6-Core, 12-Threads, 2.5GHz (4.4GHz Turbo), Cache 18MB, LGA1700, BX8071512400F-BR', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.019+0000] {logging_mixin.py:190} INFO - {'name': 'Processador AMD Ryzen 7 5700X, 8-Core, 16-Threads, 3.4GHz (4.6GHz Turbo), Cache 36MB, AM4, 100-100000926WOF', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.019+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i5-10400F, 6-Core, 12-Threads, 2.9Ghz (4.3Ghz Turbo), Cache 12MB, LGA1200, BX8070110400F', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.019+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i5-14400F, 10-Core, 16-Threads, 3.5GHz (4.7GHz Turbo), Cache 20MB, LGA1700, BX8071514400F', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.020+0000] {logging_mixin.py:190} INFO - {'name': 'Processador AMD Ryzen 7 5700G, 8-Core, 16-Threads, 3.8GHz (4.6GHz Turbo), Cache 20MB, AM4, 100-100000263BOX', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.020+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core I5-13400F, 10-Core, 16-Threads, 2.5GHz (4.6GHz Turbo), Cache 20MB, LGA1700, BX8071513400F', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.020+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i5-14600KF, 14-Core, 20-Threads, 3.5GHz (5.3GHz Turbo), Cache 24MB, LGA1700, BX8071514600KF', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.021+0000] {logging_mixin.py:190} INFO - {'name': 'Processador AMD Ryzen 5 5500, 6-Core, 12-Threads, 3.6GHz (4.2GHz Turbo), Cache 19MB, AM4, 100-100000457BOX', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.021+0000] {logging_mixin.py:190} INFO - {'name': 'Processador AMD Ryzen 5 5600GT, 6-Core, 12-Threads, 3.6GHz (4.6GHz Turbo), Cache 19MB, AM4, 100-100001488BOX', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.021+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i5-14600K, 14-Core, 20-Threads, 3.5GHz (5.3GHz Turbo), Cache 24MB, LGA1700, BX8071514600K', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.022+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i9-14900K, 24-Core, 32-Threads, 3.2GHz (5.8GHz Turbo), Cache 36MB, LGA1700, BX8071514900K', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.022+0000] {logging_mixin.py:190} INFO - {'name': 'Processador AMD Ryzen 9 7950X3D, 16-Core, 32-Threads, 4.2GHz (5.7GHzTurbo), Cache 144MB, AM5, 100-100000908WOF-BR', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.022+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i9-14900KF, 24-Core, 32-Threads, 3.2GHz (6.0GHz Turbo), Cache 36MB, LGA1700, BX8071514900KF', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.023+0000] {logging_mixin.py:190} INFO - {'name': 'Processador AMD Ryzen 5 7600, 6-Core, 12-Threads, 3.8GHz (5.1GHz Turbo), Cache 38MB, AM5, 100-100001015BOX-BR', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.023+0000] {logging_mixin.py:190} INFO - {'name': 'Processador AMD Ryzen 7 7700X, 8-Core, 16-Threads, 4.5GHz (5.4GHz Turbo), Cache 40MB, AM5, 100-100000591WOF-BR', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.023+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i5-14400, 10-Core, 16-Threads, 3.5GHz (4.7GHz Turbo), Cache 20MB, LGA1700, BX8071514400', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.024+0000] {logging_mixin.py:190} INFO - {'name': 'Processador AMD Ryzen 3 5300G, 4-Core, 8-Threads, 4.0GHz (4.2GHz Turbo), Cache 8MB, AM4, 100-100000253BOX', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.024+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i3-14100F, 4-Core, 8-Threads, 3.5GHz (4.7GHz Turbo), Cache 12MB, LGA1700, BX8071514100F', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.024+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i3-14100, 4-Core, 8-Threads, 3.5GHz (4.7GHz Turbo), Cache 12MB, LGA1700, BX8071514100', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.025+0000] {logging_mixin.py:190} INFO - {'name': 'Processador AMD Ryzen 7 9700X, 8-Core, 16-Threads, 3.8GHz (5.5GHz Turbo), Cache 40MB, AM5, 100-100001404WOF', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.025+0000] {logging_mixin.py:190} INFO - {'name': 'Processador AMD Ryzen 5 9600X, 6-Core, 12-Threads, 3.9GHz (5.4GHz Turbo), Cache 38MB, AM5, 100-100001405WOF', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.025+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i5-10400, 6-Core, 12-Threads, 2.9Ghz (4.3Ghz Turbo), Cache 12MB, LGA1200, BX8070110400', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.026+0000] {logging_mixin.py:190} INFO - {'name': 'Processador AMD Ryzen 7 5800XT, 8-Core, 16-Threads, 3.8GHz (4.8GHz Turbo), Cache 36MB, AM4, 100-100001582BOX', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.026+0000] {logging_mixin.py:190} INFO - {'name': 'Processador AMD Ryzen 9 5900XT, 16-Core, 32-Threads, 3.3GHz (4.8GHz Turbo), Cache 72MB, AM4, 100-100001581WOF', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.026+0000] {logging_mixin.py:190} INFO - {'name': 'Processador AMD Ryzen 9 9900X, 12-Core, 24-Threads, 4.4GHz (5.6GHz Turbo), Cache 76MB, AM5, 100-100000662WOF', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.027+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i5-11400F, 6-Core, 12-Threads, 2.6GHz (4.4GHz Turbo), Cache 12MB, LGA1200, BX8070811400F', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.027+0000] {logging_mixin.py:190} INFO - {'name': 'Processador AMD Ryzen 5 8500G, 6-Core, 12-Threads, 3.5GHz (5.0GHz Turbo), Cache 22MB, AM5, 100-100000931BOX-BR', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.027+0000] {logging_mixin.py:190} INFO - {'name': 'Processador AMD Ryzen 5 8400F, 6-Core, 12-Threads, 4.2GHz (4.7GHz Turbo), Cache 16MB, AM5, 100-100001591BOX', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.027+0000] {logging_mixin.py:190} INFO - {'name': 'Processador AMD Ryzen 7 8700F, 8-Cores, 16-Threads, 4.1GHz (5.0GHz Turbo), Cache 16MB, AM5, 100-100001590BOX', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.028+0000] {logging_mixin.py:190} INFO - {'name': 'Processador AMD Ryzen 7 5700, 8-Core, 16-Threads, 3.7GHz (4.6GHz Turbo), Cache 20MB, 100-100000743BOX', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.028+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i9-12900K, 16-Core, 24-Threads, 3.2GHz (5.2GHz Turbo), Cache 30MB, LGA1700, BX8071512900K', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.028+0000] {logging_mixin.py:190} INFO - {'name': 'Processador AMD Ryzen 5 8600G, 6-Core, 12-Threads, 4.3GHz (5.0GHz Turbo), Cache 22MB, AM5, 100-100001237BOX', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.029+0000] {logging_mixin.py:190} INFO - {'name': 'Processador AMD Ryzen Threadripper PRO 7985WX, 64-Core, 128-Threads, 3.2GHz (5.1GHz Turbo), Cache 320MB, sTR5, 100-100000454WOF', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.029+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.029+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.030+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.030+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.030+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.031+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.031+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.031+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.032+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.032+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i5-12400, 6-Core, 12-Threads, 2.5GHz (4.4GHz Turbo), Cache 18MB, LGA1700, BX8071512400', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.032+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.033+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.033+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i5-12400, 6-Core, 12-Threads, 2.5GHz (4.4GHz Turbo), Cache 18MB, LGA1700, BX8071512400', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.033+0000] {logging_mixin.py:190} INFO - {'name': 'Processador AMD Ryzen 3 3200G, 4-Core, 4-Threads, 3.6GHz (4GHz Turbo), Cache 6MB, AM4, YD3200C5FHBOX', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.034+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i7-12700F, 12-Core, 20-Threads, 2.1GHz (4.9GHz Turbo), Cache 25MB, LGA1700, BX8071512700F', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.034+0000] {logging_mixin.py:190} INFO - {'name': 'Processador AMD Ryzen 5 5600X, 6-Core, 12-Threads, 3.7GHz (4.6GHz Turbo), Cache 35MB, AM4, 100-100000065BOX', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.034+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i3-12100, 4-Core, 8-Threads, 3.3GHz (4.3GHz Turbo), Cache 12MB, LGA1700, BX8071512100', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.035+0000] {logging_mixin.py:190} INFO - {'name': 'Processador AMD Ryzen 9 5900X, 12-Core, 24-Threads, 3.7GHz (4.8GHz Turbo), Cache 70MB, AM4, 100-100000061WOF', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.035+0000] {logging_mixin.py:190} INFO - {'name': 'Processador AMD Ryzen 9 5950X, 16-Core, 32-Threads, 3.4GHz (4.9GHz Turbo), Cache 72MB, AM4, 100-100000059WOF', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.035+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i5-10400, 6-Core, 12-Threads, 2.9Ghz (4.3Ghz Turbo), Cache 12MB, LGA1200, BX8070110400-BR', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.036+0000] {logging_mixin.py:190} INFO - {'name': 'Processador AMD Ryzen 7 5800X3D, 8-Core, 16-Threads, 3.4GHz (4.5GHz Turbo), Cache 100MB, AM4, 100-100000651WOF', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.036+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i9-13900KF, 24-Core, 32-Threads, 3.0GHz (5.8GHz Turbo), Cache 36MB, LGA1700, BX8071513900KF', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.037+0000] {logging_mixin.py:190} INFO - {'name': 'Processador AMD Ryzen 5 5600, 6-Core, 12-Threads, 3.5GHz (4.4GHz Turbo), Cache 35MB, AM4, 100-100000927BOX', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.037+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i5-13600KF, 14-Core, 20-Threads, 3.5GHz (5.1GHz Turbo), Cache 24MB, LGA1700, BX8071513600KF', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.037+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i5-13600K, 14-Core, 20-Threads, 3.5GHz (5.1GHz Turbo), Cache 24MB, LGA1700, BX8071513600K', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.037+0000] {logging_mixin.py:190} INFO - {'name': 'Processador AMD Ryzen 5 4500, 6-Core, 12-Threads, 3.6GHz (4.1GHz Turbo), Cache 11MB, AM4, 100-100000644BOX', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.038+0000] {logging_mixin.py:190} INFO - {'name': 'Processador AMD Ryzen 5 4600G, 6-Core, 12-Threads, 3.7GHz (4.2GHz Turbo), Cache 11MB, AM4, 100-100000147BOX', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.038+0000] {logging_mixin.py:190} INFO - {'name': 'Processador AMD Ryzen 3 4100, 4-Core, 8-Threads, 3.8GHz (4.0GHz Turbo), Cache 6MB, AM4, 100-100000510BOX', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.038+0000] {logging_mixin.py:190} INFO - {'name': 'Processador AMD Ryzen Threadripper PRO 5975WX, 32-Core, 64-Threads, 3.6GHz (4.5GHz Turbo), Cache 144MB, sWRX8, 100-100000445WOF', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.039+0000] {logging_mixin.py:190} INFO - {'name': 'Processador AMD Ryzen Threadripper PRO 5965WX, 24-Core, 48-Threads, 3.8GHz (4.5GHz Turbo), Cache 140MB, sWRX8, 100-100000446WOF', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.039+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core I3-13100, 4-Core, 8-Threads, 3.4GHz (4.5GHz Turbo), Cache 12MB, LGA1700, BX8071513100', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.039+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core I3-13100F, 4-Core, 8-Threads, 3.4GHz (4.5GHz Turbo), Cache 12MB, LGA1700, BX8071513100F', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.039+0000] {logging_mixin.py:190} INFO - {'name': 'Processador AMD Ryzen 7 7700X, 8-Core, 16-Threads, 4.5GHz (5.4GHz Turbo), Cache 40MB, AM5, 100-100000591WOF', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.040+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core I5-13400, 10-Core, 16-Threads, 2.5GHz (4.6GHz), Cache 20MB, LGA1700, BX8071513400', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.040+0000] {logging_mixin.py:190} INFO - {'name': 'Processador AMD Ryzen 9 7900X, 12-Core, 24-Threads, 4.7GHz (5.6GHz Turbo), Cache 76MB, AM5, 100-100000589WOF', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.040+0000] {logging_mixin.py:190} INFO - {'name': 'Processador AMD Ryzen 9 7950X, 16-Core, 32-Threads, 4.5GHz (5.7GHz Turbo), Cache 80MB, AM5, 100-100000514WOF', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.041+0000] {logging_mixin.py:190} INFO - {'name': 'Processador AMD Ryzen 9 7900, 12-Core, 24-Threads, 3.7GHz (5.4GHzTurbo), Cache 76MB, AM5, 100-100000590BOX', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.041+0000] {logging_mixin.py:190} INFO - {'name': 'Processador AMD Ryzen 5 5600X, 6-Core, 12-Threads, 3.7GHz (4.6GHz Turbo), Cache 35MB, AM4, 100-100000065BOX-BR', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.041+0000] {logging_mixin.py:190} INFO - {'name': 'Processador AMD Ryzen 5 7600X, 6-Core, 12-Threads, 4.7GHz (5.3GHz Turbo), Cache 38MB, AM5, 100-100000593WOF-BR', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.042+0000] {logging_mixin.py:190} INFO - {'name': 'Processador AMD Athlon 3000G, 2-Core, 4-Threads, 3.5GHz, Cache 5MB, AM4, YD3000C6FHSBX', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.042+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i7-14700KF, 20-Core, 28-Threads, 3.4GHz (5.6GHz Turbo), Cache 33MB, LGA1700, BX8071514700KF-BR', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.042+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i7-14700F, 20-Core, 28-Threads, 3.4GHz (5.4GHz Turbo), Cache 33MB, LGA1700, BX8071514700F', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.043+0000] {logging_mixin.py:190} INFO - {'name': 'Processador AMD Ryzen 7 5700G, 8-Core, 16-Threads, 3.8GHz (4.6GHz Turbo), Cache 20MB, AM4, 100-100000263BOX-BR', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.043+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core I7-13700F, 16-Core, 24-Threads, 2.1GHz (5.2GHz Turbo), Cache 24MB, LGA1700, BX8071513700F', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.043+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i9-13900K, 24-Core, 32-Threads, 3.0GHz (5.8GHz Turbo), Cache 36MB, LGA1700, BX8071513900K', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.043+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i5-11400F, 6-Core, 12-Threads, 2.6GHz (4.4GHz Turbo), Cache 12MB, LGA1200, BX8070811400F-BR', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.044+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i9-12900F, 16-Core, 24-Threads, 2.4GHz (5.1GHz Turbo), Cache 30MB, LGA1700, BX8071512900F', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.044+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i3-12100F, 4-Core, 8-Threads, 3.3GHz ( 4.3GHz Turbo), Cache 12MB, LGA1700, BX8071512100F', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.045+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.045+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.045+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.046+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.046+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.046+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.047+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.047+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.048+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.048+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.048+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.049+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.049+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.049+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i5-12600KF, 10-Core, 16-Threads, 3.7GHz (4.9GHz Turbo), Cache 20MB, LGA1700, BX8071512600KF', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.049+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i5-12600KF, 10-Core, 16-Threads, 3.7GHz (4.9GHz Turbo), Cache 20MB, LGA1700, BX8071512600KF', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.050+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i9-12900KF, 16-Core, 24-Threads, 3.2GHz (5.2GHz Turbo), Cache 30MB, LGA1700, BX8071512900KF', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.050+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i7-12700KF, 12-Core, 20-Threads, 3.6GHz (5.0GHz Turbo), Cache 25MB, LGA1700, BX8071512700KF', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.050+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i5-12600K, 10-Core, 16-Threads, 3.7GHz (4.9GHz Turbo), Cache 20MB, LGA1700, BX8071512600K', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.051+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i5-10600KF, 6-Core, 12-Threads, 4.1GHz (4.8GHz Turbo), Cache 12MB, LGA1200, BX8070110600KF', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.051+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i9-11900K, 8-Core, 16-Threads, 3.5GHz (5.3GHz Turbo), Cache 16MB, LGA1200, BX8070811900K', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.051+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i7-11700KF, 8-Core, 16-Threads, 3.6GHz (5.0GHz Turbo), Cache 16MB, LGA1200, BX8070811700KF', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.052+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i5-11400, 6-Core, 12-Threads, 2.6GHz (4.4GHz Turbo), Cache 12MB, LGA1200, BX8070811400', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.052+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i7-11700K, 8-Core, 16-Threads, 3.6GHz (5.0GHz Turbo), Cache 16MB, LGA1200, BX8070811700K', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.053+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i3-10100F, 4-Core, 8-Threads, 3.6Ghz (4.3Ghz Turbo), Cache 6MB, LGA1200, BX8070110100F', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.053+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i5-10600K, 6-Core, 12-Threads, 4.1GHz (4.8GHz Turbo), Cache 12MB, LGA1200, BX8070110600K', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.054+0000] {logging_mixin.py:190} INFO - {'name': 'Processador AMD Ryzen 5 4500, 6-Core, 12-Threads, 3.6GHz (4.1GHz Turbo), Cache 11MB, AM4, 100-100000644BOX-BR', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.054+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i3-10320, 4-Core, 8-Threads, 3.8GHz (3.8GHz Turbo), Cache 8MB, LGA1200, BX8070110320', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.054+0000] {logging_mixin.py:190} INFO - {'name': 'Processador AMD Ryzen 7 7800X3D, 8-Core, 16-Threads, 4.2GHz (5.0GHzTurbo), Cache 104MB, AM5, 100-100000910WOF', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.055+0000] {logging_mixin.py:190} INFO - {'name': 'Processador AMD Ryzen 7 5700X3D, 8-Core, 16-Threads, 3.0GHz (4.1GHz Turbo), Cache 100MB, AM4, 100-100001503WOF', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.055+0000] {logging_mixin.py:190} INFO - {'name': 'Processador AMD Ryzen 9 9950X, 16-Core, 32-Threads, 4.3GHz (5.7GHz Turbo), Cache 80MB, AM5, 100-100001277WOF', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.055+0000] {logging_mixin.py:190} INFO - {'name': 'Processador AMD Ryzen 7 8700G, 8-Core, 16-Threads, 4.2GHz (5.1GHz Turbo), Cache 24MB, AM5, 100-100001236BOX', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.056+0000] {logging_mixin.py:190} INFO - {'name': 'Processador AMD Ryzen Threadripper PRO 7965WX, 24-Core, 48-Threads, 4.2GHz (5.3GHz Turbo), Cache 152MB, sTR5, 100-100000885WOF', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.056+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i5-12400F, 6-Core, 12-Threads, 2.5GHz (4.4GHz Turbo), Cache 18MB, LGA1700, BX8071512400F', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.057+0000] {logging_mixin.py:190} INFO - {'name': 'Processador AMD Ryzen 7 5800X, 8-Core, 16-Threads, 3.8GHz (4.7GHz Turbo), Cache 36MB, AM4, 100-100000063WOF', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.057+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core I7-13700, 16-Core, 24-Threads, 2.1GHz (5.2GHz Turbo), Cache 30MB, LGA1700, BX8071513700', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.057+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i9-13900F, 24-Core, 32-Threads, 2.0GHz (5.6GHz Turbo), Cache 36MB, LGA1700, BX8071513900F', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.058+0000] {logging_mixin.py:190} INFO - {'name': 'Processador AMD Ryzen 5 7600, 6-Core, 12-Threads, 3.8GHz (5.1GHz Turbo), Cache 38MB, AM5, 100-100001015BOX', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.058+0000] {logging_mixin.py:190} INFO - {'name': 'Processador AMD Ryzen 9 7900X3D, 12-Core, 24-Threads, 4.4GHz (5.6GHzTurbo), Cache 140MB, AM5, 100-100000909WOF', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.058+0000] {logging_mixin.py:190} INFO - {'name': 'Processador AMD Ryzen 9 7950X, 16-Core, 32-Threads, 4.5GHz (5.7GHz Turbo), Cache 80MB, AM5, 100-100000514WOF-BR', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.058+0000] {logging_mixin.py:190} INFO - {'name': 'Cooler Para Processador AMD Wraith Prism, RGB, Preto, 199-999888', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.059+0000] {logging_mixin.py:190} INFO - {'name': 'Cooler Para Processador Intel Thermal Solution TS15A Socket LGA1151, BXTS15A', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.059+0000] {logging_mixin.py:190} INFO - {'name': 'Cooler Multi Para Processador Intel e AMD, GA120', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.059+0000] {logging_mixin.py:190} INFO - {'name': 'Cooler Multi Para Processador Intel Soquete Lga 775, GA043', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.060+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Pentium G4560 Dual-Core 3.5GHz 3MB Cache LGA1151, BX80677G4560', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.060+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i3-7350K Dual-Core 4.2GHz 4MB Cache LGA1151, BX80677I37350K', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.060+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i3-7100 Dual-Core 3.9GHz 3MB Cache LGA1151, BX80677I37100', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.061+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i5-7500 Quad-Core 3.4GHz (3.8GHz Turbo) 6MB Cache LGA1151, BX80677I57500', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.061+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i7-7700 Quad-Core 3.6GHz (4.2GHz Turbo) 8MB Cache LGA1151, BX80677I77700', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.061+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i5-7600K Quad-Core 3.8GHz (4.2GHz Turbo) 6MB Cache LGA1151, BX80677I57600K', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.062+0000] {logging_mixin.py:190} INFO - {'name': 'Processador Intel Core i5-7400 Quad-Core 3GHz (3.5GHz Turbo) 6MB Cache LGA1151, BX80677I57400', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.062+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.063+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.063+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.063+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.064+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.064+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.064+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.065+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.065+0000] {logging_mixin.py:190} INFO - {'name': 'Nome não encontrado', 'link': 'Não encontrado', 'price': ''}
+[2024-10-02T23:05:16.074+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-10-02T23:05:16.074+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=SitesWebScraping, task_id=Web_Extraction_siteA, run_id=manual__2024-10-02T23:04:17.450099+00:00, execution_date=20241002T230417, start_date=20241002T230419, end_date=20241002T230516
+[2024-10-02T23:05:16.123+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-10-02T23:05:16.157+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-10-02T23:05:16.165+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,231 @@
+[2024-10-12T00:02:05.833+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-10-12T00:02:05.848+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: LoadWebScraping.submit_job manual__2024-10-12T00:02:02.242526+00:00 [queued]>
+[2024-10-12T00:02:05.857+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: LoadWebScraping.submit_job manual__2024-10-12T00:02:02.242526+00:00 [queued]>
+[2024-10-12T00:02:05.858+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2024-10-12T00:02:05.873+0000] {taskinstance.py:2888} INFO - Executing <Task(SparkSubmitOperator): submit_job> on 2024-10-12 00:02:02.242526+00:00
+[2024-10-12T00:02:05.879+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=407) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-12T00:02:05.880+0000] {standard_task_runner.py:72} INFO - Started process 409 to run task
+[2024-10-12T00:02:05.880+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'LoadWebScraping', 'submit_job', 'manual__2024-10-12T00:02:02.242526+00:00', '--job-id', '33', '--raw', '--subdir', 'DAGS_FOLDER/LoadWebScraping.py', '--cfg-path', '/tmp/tmp48dejwkl']
+[2024-10-12T00:02:05.883+0000] {standard_task_runner.py:105} INFO - Job 33: Subtask submit_job
+[2024-10-12T00:02:05.925+0000] {task_command.py:467} INFO - Running <TaskInstance: LoadWebScraping.submit_job manual__2024-10-12T00:02:02.242526+00:00 [running]> on host d29c75c3a94e
+[2024-10-12T00:02:06.143+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='LoadWebScraping' AIRFLOW_CTX_TASK_ID='submit_job' AIRFLOW_CTX_EXECUTION_DATE='2024-10-12T00:02:02.242526+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-12T00:02:02.242526+00:00'
+[2024-10-12T00:02:06.144+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-10-12T00:02:06.162+0000] {base.py:84} INFO - Retrieving connection 'spark_default'
+[2024-10-12T00:02:06.163+0000] {spark_submit.py:327} ERROR - Failed to decode base64 keytab: Incorrect padding
+[2024-10-12T00:02:06.164+0000] {spark_submit.py:304} INFO - Could not load connection string spark_default, defaulting to spark://spark::7077
+[2024-10-12T00:02:06.165+0000] {spark_submit.py:473} INFO - Spark-Submit cmd: spark-submit --master spark://spark::7077 --jars /opt/bitnami/spark/jars/postgresql-42.5.0.jar --name arrow-spark --deploy-mode client /opt/bitnami/spark/src/scripts_spark/LoadFileToDB.py
+[2024-10-12T00:02:07.545+0000] {spark_submit.py:649} INFO - 24/10/12 00:02:07 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2024-10-12T00:02:07.666+0000] {spark_submit.py:649} INFO - 24/10/12 00:02:07 WARN DependencyUtils: Local jar /opt/bitnami/spark/jars/postgresql-42.5.0.jar does not exist, skipping.
+[2024-10-12T00:02:08.758+0000] {spark_submit.py:649} INFO - 24/10/12 00:02:08 INFO SparkContext: Running Spark version 3.5.2
+[2024-10-12T00:02:08.759+0000] {spark_submit.py:649} INFO - 24/10/12 00:02:08 INFO SparkContext: OS info Linux, 5.15.153.1-microsoft-standard-WSL2, amd64
+[2024-10-12T00:02:08.759+0000] {spark_submit.py:649} INFO - 24/10/12 00:02:08 INFO SparkContext: Java version 17.0.12
+[2024-10-12T00:02:08.786+0000] {spark_submit.py:649} INFO - 24/10/12 00:02:08 INFO ResourceUtils: ==============================================================
+[2024-10-12T00:02:08.786+0000] {spark_submit.py:649} INFO - 24/10/12 00:02:08 INFO ResourceUtils: No custom resources configured for spark.driver.
+[2024-10-12T00:02:08.787+0000] {spark_submit.py:649} INFO - 24/10/12 00:02:08 INFO ResourceUtils: ==============================================================
+[2024-10-12T00:02:08.787+0000] {spark_submit.py:649} INFO - 24/10/12 00:02:08 INFO SparkContext: Submitted application: Test PostgreSQL Connection
+[2024-10-12T00:02:08.804+0000] {spark_submit.py:649} INFO - 24/10/12 00:02:08 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[2024-10-12T00:02:08.813+0000] {spark_submit.py:649} INFO - 24/10/12 00:02:08 INFO ResourceProfile: Limiting resource is cpu
+[2024-10-12T00:02:08.814+0000] {spark_submit.py:649} INFO - 24/10/12 00:02:08 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[2024-10-12T00:02:08.854+0000] {spark_submit.py:649} INFO - 24/10/12 00:02:08 INFO SecurityManager: Changing view acls to: ***
+[2024-10-12T00:02:08.855+0000] {spark_submit.py:649} INFO - 24/10/12 00:02:08 INFO SecurityManager: Changing modify acls to: ***
+[2024-10-12T00:02:08.856+0000] {spark_submit.py:649} INFO - 24/10/12 00:02:08 INFO SecurityManager: Changing view acls groups to:
+[2024-10-12T00:02:08.856+0000] {spark_submit.py:649} INFO - 24/10/12 00:02:08 INFO SecurityManager: Changing modify acls groups to:
+[2024-10-12T00:02:08.857+0000] {spark_submit.py:649} INFO - 24/10/12 00:02:08 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: ***; groups with view permissions: EMPTY; users with modify permissions: ***; groups with modify permissions: EMPTY
+[2024-10-12T00:02:09.022+0000] {spark_submit.py:649} INFO - 24/10/12 00:02:09 INFO Utils: Successfully started service 'sparkDriver' on port 42679.
+[2024-10-12T00:02:09.044+0000] {spark_submit.py:649} INFO - 24/10/12 00:02:09 INFO SparkEnv: Registering MapOutputTracker
+[2024-10-12T00:02:09.072+0000] {spark_submit.py:649} INFO - 24/10/12 00:02:09 INFO SparkEnv: Registering BlockManagerMaster
+[2024-10-12T00:02:09.085+0000] {spark_submit.py:649} INFO - 24/10/12 00:02:09 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2024-10-12T00:02:09.086+0000] {spark_submit.py:649} INFO - 24/10/12 00:02:09 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[2024-10-12T00:02:09.089+0000] {spark_submit.py:649} INFO - 24/10/12 00:02:09 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[2024-10-12T00:02:09.106+0000] {spark_submit.py:649} INFO - 24/10/12 00:02:09 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-3a6fb678-9189-4e75-adc5-a001f239da51
+[2024-10-12T00:02:09.117+0000] {spark_submit.py:649} INFO - 24/10/12 00:02:09 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+[2024-10-12T00:02:09.129+0000] {spark_submit.py:649} INFO - 24/10/12 00:02:09 INFO SparkEnv: Registering OutputCommitCoordinator
+[2024-10-12T00:02:09.231+0000] {spark_submit.py:649} INFO - 24/10/12 00:02:09 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+[2024-10-12T00:02:09.290+0000] {spark_submit.py:649} INFO - 24/10/12 00:02:09 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[2024-10-12T00:02:09.316+0000] {spark_submit.py:649} INFO - 24/10/12 00:02:09 ERROR SparkContext: Failed to add /opt/bitnami/spark/jars/postgresql-42.5.0.jar to Spark environment
+[2024-10-12T00:02:09.317+0000] {spark_submit.py:649} INFO - java.io.FileNotFoundException: Jar /opt/bitnami/spark/jars/postgresql-42.5.0.jar not found
+[2024-10-12T00:02:09.318+0000] {spark_submit.py:649} INFO - at org.apache.spark.SparkContext.addLocalJarFile$1(SparkContext.scala:2095)
+[2024-10-12T00:02:09.318+0000] {spark_submit.py:649} INFO - at org.apache.spark.SparkContext.addJar(SparkContext.scala:2151)
+[2024-10-12T00:02:09.318+0000] {spark_submit.py:649} INFO - at org.apache.spark.SparkContext.$anonfun$new$15(SparkContext.scala:521)
+[2024-10-12T00:02:09.319+0000] {spark_submit.py:649} INFO - at org.apache.spark.SparkContext.$anonfun$new$15$adapted(SparkContext.scala:521)
+[2024-10-12T00:02:09.319+0000] {spark_submit.py:649} INFO - at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+[2024-10-12T00:02:09.320+0000] {spark_submit.py:649} INFO - at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+[2024-10-12T00:02:09.320+0000] {spark_submit.py:649} INFO - at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+[2024-10-12T00:02:09.321+0000] {spark_submit.py:649} INFO - at org.apache.spark.SparkContext.<init>(SparkContext.scala:521)
+[2024-10-12T00:02:09.321+0000] {spark_submit.py:649} INFO - at org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:58)
+[2024-10-12T00:02:09.321+0000] {spark_submit.py:649} INFO - at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+[2024-10-12T00:02:09.322+0000] {spark_submit.py:649} INFO - at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+[2024-10-12T00:02:09.322+0000] {spark_submit.py:649} INFO - at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+[2024-10-12T00:02:09.323+0000] {spark_submit.py:649} INFO - at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+[2024-10-12T00:02:09.323+0000] {spark_submit.py:649} INFO - at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+[2024-10-12T00:02:09.324+0000] {spark_submit.py:649} INFO - at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:247)
+[2024-10-12T00:02:09.324+0000] {spark_submit.py:649} INFO - at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+[2024-10-12T00:02:09.325+0000] {spark_submit.py:649} INFO - at py4j.Gateway.invoke(Gateway.java:238)
+[2024-10-12T00:02:09.325+0000] {spark_submit.py:649} INFO - at py4j.commands.ConstructorCommand.invokeConstructor(ConstructorCommand.java:80)
+[2024-10-12T00:02:09.325+0000] {spark_submit.py:649} INFO - at py4j.commands.ConstructorCommand.execute(ConstructorCommand.java:69)
+[2024-10-12T00:02:09.326+0000] {spark_submit.py:649} INFO - at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+[2024-10-12T00:02:09.326+0000] {spark_submit.py:649} INFO - at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+[2024-10-12T00:02:09.327+0000] {spark_submit.py:649} INFO - at java.base/java.lang.Thread.run(Thread.java:840)
+[2024-10-12T00:02:09.376+0000] {spark_submit.py:649} INFO - 24/10/12 00:02:09 ERROR SparkContext: Error initializing SparkContext.
+[2024-10-12T00:02:09.376+0000] {spark_submit.py:649} INFO - org.apache.spark.SparkException: Invalid master URL: spark://spark::7077
+[2024-10-12T00:02:09.377+0000] {spark_submit.py:649} INFO - at org.apache.spark.util.Utils$.extractHostPortFromSparkUrl(Utils.scala:2401)
+[2024-10-12T00:02:09.377+0000] {spark_submit.py:649} INFO - at org.apache.spark.rpc.RpcAddress$.fromSparkURL(RpcAddress.scala:54)
+[2024-10-12T00:02:09.377+0000] {spark_submit.py:649} INFO - at org.apache.spark.deploy.client.StandaloneAppClient.$anonfun$masterRpcAddresses$1(StandaloneAppClient.scala:54)
+[2024-10-12T00:02:09.378+0000] {spark_submit.py:649} INFO - at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:286)
+[2024-10-12T00:02:09.378+0000] {spark_submit.py:649} INFO - at scala.collection.IndexedSeqOptimized.foreach(IndexedSeqOptimized.scala:36)
+[2024-10-12T00:02:09.379+0000] {spark_submit.py:649} INFO - at scala.collection.IndexedSeqOptimized.foreach$(IndexedSeqOptimized.scala:33)
+[2024-10-12T00:02:09.379+0000] {spark_submit.py:649} INFO - at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:198)
+[2024-10-12T00:02:09.379+0000] {spark_submit.py:649} INFO - at scala.collection.TraversableLike.map(TraversableLike.scala:286)
+[2024-10-12T00:02:09.380+0000] {spark_submit.py:649} INFO - at scala.collection.TraversableLike.map$(TraversableLike.scala:279)
+[2024-10-12T00:02:09.380+0000] {spark_submit.py:649} INFO - at scala.collection.mutable.ArrayOps$ofRef.map(ArrayOps.scala:198)
+[2024-10-12T00:02:09.381+0000] {spark_submit.py:649} INFO - at org.apache.spark.deploy.client.StandaloneAppClient.<init>(StandaloneAppClient.scala:54)
+[2024-10-12T00:02:09.381+0000] {spark_submit.py:649} INFO - at org.apache.spark.scheduler.cluster.StandaloneSchedulerBackend.start(StandaloneSchedulerBackend.scala:134)
+[2024-10-12T00:02:09.381+0000] {spark_submit.py:649} INFO - at org.apache.spark.scheduler.TaskSchedulerImpl.start(TaskSchedulerImpl.scala:235)
+[2024-10-12T00:02:09.382+0000] {spark_submit.py:649} INFO - at org.apache.spark.SparkContext.<init>(SparkContext.scala:599)
+[2024-10-12T00:02:09.382+0000] {spark_submit.py:649} INFO - at org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:58)
+[2024-10-12T00:02:09.382+0000] {spark_submit.py:649} INFO - at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+[2024-10-12T00:02:09.383+0000] {spark_submit.py:649} INFO - at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+[2024-10-12T00:02:09.383+0000] {spark_submit.py:649} INFO - at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+[2024-10-12T00:02:09.383+0000] {spark_submit.py:649} INFO - at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+[2024-10-12T00:02:09.384+0000] {spark_submit.py:649} INFO - at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+[2024-10-12T00:02:09.384+0000] {spark_submit.py:649} INFO - at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:247)
+[2024-10-12T00:02:09.384+0000] {spark_submit.py:649} INFO - at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+[2024-10-12T00:02:09.385+0000] {spark_submit.py:649} INFO - at py4j.Gateway.invoke(Gateway.java:238)
+[2024-10-12T00:02:09.385+0000] {spark_submit.py:649} INFO - at py4j.commands.ConstructorCommand.invokeConstructor(ConstructorCommand.java:80)
+[2024-10-12T00:02:09.385+0000] {spark_submit.py:649} INFO - at py4j.commands.ConstructorCommand.execute(ConstructorCommand.java:69)
+[2024-10-12T00:02:09.386+0000] {spark_submit.py:649} INFO - at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+[2024-10-12T00:02:09.386+0000] {spark_submit.py:649} INFO - at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+[2024-10-12T00:02:09.386+0000] {spark_submit.py:649} INFO - at java.base/java.lang.Thread.run(Thread.java:840)
+[2024-10-12T00:02:09.386+0000] {spark_submit.py:649} INFO - 24/10/12 00:02:09 INFO SparkContext: SparkContext is stopping with exitCode 0.
+[2024-10-12T00:02:09.387+0000] {spark_submit.py:649} INFO - 24/10/12 00:02:09 INFO SparkUI: Stopped Spark web UI at http://d29c75c3a94e:4040
+[2024-10-12T00:02:09.389+0000] {spark_submit.py:649} INFO - 24/10/12 00:02:09 INFO StandaloneSchedulerBackend: Shutting down all executors
+[2024-10-12T00:02:09.392+0000] {spark_submit.py:649} INFO - 24/10/12 00:02:09 INFO StandaloneSchedulerBackend$StandaloneDriverEndpoint: Asking each executor to shut down
+[2024-10-12T00:02:09.405+0000] {spark_submit.py:649} INFO - 24/10/12 00:02:09 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+[2024-10-12T00:02:09.411+0000] {spark_submit.py:649} INFO - 24/10/12 00:02:09 INFO MemoryStore: MemoryStore cleared
+[2024-10-12T00:02:09.412+0000] {spark_submit.py:649} INFO - 24/10/12 00:02:09 INFO BlockManager: BlockManager stopped
+[2024-10-12T00:02:09.418+0000] {spark_submit.py:649} INFO - 24/10/12 00:02:09 INFO BlockManagerMaster: BlockManagerMaster stopped
+[2024-10-12T00:02:09.418+0000] {spark_submit.py:649} INFO - 24/10/12 00:02:09 WARN MetricsSystem: Stopping a MetricsSystem that is not running
+[2024-10-12T00:02:09.420+0000] {spark_submit.py:649} INFO - 24/10/12 00:02:09 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+[2024-10-12T00:02:09.426+0000] {spark_submit.py:649} INFO - 24/10/12 00:02:09 INFO SparkContext: Successfully stopped SparkContext
+[2024-10-12T00:02:09.427+0000] {spark_submit.py:649} INFO - Traceback (most recent call last):
+[2024-10-12T00:02:09.427+0000] {spark_submit.py:649} INFO - File "/opt/bitnami/spark/src/scripts_spark/LoadFileToDB.py", line 6, in <module>
+[2024-10-12T00:02:09.428+0000] {spark_submit.py:649} INFO - .getOrCreate()
+[2024-10-12T00:02:09.428+0000] {spark_submit.py:649} INFO - ^^^^^^^^^^^^^
+[2024-10-12T00:02:09.429+0000] {spark_submit.py:649} INFO - File "/home/***/.local/lib/python3.12/site-packages/pyspark/python/lib/pyspark.zip/pyspark/sql/session.py", line 497, in getOrCreate
+[2024-10-12T00:02:09.429+0000] {spark_submit.py:649} INFO - File "/home/***/.local/lib/python3.12/site-packages/pyspark/python/lib/pyspark.zip/pyspark/context.py", line 515, in getOrCreate
+[2024-10-12T00:02:09.430+0000] {spark_submit.py:649} INFO - File "/home/***/.local/lib/python3.12/site-packages/pyspark/python/lib/pyspark.zip/pyspark/context.py", line 203, in __init__
+[2024-10-12T00:02:09.430+0000] {spark_submit.py:649} INFO - File "/home/***/.local/lib/python3.12/site-packages/pyspark/python/lib/pyspark.zip/pyspark/context.py", line 296, in _do_init
+[2024-10-12T00:02:09.431+0000] {spark_submit.py:649} INFO - File "/home/***/.local/lib/python3.12/site-packages/pyspark/python/lib/pyspark.zip/pyspark/context.py", line 421, in _initialize_context
+[2024-10-12T00:02:09.431+0000] {spark_submit.py:649} INFO - File "/home/***/.local/lib/python3.12/site-packages/pyspark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1587, in __call__
+[2024-10-12T00:02:09.432+0000] {spark_submit.py:649} INFO - File "/home/***/.local/lib/python3.12/site-packages/pyspark/python/lib/py4j-0.10.9.7-src.zip/py4j/protocol.py", line 326, in get_return_value
+[2024-10-12T00:02:09.433+0000] {spark_submit.py:649} INFO - py4j.protocol.Py4JJavaError: An error occurred while calling None.org.apache.spark.api.java.JavaSparkContext.
+[2024-10-12T00:02:09.434+0000] {spark_submit.py:649} INFO - : org.apache.spark.SparkException: Invalid master URL: spark://spark::7077
+[2024-10-12T00:02:09.434+0000] {spark_submit.py:649} INFO - at org.apache.spark.util.Utils$.extractHostPortFromSparkUrl(Utils.scala:2401)
+[2024-10-12T00:02:09.434+0000] {spark_submit.py:649} INFO - at org.apache.spark.rpc.RpcAddress$.fromSparkURL(RpcAddress.scala:54)
+[2024-10-12T00:02:09.435+0000] {spark_submit.py:649} INFO - at org.apache.spark.deploy.client.StandaloneAppClient.$anonfun$masterRpcAddresses$1(StandaloneAppClient.scala:54)
+[2024-10-12T00:02:09.435+0000] {spark_submit.py:649} INFO - at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:286)
+[2024-10-12T00:02:09.435+0000] {spark_submit.py:649} INFO - at scala.collection.IndexedSeqOptimized.foreach(IndexedSeqOptimized.scala:36)
+[2024-10-12T00:02:09.436+0000] {spark_submit.py:649} INFO - at scala.collection.IndexedSeqOptimized.foreach$(IndexedSeqOptimized.scala:33)
+[2024-10-12T00:02:09.436+0000] {spark_submit.py:649} INFO - at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:198)
+[2024-10-12T00:02:09.436+0000] {spark_submit.py:649} INFO - at scala.collection.TraversableLike.map(TraversableLike.scala:286)
+[2024-10-12T00:02:09.436+0000] {spark_submit.py:649} INFO - at scala.collection.TraversableLike.map$(TraversableLike.scala:279)
+[2024-10-12T00:02:09.437+0000] {spark_submit.py:649} INFO - at scala.collection.mutable.ArrayOps$ofRef.map(ArrayOps.scala:198)
+[2024-10-12T00:02:09.437+0000] {spark_submit.py:649} INFO - at org.apache.spark.deploy.client.StandaloneAppClient.<init>(StandaloneAppClient.scala:54)
+[2024-10-12T00:02:09.437+0000] {spark_submit.py:649} INFO - at org.apache.spark.scheduler.cluster.StandaloneSchedulerBackend.start(StandaloneSchedulerBackend.scala:134)
+[2024-10-12T00:02:09.437+0000] {spark_submit.py:649} INFO - at org.apache.spark.scheduler.TaskSchedulerImpl.start(TaskSchedulerImpl.scala:235)
+[2024-10-12T00:02:09.438+0000] {spark_submit.py:649} INFO - at org.apache.spark.SparkContext.<init>(SparkContext.scala:599)
+[2024-10-12T00:02:09.438+0000] {spark_submit.py:649} INFO - at org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:58)
+[2024-10-12T00:02:09.438+0000] {spark_submit.py:649} INFO - at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+[2024-10-12T00:02:09.439+0000] {spark_submit.py:649} INFO - at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+[2024-10-12T00:02:09.439+0000] {spark_submit.py:649} INFO - at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+[2024-10-12T00:02:09.439+0000] {spark_submit.py:649} INFO - at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+[2024-10-12T00:02:09.439+0000] {spark_submit.py:649} INFO - at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+[2024-10-12T00:02:09.440+0000] {spark_submit.py:649} INFO - at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:247)
+[2024-10-12T00:02:09.440+0000] {spark_submit.py:649} INFO - at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+[2024-10-12T00:02:09.440+0000] {spark_submit.py:649} INFO - at py4j.Gateway.invoke(Gateway.java:238)
+[2024-10-12T00:02:09.441+0000] {spark_submit.py:649} INFO - at py4j.commands.ConstructorCommand.invokeConstructor(ConstructorCommand.java:80)
+[2024-10-12T00:02:09.441+0000] {spark_submit.py:649} INFO - at py4j.commands.ConstructorCommand.execute(ConstructorCommand.java:69)
+[2024-10-12T00:02:09.441+0000] {spark_submit.py:649} INFO - at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+[2024-10-12T00:02:09.441+0000] {spark_submit.py:649} INFO - at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+[2024-10-12T00:02:09.442+0000] {spark_submit.py:649} INFO - at java.base/java.lang.Thread.run(Thread.java:840)
+[2024-10-12T00:02:09.442+0000] {spark_submit.py:649} INFO - 
+[2024-10-12T00:02:09.476+0000] {spark_submit.py:649} INFO - 24/10/12 00:02:09 INFO ShutdownHookManager: Shutdown hook called
+[2024-10-12T00:02:09.477+0000] {spark_submit.py:649} INFO - 24/10/12 00:02:09 INFO ShutdownHookManager: Deleting directory /tmp/spark-a95346e4-e203-4cc1-a0d9-3d4623195018
+[2024-10-12T00:02:09.480+0000] {spark_submit.py:649} INFO - 24/10/12 00:02:09 INFO ShutdownHookManager: Deleting directory /tmp/spark-9c049278-9175-4a61-831c-2040b48a8c23
+[2024-10-12T00:02:09.508+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/apache/spark/operators/spark_submit.py", line 176, in execute
+    self._hook.submit(self.application)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 575, in submit
+    raise AirflowException(
+airflow.exceptions.AirflowException: Cannot execute: spark-submit --master spark://spark::7077 --jars /opt/bitnami/spark/jars/postgresql-42.5.0.jar --name arrow-spark --deploy-mode client /opt/bitnami/spark/src/scripts_spark/LoadFileToDB.py. Error code is: 1.
+[2024-10-12T00:02:09.511+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=LoadWebScraping, task_id=submit_job, run_id=manual__2024-10-12T00:02:02.242526+00:00, execution_date=20241012T000202, start_date=20241012T000205, end_date=20241012T000209
+[2024-10-12T00:02:09.525+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-10-12T00:02:09.526+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 33 for task submit_job (Cannot execute: spark-submit --master spark://spark::7077 --jars /opt/bitnami/spark/jars/postgresql-42.5.0.jar --name arrow-spark --deploy-mode client /opt/bitnami/spark/src/scripts_spark/LoadFileToDB.py. Error code is: 1.; 409)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3004, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3158, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3182, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/apache/spark/operators/spark_submit.py", line 176, in execute
+    self._hook.submit(self.application)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 575, in submit
+    raise AirflowException(
+airflow.exceptions.AirflowException: Cannot execute: spark-submit --master spark://spark::7077 --jars /opt/bitnami/spark/jars/postgresql-42.5.0.jar --name arrow-spark --deploy-mode client /opt/bitnami/spark/src/scripts_spark/LoadFileToDB.py. Error code is: 1.
+[2024-10-12T00:02:09.545+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2024-10-12T00:02:09.558+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-12T00:02:09.563+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,20 @@
+[2024-10-21T13:03:15.866+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-10-21T13:03:15.883+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pipeline_webscraping.pichau_tasks.Web_Extraction_pichau manual__2024-10-21T13:03:12.581641+00:00 [queued]>
+[2024-10-21T13:03:15.894+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pipeline_webscraping.pichau_tasks.Web_Extraction_pichau manual__2024-10-21T13:03:12.581641+00:00 [queued]>
+[2024-10-21T13:03:15.895+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2024-10-21T13:03:15.916+0000] {taskinstance.py:2888} INFO - Executing <Task(OperatorSiteA): pichau_tasks.Web_Extraction_pichau> on 2024-10-21 13:03:12.581641+00:00
+[2024-10-21T13:03:15.922+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1487) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-21T13:03:15.926+0000] {standard_task_runner.py:72} INFO - Started process 1489 to run task
+[2024-10-21T13:03:15.925+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pipeline_webscraping', 'pichau_tasks.Web_Extraction_pichau', 'manual__2024-10-21T13:03:12.581641+00:00', '--job-id', '297', '--raw', '--subdir', 'DAGS_FOLDER/DagWebScraping.py', '--cfg-path', '/tmp/tmpk54bqeb5']
+[2024-10-21T13:03:15.929+0000] {standard_task_runner.py:105} INFO - Job 297: Subtask pichau_tasks.Web_Extraction_pichau
+[2024-10-21T13:03:15.980+0000] {task_command.py:467} INFO - Running <TaskInstance: pipeline_webscraping.pichau_tasks.Web_Extraction_pichau manual__2024-10-21T13:03:12.581641+00:00 [running]> on host e2c3a206786d
+[2024-10-21T13:03:16.100+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pipeline_webscraping' AIRFLOW_CTX_TASK_ID='pichau_tasks.Web_Extraction_pichau' AIRFLOW_CTX_EXECUTION_DATE='2024-10-21T13:03:12.581641+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-21T13:03:12.581641+00:00'
+[2024-10-21T13:03:16.102+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-10-21T13:05:42.442+0000] {logging_mixin.py:190} INFO - /opt/***/datalake/rawzone/pichau_2024-10-21
+[2024-10-21T13:05:42.470+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-10-21T13:05:42.470+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=pipeline_webscraping, task_id=pichau_tasks.Web_Extraction_pichau, run_id=manual__2024-10-21T13:03:12.581641+00:00, execution_date=20241021T130312, start_date=20241021T130315, end_date=20241021T130542
+[2024-10-21T13:05:42.495+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-10-21T13:05:42.523+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-10-21T13:05:42.528+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

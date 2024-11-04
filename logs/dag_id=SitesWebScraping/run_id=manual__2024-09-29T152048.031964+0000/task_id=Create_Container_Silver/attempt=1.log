@@ -1,0 +1,24 @@
+[2024-09-29T15:22:24.279+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-29T15:22:24.298+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: SitesWebScraping.Create_Container_Silver manual__2024-09-29T15:20:48.031964+00:00 [queued]>
+[2024-09-29T15:22:24.307+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: SitesWebScraping.Create_Container_Silver manual__2024-09-29T15:20:48.031964+00:00 [queued]>
+[2024-09-29T15:22:24.307+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2024-09-29T15:22:24.342+0000] {taskinstance.py:2888} INFO - Executing <Task(CreateContainerInDataLake): Create_Container_Silver> on 2024-09-29 15:20:48.031964+00:00
+[2024-09-29T15:22:24.348+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=985) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-29T15:22:24.350+0000] {standard_task_runner.py:72} INFO - Started process 986 to run task
+[2024-09-29T15:22:24.350+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'SitesWebScraping', 'Create_Container_Silver', 'manual__2024-09-29T15:20:48.031964+00:00', '--job-id', '437', '--raw', '--subdir', 'DAGS_FOLDER/DagWebScraping.py', '--cfg-path', '/tmp/tmp_yrx374o']
+[2024-09-29T15:22:24.352+0000] {standard_task_runner.py:105} INFO - Job 437: Subtask Create_Container_Silver
+[2024-09-29T15:22:24.403+0000] {task_command.py:467} INFO - Running <TaskInstance: SitesWebScraping.Create_Container_Silver manual__2024-09-29T15:20:48.031964+00:00 [running]> on host a0498bad71d1
+[2024-09-29T15:22:24.509+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='SitesWebScraping' AIRFLOW_CTX_TASK_ID='Create_Container_Silver' AIRFLOW_CTX_EXECUTION_DATE='2024-09-29T15:20:48.031964+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-29T15:20:48.031964+00:00'
+[2024-09-29T15:22:24.510+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-29T15:22:24.526+0000] {baseoperator.py:405} WARNING - CreateContainerInDataLake.execute cannot be called outside TaskInstance!
+[2024-09-29T15:22:24.527+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-29T15:22:24.528+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'mkdir -p /opt/***/datalake/silverzone/kabum_2024-09-29']
+[2024-09-29T15:22:24.538+0000] {subprocess.py:86} INFO - Output:
+[2024-09-29T15:22:24.544+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-09-29T15:22:24.572+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-29T15:22:24.573+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=SitesWebScraping, task_id=Create_Container_Silver, run_id=manual__2024-09-29T15:20:48.031964+00:00, execution_date=20240929T152048, start_date=20240929T152224, end_date=20240929T152224
+[2024-09-29T15:22:24.621+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-09-29T15:22:24.662+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-29T15:22:24.666+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

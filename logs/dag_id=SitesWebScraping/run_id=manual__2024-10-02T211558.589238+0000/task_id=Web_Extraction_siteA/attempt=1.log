@@ -1,0 +1,189 @@
+[2024-10-02T21:16:01.272+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-10-02T21:16:01.297+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: SitesWebScraping.Web_Extraction_siteA manual__2024-10-02T21:15:58.589238+00:00 [queued]>
+[2024-10-02T21:16:01.307+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: SitesWebScraping.Web_Extraction_siteA manual__2024-10-02T21:15:58.589238+00:00 [queued]>
+[2024-10-02T21:16:01.308+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2024-10-02T21:16:01.324+0000] {taskinstance.py:2888} INFO - Executing <Task(OperatorSiteA): Web_Extraction_siteA> on 2024-10-02 21:15:58.589238+00:00
+[2024-10-02T21:16:01.329+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1631) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-02T21:16:01.331+0000] {standard_task_runner.py:72} INFO - Started process 1632 to run task
+[2024-10-02T21:16:01.331+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'SitesWebScraping', 'Web_Extraction_siteA', 'manual__2024-10-02T21:15:58.589238+00:00', '--job-id', '780', '--raw', '--subdir', 'DAGS_FOLDER/DagWebScraping.py', '--cfg-path', '/tmp/tmp9x3us_9e']
+[2024-10-02T21:16:01.334+0000] {standard_task_runner.py:105} INFO - Job 780: Subtask Web_Extraction_siteA
+[2024-10-02T21:16:01.380+0000] {task_command.py:467} INFO - Running <TaskInstance: SitesWebScraping.Web_Extraction_siteA manual__2024-10-02T21:15:58.589238+00:00 [running]> on host f8603ea05473
+[2024-10-02T21:16:01.481+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='SitesWebScraping' AIRFLOW_CTX_TASK_ID='Web_Extraction_siteA' AIRFLOW_CTX_EXECUTION_DATE='2024-10-02T21:15:58.589238+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-02T21:15:58.589238+00:00'
+[2024-10-02T21:16:01.482+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-10-02T21:16:10.735+0000] {logging_mixin.py:190} INFO - placas-mae
+[2024-10-02T21:16:10.743+0000] {logging_mixin.py:190} INFO - /
+[2024-10-02T21:16:10.744+0000] {logging_mixin.py:190} INFO - None
+[2024-10-02T21:16:10.744+0000] {logging_mixin.py:190} INFO - None
+[2024-10-02T21:16:10.745+0000] {logging_mixin.py:190} INFO - /account
+[2024-10-02T21:16:10.745+0000] {logging_mixin.py:190} INFO - None
+[2024-10-02T21:16:10.746+0000] {logging_mixin.py:190} INFO - None
+[2024-10-02T21:16:10.746+0000] {logging_mixin.py:190} INFO - None
+[2024-10-02T21:16:10.747+0000] {logging_mixin.py:190} INFO - None
+[2024-10-02T21:16:10.747+0000] {logging_mixin.py:190} INFO - None
+[2024-10-02T21:16:10.748+0000] {logging_mixin.py:190} INFO - None
+[2024-10-02T21:16:10.748+0000] {logging_mixin.py:190} INFO - None
+[2024-10-02T21:16:10.748+0000] {logging_mixin.py:190} INFO - None
+[2024-10-02T21:16:10.749+0000] {logging_mixin.py:190} INFO - /placa-mae-pichau-danuri-b550m-px-ddr4-socket-am4-m-atx-chipset-amd-b550-pch-dnrb550m-px
+[2024-10-02T21:16:10.749+0000] {logging_mixin.py:190} INFO - Placa Mae Pichau Danuri B550M-PX, DDR4, Socket AM4, M-ATX, Chipset AMD B550, PCH-DNRB550M-PX
+[2024-10-02T21:16:10.750+0000] {logging_mixin.py:190} INFO - 399.99
+[2024-10-02T21:16:10.751+0000] {logging_mixin.py:190} INFO - /placa-mae-pichau-danuri-b550m-px-ddr4-socket-am4-m-atx-chipset-amd-b550-pch-dnrb550m-px
+[2024-10-02T21:16:10.751+0000] {logging_mixin.py:190} INFO - Placa Mae Pichau Danuri B550M-PX, DDR4, Socket AM4, M-ATX, Chipset AMD B550, PCH-DNRB550M-PX
+[2024-10-02T21:16:10.752+0000] {logging_mixin.py:190} INFO - 399.99
+[2024-10-02T21:16:10.752+0000] {logging_mixin.py:190} INFO - /placa-mae-pichau-b550m-k-ddr4-socket-amd-am4-m-atx-chipset-amd-b550-b550m-k-1p
+[2024-10-02T21:16:10.752+0000] {logging_mixin.py:190} INFO - Placa Mae Pichau B550M K, DDR4, Socket AMD AM4, M-ATX, Chipset AMD B550, B550M-K-1P
+[2024-10-02T21:16:10.753+0000] {logging_mixin.py:190} INFO - 579.99
+[2024-10-02T21:16:10.754+0000] {logging_mixin.py:190} INFO - /placa-mae-gigabyte-b550m-k-ddr4-socket-amd-am4-m-atx-chipset-amd-b550-b550m-k
+[2024-10-02T21:16:10.754+0000] {logging_mixin.py:190} INFO - Placa Mae Gigabyte B550M K, DDR4, Socket AMD AM4, M-ATX, Chipset AMD B550, B550M-K
+[2024-10-02T21:16:10.755+0000] {logging_mixin.py:190} INFO - 589.99
+[2024-10-02T21:16:10.755+0000] {logging_mixin.py:190} INFO - /placa-mae-gigabyte-b550m-aorus-elite-ddr4-socket-am4-chipset-amd-b550
+[2024-10-02T21:16:10.756+0000] {logging_mixin.py:190} INFO - Placa Mae Gigabyte B550M Aorus Elite DDR4 Socket AM4 Chipset AMD B550
+[2024-10-02T21:16:10.756+0000] {logging_mixin.py:190} INFO - 819.99
+[2024-10-02T21:16:10.757+0000] {logging_mixin.py:190} INFO - /placa-mae-asrock-b450m-steel-legend-ddr4-socket-am4-chipset-amd-b450
+[2024-10-02T21:16:10.757+0000] {logging_mixin.py:190} INFO - Placa Mae ASRock B450M Steel Legend DDR4 Socket AM4 Chipset AMD B450
+[2024-10-02T21:16:10.757+0000] {logging_mixin.py:190} INFO - 689.99
+[2024-10-02T21:16:10.758+0000] {logging_mixin.py:190} INFO - /placa-mae-mancer-a520m-dx-ddr4-socket-amd-am4-m-atx-chipset-amd-a520-mcr-a520m-dxv3
+[2024-10-02T21:16:10.758+0000] {logging_mixin.py:190} INFO - Placa Mae Mancer A520M DX, DDR4, Socket AMD AM4, M-ATX, Chipset AMD A520, MCR-A520M-DXV3
+[2024-10-02T21:16:10.759+0000] {logging_mixin.py:190} INFO - 409.99
+[2024-10-02T21:16:10.759+0000] {logging_mixin.py:190} INFO - /placa-mae-gigabyte-b760m-aorus-elite-ddr5-socket-lga-1700-m-atx-chipset-intel-b760-b760m-aorus-elite
+[2024-10-02T21:16:10.760+0000] {logging_mixin.py:190} INFO - Placa Mae Gigabyte B760M Aorus Elite, DDR5, Socket LGA 1700, M-ATX, Chipset Intel B760, B760M-AORUS-ELITE
+[2024-10-02T21:16:10.761+0000] {logging_mixin.py:190} INFO - 999.99
+[2024-10-02T21:16:10.761+0000] {logging_mixin.py:190} INFO - /placa-mae-mancer-b560m-dx-ddr4-lga-1200-m-atx-chipset-intel-b560-mcr-b560m-dx
+[2024-10-02T21:16:10.762+0000] {logging_mixin.py:190} INFO - Placa Mae Mancer B560M-DX, DDR4, LGA 1200, M-ATX, Chipset Intel B560, MCR-B560M-DX
+[2024-10-02T21:16:10.762+0000] {logging_mixin.py:190} INFO - 449.99
+[2024-10-02T21:16:10.763+0000] {logging_mixin.py:190} INFO - /placa-mae-asus-tuf-gaming-a520m-plus-ii-ddr4-socket-amd-am4-m-atx-chipset-amd-a520-tuf-gaming-a520m-plus-ii
+[2024-10-02T21:16:10.763+0000] {logging_mixin.py:190} INFO - Placa Mae Asus TUF Gaming A520M-PLUS II, DDR4, Socket AMD AM4, M-ATX, Chipset AMD A520, TUF-GAMING-A520M-PLUS-II
+[2024-10-02T21:16:10.764+0000] {logging_mixin.py:190} INFO - 569.99
+[2024-10-02T21:16:10.764+0000] {logging_mixin.py:190} INFO - /placa-mae-msi-b450m-a-pro-max-ii-ddr4-socket-am4-m-atx-chipset-amd-b450-b450m-a-pro-max-ii
+[2024-10-02T21:16:10.765+0000] {logging_mixin.py:190} INFO - Placa Mae MSI B450M-A PRO MAX II, DDR4, Socket AM4, M-ATX, Chipset AMD B450, B450M-A-PRO-MAX-II
+[2024-10-02T21:16:10.765+0000] {logging_mixin.py:190} INFO - 459.99
+[2024-10-02T21:16:10.766+0000] {logging_mixin.py:190} INFO - /placa-mae-asrock-b660m-phantom-gaming-4-ddr4-socket-lga1700-m-atx-chipset-intel-b660-b660m-phantom-gaming
+[2024-10-02T21:16:10.766+0000] {logging_mixin.py:190} INFO - Placa Mae ASRock B660M Phantom Gaming 4, DDR4, Socket LGA1700, M-ATX, Chipset Intel B660, B660M-PHANTOM-GAMING
+[2024-10-02T21:16:10.767+0000] {logging_mixin.py:190} INFO - 744.99
+[2024-10-02T21:16:10.767+0000] {logging_mixin.py:190} INFO - /placa-mae-msi-pro-b650m-p-ddr5-socket-amd-am5-m-atx-chipset-amd-b650-pro-b650m-p
+[2024-10-02T21:16:10.768+0000] {logging_mixin.py:190} INFO - Placa Mae MSI Pro B650M-P, DDR5, Socket AMD AM5, M-ATX, Chipset AMD B650, PRO-B650M-P
+[2024-10-02T21:16:10.768+0000] {logging_mixin.py:190} INFO - 829.99
+[2024-10-02T21:16:10.769+0000] {logging_mixin.py:190} INFO - /placa-mae-mancer-h510m-dx-ddr4-lga-1200-m-atx-chipset-intel-h510-mcr-h510m-dx
+[2024-10-02T21:16:10.769+0000] {logging_mixin.py:190} INFO - Placa Mae Mancer H510M-DX, DDR4, LGA 1200, M-ATX, Chipset Intel H510, MCR-H510M-DX
+[2024-10-02T21:16:10.770+0000] {logging_mixin.py:190} INFO - 449.99
+[2024-10-02T21:16:10.770+0000] {logging_mixin.py:190} INFO - /placa-mae-asrock-h510m-hvs-r2-0-ddr4-socket-lga1200-m-atx-chipset-intel-h510-h510m-hvs-r2-0
+[2024-10-02T21:16:10.771+0000] {logging_mixin.py:190} INFO - Placa Mae ASRock H510M-HVS R2.0, DDR4, Socket LGA1200, M-ATX, Chipset Intel H510, H510M-HVS-R2.0
+[2024-10-02T21:16:10.771+0000] {logging_mixin.py:190} INFO - 369.99
+[2024-10-02T21:16:10.772+0000] {logging_mixin.py:190} INFO - /placa-mae-mancer-a520m-dx-ddr4-socket-amd-am4-m-atx-chipset-amd-a520-mcr-a520m-dx
+[2024-10-02T21:16:10.772+0000] {logging_mixin.py:190} INFO - Placa Mae Mancer A520M-DX, DDR4,Socket AMD AM4, M-ATX, Chipset AMD A520, MCR-A520M-DX
+[2024-10-02T21:16:10.773+0000] {logging_mixin.py:190} INFO - 379.99
+[2024-10-02T21:16:10.773+0000] {logging_mixin.py:190} INFO - /placa-mae-asus-tuf-gaming-b650m-e-ddr5-socket-amd-am5-m-atx-chipset-amd-b650-tuf-gaming-b650m-e
+[2024-10-02T21:16:10.773+0000] {logging_mixin.py:190} INFO - Placa Mae Asus TUF Gaming B650M-E, DDR5, Socket AMD AM5, M-ATX, Chipset AMD B650, TUF-GAMING-B650M-E
+[2024-10-02T21:16:10.774+0000] {logging_mixin.py:190} INFO - 999.99
+[2024-10-02T21:16:10.774+0000] {logging_mixin.py:190} INFO - /placa-mae-asrock-h610m-hvs-m-2-r2-0-socket-lga1700-m-atx-chipset-intel-h610-h610m-hvs-m-2-r2
+[2024-10-02T21:16:10.775+0000] {logging_mixin.py:190} INFO - Placa Mae ASRock H610M-HVS/M.2 R2.0, Socket LGA1700, M-ATX, Chipset Intel H610, H610M-HVS-M.2-R2
+[2024-10-02T21:16:10.775+0000] {logging_mixin.py:190} INFO - 529.99
+[2024-10-02T21:16:10.776+0000] {logging_mixin.py:190} INFO - /placa-mae-mancer-h610m-dx-ddr4-socket-lga1700-m-atx-chipset-intel-h610-mcr-h610m-dxv2
+[2024-10-02T21:16:10.776+0000] {logging_mixin.py:190} INFO - Placa Mae Mancer H610M-DX, DDR4, Socket LGA1700, M-ATX, Chipset Intel H610, MCR-H610M-DXV2
+[2024-10-02T21:16:10.777+0000] {logging_mixin.py:190} INFO - 449.99
+[2024-10-02T21:16:10.777+0000] {logging_mixin.py:190} INFO - /placa-mae-asrock-a520m-hvs-ddr4-socket-am4-m-atx-chipset-amd-a520-a520m-hvs
+[2024-10-02T21:16:10.778+0000] {logging_mixin.py:190} INFO - Placa Mae ASRock A520M-HVS, DDR4, Socket AM4, M-ATX, Chipset AMD A520, A520M-HVS
+[2024-10-02T21:16:10.778+0000] {logging_mixin.py:190} INFO - 459.99
+[2024-10-02T21:16:10.779+0000] {logging_mixin.py:190} INFO - /placa-mae-asus-tuf-gaming-b650m-e-wifi-ddr5-socket-amd-am5-m-atx-chipset-amd-b650-tuf-gaming-b650m-e-wifi
+[2024-10-02T21:16:10.779+0000] {logging_mixin.py:190} INFO - Placa Mae Asus Tuf Gaming B650M-E WIFI, DDR5, Socket AMD AM5, M-ATX, Chipset AMD B650, TUF-GAMING-B650M-E-WIFI
+[2024-10-02T21:16:10.780+0000] {logging_mixin.py:190} INFO - 1159.99
+[2024-10-02T21:16:10.780+0000] {logging_mixin.py:190} INFO - /placa-mae-pichau-alphard-h610m-t-ddr4-lga-1700-m-atx-chipset-intel-h610-pch-alph610m-t
+[2024-10-02T21:16:10.780+0000] {logging_mixin.py:190} INFO - Placa Mae Pichau Alphard H610M-T, DDR4, LGA 1700, M-ATX, Chipset Intel H610, PCH-ALPH610M-T
+[2024-10-02T21:16:10.781+0000] {logging_mixin.py:190} INFO - 439.99
+[2024-10-02T21:16:10.781+0000] {logging_mixin.py:190} INFO - /placa-mae-msi-pro-b550m-p-gen3-ddr4-socket-am4-m-atx-chipset-amd-b550-pro-b550m-p-gen3
+[2024-10-02T21:16:10.782+0000] {logging_mixin.py:190} INFO - Placa Mae MSI PRO B550M-P GEN3, DDR4, Socket AM4, M-ATX, Chipset AMD B550, PRO-B550M-P-GEN3
+[2024-10-02T21:16:10.782+0000] {logging_mixin.py:190} INFO - 679.99
+[2024-10-02T21:16:10.783+0000] {logging_mixin.py:190} INFO - /placa-mae-asus-tuf-gaming-b760m-plus-ii-ddr5-socket-lga-1700-m-atx-chipset-intel-b760-tuf-gaming-b760m-plus-ii
+[2024-10-02T21:16:10.783+0000] {logging_mixin.py:190} INFO - Placa Mae Asus TUF Gaming B760M-PLUS II, DDR5, Socket LGA 1700, M-ATX, Chipset Intel B760, TUF-GAMING-B760M-PLUS-II
+[2024-10-02T21:16:10.783+0000] {logging_mixin.py:190} INFO - 999.99
+[2024-10-02T21:16:10.784+0000] {logging_mixin.py:190} INFO - /placa-mae-asus-rog-strix-x670e-i-gaming-wifi-ddr5-socket-am5-itx-chipset-amd-x670-rog-strix-x670e-i-gaming-wifi
+[2024-10-02T21:16:10.784+0000] {logging_mixin.py:190} INFO - Placa Mae Asus ROG Strix X670E-I Gaming Wifi, DDR5, Socket AM5, ITX, Chipset AMD X670, ROG-STRIX-X670E-I-GAMING-WIFI
+[2024-10-02T21:16:10.785+0000] {logging_mixin.py:190} INFO - 3299.99
+[2024-10-02T21:16:10.785+0000] {logging_mixin.py:190} INFO - /placa-mae-aigo-b760l-d4-ddr4-lga-1700-m-atx-chipset-intel-b760-aigo-b760l-d4
+[2024-10-02T21:16:10.785+0000] {logging_mixin.py:190} INFO - Placa Mae Aigo B760L D4, DDR4, LGA 1700, M-ATX, Chipset Intel B760, AIGO-B760L-D4
+[2024-10-02T21:16:10.786+0000] {logging_mixin.py:190} INFO - 699.99
+[2024-10-02T21:16:10.786+0000] {logging_mixin.py:190} INFO - /placa-mae-aigo-h511m-ddr4-lga-1200-m-atx-chipset-intel-h470-aigo-h511m
+[2024-10-02T21:16:10.787+0000] {logging_mixin.py:190} INFO - Placa Mae Aigo H511M, DDR4, LGA 1200, M-ATX, Chipset Intel H470, AIGO-H511M
+[2024-10-02T21:16:10.787+0000] {logging_mixin.py:190} INFO - 479.99
+[2024-10-02T21:16:10.788+0000] {logging_mixin.py:190} INFO - /placa-mae-aigo-h610-ddr4-lga-1700-m-atx-chipset-intel-h610-aigo-h610m
+[2024-10-02T21:16:10.788+0000] {logging_mixin.py:190} INFO - Placa Mae Aigo H610, DDR4, LGA 1700, M-ATX, Chipset Intel H610, AIGO-H610M
+[2024-10-02T21:16:10.788+0000] {logging_mixin.py:190} INFO - 519.99
+[2024-10-02T21:16:10.789+0000] {logging_mixin.py:190} INFO - /placa-mae-asus-b760m-ayw-wifi-ddr5-socket-lga-1700-m-atx-chipset-intel-b760-b760m-ayw-wifi
+[2024-10-02T21:16:10.789+0000] {logging_mixin.py:190} INFO - Placa Mae Asus B760M-AYW WIFI, DDR5, Socket LGA 1700, M-ATX, Chipset Intel B760, B760M-AYW-WIFI
+[2024-10-02T21:16:10.790+0000] {logging_mixin.py:190} INFO - 899.99
+[2024-10-02T21:16:10.790+0000] {logging_mixin.py:190} INFO - /placa-mae-asus-prime-h610m-a-ddr5-socket-lga-1700-m-atx-chipset-intel-h610-prime-h610m-a
+[2024-10-02T21:16:10.790+0000] {logging_mixin.py:190} INFO - Placa Mae Asus Prime H610M-A, DDR5, Socket LGA 1700, M-ATX, Chipset Intel H610, PRIME-H610M-A
+[2024-10-02T21:16:10.791+0000] {logging_mixin.py:190} INFO - 599.99
+[2024-10-02T21:16:10.791+0000] {logging_mixin.py:190} INFO - /placa-mae-asus-prime-b650m-r-ddr5-socket-am5-m-atx-chipset-amd-b650-prime-b650m-r
+[2024-10-02T21:16:10.792+0000] {logging_mixin.py:190} INFO - Placa Mae Asus Prime B650M-R, DDR5, Socket AM5, M-ATX, Chipset AMD B650, PRIME-B650M-R
+[2024-10-02T21:16:10.792+0000] {logging_mixin.py:190} INFO - 899.99
+[2024-10-02T21:16:10.793+0000] {logging_mixin.py:190} INFO - /placa-mae-asus-rog-strix-b650e-i-gaming-wifi-ddr5-socket-am5-itx-chipset-b650-rog-strix-b650e-i-gaming-wifi
+[2024-10-02T21:16:10.793+0000] {logging_mixin.py:190} INFO - Placa Mae Asus ROG Strix B650E-I Gaming Wifi, DDR5, Socket AM5, ITX, Chipset B650, ROG-STRIX-B650E-I-GAMING-WIFI
+[2024-10-02T21:16:10.794+0000] {logging_mixin.py:190} INFO - 2299.99
+[2024-10-02T21:16:10.794+0000] {logging_mixin.py:190} INFO - /placa-mae-asus-rog-strix-b760-i-gaming-wifi-ddr5-socket-lga1700-itx-chipset-intel-b760-rog-strix-b760-i-gaming-wifi
+[2024-10-02T21:16:10.795+0000] {logging_mixin.py:190} INFO - Placa Mae Asus ROG Strix B760-I Gaming Wifi, DDR5, Socket LGA1700, ITX, Chipset Intel B760, ROG-STRIX-B760-I-GAMING-WIFI
+[2024-10-02T21:16:10.795+0000] {logging_mixin.py:190} INFO - 1759.99
+[2024-10-02T21:16:10.795+0000] {logging_mixin.py:190} INFO - /placa-mae-asus-rog-strix-z790-i-gaming-wifi-ddr5-socket-lga1700-itx-chipset-intel-z790-rog-strix-z790-i-gaming-wifi
+[2024-10-02T21:16:10.796+0000] {logging_mixin.py:190} INFO - Placa Mae Asus ROG Strix Z790-I Gaming Wifi, DDR5, Socket LGA1700, ITX, Chipset Intel Z790, ROG-STRIX-Z790-I-GAMING-WIFI
+[2024-10-02T21:16:10.796+0000] {logging_mixin.py:190} INFO - 2799.99
+[2024-10-02T21:16:10.797+0000] {logging_mixin.py:190} INFO - /placa-mae-gigabyte-b650m-d3hp-ax-ddr5-socket-am5-m-atx-chipset-amd-b650-b650m-d3hp-ax
+[2024-10-02T21:16:10.797+0000] {logging_mixin.py:190} INFO - Placa Mae Gigabyte B650M D3HP AX, DDR5, Socket AM5, M-ATX, Chipset AMD B650, B650M-D3HP-AX
+[2024-10-02T21:16:10.798+0000] {logging_mixin.py:190} INFO - 1099.99
+[2024-10-02T21:16:10.798+0000] {logging_mixin.py:190} INFO - /placa-mae-gigabyte-b760m-gaming-ac-ddr4-lga1700-atx-socket-intel-b760m-b760m-gaming-ac-ddr4
+[2024-10-02T21:16:10.798+0000] {logging_mixin.py:190} INFO - Placa Mae Gigabyte B760M Gaming AC, DDR4, LGA1700, ATX, Socket Intel B760M, B760M-GAMING-AC-DDR4
+[2024-10-02T21:16:10.799+0000] {logging_mixin.py:190} INFO - 999.99
+[2024-10-02T21:16:10.799+0000] {logging_mixin.py:190} INFO - /placa-mae-gigabyte-b760-ds3h-ax-ddr5-socket-lga-1700-atx-chipset-intel-b760-b760-ds3h-ax
+[2024-10-02T21:16:10.800+0000] {logging_mixin.py:190} INFO - Placa Mae Gigabyte B760 DS3H AX, DDR5, Socket LGA 1700, ATX, Chipset Intel B760, B760-DS3H-AX
+[2024-10-02T21:16:10.800+0000] {logging_mixin.py:190} INFO - 1179.99
+[2024-10-02T21:16:10.800+0000] {logging_mixin.py:190} INFO - None
+[2024-10-02T21:16:10.801+0000] {logging_mixin.py:190} INFO - None
+[2024-10-02T21:16:10.801+0000] {logging_mixin.py:190} INFO - None
+[2024-10-02T21:16:10.801+0000] {logging_mixin.py:190} INFO - None
+[2024-10-02T21:16:10.802+0000] {logging_mixin.py:190} INFO - None
+[2024-10-02T21:16:10.802+0000] {logging_mixin.py:190} INFO - None
+[2024-10-02T21:16:10.802+0000] {logging_mixin.py:190} INFO - None
+[2024-10-02T21:16:10.803+0000] {logging_mixin.py:190} INFO - None
+[2024-10-02T21:16:10.803+0000] {logging_mixin.py:190} INFO - None
+[2024-10-02T21:16:10.804+0000] {logging_mixin.py:190} INFO - None
+[2024-10-02T21:16:10.804+0000] {logging_mixin.py:190} INFO - None
+[2024-10-02T21:16:10.805+0000] {logging_mixin.py:190} INFO - None
+[2024-10-02T21:16:10.805+0000] {logging_mixin.py:190} INFO - None
+[2024-10-02T21:16:10.805+0000] {logging_mixin.py:190} INFO - None
+[2024-10-02T21:16:10.806+0000] {logging_mixin.py:190} INFO - None
+[2024-10-02T21:16:10.806+0000] {logging_mixin.py:190} INFO - None
+[2024-10-02T21:16:10.807+0000] {logging_mixin.py:190} INFO - None
+[2024-10-02T21:16:10.807+0000] {logging_mixin.py:190} INFO - None
+[2024-10-02T21:16:10.807+0000] {logging_mixin.py:190} INFO - None
+[2024-10-02T21:16:10.808+0000] {logging_mixin.py:190} INFO - None
+[2024-10-02T21:16:10.808+0000] {logging_mixin.py:190} INFO - None
+[2024-10-02T21:16:10.809+0000] {logging_mixin.py:190} INFO - None
+[2024-10-02T21:16:10.809+0000] {logging_mixin.py:190} INFO - None
+[2024-10-02T21:16:10.810+0000] {logging_mixin.py:190} INFO - None
+[2024-10-02T21:16:10.810+0000] {logging_mixin.py:190} INFO - None
+[2024-10-02T21:16:10.810+0000] {logging_mixin.py:190} INFO - None
+[2024-10-02T21:16:10.811+0000] {logging_mixin.py:190} INFO - None
+[2024-10-02T21:16:16.418+0000] {logging_mixin.py:190} INFO - placas-mae
+[2024-10-02T21:16:21.953+0000] {logging_mixin.py:190} INFO - placas-mae
+[2024-10-02T21:16:27.489+0000] {logging_mixin.py:190} INFO - placas-mae
+[2024-10-02T21:16:33.041+0000] {logging_mixin.py:190} INFO - placas-mae
+[2024-10-02T21:16:38.738+0000] {logging_mixin.py:190} INFO - processadores
+[2024-10-02T21:16:44.804+0000] {logging_mixin.py:190} INFO - processadores
+[2024-10-02T21:16:50.664+0000] {logging_mixin.py:190} INFO - processadores
+[2024-10-02T21:16:56.214+0000] {logging_mixin.py:190} INFO - processadores
+[2024-10-02T21:17:01.758+0000] {logging_mixin.py:190} INFO - processadores
+[2024-10-02T21:17:07.337+0000] {logging_mixin.py:190} INFO - memoria-ram
+[2024-10-02T21:17:12.924+0000] {logging_mixin.py:190} INFO - memoria-ram
+[2024-10-02T21:17:18.527+0000] {logging_mixin.py:190} INFO - memoria-ram
+[2024-10-02T21:17:24.261+0000] {logging_mixin.py:190} INFO - memoria-ram
+[2024-10-02T21:17:29.833+0000] {logging_mixin.py:190} INFO - memoria-ram
+[2024-10-02T21:17:35.418+0000] {logging_mixin.py:190} INFO - placa-de-video-vga
+[2024-10-02T21:17:41.018+0000] {logging_mixin.py:190} INFO - placa-de-video-vga
+[2024-10-02T21:17:46.609+0000] {logging_mixin.py:190} INFO - placa-de-video-vga
+[2024-10-02T21:17:52.182+0000] {logging_mixin.py:190} INFO - placa-de-video-vga
+[2024-10-02T21:17:57.746+0000] {logging_mixin.py:190} INFO - placa-de-video-vga
+[2024-10-02T21:17:57.892+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-10-02T21:17:57.893+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=SitesWebScraping, task_id=Web_Extraction_siteA, run_id=manual__2024-10-02T21:15:58.589238+00:00, execution_date=20241002T211558, start_date=20241002T211601, end_date=20241002T211757
+[2024-10-02T21:17:58.022+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-10-02T21:17:58.066+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-10-02T21:17:58.072+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

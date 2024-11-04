@@ -1,0 +1,169 @@
+[2024-10-04T20:23:12.017+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-10-04T20:23:12.033+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: SitesWebScraping.Spark_Transformation_pichau manual__2024-10-04T20:20:45.703568+00:00 [queued]>
+[2024-10-04T20:23:12.041+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: SitesWebScraping.Spark_Transformation_pichau manual__2024-10-04T20:20:45.703568+00:00 [queued]>
+[2024-10-04T20:23:12.042+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2024-10-04T20:23:12.057+0000] {taskinstance.py:2888} INFO - Executing <Task(OperatorSubmitSpark): Spark_Transformation_pichau> on 2024-10-04 20:20:45.703568+00:00
+[2024-10-04T20:23:12.067+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1387) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-04T20:23:12.069+0000] {standard_task_runner.py:72} INFO - Started process 1388 to run task
+[2024-10-04T20:23:12.070+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'SitesWebScraping', 'Spark_Transformation_pichau', 'manual__2024-10-04T20:20:45.703568+00:00', '--job-id', '1068', '--raw', '--subdir', 'DAGS_FOLDER/DagWebScraping.py', '--cfg-path', '/tmp/tmpkrwoesc4']
+[2024-10-04T20:23:12.073+0000] {standard_task_runner.py:105} INFO - Job 1068: Subtask Spark_Transformation_pichau
+[2024-10-04T20:23:12.124+0000] {task_command.py:467} INFO - Running <TaskInstance: SitesWebScraping.Spark_Transformation_pichau manual__2024-10-04T20:20:45.703568+00:00 [running]> on host f8603ea05473
+[2024-10-04T20:23:12.198+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='SitesWebScraping' AIRFLOW_CTX_TASK_ID='Spark_Transformation_pichau' AIRFLOW_CTX_EXECUTION_DATE='2024-10-04T20:20:45.703568+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-04T20:20:45.703568+00:00'
+[2024-10-04T20:23:12.200+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-10-04T20:23:12.226+0000] {logging_mixin.py:190} INFO - /opt/***/datalake/silverzone/pichau_2024-10-04
+[2024-10-04T20:23:12.226+0000] {logging_mixin.py:190} INFO - None
+[2024-10-04T20:23:12.227+0000] {baseoperator.py:405} WARNING - OperatorSubmitSpark.execute cannot be called outside TaskInstance!
+[2024-10-04T20:23:12.235+0000] {base.py:84} INFO - Retrieving connection 'spark_default'
+[2024-10-04T20:23:12.236+0000] {spark_submit.py:403} INFO - Spark-Submit cmd: spark-submit --master spark://spark:7077 --num-executors 2 --driver-memory 512M --name arrow-spark --deploy-mode client /opt/bitnami/spark/src/scripts_spark/WebScraping_Transformation.py --path_save_transfor /opt/***/datalake/silverzone/pichau_2024-10-04 --json_file_path None
+[2024-10-04T20:23:14.877+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:14 INFO SparkContext: Running Spark version 3.5.2
+[2024-10-04T20:23:14.878+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:14 INFO SparkContext: OS info Linux, 5.15.153.1-microsoft-standard-WSL2, amd64
+[2024-10-04T20:23:14.879+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:14 INFO SparkContext: Java version 17.0.12
+[2024-10-04T20:23:14.929+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:14 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2024-10-04T20:23:15.020+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:15 INFO ResourceUtils: ==============================================================
+[2024-10-04T20:23:15.021+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:15 INFO ResourceUtils: No custom resources configured for spark.driver.
+[2024-10-04T20:23:15.021+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:15 INFO ResourceUtils: ==============================================================
+[2024-10-04T20:23:15.022+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:15 INFO SparkContext: Submitted application: Test
+[2024-10-04T20:23:15.037+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:15 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[2024-10-04T20:23:15.044+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:15 INFO ResourceProfile: Limiting resource is cpu
+[2024-10-04T20:23:15.045+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:15 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[2024-10-04T20:23:15.084+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:15 INFO SecurityManager: Changing view acls to: ***
+[2024-10-04T20:23:15.085+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:15 INFO SecurityManager: Changing modify acls to: ***
+[2024-10-04T20:23:15.085+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:15 INFO SecurityManager: Changing view acls groups to:
+[2024-10-04T20:23:15.086+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:15 INFO SecurityManager: Changing modify acls groups to:
+[2024-10-04T20:23:15.086+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:15 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: ***; groups with view permissions: EMPTY; users with modify permissions: ***; groups with modify permissions: EMPTY
+[2024-10-04T20:23:15.250+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:15 INFO Utils: Successfully started service 'sparkDriver' on port 36151.
+[2024-10-04T20:23:15.270+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:15 INFO SparkEnv: Registering MapOutputTracker
+[2024-10-04T20:23:15.298+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:15 INFO SparkEnv: Registering BlockManagerMaster
+[2024-10-04T20:23:15.310+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:15 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2024-10-04T20:23:15.310+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:15 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[2024-10-04T20:23:15.313+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:15 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[2024-10-04T20:23:15.330+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:15 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-326d1590-4610-4bed-bf0b-e8c1012b2cae
+[2024-10-04T20:23:15.341+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:15 INFO MemoryStore: MemoryStore started with capacity 127.2 MiB
+[2024-10-04T20:23:15.354+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:15 INFO SparkEnv: Registering OutputCommitCoordinator
+[2024-10-04T20:23:15.459+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:15 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+[2024-10-04T20:23:15.505+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:15 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[2024-10-04T20:23:15.594+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:15 INFO Executor: Starting executor ID driver on host f8603ea05473
+[2024-10-04T20:23:15.594+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:15 INFO Executor: OS info Linux, 5.15.153.1-microsoft-standard-WSL2, amd64
+[2024-10-04T20:23:15.595+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:15 INFO Executor: Java version 17.0.12
+[2024-10-04T20:23:15.600+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:15 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+[2024-10-04T20:23:15.601+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:15 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@71c9df3d for default.
+[2024-10-04T20:23:15.616+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:15 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 34033.
+[2024-10-04T20:23:15.621+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:15 INFO NettyBlockTransferService: Server created on f8603ea05473:34033
+[2024-10-04T20:23:15.625+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:15 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[2024-10-04T20:23:15.629+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:15 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, f8603ea05473, 34033, None)
+[2024-10-04T20:23:15.633+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:15 INFO BlockManagerMasterEndpoint: Registering block manager f8603ea05473:34033 with 127.2 MiB RAM, BlockManagerId(driver, f8603ea05473, 34033, None)
+[2024-10-04T20:23:15.635+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:15 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, f8603ea05473, 34033, None)
+[2024-10-04T20:23:15.636+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:15 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, f8603ea05473, 34033, None)
+[2024-10-04T20:23:16.001+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:16 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+[2024-10-04T20:23:16.008+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:16 INFO SharedState: Warehouse path is 'file:/opt/***/spark-warehouse'.
+[2024-10-04T20:23:16.835+0000] {spark_submit.py:579} INFO - Traceback (most recent call last):
+[2024-10-04T20:23:16.836+0000] {spark_submit.py:579} INFO - File "/opt/bitnami/spark/src/scripts_spark/WebScraping_Transformation.py", line 129, in <module>
+[2024-10-04T20:23:16.837+0000] {spark_submit.py:579} INFO - transformation_data(args.json_file_path,args.path_save_transfor)
+[2024-10-04T20:23:16.838+0000] {spark_submit.py:579} INFO - File "/opt/bitnami/spark/src/scripts_spark/WebScraping_Transformation.py", line 28, in transformation_data
+[2024-10-04T20:23:16.839+0000] {spark_submit.py:579} INFO - df=spark.read.json(path)
+[2024-10-04T20:23:16.840+0000] {spark_submit.py:579} INFO - ^^^^^^^^^^^^^^^^^^^^^
+[2024-10-04T20:23:16.840+0000] {spark_submit.py:579} INFO - File "/home/***/.local/lib/python3.12/site-packages/pyspark/python/lib/pyspark.zip/pyspark/sql/readwriter.py", line 425, in json
+[2024-10-04T20:23:16.841+0000] {spark_submit.py:579} INFO - File "/home/***/.local/lib/python3.12/site-packages/pyspark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+[2024-10-04T20:23:16.841+0000] {spark_submit.py:579} INFO - File "/home/***/.local/lib/python3.12/site-packages/pyspark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 185, in deco
+[2024-10-04T20:23:16.848+0000] {spark_submit.py:579} INFO - pyspark.errors.exceptions.captured.AnalysisException: [PATH_NOT_FOUND] Path does not exist: file:/opt/***/None.
+[2024-10-04T20:23:16.904+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:16 INFO SparkContext: Invoking stop() from shutdown hook
+[2024-10-04T20:23:16.905+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:16 INFO SparkContext: SparkContext is stopping with exitCode 0.
+[2024-10-04T20:23:16.913+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:16 INFO SparkUI: Stopped Spark web UI at http://f8603ea05473:4040
+[2024-10-04T20:23:16.923+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:16 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+[2024-10-04T20:23:16.933+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:16 INFO MemoryStore: MemoryStore cleared
+[2024-10-04T20:23:16.934+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:16 INFO BlockManager: BlockManager stopped
+[2024-10-04T20:23:16.938+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:16 INFO BlockManagerMaster: BlockManagerMaster stopped
+[2024-10-04T20:23:16.940+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:16 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+[2024-10-04T20:23:16.946+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:16 INFO SparkContext: Successfully stopped SparkContext
+[2024-10-04T20:23:16.946+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:16 INFO ShutdownHookManager: Shutdown hook called
+[2024-10-04T20:23:16.947+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:16 INFO ShutdownHookManager: Deleting directory /tmp/spark-5421ad50-a300-46e2-8361-7f424dffbdcb
+[2024-10-04T20:23:16.951+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:16 INFO ShutdownHookManager: Deleting directory /tmp/spark-5421ad50-a300-46e2-8361-7f424dffbdcb/pyspark-33431669-6066-40db-a31e-d5788e2e14fc
+[2024-10-04T20:23:16.954+0000] {spark_submit.py:579} INFO - 24/10/04 20:23:16 INFO ShutdownHookManager: Deleting directory /tmp/spark-14130e99-ba3e-4d12-9759-3865815a8eb0
+[2024-10-04T20:23:16.999+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/operators/OperatorSpark.py", line 21, in execute
+    super().execute(context)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/apache/spark/operators/spark_submit.py", line 174, in execute
+    self._hook.submit(self.application)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 505, in submit
+    raise AirflowException(
+airflow.exceptions.AirflowException: Cannot execute: spark-submit --master spark://spark:7077 --num-executors 2 --driver-memory 512M --name arrow-spark --deploy-mode client /opt/bitnami/spark/src/scripts_spark/WebScraping_Transformation.py --path_save_transfor /opt/***/datalake/silverzone/pichau_2024-10-04 --json_file_path None. Error code is: 1.
+[2024-10-04T20:23:17.007+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=SitesWebScraping, task_id=Spark_Transformation_pichau, run_id=manual__2024-10-04T20:20:45.703568+00:00, execution_date=20241004T202045, start_date=20241004T202312, end_date=20241004T202317
+[2024-10-04T20:23:17.019+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-10-04T20:23:17.019+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 1068 for task Spark_Transformation_pichau (Cannot execute: spark-submit --master spark://spark:7077 --num-executors 2 --driver-memory 512M --name arrow-spark --deploy-mode client /opt/bitnami/spark/src/scripts_spark/WebScraping_Transformation.py --path_save_transfor /opt/***/datalake/silverzone/pichau_2024-10-04 --json_file_path None. Error code is: 1.; 1388)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3004, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3158, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3182, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/operators/OperatorSpark.py", line 21, in execute
+    super().execute(context)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/apache/spark/operators/spark_submit.py", line 174, in execute
+    self._hook.submit(self.application)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 505, in submit
+    raise AirflowException(
+airflow.exceptions.AirflowException: Cannot execute: spark-submit --master spark://spark:7077 --num-executors 2 --driver-memory 512M --name arrow-spark --deploy-mode client /opt/bitnami/spark/src/scripts_spark/WebScraping_Transformation.py --path_save_transfor /opt/***/datalake/silverzone/pichau_2024-10-04 --json_file_path None. Error code is: 1.
+[2024-10-04T20:23:17.061+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2024-10-04T20:23:17.077+0000] {standard_task_runner.py:217} INFO - Process not found (most likely exited), stop collecting metrics
+[2024-10-04T20:23:17.079+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-04T20:23:17.082+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

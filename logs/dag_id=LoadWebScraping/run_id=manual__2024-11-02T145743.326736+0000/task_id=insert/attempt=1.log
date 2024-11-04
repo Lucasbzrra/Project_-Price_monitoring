@@ -1,0 +1,280 @@
+[2024-11-02T14:57:47.493+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-02T14:57:47.510+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: LoadWebScraping.insert manual__2024-11-02T14:57:43.326736+00:00 [queued]>
+[2024-11-02T14:57:47.518+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: LoadWebScraping.insert manual__2024-11-02T14:57:43.326736+00:00 [queued]>
+[2024-11-02T14:57:47.519+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2024-11-02T14:57:47.536+0000] {taskinstance.py:2888} INFO - Executing <Task(SparkSubmitOperator): insert> on 2024-11-02 14:57:43.326736+00:00
+[2024-11-02T14:57:47.543+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=11010) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-11-02T14:57:47.544+0000] {standard_task_runner.py:72} INFO - Started process 11012 to run task
+[2024-11-02T14:57:47.545+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'LoadWebScraping', 'insert', 'manual__2024-11-02T14:57:43.326736+00:00', '--job-id', '220', '--raw', '--subdir', 'DAGS_FOLDER/LoadWebScraping.py', '--cfg-path', '/tmp/tmper8mlxw_']
+[2024-11-02T14:57:47.548+0000] {standard_task_runner.py:105} INFO - Job 220: Subtask insert
+[2024-11-02T14:57:47.597+0000] {task_command.py:467} INFO - Running <TaskInstance: LoadWebScraping.insert manual__2024-11-02T14:57:43.326736+00:00 [running]> on host c9f99735a600
+[2024-11-02T14:57:47.683+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='LoadWebScraping' AIRFLOW_CTX_TASK_ID='insert' AIRFLOW_CTX_EXECUTION_DATE='2024-11-02T14:57:43.326736+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-02T14:57:43.326736+00:00'
+[2024-11-02T14:57:47.684+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-02T14:57:47.708+0000] {base.py:84} INFO - Retrieving connection 'spark_default'
+[2024-11-02T14:57:47.709+0000] {spark_submit.py:327} ERROR - Failed to decode base64 keytab: Incorrect padding
+[2024-11-02T14:57:47.710+0000] {spark_submit.py:304} INFO - Could not load connection string spark_default, defaulting to spark://spark:7077
+[2024-11-02T14:57:47.711+0000] {spark_submit.py:473} INFO - Spark-Submit cmd: spark-submit --master spark://spark:7077 --driver-class-path /opt/***/jars/postgresql-42.5.0.jar --jars /opt/***/jars/postgresql-42.5.0.jar --packages org.postgresql:postgresql:42.5.0 --name arrow-spark --deploy-mode client /opt/bitnami/spark/src/scripts_spark/LoadFileToDB.py
+[2024-11-02T14:57:49.191+0000] {spark_submit.py:634} INFO - :: loading settings :: url = jar:file:/home/***/.local/lib/python3.12/site-packages/pyspark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[2024-11-02T14:57:49.243+0000] {spark_submit.py:634} INFO - Ivy Default Cache set to: /home/***/.ivy2/cache
+[2024-11-02T14:57:49.244+0000] {spark_submit.py:634} INFO - The jars for the packages stored in: /home/***/.ivy2/jars
+[2024-11-02T14:57:49.252+0000] {spark_submit.py:634} INFO - org.postgresql#postgresql added as a dependency
+[2024-11-02T14:57:49.253+0000] {spark_submit.py:634} INFO - :: resolving dependencies :: org.apache.spark#spark-submit-parent-fc931c87-fe4b-4884-9a4b-4d7e52f7807b;1.0
+[2024-11-02T14:57:49.254+0000] {spark_submit.py:634} INFO - confs: [default]
+[2024-11-02T14:57:49.331+0000] {spark_submit.py:634} INFO - found org.postgresql#postgresql;42.5.0 in central
+[2024-11-02T14:57:49.347+0000] {spark_submit.py:634} INFO - found org.checkerframework#checker-qual;3.5.0 in central
+[2024-11-02T14:57:49.359+0000] {spark_submit.py:634} INFO - :: resolution report :: resolve 102ms :: artifacts dl 4ms
+[2024-11-02T14:57:49.360+0000] {spark_submit.py:634} INFO - :: modules in use:
+[2024-11-02T14:57:49.360+0000] {spark_submit.py:634} INFO - org.checkerframework#checker-qual;3.5.0 from central in [default]
+[2024-11-02T14:57:49.361+0000] {spark_submit.py:634} INFO - org.postgresql#postgresql;42.5.0 from central in [default]
+[2024-11-02T14:57:49.361+0000] {spark_submit.py:634} INFO - ---------------------------------------------------------------------
+[2024-11-02T14:57:49.362+0000] {spark_submit.py:634} INFO - |                  |            modules            ||   artifacts   |
+[2024-11-02T14:57:49.362+0000] {spark_submit.py:634} INFO - |       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+[2024-11-02T14:57:49.362+0000] {spark_submit.py:634} INFO - ---------------------------------------------------------------------
+[2024-11-02T14:57:49.363+0000] {spark_submit.py:634} INFO - |      default     |   2   |   0   |   0   |   0   ||   2   |   0   |
+[2024-11-02T14:57:49.363+0000] {spark_submit.py:634} INFO - ---------------------------------------------------------------------
+[2024-11-02T14:57:49.364+0000] {spark_submit.py:634} INFO - :: retrieving :: org.apache.spark#spark-submit-parent-fc931c87-fe4b-4884-9a4b-4d7e52f7807b
+[2024-11-02T14:57:49.364+0000] {spark_submit.py:634} INFO - confs: [default]
+[2024-11-02T14:57:49.365+0000] {spark_submit.py:634} INFO - 0 artifacts copied, 2 already retrieved (0kB/3ms)
+[2024-11-02T14:57:49.502+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:49 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2024-11-02T14:57:49.631+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:49 WARN DependencyUtils: Local jar /opt/***/jars/postgresql-42.5.0.jar does not exist, skipping.
+[2024-11-02T14:57:52.276+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:52 INFO SparkContext: Running Spark version 3.5.2
+[2024-11-02T14:57:52.276+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:52 INFO SparkContext: OS info Linux, 5.15.153.1-microsoft-standard-WSL2, amd64
+[2024-11-02T14:57:52.277+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:52 INFO SparkContext: Java version 17.0.13
+[2024-11-02T14:57:52.297+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:52 INFO ResourceUtils: ==============================================================
+[2024-11-02T14:57:52.299+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:52 INFO ResourceUtils: No custom resources configured for spark.driver.
+[2024-11-02T14:57:52.300+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:52 INFO ResourceUtils: ==============================================================
+[2024-11-02T14:57:52.300+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:52 INFO SparkContext: Submitted application: Insert_data
+[2024-11-02T14:57:52.324+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:52 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[2024-11-02T14:57:52.334+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:52 INFO ResourceProfile: Limiting resource is cpu
+[2024-11-02T14:57:52.335+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:52 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[2024-11-02T14:57:52.383+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:52 INFO SecurityManager: Changing view acls to: ***
+[2024-11-02T14:57:52.384+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:52 INFO SecurityManager: Changing modify acls to: ***
+[2024-11-02T14:57:52.384+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:52 INFO SecurityManager: Changing view acls groups to:
+[2024-11-02T14:57:52.385+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:52 INFO SecurityManager: Changing modify acls groups to:
+[2024-11-02T14:57:52.386+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:52 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: ***; groups with view permissions: EMPTY; users with modify permissions: ***; groups with modify permissions: EMPTY
+[2024-11-02T14:57:52.616+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:52 INFO Utils: Successfully started service 'sparkDriver' on port 44027.
+[2024-11-02T14:57:52.664+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:52 INFO SparkEnv: Registering MapOutputTracker
+[2024-11-02T14:57:52.691+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:52 INFO SparkEnv: Registering BlockManagerMaster
+[2024-11-02T14:57:52.714+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:52 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2024-11-02T14:57:52.715+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:52 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[2024-11-02T14:57:52.719+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:52 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[2024-11-02T14:57:52.736+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:52 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-564eefdf-456d-4f1c-bafc-8edb04e83602
+[2024-11-02T14:57:52.747+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:52 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+[2024-11-02T14:57:52.760+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:52 INFO SparkEnv: Registering OutputCommitCoordinator
+[2024-11-02T14:57:52.855+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:52 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+[2024-11-02T14:57:52.901+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:52 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[2024-11-02T14:57:52.930+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:52 ERROR SparkContext: Failed to add /opt/bitnami/spark/jars/postgresql-42.5.0.jar to Spark environment
+[2024-11-02T14:57:52.930+0000] {spark_submit.py:634} INFO - java.io.FileNotFoundException: Jar /opt/bitnami/spark/jars/postgresql-42.5.0.jar not found
+[2024-11-02T14:57:52.931+0000] {spark_submit.py:634} INFO - at org.apache.spark.SparkContext.addLocalJarFile$1(SparkContext.scala:2095)
+[2024-11-02T14:57:52.932+0000] {spark_submit.py:634} INFO - at org.apache.spark.SparkContext.addJar(SparkContext.scala:2151)
+[2024-11-02T14:57:52.932+0000] {spark_submit.py:634} INFO - at org.apache.spark.SparkContext.$anonfun$new$15(SparkContext.scala:521)
+[2024-11-02T14:57:52.932+0000] {spark_submit.py:634} INFO - at org.apache.spark.SparkContext.$anonfun$new$15$adapted(SparkContext.scala:521)
+[2024-11-02T14:57:52.933+0000] {spark_submit.py:634} INFO - at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+[2024-11-02T14:57:52.933+0000] {spark_submit.py:634} INFO - at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+[2024-11-02T14:57:52.934+0000] {spark_submit.py:634} INFO - at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+[2024-11-02T14:57:52.934+0000] {spark_submit.py:634} INFO - at org.apache.spark.SparkContext.<init>(SparkContext.scala:521)
+[2024-11-02T14:57:52.934+0000] {spark_submit.py:634} INFO - at org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:58)
+[2024-11-02T14:57:52.935+0000] {spark_submit.py:634} INFO - at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+[2024-11-02T14:57:52.935+0000] {spark_submit.py:634} INFO - at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+[2024-11-02T14:57:52.936+0000] {spark_submit.py:634} INFO - at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+[2024-11-02T14:57:52.936+0000] {spark_submit.py:634} INFO - at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+[2024-11-02T14:57:52.936+0000] {spark_submit.py:634} INFO - at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+[2024-11-02T14:57:52.937+0000] {spark_submit.py:634} INFO - at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:247)
+[2024-11-02T14:57:52.937+0000] {spark_submit.py:634} INFO - at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+[2024-11-02T14:57:52.938+0000] {spark_submit.py:634} INFO - at py4j.Gateway.invoke(Gateway.java:238)
+[2024-11-02T14:57:52.938+0000] {spark_submit.py:634} INFO - at py4j.commands.ConstructorCommand.invokeConstructor(ConstructorCommand.java:80)
+[2024-11-02T14:57:52.939+0000] {spark_submit.py:634} INFO - at py4j.commands.ConstructorCommand.execute(ConstructorCommand.java:69)
+[2024-11-02T14:57:52.939+0000] {spark_submit.py:634} INFO - at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+[2024-11-02T14:57:52.939+0000] {spark_submit.py:634} INFO - at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+[2024-11-02T14:57:52.940+0000] {spark_submit.py:634} INFO - at java.base/java.lang.Thread.run(Thread.java:840)
+[2024-11-02T14:57:52.940+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:52 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.postgresql_postgresql-42.5.0.jar at file:///home/***/.ivy2/jars/org.postgresql_postgresql-42.5.0.jar with timestamp 1730559472270
+[2024-11-02T14:57:52.941+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:52 INFO Utils: Copying /home/***/.ivy2/jars/org.postgresql_postgresql-42.5.0.jar to /tmp/spark-c922a500-1ade-4bc4-8fc2-e1888764f481/userFiles-7bbea933-7e97-4c06-b130-32f4a6b2a2d9/org.postgresql_postgresql-42.5.0.jar
+[2024-11-02T14:57:52.944+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:52 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.checkerframework_checker-qual-3.5.0.jar at file:///home/***/.ivy2/jars/org.checkerframework_checker-qual-3.5.0.jar with timestamp 1730559472270
+[2024-11-02T14:57:52.945+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:52 INFO Utils: Copying /home/***/.ivy2/jars/org.checkerframework_checker-qual-3.5.0.jar to /tmp/spark-c922a500-1ade-4bc4-8fc2-e1888764f481/userFiles-7bbea933-7e97-4c06-b130-32f4a6b2a2d9/org.checkerframework_checker-qual-3.5.0.jar
+[2024-11-02T14:57:53.004+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:53 INFO Executor: Starting executor ID driver on host c9f99735a600
+[2024-11-02T14:57:53.004+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:53 INFO Executor: OS info Linux, 5.15.153.1-microsoft-standard-WSL2, amd64
+[2024-11-02T14:57:53.005+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:53 INFO Executor: Java version 17.0.13
+[2024-11-02T14:57:53.009+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:53 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+[2024-11-02T14:57:53.010+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:53 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@3ece54a4 for default.
+[2024-11-02T14:57:53.020+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:53 INFO Executor: Fetching file:///home/***/.ivy2/jars/org.checkerframework_checker-qual-3.5.0.jar with timestamp 1730559472270
+[2024-11-02T14:57:53.038+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:53 INFO Utils: /home/***/.ivy2/jars/org.checkerframework_checker-qual-3.5.0.jar has been previously copied to /tmp/spark-c922a500-1ade-4bc4-8fc2-e1888764f481/userFiles-7bbea933-7e97-4c06-b130-32f4a6b2a2d9/org.checkerframework_checker-qual-3.5.0.jar
+[2024-11-02T14:57:53.043+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:53 INFO Executor: Fetching file:///home/***/.ivy2/jars/org.postgresql_postgresql-42.5.0.jar with timestamp 1730559472270
+[2024-11-02T14:57:53.047+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:53 INFO Utils: /home/***/.ivy2/jars/org.postgresql_postgresql-42.5.0.jar has been previously copied to /tmp/spark-c922a500-1ade-4bc4-8fc2-e1888764f481/userFiles-7bbea933-7e97-4c06-b130-32f4a6b2a2d9/org.postgresql_postgresql-42.5.0.jar
+[2024-11-02T14:57:53.066+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:53 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 39381.
+[2024-11-02T14:57:53.066+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:53 INFO NettyBlockTransferService: Server created on c9f99735a600:39381
+[2024-11-02T14:57:53.068+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:53 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[2024-11-02T14:57:53.073+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:53 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, c9f99735a600, 39381, None)
+[2024-11-02T14:57:53.077+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:53 INFO BlockManagerMasterEndpoint: Registering block manager c9f99735a600:39381 with 434.4 MiB RAM, BlockManagerId(driver, c9f99735a600, 39381, None)
+[2024-11-02T14:57:53.079+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:53 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, c9f99735a600, 39381, None)
+[2024-11-02T14:57:53.080+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:53 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, c9f99735a600, 39381, None)
+[2024-11-02T14:57:53.479+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:53 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+[2024-11-02T14:57:53.481+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:53 INFO SharedState: Warehouse path is 'file:/opt/***/spark-warehouse'.
+[2024-11-02T14:57:54.122+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:54 WARN FileStreamSink: Assume no metadata directory. Error while looking for metadata directory in the path: s3a://rawzone/kabum/kabum_2024-11-02/data.json.
+[2024-11-02T14:57:54.123+0000] {spark_submit.py:634} INFO - java.lang.RuntimeException: java.lang.ClassNotFoundException: Class org.apache.hadoop.fs.s3a.S3AFileSystem not found
+[2024-11-02T14:57:54.123+0000] {spark_submit.py:634} INFO - at org.apache.hadoop.conf.Configuration.getClass(Configuration.java:2688)
+[2024-11-02T14:57:54.124+0000] {spark_submit.py:634} INFO - at org.apache.hadoop.fs.FileSystem.getFileSystemClass(FileSystem.java:3431)
+[2024-11-02T14:57:54.124+0000] {spark_submit.py:634} INFO - at org.apache.hadoop.fs.FileSystem.createFileSystem(FileSystem.java:3466)
+[2024-11-02T14:57:54.124+0000] {spark_submit.py:634} INFO - at org.apache.hadoop.fs.FileSystem.access$300(FileSystem.java:174)
+[2024-11-02T14:57:54.125+0000] {spark_submit.py:634} INFO - at org.apache.hadoop.fs.FileSystem$Cache.getInternal(FileSystem.java:3574)
+[2024-11-02T14:57:54.125+0000] {spark_submit.py:634} INFO - at org.apache.hadoop.fs.FileSystem$Cache.get(FileSystem.java:3521)
+[2024-11-02T14:57:54.125+0000] {spark_submit.py:634} INFO - at org.apache.hadoop.fs.FileSystem.get(FileSystem.java:540)
+[2024-11-02T14:57:54.126+0000] {spark_submit.py:634} INFO - at org.apache.hadoop.fs.Path.getFileSystem(Path.java:365)
+[2024-11-02T14:57:54.126+0000] {spark_submit.py:634} INFO - at org.apache.spark.sql.execution.streaming.FileStreamSink$.hasMetadata(FileStreamSink.scala:53)
+[2024-11-02T14:57:54.127+0000] {spark_submit.py:634} INFO - at org.apache.spark.sql.execution.datasources.DataSource.resolveRelation(DataSource.scala:366)
+[2024-11-02T14:57:54.127+0000] {spark_submit.py:634} INFO - at org.apache.spark.sql.DataFrameReader.loadV1Source(DataFrameReader.scala:229)
+[2024-11-02T14:57:54.128+0000] {spark_submit.py:634} INFO - at org.apache.spark.sql.DataFrameReader.$anonfun$load$2(DataFrameReader.scala:211)
+[2024-11-02T14:57:54.129+0000] {spark_submit.py:634} INFO - at scala.Option.getOrElse(Option.scala:189)
+[2024-11-02T14:57:54.130+0000] {spark_submit.py:634} INFO - at org.apache.spark.sql.DataFrameReader.load(DataFrameReader.scala:211)
+[2024-11-02T14:57:54.130+0000] {spark_submit.py:634} INFO - at org.apache.spark.sql.DataFrameReader.parquet(DataFrameReader.scala:563)
+[2024-11-02T14:57:54.131+0000] {spark_submit.py:634} INFO - at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[2024-11-02T14:57:54.131+0000] {spark_submit.py:634} INFO - at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+[2024-11-02T14:57:54.132+0000] {spark_submit.py:634} INFO - at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[2024-11-02T14:57:54.132+0000] {spark_submit.py:634} INFO - at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+[2024-11-02T14:57:54.133+0000] {spark_submit.py:634} INFO - at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+[2024-11-02T14:57:54.133+0000] {spark_submit.py:634} INFO - at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+[2024-11-02T14:57:54.133+0000] {spark_submit.py:634} INFO - at py4j.Gateway.invoke(Gateway.java:282)
+[2024-11-02T14:57:54.134+0000] {spark_submit.py:634} INFO - at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+[2024-11-02T14:57:54.134+0000] {spark_submit.py:634} INFO - at py4j.commands.CallCommand.execute(CallCommand.java:79)
+[2024-11-02T14:57:54.134+0000] {spark_submit.py:634} INFO - at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+[2024-11-02T14:57:54.135+0000] {spark_submit.py:634} INFO - at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+[2024-11-02T14:57:54.135+0000] {spark_submit.py:634} INFO - at java.base/java.lang.Thread.run(Thread.java:840)
+[2024-11-02T14:57:54.136+0000] {spark_submit.py:634} INFO - Caused by: java.lang.ClassNotFoundException: Class org.apache.hadoop.fs.s3a.S3AFileSystem not found
+[2024-11-02T14:57:54.136+0000] {spark_submit.py:634} INFO - at org.apache.hadoop.conf.Configuration.getClassByName(Configuration.java:2592)
+[2024-11-02T14:57:54.137+0000] {spark_submit.py:634} INFO - at org.apache.hadoop.conf.Configuration.getClass(Configuration.java:2686)
+[2024-11-02T14:57:54.137+0000] {spark_submit.py:634} INFO - ... 26 more
+[2024-11-02T14:57:54.171+0000] {spark_submit.py:634} INFO - Traceback (most recent call last):
+[2024-11-02T14:57:54.172+0000] {spark_submit.py:634} INFO - File "/opt/bitnami/spark/src/scripts_spark/LoadFileToDB.py", line 50, in <module>
+[2024-11-02T14:57:54.173+0000] {spark_submit.py:634} INFO - df_memoria = spark.read.parquet(local_path)
+[2024-11-02T14:57:54.173+0000] {spark_submit.py:634} INFO - ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-11-02T14:57:54.173+0000] {spark_submit.py:634} INFO - File "/home/***/.local/lib/python3.12/site-packages/pyspark/python/lib/pyspark.zip/pyspark/sql/readwriter.py", line 544, in parquet
+[2024-11-02T14:57:54.174+0000] {spark_submit.py:634} INFO - File "/home/***/.local/lib/python3.12/site-packages/pyspark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+[2024-11-02T14:57:54.175+0000] {spark_submit.py:634} INFO - File "/home/***/.local/lib/python3.12/site-packages/pyspark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 179, in deco
+[2024-11-02T14:57:54.176+0000] {spark_submit.py:634} INFO - File "/home/***/.local/lib/python3.12/site-packages/pyspark/python/lib/py4j-0.10.9.7-src.zip/py4j/protocol.py", line 326, in get_return_value
+[2024-11-02T14:57:54.178+0000] {spark_submit.py:634} INFO - py4j.protocol.Py4JJavaError: An error occurred while calling o42.parquet.
+[2024-11-02T14:57:54.178+0000] {spark_submit.py:634} INFO - : java.lang.RuntimeException: java.lang.ClassNotFoundException: Class org.apache.hadoop.fs.s3a.S3AFileSystem not found
+[2024-11-02T14:57:54.178+0000] {spark_submit.py:634} INFO - at org.apache.hadoop.conf.Configuration.getClass(Configuration.java:2688)
+[2024-11-02T14:57:54.179+0000] {spark_submit.py:634} INFO - at org.apache.hadoop.fs.FileSystem.getFileSystemClass(FileSystem.java:3431)
+[2024-11-02T14:57:54.179+0000] {spark_submit.py:634} INFO - at org.apache.hadoop.fs.FileSystem.createFileSystem(FileSystem.java:3466)
+[2024-11-02T14:57:54.179+0000] {spark_submit.py:634} INFO - at org.apache.hadoop.fs.FileSystem.access$300(FileSystem.java:174)
+[2024-11-02T14:57:54.179+0000] {spark_submit.py:634} INFO - at org.apache.hadoop.fs.FileSystem$Cache.getInternal(FileSystem.java:3574)
+[2024-11-02T14:57:54.180+0000] {spark_submit.py:634} INFO - at org.apache.hadoop.fs.FileSystem$Cache.get(FileSystem.java:3521)
+[2024-11-02T14:57:54.180+0000] {spark_submit.py:634} INFO - at org.apache.hadoop.fs.FileSystem.get(FileSystem.java:540)
+[2024-11-02T14:57:54.180+0000] {spark_submit.py:634} INFO - at org.apache.hadoop.fs.Path.getFileSystem(Path.java:365)
+[2024-11-02T14:57:54.181+0000] {spark_submit.py:634} INFO - at org.apache.spark.sql.execution.datasources.DataSource$.$anonfun$checkAndGlobPathIfNecessary$1(DataSource.scala:724)
+[2024-11-02T14:57:54.181+0000] {spark_submit.py:634} INFO - at scala.collection.immutable.List.map(List.scala:293)
+[2024-11-02T14:57:54.181+0000] {spark_submit.py:634} INFO - at org.apache.spark.sql.execution.datasources.DataSource$.checkAndGlobPathIfNecessary(DataSource.scala:722)
+[2024-11-02T14:57:54.181+0000] {spark_submit.py:634} INFO - at org.apache.spark.sql.execution.datasources.DataSource.checkAndGlobPathIfNecessary(DataSource.scala:551)
+[2024-11-02T14:57:54.182+0000] {spark_submit.py:634} INFO - at org.apache.spark.sql.execution.datasources.DataSource.resolveRelation(DataSource.scala:404)
+[2024-11-02T14:57:54.182+0000] {spark_submit.py:634} INFO - at org.apache.spark.sql.DataFrameReader.loadV1Source(DataFrameReader.scala:229)
+[2024-11-02T14:57:54.182+0000] {spark_submit.py:634} INFO - at org.apache.spark.sql.DataFrameReader.$anonfun$load$2(DataFrameReader.scala:211)
+[2024-11-02T14:57:54.183+0000] {spark_submit.py:634} INFO - at scala.Option.getOrElse(Option.scala:189)
+[2024-11-02T14:57:54.183+0000] {spark_submit.py:634} INFO - at org.apache.spark.sql.DataFrameReader.load(DataFrameReader.scala:211)
+[2024-11-02T14:57:54.183+0000] {spark_submit.py:634} INFO - at org.apache.spark.sql.DataFrameReader.parquet(DataFrameReader.scala:563)
+[2024-11-02T14:57:54.183+0000] {spark_submit.py:634} INFO - at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[2024-11-02T14:57:54.184+0000] {spark_submit.py:634} INFO - at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+[2024-11-02T14:57:54.184+0000] {spark_submit.py:634} INFO - at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[2024-11-02T14:57:54.184+0000] {spark_submit.py:634} INFO - at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+[2024-11-02T14:57:54.185+0000] {spark_submit.py:634} INFO - at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+[2024-11-02T14:57:54.185+0000] {spark_submit.py:634} INFO - at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+[2024-11-02T14:57:54.185+0000] {spark_submit.py:634} INFO - at py4j.Gateway.invoke(Gateway.java:282)
+[2024-11-02T14:57:54.186+0000] {spark_submit.py:634} INFO - at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+[2024-11-02T14:57:54.186+0000] {spark_submit.py:634} INFO - at py4j.commands.CallCommand.execute(CallCommand.java:79)
+[2024-11-02T14:57:54.186+0000] {spark_submit.py:634} INFO - at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+[2024-11-02T14:57:54.187+0000] {spark_submit.py:634} INFO - at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+[2024-11-02T14:57:54.187+0000] {spark_submit.py:634} INFO - at java.base/java.lang.Thread.run(Thread.java:840)
+[2024-11-02T14:57:54.187+0000] {spark_submit.py:634} INFO - Caused by: java.lang.ClassNotFoundException: Class org.apache.hadoop.fs.s3a.S3AFileSystem not found
+[2024-11-02T14:57:54.187+0000] {spark_submit.py:634} INFO - at org.apache.hadoop.conf.Configuration.getClassByName(Configuration.java:2592)
+[2024-11-02T14:57:54.188+0000] {spark_submit.py:634} INFO - at org.apache.hadoop.conf.Configuration.getClass(Configuration.java:2686)
+[2024-11-02T14:57:54.188+0000] {spark_submit.py:634} INFO - ... 29 more
+[2024-11-02T14:57:54.188+0000] {spark_submit.py:634} INFO - 
+[2024-11-02T14:57:54.189+0000] {spark_submit.py:634} INFO - [2024-11-02T14:57:54.178+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-11-02T14:57:54.419+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:54 INFO SparkContext: Invoking stop() from shutdown hook
+[2024-11-02T14:57:54.420+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:54 INFO SparkContext: SparkContext is stopping with exitCode 0.
+[2024-11-02T14:57:54.428+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:54 INFO SparkUI: Stopped Spark web UI at http://c9f99735a600:4040
+[2024-11-02T14:57:54.438+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:54 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+[2024-11-02T14:57:54.447+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:54 INFO MemoryStore: MemoryStore cleared
+[2024-11-02T14:57:54.448+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:54 INFO BlockManager: BlockManager stopped
+[2024-11-02T14:57:54.453+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:54 INFO BlockManagerMaster: BlockManagerMaster stopped
+[2024-11-02T14:57:54.455+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:54 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+[2024-11-02T14:57:54.461+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:54 INFO SparkContext: Successfully stopped SparkContext
+[2024-11-02T14:57:54.462+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:54 INFO ShutdownHookManager: Shutdown hook called
+[2024-11-02T14:57:54.462+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:54 INFO ShutdownHookManager: Deleting directory /tmp/spark-c922a500-1ade-4bc4-8fc2-e1888764f481
+[2024-11-02T14:57:54.466+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:54 INFO ShutdownHookManager: Deleting directory /tmp/spark-c922a500-1ade-4bc4-8fc2-e1888764f481/pyspark-f517eee4-b0a4-410b-8257-9051edfdf4d8
+[2024-11-02T14:57:54.470+0000] {spark_submit.py:634} INFO - 24/11/02 14:57:54 INFO ShutdownHookManager: Deleting directory /tmp/spark-2148a047-4518-437e-9a97-8e678bd617ae
+[2024-11-02T14:57:54.504+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/apache/spark/operators/spark_submit.py", line 176, in execute
+    self._hook.submit(self.application)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 560, in submit
+    raise AirflowException(
+airflow.exceptions.AirflowException: Cannot execute: spark-submit --master spark://spark:7077 --driver-class-path /opt/***/jars/postgresql-42.5.0.jar --jars /opt/***/jars/postgresql-42.5.0.jar --packages org.postgresql:postgresql:42.5.0 --name arrow-spark --deploy-mode client /opt/bitnami/spark/src/scripts_spark/LoadFileToDB.py. Error code is: 1.
+[2024-11-02T14:57:54.507+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=LoadWebScraping, task_id=insert, run_id=manual__2024-11-02T14:57:43.326736+00:00, execution_date=20241102T145743, start_date=20241102T145747, end_date=20241102T145754
+[2024-11-02T14:57:54.520+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-02T14:57:54.521+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 220 for task insert (Cannot execute: spark-submit --master spark://spark:7077 --driver-class-path /opt/***/jars/postgresql-42.5.0.jar --jars /opt/***/jars/postgresql-42.5.0.jar --packages org.postgresql:postgresql:42.5.0 --name arrow-spark --deploy-mode client /opt/bitnami/spark/src/scripts_spark/LoadFileToDB.py. Error code is: 1.; 11012)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3004, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3158, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3182, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/apache/spark/operators/spark_submit.py", line 176, in execute
+    self._hook.submit(self.application)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 560, in submit
+    raise AirflowException(
+airflow.exceptions.AirflowException: Cannot execute: spark-submit --master spark://spark:7077 --driver-class-path /opt/***/jars/postgresql-42.5.0.jar --jars /opt/***/jars/postgresql-42.5.0.jar --packages org.postgresql:postgresql:42.5.0 --name arrow-spark --deploy-mode client /opt/bitnami/spark/src/scripts_spark/LoadFileToDB.py. Error code is: 1.
+[2024-11-02T14:57:54.535+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2024-11-02T14:57:54.548+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-11-02T14:57:54.553+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

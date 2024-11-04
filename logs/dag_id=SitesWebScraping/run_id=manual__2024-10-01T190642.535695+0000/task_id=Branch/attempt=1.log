@@ -1,0 +1,24 @@
+[2024-10-01T19:06:46.497+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-10-01T19:06:46.517+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: SitesWebScraping.Branch manual__2024-10-01T19:06:42.535695+00:00 [queued]>
+[2024-10-01T19:06:46.526+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: SitesWebScraping.Branch manual__2024-10-01T19:06:42.535695+00:00 [queued]>
+[2024-10-01T19:06:46.527+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2024-10-01T19:06:46.540+0000] {taskinstance.py:2888} INFO - Executing <Task(BranchPythonOperator): Branch> on 2024-10-01 19:06:42.535695+00:00
+[2024-10-01T19:06:46.545+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=882) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-01T19:06:46.547+0000] {standard_task_runner.py:72} INFO - Started process 883 to run task
+[2024-10-01T19:06:46.547+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'SitesWebScraping', 'Branch', 'manual__2024-10-01T19:06:42.535695+00:00', '--job-id', '635', '--raw', '--subdir', 'DAGS_FOLDER/DagWebScraping.py', '--cfg-path', '/tmp/tmpdefryskw']
+[2024-10-01T19:06:46.549+0000] {standard_task_runner.py:105} INFO - Job 635: Subtask Branch
+[2024-10-01T19:06:46.590+0000] {task_command.py:467} INFO - Running <TaskInstance: SitesWebScraping.Branch manual__2024-10-01T19:06:42.535695+00:00 [running]> on host eb305769d48a
+[2024-10-01T19:06:46.685+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='SitesWebScraping' AIRFLOW_CTX_TASK_ID='Branch' AIRFLOW_CTX_EXECUTION_DATE='2024-10-01T19:06:42.535695+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-01T19:06:42.535695+00:00'
+[2024-10-01T19:06:46.687+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-10-01T19:06:46.704+0000] {baseoperator.py:405} WARNING - BranchPythonOperator.execute cannot be called outside TaskInstance!
+[2024-10-01T19:06:46.713+0000] {python.py:240} INFO - Done. Returned value was: process_file_task
+[2024-10-01T19:06:46.713+0000] {branch.py:38} INFO - Branch into process_file_task
+[2024-10-01T19:06:46.714+0000] {skipmixin.py:230} INFO - Following branch ('process_file_task',)
+[2024-10-01T19:06:46.723+0000] {skipmixin.py:278} INFO - Skipping tasks [('Task_failed', -1)]
+[2024-10-01T19:06:46.759+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-10-01T19:06:46.761+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=SitesWebScraping, task_id=Branch, run_id=manual__2024-10-01T19:06:42.535695+00:00, execution_date=20241001T190642, start_date=20241001T190646, end_date=20241001T190646
+[2024-10-01T19:06:46.802+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-10-01T19:06:46.825+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-01T19:06:46.831+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

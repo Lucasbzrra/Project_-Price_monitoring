@@ -1,0 +1,24 @@
+[2024-10-07T19:37:35.284+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-10-07T19:37:35.303+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pipeline_webscraping.pichau_tasks.Create_Container_Silver_pichau manual__2024-10-07T19:32:56.650938+00:00 [queued]>
+[2024-10-07T19:37:35.312+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pipeline_webscraping.pichau_tasks.Create_Container_Silver_pichau manual__2024-10-07T19:32:56.650938+00:00 [queued]>
+[2024-10-07T19:37:35.315+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2024-10-07T19:37:35.341+0000] {taskinstance.py:2888} INFO - Executing <Task(CreateContainerInDataLake): pichau_tasks.Create_Container_Silver_pichau> on 2024-10-07 19:32:56.650938+00:00
+[2024-10-07T19:37:35.355+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1415) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-07T19:37:35.357+0000] {standard_task_runner.py:72} INFO - Started process 1417 to run task
+[2024-10-07T19:37:35.357+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pipeline_webscraping', 'pichau_tasks.Create_Container_Silver_pichau', 'manual__2024-10-07T19:32:56.650938+00:00', '--job-id', '1282', '--raw', '--subdir', 'DAGS_FOLDER/DagWebScraping.py', '--cfg-path', '/tmp/tmphjuwxc5_']
+[2024-10-07T19:37:35.360+0000] {standard_task_runner.py:105} INFO - Job 1282: Subtask pichau_tasks.Create_Container_Silver_pichau
+[2024-10-07T19:37:35.405+0000] {task_command.py:467} INFO - Running <TaskInstance: pipeline_webscraping.pichau_tasks.Create_Container_Silver_pichau manual__2024-10-07T19:32:56.650938+00:00 [running]> on host 97b4e38b3eb9
+[2024-10-07T19:37:35.507+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pipeline_webscraping' AIRFLOW_CTX_TASK_ID='pichau_tasks.Create_Container_Silver_pichau' AIRFLOW_CTX_EXECUTION_DATE='2024-10-07T19:32:56.650938+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-07T19:32:56.650938+00:00'
+[2024-10-07T19:37:35.508+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-10-07T19:37:35.521+0000] {baseoperator.py:405} WARNING - CreateContainerInDataLake.execute cannot be called outside TaskInstance!
+[2024-10-07T19:37:35.522+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-10-07T19:37:35.523+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'mkdir -p /opt/***/datalake/silverzone/pichau_2024-10-07']
+[2024-10-07T19:37:35.535+0000] {subprocess.py:86} INFO - Output:
+[2024-10-07T19:37:35.540+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-10-07T19:37:35.567+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-10-07T19:37:35.567+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=pipeline_webscraping, task_id=pichau_tasks.Create_Container_Silver_pichau, run_id=manual__2024-10-07T19:32:56.650938+00:00, execution_date=20241007T193256, start_date=20241007T193735, end_date=20241007T193735
+[2024-10-07T19:37:35.613+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-10-07T19:37:35.641+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-10-07T19:37:35.648+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

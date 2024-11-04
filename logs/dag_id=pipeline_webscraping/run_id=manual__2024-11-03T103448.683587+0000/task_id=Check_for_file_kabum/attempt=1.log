@@ -1,0 +1,24 @@
+[2024-11-03T10:42:28.961+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-03T10:42:28.975+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pipeline_webscraping.Check_for_file_kabum manual__2024-11-03T10:34:48.683587+00:00 [queued]>
+[2024-11-03T10:42:28.984+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pipeline_webscraping.Check_for_file_kabum manual__2024-11-03T10:34:48.683587+00:00 [queued]>
+[2024-11-03T10:42:28.984+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2024-11-03T10:42:28.999+0000] {taskinstance.py:2888} INFO - Executing <Task(OperatorFileSensor): Check_for_file_kabum> on 2024-11-03 10:34:48.683587+00:00
+[2024-11-03T10:42:29.006+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1111) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-11-03T10:42:29.007+0000] {standard_task_runner.py:72} INFO - Started process 1115 to run task
+[2024-11-03T10:42:29.008+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pipeline_webscraping', 'Check_for_file_kabum', 'manual__2024-11-03T10:34:48.683587+00:00', '--job-id', '265', '--raw', '--subdir', 'DAGS_FOLDER/DagWebScraping.py', '--cfg-path', '/tmp/tmpopxwjrxs']
+[2024-11-03T10:42:29.010+0000] {standard_task_runner.py:105} INFO - Job 265: Subtask Check_for_file_kabum
+[2024-11-03T10:42:29.128+0000] {task_command.py:467} INFO - Running <TaskInstance: pipeline_webscraping.Check_for_file_kabum manual__2024-11-03T10:34:48.683587+00:00 [running]> on host f2a2c0e12dc6
+[2024-11-03T10:42:29.211+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pipeline_webscraping' AIRFLOW_CTX_TASK_ID='Check_for_file_kabum' AIRFLOW_CTX_EXECUTION_DATE='2024-11-03T10:34:48.683587+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-03T10:34:48.683587+00:00'
+[2024-11-03T10:42:29.213+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-03T10:42:29.226+0000] {baseoperator.py:405} WARNING - OperatorFileSensor.execute cannot be called outside TaskInstance!
+[2024-11-03T10:42:29.243+0000] {base.py:84} INFO - Retrieving connection 's3_connect'
+[2024-11-03T10:42:29.243+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connect', conn_type='aws') credentials retrieved from login and password.
+[2024-11-03T10:42:30.140+0000] {base.py:336} INFO - Success criteria met. Exiting.
+[2024-11-03T10:42:30.152+0000] {base.py:84} INFO - Retrieving connection 's3_connect'
+[2024-11-03T10:42:30.153+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connect', conn_type='aws') credentials retrieved from login and password.
+[2024-11-03T10:42:30.383+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-03T10:42:30.384+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=pipeline_webscraping, task_id=Check_for_file_kabum, run_id=manual__2024-11-03T10:34:48.683587+00:00, execution_date=20241103T103448, start_date=20241103T104228, end_date=20241103T104230
+[2024-11-03T10:42:30.427+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-11-03T10:42:30.435+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

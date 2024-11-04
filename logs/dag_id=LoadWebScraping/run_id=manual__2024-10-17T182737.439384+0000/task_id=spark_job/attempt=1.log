@@ -1,0 +1,708 @@
+[2024-10-17T18:27:39.166+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-10-17T18:27:39.180+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: LoadWebScraping.spark_job manual__2024-10-17T18:27:37.439384+00:00 [queued]>
+[2024-10-17T18:27:39.186+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: LoadWebScraping.spark_job manual__2024-10-17T18:27:37.439384+00:00 [queued]>
+[2024-10-17T18:27:39.187+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2024-10-17T18:27:39.200+0000] {taskinstance.py:2888} INFO - Executing <Task(SparkSubmitOperator): spark_job> on 2024-10-17 18:27:37.439384+00:00
+[2024-10-17T18:27:39.204+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=914) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-17T18:27:39.206+0000] {standard_task_runner.py:72} INFO - Started process 917 to run task
+[2024-10-17T18:27:39.206+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'LoadWebScraping', 'spark_job', 'manual__2024-10-17T18:27:37.439384+00:00', '--job-id', '86', '--raw', '--subdir', 'DAGS_FOLDER/LoadWebScraping.py', '--cfg-path', '/tmp/tmplcfq4hpj']
+[2024-10-17T18:27:39.209+0000] {standard_task_runner.py:105} INFO - Job 86: Subtask spark_job
+[2024-10-17T18:27:39.249+0000] {task_command.py:467} INFO - Running <TaskInstance: LoadWebScraping.spark_job manual__2024-10-17T18:27:37.439384+00:00 [running]> on host cc66b6895e01
+[2024-10-17T18:27:39.540+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='LoadWebScraping' AIRFLOW_CTX_TASK_ID='spark_job' AIRFLOW_CTX_EXECUTION_DATE='2024-10-17T18:27:37.439384+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-17T18:27:37.439384+00:00'
+[2024-10-17T18:27:39.540+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-10-17T18:27:39.560+0000] {spark_submit.py:304} INFO - Could not load connection string spark_default, defaulting to yarn
+[2024-10-17T18:27:39.562+0000] {spark_submit.py:473} INFO - Spark-Submit cmd: spark-submit --master yarn --driver-class-path /opt/***/jars/postgresql-42.5.0.jar --jars /opt/***/jars/postgresql-42.5.0.jar --packages org.postgresql:postgresql:42.5.0 --name arrow-spark /opt/bitnami/spark/src/scripts_spark/LoadFileToDB.py
+[2024-10-17T18:27:40.995+0000] {spark_submit.py:634} INFO - :: loading settings :: url = jar:file:/home/***/.local/lib/python3.12/site-packages/pyspark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[2024-10-17T18:27:41.052+0000] {spark_submit.py:634} INFO - Ivy Default Cache set to: /home/***/.ivy2/cache
+[2024-10-17T18:27:41.053+0000] {spark_submit.py:634} INFO - The jars for the packages stored in: /home/***/.ivy2/jars
+[2024-10-17T18:27:41.062+0000] {spark_submit.py:634} INFO - org.postgresql#postgresql added as a dependency
+[2024-10-17T18:27:41.063+0000] {spark_submit.py:634} INFO - :: resolving dependencies :: org.apache.spark#spark-submit-parent-f98ed268-138d-4b50-86cc-8f30d182319f;1.0
+[2024-10-17T18:27:41.063+0000] {spark_submit.py:634} INFO - confs: [default]
+[2024-10-17T18:27:41.143+0000] {spark_submit.py:634} INFO - found org.postgresql#postgresql;42.5.0 in central
+[2024-10-17T18:27:41.162+0000] {spark_submit.py:634} INFO - found org.checkerframework#checker-qual;3.5.0 in central
+[2024-10-17T18:27:41.175+0000] {spark_submit.py:634} INFO - :: resolution report :: resolve 107ms :: artifacts dl 5ms
+[2024-10-17T18:27:41.176+0000] {spark_submit.py:634} INFO - :: modules in use:
+[2024-10-17T18:27:41.176+0000] {spark_submit.py:634} INFO - org.checkerframework#checker-qual;3.5.0 from central in [default]
+[2024-10-17T18:27:41.177+0000] {spark_submit.py:634} INFO - org.postgresql#postgresql;42.5.0 from central in [default]
+[2024-10-17T18:27:41.177+0000] {spark_submit.py:634} INFO - ---------------------------------------------------------------------
+[2024-10-17T18:27:41.178+0000] {spark_submit.py:634} INFO - |                  |            modules            ||   artifacts   |
+[2024-10-17T18:27:41.178+0000] {spark_submit.py:634} INFO - |       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+[2024-10-17T18:27:41.179+0000] {spark_submit.py:634} INFO - ---------------------------------------------------------------------
+[2024-10-17T18:27:41.179+0000] {spark_submit.py:634} INFO - |      default     |   2   |   0   |   0   |   0   ||   2   |   0   |
+[2024-10-17T18:27:41.180+0000] {spark_submit.py:634} INFO - ---------------------------------------------------------------------
+[2024-10-17T18:27:41.180+0000] {spark_submit.py:634} INFO - :: retrieving :: org.apache.spark#spark-submit-parent-f98ed268-138d-4b50-86cc-8f30d182319f
+[2024-10-17T18:27:41.181+0000] {spark_submit.py:634} INFO - confs: [default]
+[2024-10-17T18:27:41.182+0000] {spark_submit.py:634} INFO - 0 artifacts copied, 2 already retrieved (0kB/4ms)
+[2024-10-17T18:27:41.317+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:41 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2024-10-17T18:27:42.571+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:42 INFO SparkContext: Running Spark version 3.5.2
+[2024-10-17T18:27:42.572+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:42 INFO SparkContext: OS info Linux, 5.15.153.1-microsoft-standard-WSL2, amd64
+[2024-10-17T18:27:42.572+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:42 INFO SparkContext: Java version 17.0.12
+[2024-10-17T18:27:42.592+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:42 INFO ResourceUtils: ==============================================================
+[2024-10-17T18:27:42.593+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:42 INFO ResourceUtils: No custom resources configured for spark.driver.
+[2024-10-17T18:27:42.593+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:42 INFO ResourceUtils: ==============================================================
+[2024-10-17T18:27:42.594+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:42 INFO SparkContext: Submitted application: Exemplo
+[2024-10-17T18:27:42.612+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:42 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[2024-10-17T18:27:42.620+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:42 INFO ResourceProfile: Limiting resource is cpu
+[2024-10-17T18:27:42.621+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:42 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[2024-10-17T18:27:42.662+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:42 INFO SecurityManager: Changing view acls to: ***
+[2024-10-17T18:27:42.663+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:42 INFO SecurityManager: Changing modify acls to: ***
+[2024-10-17T18:27:42.663+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:42 INFO SecurityManager: Changing view acls groups to:
+[2024-10-17T18:27:42.664+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:42 INFO SecurityManager: Changing modify acls groups to:
+[2024-10-17T18:27:42.664+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:42 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: ***; groups with view permissions: EMPTY; users with modify permissions: ***; groups with modify permissions: EMPTY
+[2024-10-17T18:27:42.832+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:42 INFO Utils: Successfully started service 'sparkDriver' on port 32879.
+[2024-10-17T18:27:42.861+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:42 INFO SparkEnv: Registering MapOutputTracker
+[2024-10-17T18:27:42.888+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:42 INFO SparkEnv: Registering BlockManagerMaster
+[2024-10-17T18:27:42.901+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:42 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2024-10-17T18:27:42.901+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:42 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[2024-10-17T18:27:42.914+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:42 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[2024-10-17T18:27:42.930+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:42 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-52cbafc4-1428-4021-8e24-b4b4a0de580a
+[2024-10-17T18:27:42.942+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:42 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+[2024-10-17T18:27:42.954+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:42 INFO SparkEnv: Registering OutputCommitCoordinator
+[2024-10-17T18:27:43.051+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:43 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+[2024-10-17T18:27:43.104+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:43 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[2024-10-17T18:27:43.136+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:43 INFO SparkContext: Added JAR /opt/bitnami/spark/jars/postgresql-42.5.0.jar at spark://cc66b6895e01:32879/jars/postgresql-42.5.0.jar with timestamp 1729189662565
+[2024-10-17T18:27:43.183+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:43 INFO Executor: Starting executor ID driver on host cc66b6895e01
+[2024-10-17T18:27:43.183+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:43 INFO Executor: OS info Linux, 5.15.153.1-microsoft-standard-WSL2, amd64
+[2024-10-17T18:27:43.184+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:43 INFO Executor: Java version 17.0.12
+[2024-10-17T18:27:43.191+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:43 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+[2024-10-17T18:27:43.191+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:43 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@1c97e89a for default.
+[2024-10-17T18:27:43.207+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:43 INFO Executor: Fetching spark://cc66b6895e01:32879/jars/postgresql-42.5.0.jar with timestamp 1729189662565
+[2024-10-17T18:27:43.256+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:43 INFO TransportClientFactory: Successfully created connection to cc66b6895e01/172.18.0.4:32879 after 29 ms (0 ms spent in bootstraps)
+[2024-10-17T18:27:43.262+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:43 INFO Utils: Fetching spark://cc66b6895e01:32879/jars/postgresql-42.5.0.jar to /tmp/spark-7a73f4a4-4218-4e43-abf9-bf915d56146d/userFiles-e798791e-eac2-4230-a1c6-5a846cba1ebd/fetchFileTemp7872897516699200051.tmp
+[2024-10-17T18:27:43.290+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:43 INFO Executor: Adding file:/tmp/spark-7a73f4a4-4218-4e43-abf9-bf915d56146d/userFiles-e798791e-eac2-4230-a1c6-5a846cba1ebd/postgresql-42.5.0.jar to class loader default
+[2024-10-17T18:27:43.298+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:43 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 39133.
+[2024-10-17T18:27:43.299+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:43 INFO NettyBlockTransferService: Server created on cc66b6895e01:39133
+[2024-10-17T18:27:43.299+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:43 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[2024-10-17T18:27:43.303+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:43 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, cc66b6895e01, 39133, None)
+[2024-10-17T18:27:43.307+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:43 INFO BlockManagerMasterEndpoint: Registering block manager cc66b6895e01:39133 with 434.4 MiB RAM, BlockManagerId(driver, cc66b6895e01, 39133, None)
+[2024-10-17T18:27:43.308+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:43 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, cc66b6895e01, 39133, None)
+[2024-10-17T18:27:43.309+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:43 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, cc66b6895e01, 39133, None)
+[2024-10-17T18:27:43.620+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:43 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+[2024-10-17T18:27:43.622+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:43 INFO SharedState: Warehouse path is 'file:/opt/***/spark-warehouse'.
+[2024-10-17T18:27:44.517+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:44 INFO InMemoryFileIndex: It took 168 ms to list leaf files for 4 paths.
+[2024-10-17T18:27:44.872+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:44 INFO SparkContext: Starting job: parquet at NativeMethodAccessorImpl.java:0
+[2024-10-17T18:27:44.888+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:44 INFO DAGScheduler: Got job 0 (parquet at NativeMethodAccessorImpl.java:0) with 1 output partitions
+[2024-10-17T18:27:44.889+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:44 INFO DAGScheduler: Final stage: ResultStage 0 (parquet at NativeMethodAccessorImpl.java:0)
+[2024-10-17T18:27:44.890+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:44 INFO DAGScheduler: Parents of final stage: List()
+[2024-10-17T18:27:44.891+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:44 INFO DAGScheduler: Missing parents: List()
+[2024-10-17T18:27:44.913+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:44 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[1] at parquet at NativeMethodAccessorImpl.java:0), which has no missing parents
+[2024-10-17T18:27:44.970+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:44 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 104.5 KiB, free 434.3 MiB)
+[2024-10-17T18:27:44.995+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:44 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 37.7 KiB, free 434.3 MiB)
+[2024-10-17T18:27:44.998+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:44 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on cc66b6895e01:39133 (size: 37.7 KiB, free: 434.4 MiB)
+[2024-10-17T18:27:45.001+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:45 INFO SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:1585
+[2024-10-17T18:27:45.015+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:45 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[1] at parquet at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+[2024-10-17T18:27:45.016+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:45 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks resource profile 0
+[2024-10-17T18:27:45.059+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:45 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (cc66b6895e01, executor driver, partition 0, PROCESS_LOCAL, 9378 bytes)
+[2024-10-17T18:27:45.069+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:45 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+[2024-10-17T18:27:45.346+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:45 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 1706 bytes result sent to driver
+[2024-10-17T18:27:45.353+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:45 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 312 ms on cc66b6895e01 (executor driver) (1/1)
+[2024-10-17T18:27:45.354+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:45 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool
+[2024-10-17T18:27:45.358+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:45 INFO DAGScheduler: ResultStage 0 (parquet at NativeMethodAccessorImpl.java:0) finished in 0.431 s
+[2024-10-17T18:27:45.360+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:45 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+[2024-10-17T18:27:45.361+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:45 INFO TaskSchedulerImpl: Killing all running tasks in stage 0: Stage finished
+[2024-10-17T18:27:45.362+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:45 INFO DAGScheduler: Job 0 finished: parquet at NativeMethodAccessorImpl.java:0, took 0.489372 s
+[2024-10-17T18:27:45.619+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:45 INFO BlockManagerInfo: Removed broadcast_0_piece0 on cc66b6895e01:39133 in memory (size: 37.7 KiB, free: 434.4 MiB)
+[2024-10-17T18:27:46.013+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO InMemoryFileIndex: It took 109 ms to list leaf files for 4 paths.
+[2024-10-17T18:27:46.044+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO SparkContext: Starting job: parquet at NativeMethodAccessorImpl.java:0
+[2024-10-17T18:27:46.045+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO DAGScheduler: Got job 1 (parquet at NativeMethodAccessorImpl.java:0) with 1 output partitions
+[2024-10-17T18:27:46.045+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO DAGScheduler: Final stage: ResultStage 1 (parquet at NativeMethodAccessorImpl.java:0)
+[2024-10-17T18:27:46.046+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO DAGScheduler: Parents of final stage: List()
+[2024-10-17T18:27:46.047+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO DAGScheduler: Missing parents: List()
+[2024-10-17T18:27:46.047+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO DAGScheduler: Submitting ResultStage 1 (MapPartitionsRDD[3] at parquet at NativeMethodAccessorImpl.java:0), which has no missing parents
+[2024-10-17T18:27:46.054+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 104.5 KiB, free 434.3 MiB)
+[2024-10-17T18:27:46.055+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 37.7 KiB, free 434.3 MiB)
+[2024-10-17T18:27:46.056+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on cc66b6895e01:39133 (size: 37.7 KiB, free: 434.4 MiB)
+[2024-10-17T18:27:46.056+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1585
+[2024-10-17T18:27:46.057+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 1 (MapPartitionsRDD[3] at parquet at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+[2024-10-17T18:27:46.058+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO TaskSchedulerImpl: Adding task set 1.0 with 1 tasks resource profile 0
+[2024-10-17T18:27:46.059+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1) (cc66b6895e01, executor driver, partition 0, PROCESS_LOCAL, 9377 bytes)
+[2024-10-17T18:27:46.060+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO Executor: Running task 0.0 in stage 1.0 (TID 1)
+[2024-10-17T18:27:46.097+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO Executor: Finished task 0.0 in stage 1.0 (TID 1). 1620 bytes result sent to driver
+[2024-10-17T18:27:46.098+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 1) in 40 ms on cc66b6895e01 (executor driver) (1/1)
+[2024-10-17T18:27:46.099+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool
+[2024-10-17T18:27:46.100+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO DAGScheduler: ResultStage 1 (parquet at NativeMethodAccessorImpl.java:0) finished in 0.053 s
+[2024-10-17T18:27:46.100+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO DAGScheduler: Job 1 is finished. Cancelling potential speculative or zombie tasks for this job
+[2024-10-17T18:27:46.101+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO TaskSchedulerImpl: Killing all running tasks in stage 1: Stage finished
+[2024-10-17T18:27:46.101+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO DAGScheduler: Job 1 finished: parquet at NativeMethodAccessorImpl.java:0, took 0.055947 s
+[2024-10-17T18:27:46.343+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO BlockManagerInfo: Removed broadcast_1_piece0 on cc66b6895e01:39133 in memory (size: 37.7 KiB, free: 434.4 MiB)
+[2024-10-17T18:27:46.443+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO FileSourceStrategy: Pushed Filters:
+[2024-10-17T18:27:46.444+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO FileSourceStrategy: Post-Scan Filters:
+[2024-10-17T18:27:46.452+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO FileSourceStrategy: Pushed Filters:
+[2024-10-17T18:27:46.452+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO FileSourceStrategy: Post-Scan Filters:
+[2024-10-17T18:27:46.824+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO CodeGenerator: Code generated in 205.265967 ms
+[2024-10-17T18:27:46.843+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 202.6 KiB, free 434.2 MiB)
+[2024-10-17T18:27:46.850+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 35.4 KiB, free 434.2 MiB)
+[2024-10-17T18:27:46.851+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on cc66b6895e01:39133 (size: 35.4 KiB, free: 434.4 MiB)
+[2024-10-17T18:27:46.852+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO SparkContext: Created broadcast 2 from showString at NativeMethodAccessorImpl.java:0
+[2024-10-17T18:27:46.861+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO FileSourceScanExec: Planning scan with bin packing, max size: 16782037 bytes, open cost is considered as scanning 4194304 bytes.
+[2024-10-17T18:27:46.881+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 202.6 KiB, free 434.0 MiB)
+[2024-10-17T18:27:46.892+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 35.4 KiB, free 433.9 MiB)
+[2024-10-17T18:27:46.893+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on cc66b6895e01:39133 (size: 35.4 KiB, free: 434.3 MiB)
+[2024-10-17T18:27:46.893+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO SparkContext: Created broadcast 3 from showString at NativeMethodAccessorImpl.java:0
+[2024-10-17T18:27:46.895+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO FileSourceScanExec: Planning scan with bin packing, max size: 16798470 bytes, open cost is considered as scanning 4194304 bytes.
+[2024-10-17T18:27:46.946+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO DAGScheduler: Registering RDD 10 (showString at NativeMethodAccessorImpl.java:0) as input to shuffle 0
+[2024-10-17T18:27:46.949+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO DAGScheduler: Got map stage job 2 (showString at NativeMethodAccessorImpl.java:0) with 2 output partitions
+[2024-10-17T18:27:46.949+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO DAGScheduler: Final stage: ShuffleMapStage 2 (showString at NativeMethodAccessorImpl.java:0)
+[2024-10-17T18:27:46.950+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO DAGScheduler: Parents of final stage: List()
+[2024-10-17T18:27:46.950+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO DAGScheduler: Missing parents: List()
+[2024-10-17T18:27:46.951+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO DAGScheduler: Submitting ShuffleMapStage 2 (MapPartitionsRDD[10] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+[2024-10-17T18:27:46.965+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 31.1 KiB, free 433.9 MiB)
+[2024-10-17T18:27:46.970+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 13.5 KiB, free 433.9 MiB)
+[2024-10-17T18:27:46.971+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on cc66b6895e01:39133 (size: 13.5 KiB, free: 434.3 MiB)
+[2024-10-17T18:27:46.972+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:1585
+[2024-10-17T18:27:46.973+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 2 (MapPartitionsRDD[10] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1))
+[2024-10-17T18:27:46.974+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO TaskSchedulerImpl: Adding task set 2.0 with 2 tasks resource profile 0
+[2024-10-17T18:27:46.978+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 2) (cc66b6895e01, executor driver, partition 0, PROCESS_LOCAL, 10583 bytes)
+[2024-10-17T18:27:46.979+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:46 INFO Executor: Running task 0.0 in stage 2.0 (TID 2)
+[2024-10-17T18:27:47.042+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:47 INFO CodeGenerator: Code generated in 32.313726 ms
+[2024-10-17T18:27:47.064+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:47 INFO CodeGenerator: Code generated in 8.097233 ms
+[2024-10-17T18:27:47.076+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:47 INFO CodeGenerator: Code generated in 4.200525 ms
+[2024-10-17T18:27:47.097+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:47 INFO CodeGenerator: Code generated in 5.272081 ms
+[2024-10-17T18:27:47.102+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:47 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/pichau_2024-10-08/dim_marca.parquet/part-00000-eaf0b330-5a42-4a4a-abb7-5c1b2a5487cc-c000.snappy.parquet, range: 0-1246, partition values: [empty row]
+[2024-10-17T18:27:47.232+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:47 INFO CodecPool: Got brand-new decompressor [.snappy]
+[2024-10-17T18:27:47.339+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:47 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/pichau_2024-10-11/dim_marca.parquet/part-00000-b9a8b591-4aa2-4f41-b3f2-7bc66dfa3fd5-c000.snappy.parquet, range: 0-1224, partition values: [empty row]
+[2024-10-17T18:27:47.403+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:47 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/pichau_2024-10-16/dim_marca.parquet/part-00000-a1f91b58-8964-4ceb-ae65-2ba4926f5517-c000.snappy.parquet, range: 0-1177, partition values: [empty row]
+[2024-10-17T18:27:47.467+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:47 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/pichau_2024-10-15/dim_marca.parquet/part-00000-2ca7ede2-4a68-4273-914c-5fcead13cc3d-c000.snappy.parquet, range: 0-1174, partition values: [empty row]
+[2024-10-17T18:27:47.588+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:47 INFO Executor: Finished task 0.0 in stage 2.0 (TID 2). 3296 bytes result sent to driver
+[2024-10-17T18:27:47.589+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:47 INFO TaskSetManager: Starting task 1.0 in stage 2.0 (TID 3) (cc66b6895e01, executor driver, partition 1, PROCESS_LOCAL, 10579 bytes)
+[2024-10-17T18:27:47.590+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:47 INFO Executor: Running task 1.0 in stage 2.0 (TID 3)
+[2024-10-17T18:27:47.591+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:47 INFO TaskSetManager: Finished task 0.0 in stage 2.0 (TID 2) in 615 ms on cc66b6895e01 (executor driver) (1/2)
+[2024-10-17T18:27:47.607+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:47 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/kabum_2024-10-11/dim_marca.parquet/part-00000-d8228eec-115b-4488-9160-cbb0376594df-c000.snappy.parquet, range: 0-5464, partition values: [empty row]
+[2024-10-17T18:27:47.669+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:47 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/kabum_2024-10-08/dim_marca.parquet/part-00000-a70cc15e-091c-494d-a8b5-6557e879fc0d-c000.snappy.parquet, range: 0-5416, partition values: [empty row]
+[2024-10-17T18:27:47.736+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:47 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/kabum_2024-10-16/dim_marca.parquet/part-00000-62b3fd2b-0716-4fac-a704-c78d499b75ca-c000.snappy.parquet, range: 0-5200, partition values: [empty row]
+[2024-10-17T18:27:47.795+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:47 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/kabum_2024-10-15/dim_marca.parquet/part-00000-25967887-4b45-490a-a9af-271e6dacd0d9-c000.snappy.parquet, range: 0-5174, partition values: [empty row]
+[2024-10-17T18:27:47.897+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:47 INFO Executor: Finished task 1.0 in stage 2.0 (TID 3). 3296 bytes result sent to driver
+[2024-10-17T18:27:47.899+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:47 INFO TaskSetManager: Finished task 1.0 in stage 2.0 (TID 3) in 309 ms on cc66b6895e01 (executor driver) (2/2)
+[2024-10-17T18:27:47.900+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:47 INFO TaskSchedulerImpl: Removed TaskSet 2.0, whose tasks have all completed, from pool
+[2024-10-17T18:27:47.901+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:47 INFO DAGScheduler: ShuffleMapStage 2 (showString at NativeMethodAccessorImpl.java:0) finished in 0.945 s
+[2024-10-17T18:27:47.902+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:47 INFO DAGScheduler: looking for newly runnable stages
+[2024-10-17T18:27:47.902+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:47 INFO DAGScheduler: running: Set()
+[2024-10-17T18:27:47.903+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:47 INFO DAGScheduler: waiting: Set()
+[2024-10-17T18:27:47.903+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:47 INFO DAGScheduler: failed: Set()
+[2024-10-17T18:27:47.920+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:47 INFO ShufflePartitionsUtil: For shuffle(0), advisory target size: 67108864, actual target size 1048576, minimum partition size: 1048576
+[2024-10-17T18:27:47.960+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:47 INFO CodeGenerator: Code generated in 21.752863 ms
+[2024-10-17T18:27:47.987+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:47 INFO SparkContext: Starting job: showString at NativeMethodAccessorImpl.java:0
+[2024-10-17T18:27:47.988+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:47 INFO DAGScheduler: Got job 3 (showString at NativeMethodAccessorImpl.java:0) with 1 output partitions
+[2024-10-17T18:27:47.989+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:47 INFO DAGScheduler: Final stage: ResultStage 4 (showString at NativeMethodAccessorImpl.java:0)
+[2024-10-17T18:27:47.990+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:47 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 3)
+[2024-10-17T18:27:47.991+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:47 INFO DAGScheduler: Missing parents: List()
+[2024-10-17T18:27:47.991+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:47 INFO DAGScheduler: Submitting ResultStage 4 (MapPartitionsRDD[13] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+[2024-10-17T18:27:48.006+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:48 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 41.9 KiB, free 433.9 MiB)
+[2024-10-17T18:27:48.011+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:48 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 19.1 KiB, free 433.8 MiB)
+[2024-10-17T18:27:48.011+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:48 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on cc66b6895e01:39133 (size: 19.1 KiB, free: 434.3 MiB)
+[2024-10-17T18:27:48.012+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:48 INFO BlockManagerInfo: Removed broadcast_4_piece0 on cc66b6895e01:39133 in memory (size: 13.5 KiB, free: 434.3 MiB)
+[2024-10-17T18:27:48.012+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:48 INFO SparkContext: Created broadcast 5 from broadcast at DAGScheduler.scala:1585
+[2024-10-17T18:27:48.013+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:48 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 4 (MapPartitionsRDD[13] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+[2024-10-17T18:27:48.013+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:48 INFO TaskSchedulerImpl: Adding task set 4.0 with 1 tasks resource profile 0
+[2024-10-17T18:27:48.017+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:48 INFO TaskSetManager: Starting task 0.0 in stage 4.0 (TID 4) (cc66b6895e01, executor driver, partition 0, NODE_LOCAL, 9179 bytes)
+[2024-10-17T18:27:48.017+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:48 INFO Executor: Running task 0.0 in stage 4.0 (TID 4)
+[2024-10-17T18:27:48.046+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:48 INFO ShuffleBlockFetcherIterator: Getting 2 (31.3 KiB) non-empty blocks including 2 (31.3 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+[2024-10-17T18:27:48.048+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:48 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 8 ms
+[2024-10-17T18:27:48.070+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:48 INFO CodeGenerator: Code generated in 20.141376 ms
+[2024-10-17T18:27:48.096+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:48 INFO Executor: Finished task 0.0 in stage 4.0 (TID 4). 13539 bytes result sent to driver
+[2024-10-17T18:27:48.098+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:48 INFO TaskSetManager: Finished task 0.0 in stage 4.0 (TID 4) in 82 ms on cc66b6895e01 (executor driver) (1/1)
+[2024-10-17T18:27:48.098+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:48 INFO TaskSchedulerImpl: Removed TaskSet 4.0, whose tasks have all completed, from pool
+[2024-10-17T18:27:48.099+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:48 INFO DAGScheduler: ResultStage 4 (showString at NativeMethodAccessorImpl.java:0) finished in 0.095 s
+[2024-10-17T18:27:48.099+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:48 INFO DAGScheduler: Job 3 is finished. Cancelling potential speculative or zombie tasks for this job
+[2024-10-17T18:27:48.100+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:48 INFO TaskSchedulerImpl: Killing all running tasks in stage 4: Stage finished
+[2024-10-17T18:27:48.101+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:48 INFO DAGScheduler: Job 3 finished: showString at NativeMethodAccessorImpl.java:0, took 0.112637 s
+[2024-10-17T18:27:48.755+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:48 INFO CodeGenerator: Code generated in 5.705405 ms
+[2024-10-17T18:27:48.773+0000] {spark_submit.py:634} INFO - +--------------------------------------------------------------------------------------------------------------------------------+
+[2024-10-17T18:27:48.774+0000] {spark_submit.py:634} INFO - |name_mark                                                                                                                       |
+[2024-10-17T18:27:48.775+0000] {spark_submit.py:634} INFO - +--------------------------------------------------------------------------------------------------------------------------------+
+[2024-10-17T18:27:48.775+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 3 5300G                                                                                                   |
+[2024-10-17T18:27:48.776+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 9 5950X                                                                                                   |
+[2024-10-17T18:27:48.776+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I9-14900F                                                                                                |
+[2024-10-17T18:27:48.777+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 7 7800X3D                                                                                                 |
+[2024-10-17T18:27:48.777+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 7 8700G                                                                                                   |
+[2024-10-17T18:27:48.778+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I7-14700F                                                                                                |
+[2024-10-17T18:27:48.778+0000] {spark_submit.py:634} INFO - |KINGSTON                                                                                                                        |
+[2024-10-17T18:27:48.778+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 7 7700                                                                                                    |
+[2024-10-17T18:27:48.779+0000] {spark_submit.py:634} INFO - |GIGABYTE                                                                                                                        |
+[2024-10-17T18:27:48.779+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 3 4100                                                                                                    |
+[2024-10-17T18:27:48.780+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 5 5600GT                                                                                                  |
+[2024-10-17T18:27:48.780+0000] {spark_submit.py:634} INFO - |SAPPHIRE                                                                                                                        |
+[2024-10-17T18:27:48.780+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 9 7950X3D                                                                                                 |
+[2024-10-17T18:27:48.781+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 7 5700G                                                                                                   |
+[2024-10-17T18:27:48.781+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 7 9700X                                                                                                   |
+[2024-10-17T18:27:48.782+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN THREADRIPPER PRO 7985WX                                                                                   |
+[2024-10-17T18:27:48.782+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 9 5900X                                                                                                   |
+[2024-10-17T18:27:48.782+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5-12400F                                                                                                |
+[2024-10-17T18:27:48.783+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5-14600KF                                                                                               |
+[2024-10-17T18:27:48.783+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5-14600K                                                                                                |
+[2024-10-17T18:27:48.784+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5-13600KF                                                                                               |
+[2024-10-17T18:27:48.784+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I7-14700KF                                                                                               |
+[2024-10-17T18:27:48.784+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 9 9900X                                                                                                   |
+[2024-10-17T18:27:48.785+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 5 4500                                                                                                    |
+[2024-10-17T18:27:48.785+0000] {spark_submit.py:634} INFO - |BIOSTAR                                                                                                                         |
+[2024-10-17T18:27:48.786+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I3-14100F                                                                                                |
+[2024-10-17T18:27:48.786+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 9 7900                                                                                                    |
+[2024-10-17T18:27:48.786+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 5 8500G                                                                                                   |
+[2024-10-17T18:27:48.787+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5-10400                                                                                                 |
+[2024-10-17T18:27:48.787+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 7 5800XT                                                                                                  |
+[2024-10-17T18:27:48.787+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I7-13700F                                                                                                |
+[2024-10-17T18:27:48.788+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN THREADRIPPER PRO 5975WX                                                                                   |
+[2024-10-17T18:27:48.788+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5-10600K                                                                                                |
+[2024-10-17T18:27:48.788+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 5 9600X                                                                                                   |
+[2024-10-17T18:27:48.789+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 7 7700X                                                                                                   |
+[2024-10-17T18:27:48.789+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 7 5700X                                                                                                   |
+[2024-10-17T18:27:48.790+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5-14400F                                                                                                |
+[2024-10-17T18:27:48.790+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 5 4600G                                                                                                   |
+[2024-10-17T18:27:48.790+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5-13600K                                                                                                |
+[2024-10-17T18:27:48.791+0000] {spark_submit.py:634} INFO - |NOT_INFO                                                                                                                        |
+[2024-10-17T18:27:48.791+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN THREADRIPPER PRO 7965WX                                                                                   |
+[2024-10-17T18:27:48.791+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I3-13100                                                                                                 |
+[2024-10-17T18:27:48.792+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5-13400                                                                                                 |
+[2024-10-17T18:27:48.792+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 5 8600G                                                                                                   |
+[2024-10-17T18:27:48.793+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5-13400F                                                                                                |
+[2024-10-17T18:27:48.793+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5-12400                                                                                                 |
+[2024-10-17T18:27:48.793+0000] {spark_submit.py:634} INFO - |PNY                                                                                                                             |
+[2024-10-17T18:27:48.794+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 9 5900XT                                                                                                  |
+[2024-10-17T18:27:48.794+0000] {spark_submit.py:634} INFO - |CORSAIR                                                                                                                         |
+[2024-10-17T18:27:48.794+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 5 7600X                                                                                                   |
+[2024-10-17T18:27:48.795+0000] {spark_submit.py:634} INFO - |AMD                                                                                                                             |
+[2024-10-17T18:27:48.795+0000] {spark_submit.py:634} INFO - |ADATA                                                                                                                           |
+[2024-10-17T18:27:48.795+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 5 5600                                                                                                    |
+[2024-10-17T18:27:48.796+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I9-12900F                                                                                                |
+[2024-10-17T18:27:48.796+0000] {spark_submit.py:634} INFO - |REDRAGON                                                                                                                        |
+[2024-10-17T18:27:48.797+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 7 5800X3D                                                                                                 |
+[2024-10-17T18:27:48.797+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I3-12100F                                                                                                |
+[2024-10-17T18:27:48.797+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 5 8400F                                                                                                   |
+[2024-10-17T18:27:48.798+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 7 8700F                                                                                                   |
+[2024-10-17T18:27:48.798+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN THREADRIPPER PRO 5965WX                                                                                   |
+[2024-10-17T18:27:48.798+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 5 7600                                                                                                    |
+[2024-10-17T18:27:48.799+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I3-13100F                                                                                                |
+[2024-10-17T18:27:48.799+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5-11400                                                                                                 |
+[2024-10-17T18:27:48.799+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I9-11900K                                                                                                |
+[2024-10-17T18:27:48.800+0000] {spark_submit.py:634} INFO - |PCYES                                                                                                                           |
+[2024-10-17T18:27:48.800+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I7-14700                                                                                                 |
+[2024-10-17T18:27:48.800+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 7 5700X3D                                                                                                 |
+[2024-10-17T18:27:48.801+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5-14400                                                                                                 |
+[2024-10-17T18:27:48.801+0000] {spark_submit.py:634} INFO - |ASUS                                                                                                                            |
+[2024-10-17T18:27:48.801+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 5 5500                                                                                                    |
+[2024-10-17T18:27:48.802+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD ATHLON 3000G                                                                                                    |
+[2024-10-17T18:27:48.802+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I9-14900KF                                                                                               |
+[2024-10-17T18:27:48.802+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5-10600KF                                                                                               |
+[2024-10-17T18:27:48.803+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 3 3200G                                                                                                   |
+[2024-10-17T18:27:48.803+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I9-14900K                                                                                                |
+[2024-10-17T18:27:48.803+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5-11400F                                                                                                |
+[2024-10-17T18:27:48.803+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 5 5600X                                                                                                   |
+[2024-10-17T18:27:48.804+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I3-14100                                                                                                 |
+[2024-10-17T18:27:48.804+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I3-12100                                                                                                 |
+[2024-10-17T18:27:48.804+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I9-12900KF                                                                                               |
+[2024-10-17T18:27:48.805+0000] {spark_submit.py:634} INFO - |MSI                                                                                                                             |
+[2024-10-17T18:27:48.805+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 7 5700                                                                                                    |
+[2024-10-17T18:27:48.806+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 9 7900X                                                                                                   |
+[2024-10-17T18:27:48.806+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I7-14700K                                                                                                |
+[2024-10-17T18:27:48.806+0000] {spark_submit.py:634} INFO - |ASROCK                                                                                                                          |
+[2024-10-17T18:27:48.807+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5-10400F                                                                                                |
+[2024-10-17T18:27:48.807+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I9-13900K                                                                                                |
+[2024-10-17T18:27:48.807+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I7-12700K                                                                                                |
+[2024-10-17T18:27:48.808+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL I5-11400 2.6GHZ                                                                                               |
+[2024-10-17T18:27:48.808+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I9 12900F                                                                                                |
+[2024-10-17T18:27:48.808+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5-6500 3.2GHZ 6MB CM8066201920404 LGA  1151 OEM                                                         |
+[2024-10-17T18:27:48.809+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL I3-4130                                                                                                       |
+[2024-10-17T18:27:48.809+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I3-4130 3.40 OEM                                                                                         |
+[2024-10-17T18:27:48.809+0000] {spark_submit.py:634} INFO - |HIKVISION                                                                                                                       |
+[2024-10-17T18:27:48.809+0000] {spark_submit.py:634} INFO - |KTROK                                                                                                                           |
+[2024-10-17T18:27:48.810+0000] {spark_submit.py:634} INFO - |OXY                                                                                                                             |
+[2024-10-17T18:27:48.810+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 7 8700F AM5 4.1GHZ                                                                                        |
+[2024-10-17T18:27:48.810+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5-10500                                                                                                 |
+[2024-10-17T18:27:48.811+0000] {spark_submit.py:634} INFO - |LEXAR                                                                                                                           |
+[2024-10-17T18:27:48.811+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 5 3600 CACHE 32MB 3.6GHZ(4.2GHZ MAX TURBO) AM4                                                            |
+[2024-10-17T18:27:48.811+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL I7-3770                                                                                                       |
+[2024-10-17T18:27:48.811+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5-2400 3.10GHZ CACHE 6MB  LGA  1155 OEM                                                                 |
+[2024-10-17T18:27:48.812+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL XEON GOLD 5317 - LGA 4189 3GEN - 12 CORES - 3.0GHZ - 18MB - TDP                                               |
+[2024-10-17T18:27:48.812+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL I5-10600K 4.10GHZ                                                                                             |
+[2024-10-17T18:27:48.812+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I9 11900F BOX LGA 1200 16MB CACHE S/ V                                                                   |
+[2024-10-17T18:27:48.813+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL I3 2120 3.3GHTZ                                                                                               |
+[2024-10-17T18:27:48.813+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I9-13900KF                                                                                               |
+[2024-10-17T18:27:48.813+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I3 4130 4                                                                                                |
+[2024-10-17T18:27:48.814+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I3 21XX                                                                                                  |
+[2024-10-17T18:27:48.814+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL I7-11700KF 3.6GHZ                                                                                             |
+[2024-10-17T18:27:48.814+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL XEON SILVER 4310 - LGA 4189 3GEN - 12 CORES - 2.10GHZ - 18MB - TDP                                            |
+[2024-10-17T18:27:48.814+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 7 8700F 24MB 4.1GHZ - 5.0GHZ                                                                              |
+[2024-10-17T18:27:48.815+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I3                                                                                                       |
+[2024-10-17T18:27:48.815+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I510500T  2.30GHZ CACHE 12MB LGA  1200 OEM                                                               |
+[2024-10-17T18:27:48.815+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I9-13900 LGA 1700 24 CORES 32 THREADS 5.6GHZ 36MB CACHE UHD INTEL 770 - BX8071513900                     |
+[2024-10-17T18:27:48.816+0000] {spark_submit.py:634} INFO - |BLUECASE                                                                                                                        |
+[2024-10-17T18:27:48.816+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I7 14700KF 14 GERA                                                                                       |
+[2024-10-17T18:27:48.816+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5-3470 3                                                                                                |
+[2024-10-17T18:27:48.817+0000] {spark_submit.py:634} INFO - |GOLDENTEC                                                                                                                       |
+[2024-10-17T18:27:48.817+0000] {spark_submit.py:634} INFO - |ALLIGATOR SHOP                                                                                                                  |
+[2024-10-17T18:27:48.817+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I7-13700KF                                                                                               |
+[2024-10-17T18:27:48.818+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL XEON                                                                                                          |
+[2024-10-17T18:27:48.818+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5-4570S  2.90GHZ CACHE 6MB LGA  1150 OEM                                                                |
+[2024-10-17T18:27:48.818+0000] {spark_submit.py:634} INFO - |PROCESSADOR CORE I3 9100 LGA 1151                                                                                               |
+[2024-10-17T18:27:48.819+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I7 10700F 2.90GHZ                                                                                        |
+[2024-10-17T18:27:48.819+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I3-3220                                                                                                  |
+[2024-10-17T18:27:48.819+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I7-2600K CACHE 8MB 3.40GHZ 1155 OEM                                                                      |
+[2024-10-17T18:27:48.820+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I7-10700F                                                                                                |
+[2024-10-17T18:27:48.820+0000] {spark_submit.py:634} INFO - |REVENGER                                                                                                                        |
+[2024-10-17T18:27:48.820+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I7 10700 2.90GHZ                                                                                         |
+[2024-10-17T18:27:48.821+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5 4590                                                                                                  |
+[2024-10-17T18:27:48.821+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5-3570 3.4GHZ 6MB CM8063701093103 LGA  1155 OEM - SEM COOLER                                            |
+[2024-10-17T18:27:48.821+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I7 6700 SKYLAKE                                                                                          |
+[2024-10-17T18:27:48.822+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD ATHLON 3000G 3.5GHZ AM4 YD3000C6FHSBX                                                                           |
+[2024-10-17T18:27:48.822+0000] {spark_submit.py:634} INFO - |PATRIOT                                                                                                                         |
+[2024-10-17T18:27:48.822+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5 - 10400F                                                                                              |
+[2024-10-17T18:27:48.823+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD A6 7480                                                                                                         |
+[2024-10-17T18:27:48.823+0000] {spark_submit.py:634} INFO - |NVIDIA                                                                                                                          |
+[2024-10-17T18:27:48.823+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I7-10700KF                                                                                               |
+[2024-10-17T18:27:48.824+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL 1151 CORE I3 8100 3.6GHZ/6MB S/ COOLER TRAY 8                                                                 |
+[2024-10-17T18:27:48.824+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I3-10100 COMET LAKE                                                                                      |
+[2024-10-17T18:27:48.824+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I3 3XXX 3.3GHZ CACHE 3MB LGA  1155 OEM                                                                   |
+[2024-10-17T18:27:48.825+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I7 10700K 10                                                                                             |
+[2024-10-17T18:27:48.825+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL 1700P CORE I5 12400 2.5GHZ 18MB                                                                               |
+[2024-10-17T18:27:48.825+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL I5-4570 / 3.60GHZ / 6MB CACHE / FCLGA 1150.                                                                   |
+[2024-10-17T18:27:48.825+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL 1155 CORE I5 2400 3.1GHZ/3MB S/ COOLER TRAY 2                                                                 |
+[2024-10-17T18:27:48.826+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 7 5800X                                                                                                   |
+[2024-10-17T18:27:48.826+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I7-3770                                                                                                  |
+[2024-10-17T18:27:48.826+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I7 13700K LGA 1700 3.4GHZ (5.4GHZ MAX TURBO) CACHE 30MB 16 N                                             |
+[2024-10-17T18:27:48.827+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5-4570 3.2GHZ 6MB CM8064601464707 LGA  1150 OEM -  SEM COOLER                                           |
+[2024-10-17T18:27:48.827+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5 2400 3.10GHZ                                                                                          |
+[2024-10-17T18:27:48.827+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CELERON G6900                                                                                                 |
+[2024-10-17T18:27:48.828+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I3-10100 10 GERA                                                                                         |
+[2024-10-17T18:27:48.828+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I7 12700F                                                                                                |
+[2024-10-17T18:27:48.828+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I7 10700K 3.80GHZ                                                                                        |
+[2024-10-17T18:27:48.829+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5-11500 11                                                                                              |
+[2024-10-17T18:27:48.829+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5-11400 LGA  1200 2.6GHZ 6CORE CACHE 12MB BX8070811400  - INTEL                                         |
+[2024-10-17T18:27:48.829+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL I3-12100F                                                                                                     |
+[2024-10-17T18:27:48.829+0000] {spark_submit.py:634} INFO - |AFOX                                                                                                                            |
+[2024-10-17T18:27:48.830+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL I5-11400F                                                                                                     |
+[2024-10-17T18:27:48.830+0000] {spark_submit.py:634} INFO - |WIN MEMORY                                                                                                                      |
+[2024-10-17T18:27:48.830+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 3 5300G 4GHZ 4.2GHZ TURBO 4 CORES 8 THREADS AM4 V                                                         |
+[2024-10-17T18:27:48.831+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL I7 12700 12                                                                                                   |
+[2024-10-17T18:27:48.831+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN                                                                                                           |
+[2024-10-17T18:27:48.831+0000] {spark_submit.py:634} INFO - |BRAZILPC                                                                                                                        |
+[2024-10-17T18:27:48.832+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I7-4790                                                                                                  |
+[2024-10-17T18:27:48.832+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5-12400F 2.5GHZ (4.4GHZ MAX TURBO) CACHE 18MB LGA1700 - BX8071512400F                                   |
+[2024-10-17T18:27:48.832+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL I5-14500 LGA 1700 - BX8071514500                                                                              |
+[2024-10-17T18:27:48.833+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL XEON GOLD 5318Y - LGA 4189 3GEN - 24 CORES - 2.10GHZ - 36MB - TDP                                             |
+[2024-10-17T18:27:48.833+0000] {spark_submit.py:634} INFO - |EASY MEMORY                                                                                                                     |
+[2024-10-17T18:27:48.833+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL XEON SILVER 4309Y - LGA 4189 3GEN - 08 CORES - 2.80GHZ - 12MB - TDP                                           |
+[2024-10-17T18:27:48.834+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I7-10700                                                                                                 |
+[2024-10-17T18:27:48.834+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 5 4600G BOX                                                                                               |
+[2024-10-17T18:27:48.834+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL PENTIUM E2160                                                                                                 |
+[2024-10-17T18:27:48.834+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL PENTIUM GOLD G6405                                                                                            |
+[2024-10-17T18:27:48.835+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL I5-6500                                                                                                       |
+[2024-10-17T18:27:48.835+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL LGA  1200 CELERON DUAL CORE G5905 3.50GHZ BOX                                                                 |
+[2024-10-17T18:27:48.835+0000] {spark_submit.py:634} INFO - |BRAZIL PC                                                                                                                       |
+[2024-10-17T18:27:48.836+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I9 13900K                                                                                                |
+[2024-10-17T18:27:48.836+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I7-11700K 11                                                                                             |
+[2024-10-17T18:27:48.836+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 7 3800X                                                                                                   |
+[2024-10-17T18:27:48.837+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I3 7100                                                                                                  |
+[2024-10-17T18:27:48.837+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL I7-4770                                                                                                       |
+[2024-10-17T18:27:48.837+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5 6500                                                                                                  |
+[2024-10-17T18:27:48.837+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5 650                                                                                                   |
+[2024-10-17T18:27:48.838+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 7 5800XT 3.8GHZ (4.8GHZ TURBO) 8 CORES 16 THREADS AM4 36MB CACHE WRAITH PRISM SEM VIDEO - 100-100001582BOX|
+[2024-10-17T18:27:48.838+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I7-10700F 10                                                                                             |
+[2024-10-17T18:27:48.838+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I7-11700KF 11                                                                                            |
+[2024-10-17T18:27:48.839+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CELERON G1820                                                                                                 |
+[2024-10-17T18:27:48.839+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 5 9600X 38MB 3.9GHZ - 5.4GHZ                                                                              |
+[2024-10-17T18:27:48.839+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I9-11900K 11                                                                                             |
+[2024-10-17T18:27:48.839+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL I5 10400  2.9GHZ LGA  1200                                                                                    |
+[2024-10-17T18:27:48.840+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5-3570                                                                                                  |
+[2024-10-17T18:27:48.840+0000] {spark_submit.py:634} INFO - |NTC                                                                                                                             |
+[2024-10-17T18:27:48.840+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 5 3400G                                                                                                   |
+[2024-10-17T18:27:48.841+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I3-10100                                                                                                 |
+[2024-10-17T18:27:48.841+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I9-13900KS                                                                                               |
+[2024-10-17T18:27:48.841+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL I3-2120                                                                                                       |
+[2024-10-17T18:27:48.842+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I7-2600 3.4GHZ 8MB CM8062300834302 LGA  1155 OEM                                                         |
+[2024-10-17T18:27:48.842+0000] {spark_submit.py:634} INFO - |DUEX                                                                                                                            |
+[2024-10-17T18:27:48.842+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 5-5500 3.6GHZ                                                                                             |
+[2024-10-17T18:27:48.842+0000] {spark_submit.py:634} INFO - |DALE7                                                                                                                           |
+[2024-10-17T18:27:48.843+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I3 3240 OEM                                                                                              |
+[2024-10-17T18:27:48.843+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 7                                                                                                         |
+[2024-10-17T18:27:48.844+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I7-13700F BOX LGA 1700 30MB CACHE) SEM V                                                                 |
+[2024-10-17T18:27:48.844+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I3-2100 CACHE 3M 3.10GHZ LGA 1155 OEM                                                                    |
+[2024-10-17T18:27:48.844+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I3-2130 CACHE 3MB 3.40GHZ 1155 OEM                                                                       |
+[2024-10-17T18:27:48.845+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 5 4600G 3.7 AM4 OEM                                                                                       |
+[2024-10-17T18:27:48.845+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I7 6700 3.4GHZ 1151 OEM                                                                                  |
+[2024-10-17T18:27:48.846+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I9 14900                                                                                                 |
+[2024-10-17T18:27:48.846+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5-12400F 2.5GHZ (4.4GHZ TURBO)                                                                          |
+[2024-10-17T18:27:48.846+0000] {spark_submit.py:634} INFO - |BEST MEMORY                                                                                                                     |
+[2024-10-17T18:27:48.847+0000] {spark_submit.py:634} INFO - |DELL                                                                                                                            |
+[2024-10-17T18:27:48.847+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD A6-7480 DUAL CORE                                                                                               |
+[2024-10-17T18:27:48.848+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL XEON GOLD 5418Y - LGA 4677 4GEN 24 CORES 2.00GHZ - 45MB - TDP                                                 |
+[2024-10-17T18:27:48.848+0000] {spark_submit.py:634} INFO - |PROCESSADOR 1151 CORE I3-9100 3.6GHZ/6MB S/ COOLER TRAY 9                                                                       |
+[2024-10-17T18:27:48.848+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 9 7900X3D                                                                                                 |
+[2024-10-17T18:27:48.849+0000] {spark_submit.py:634} INFO - |KEEPDATA                                                                                                                        |
+[2024-10-17T18:27:48.849+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL I5-2400                                                                                                       |
+[2024-10-17T18:27:48.849+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL I7-2600                                                                                                       |
+[2024-10-17T18:27:48.850+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL LGA  1200 I5 11600K 3                                                                                         |
+[2024-10-17T18:27:48.850+0000] {spark_submit.py:634} INFO - |PROCESSADOR 1151 CORE I5                                                                                                        |
+[2024-10-17T18:27:48.850+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 7 9700X 40MB 3.8GHZ - 5.5GHZ                                                                              |
+[2024-10-17T18:27:48.851+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL I7-12700KF                                                                                                    |
+[2024-10-17T18:27:48.851+0000] {spark_submit.py:634} INFO - |PROCESSADOR I3-7100 3.90GHZ                                                                                                     |
+[2024-10-17T18:27:48.851+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 5 5600G                                                                                                   |
+[2024-10-17T18:27:48.852+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I9 14900F                                                                                                |
+[2024-10-17T18:27:48.852+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I9-12900K                                                                                                |
+[2024-10-17T18:27:48.853+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I7 13700                                                                                                 |
+[2024-10-17T18:27:48.853+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5-9500 COFFEE LAKE                                                                                      |
+[2024-10-17T18:27:48.853+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL XEON E-2324G                                                                                                  |
+[2024-10-17T18:27:48.854+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5-12400T CACHE 18MB 4.20GHZ 1700 OEM                                                                    |
+[2024-10-17T18:27:48.854+0000] {spark_submit.py:634} INFO - |AORUS                                                                                                                           |
+[2024-10-17T18:27:48.855+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL I5-12400                                                                                                      |
+[2024-10-17T18:27:48.855+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CELERON G-5900                                                                                                |
+[2024-10-17T18:27:48.856+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I3 13100F BOX LGA 1700 3.4GHZ 12MB CACHE S/ V                                                            |
+[2024-10-17T18:27:48.856+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CELERON 430                                                                                                   |
+[2024-10-17T18:27:48.856+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL PENTIUM G2030                                                                                                 |
+[2024-10-17T18:27:48.857+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL 1155 CORE I3 3220 3.3GHZ/3MB S/ COOLER TRAY 3                                                                 |
+[2024-10-17T18:27:48.857+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I3 2120                                                                                                  |
+[2024-10-17T18:27:48.857+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 9 9900X 4.4GHZ (5.6GHZ TURBO) 12 CORES 24 THREADS AM5 76MB RADEON GRAPHICS SEM COOLER - 100-100000662WOF  |
+[2024-10-17T18:27:48.858+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 9 9900X 76MB 4.4GHZ - 5.6GHZ                                                                              |
+[2024-10-17T18:27:48.858+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL 1150 CORE I5 4590                                                                                             |
+[2024-10-17T18:27:48.858+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL I7 4790                                                                                                       |
+[2024-10-17T18:27:48.859+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 9 7950X                                                                                                   |
+[2024-10-17T18:27:48.859+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL 1151 CORE I7 7700 3.6GHZ/8MB S/ COOLER TRAY 7                                                                 |
+[2024-10-17T18:27:48.860+0000] {spark_submit.py:634} INFO - |GOLINE                                                                                                                          |
+[2024-10-17T18:27:48.860+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN R9 5950X                                                                                                  |
+[2024-10-17T18:27:48.860+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I3-7100 KABY LAKE 7                                                                                      |
+[2024-10-17T18:27:48.861+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL PENTIUM G3220                                                                                                 |
+[2024-10-17T18:27:48.861+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I9-10900X CASCADE LAKE                                                                                   |
+[2024-10-17T18:27:48.861+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 7 7700 3.80GHZ                                                                                            |
+[2024-10-17T18:27:48.862+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL I3-10105F                                                                                                     |
+[2024-10-17T18:27:48.862+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I9-13900                                                                                                 |
+[2024-10-17T18:27:48.862+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 5 7600 4                                                                                                  |
+[2024-10-17T18:27:48.863+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL LGA  1200 CELERON G5925 3.60GHZ 4MB                                                                           |
+[2024-10-17T18:27:48.863+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I7-4770                                                                                                  |
+[2024-10-17T18:27:48.863+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL I3-7100                                                                                                       |
+[2024-10-17T18:27:48.864+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5 3470                                                                                                  |
+[2024-10-17T18:27:48.864+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I9 10900KF                                                                                               |
+[2024-10-17T18:27:48.864+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5-2310 CACHE 6M 2.90GHZ LGA  1155  OEM                                                                  |
+[2024-10-17T18:27:48.864+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL I5-9500                                                                                                       |
+[2024-10-17T18:27:48.865+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CELERON G5905                                                                                                 |
+[2024-10-17T18:27:48.865+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I9 11900F OEM LGA 1200                                                                                   |
+[2024-10-17T18:27:48.865+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5-6500 3.2GHZ LGA  1151 OEM                                                                             |
+[2024-10-17T18:27:48.866+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I3-6100T                                                                                                 |
+[2024-10-17T18:27:48.866+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5 11600K 11                                                                                             |
+[2024-10-17T18:27:48.866+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL 1151 CORE I7 6700 3.4GHZ/8MB S/ COOLER TRAY 6                                                                 |
+[2024-10-17T18:27:48.867+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5-12600K                                                                                                |
+[2024-10-17T18:27:48.867+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL I5-10400 COMET LAKE                                                                                           |
+[2024-10-17T18:27:48.867+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL LGA  1200 I3 10105F 3.7GHZ 6MB BOX                                                                            |
+[2024-10-17T18:27:48.868+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CELERON G5925 10                                                                                              |
+[2024-10-17T18:27:48.868+0000] {spark_submit.py:634} INFO - |PRIMETEK                                                                                                                        |
+[2024-10-17T18:27:48.868+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I3-10105 10                                                                                              |
+[2024-10-17T18:27:48.868+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5 14600KF 14 GERA                                                                                       |
+[2024-10-17T18:27:48.869+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5-12400F CACHE 18MB 4.40GHZ 1700 OEM                                                                    |
+[2024-10-17T18:27:48.869+0000] {spark_submit.py:634} INFO - |AITEK                                                                                                                           |
+[2024-10-17T18:27:48.869+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5                                                                                                       |
+[2024-10-17T18:27:48.870+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I9 14900KF                                                                                               |
+[2024-10-17T18:27:48.870+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I9-13900F                                                                                                |
+[2024-10-17T18:27:48.870+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL PENTIUM DUAL CORE G5500 8                                                                                     |
+[2024-10-17T18:27:48.870+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5-4570 3.20GHZ CACHE 6MB LGA  1150 OEM                                                                  |
+[2024-10-17T18:27:48.871+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5 11400F 2.60GHZ                                                                                        |
+[2024-10-17T18:27:48.871+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN RADEON 9 7950X                                                                                            |
+[2024-10-17T18:27:48.871+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I7-4770 3.4GHZ                                                                                           |
+[2024-10-17T18:27:48.872+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I9-12900 12                                                                                              |
+[2024-10-17T18:27:48.872+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I3 10100F COMET LAKE                                                                                     |
+[2024-10-17T18:27:48.872+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL I7-11700K ROCKET LAKE 3.60GHZ                                                                                 |
+[2024-10-17T18:27:48.872+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I9-14900                                                                                                 |
+[2024-10-17T18:27:48.873+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I7-11700K                                                                                                |
+[2024-10-17T18:27:48.873+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I7 6700                                                                                                  |
+[2024-10-17T18:27:48.873+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5 14600K 14 GERA                                                                                        |
+[2024-10-17T18:27:48.873+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 7 5800XT 3.8 GHZ AM4 100-100001582BOX                                                                     |
+[2024-10-17T18:27:48.874+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL 1151 CORE I7 8700 3.7GHZ/12MB S/ COOLER TRAY 8                                                                |
+[2024-10-17T18:27:48.874+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I9-12900KS                                                                                               |
+[2024-10-17T18:27:48.874+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5 14400                                                                                                 |
+[2024-10-17T18:27:48.874+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 9 9900X 4.4GHZ AT                                                                                         |
+[2024-10-17T18:27:48.875+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I7 10700KF 3.80GHZ                                                                                       |
+[2024-10-17T18:27:48.875+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL I3-6100  3.70GHZ  3MB CACHE LGA 1151 O                                                                        |
+[2024-10-17T18:27:48.875+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I9 14900K                                                                                                |
+[2024-10-17T18:27:48.876+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I9-10850K                                                                                                |
+[2024-10-17T18:27:48.876+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I9-11900KF                                                                                               |
+[2024-10-17T18:27:48.876+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL I5-10600K MARVEL                                                                                              |
+[2024-10-17T18:27:48.877+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CELERON G3930                                                                                                 |
+[2024-10-17T18:27:48.877+0000] {spark_submit.py:634} INFO - |PEG                                                                                                                             |
+[2024-10-17T18:27:48.877+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I7 3770 3                                                                                                |
+[2024-10-17T18:27:48.878+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 7 5700X3D AM4 3.0GHZ                                                                                      |
+[2024-10-17T18:27:48.878+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 5 8400F 22MB 4.2GHZ - 4.7GHZ                                                                              |
+[2024-10-17T18:27:48.878+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I3 10100F                                                                                                |
+[2024-10-17T18:27:48.879+0000] {spark_submit.py:634} INFO - |RISE MODE                                                                                                                       |
+[2024-10-17T18:27:48.879+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL I5-3470                                                                                                       |
+[2024-10-17T18:27:48.879+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL PENTIUM GOLD G6400 - BX80701G6400                                                                             |
+[2024-10-17T18:27:48.880+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL XEON SILVER 4310                                                                                              |
+[2024-10-17T18:27:48.880+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL 11700F CORE I7 11                                                                                             |
+[2024-10-17T18:27:48.880+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5-7400T 2.4GHZ CACHE 6MB LGA  1151 OEM                                                                  |
+[2024-10-17T18:27:48.881+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN THREADRIPPER 7980X                                                                                        |
+[2024-10-17T18:27:48.881+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5 - 12400F                                                                                              |
+[2024-10-17T18:27:48.881+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I3-10105                                                                                                 |
+[2024-10-17T18:27:48.881+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I3-3210 OEM                                                                                              |
+[2024-10-17T18:27:48.882+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 9 9950X 4.3GHZ AM5 100-100001277WOF                                                                       |
+[2024-10-17T18:27:48.882+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I9-10900F                                                                                                |
+[2024-10-17T18:27:48.882+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I7-6700                                                                                                  |
+[2024-10-17T18:27:48.883+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5 13400F                                                                                                |
+[2024-10-17T18:27:48.883+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD ATHLON 3000G AM4                                                                                                |
+[2024-10-17T18:27:48.883+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5-3470T 2.90GHZ 3MB LGA  1155 OEM                                                                       |
+[2024-10-17T18:27:48.884+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I7-13700                                                                                                 |
+[2024-10-17T18:27:48.884+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I3-12100F 2.9                                                                                            |
+[2024-10-17T18:27:48.884+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I7 14700K                                                                                                |
+[2024-10-17T18:27:48.885+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I9 13900F                                                                                                |
+[2024-10-17T18:27:48.885+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5-3470 LGA  1155 3.2GHZ 6MB OEM 326B770                                                                 |
+[2024-10-17T18:27:48.886+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5 13400 BOX LGA 1700 10 CORES 16 THREADS 20MB CACHE - BX8071513400                                      |
+[2024-10-17T18:27:48.886+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I3-10105F                                                                                                |
+[2024-10-17T18:27:48.886+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I7-2600  LGA  1155 OEM                                                                                   |
+[2024-10-17T18:27:48.887+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5-2320 3.00GHZ CACHE 6MB LGA  1155 OEM                                                                  |
+[2024-10-17T18:27:48.887+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I3-10100F                                                                                                |
+[2024-10-17T18:27:48.887+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I7 14700                                                                                                 |
+[2024-10-17T18:27:48.888+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5 7500                                                                                                  |
+[2024-10-17T18:27:48.888+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 5 9600X 3.9GHZ (5.4GHZ TURBO) 6 CORES 12 THREADS AM5 38MB RADEON GRAPHICS SEM COOLER - 100-100001405WOF   |
+[2024-10-17T18:27:48.888+0000] {spark_submit.py:634} INFO - |PROCESSADOR I7 2600                                                                                                             |
+[2024-10-17T18:27:48.889+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I7 4770                                                                                                  |
+[2024-10-17T18:27:48.889+0000] {spark_submit.py:634} INFO - |CRUCIAL                                                                                                                         |
+[2024-10-17T18:27:48.889+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5-11600KF 11                                                                                            |
+[2024-10-17T18:27:48.890+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I7-3770 3.4GHZ  8MB CM8063701211600 LGA  1155 OEM                                                        |
+[2024-10-17T18:27:48.890+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL XEON E7-8830 SLC3K                                                                                            |
+[2024-10-17T18:27:48.890+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I3 4160                                                                                                  |
+[2024-10-17T18:27:48.891+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD ATHLON 64 3800                                                                                                  |
+[2024-10-17T18:27:48.891+0000] {spark_submit.py:634} INFO - |PROCESSADOR GAMER CORE I5-4590                                                                                                  |
+[2024-10-17T18:27:48.891+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5-13600KF 3.50 GHZ (TURBO 5.10 GHZ)                                                                     |
+[2024-10-17T18:27:48.892+0000] {spark_submit.py:634} INFO - |PROCESSADOR 1151                                                                                                                |
+[2024-10-17T18:27:48.892+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I7 11700 2.50GHZ                                                                                         |
+[2024-10-17T18:27:48.892+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5-4570 4                                                                                                |
+[2024-10-17T18:27:48.893+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL G7400 PENTIUM GOLD                                                                                            |
+[2024-10-17T18:27:48.893+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 5-4500                                                                                                    |
+[2024-10-17T18:27:48.893+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL I7-8700 4.6GHZ                                                                                                |
+[2024-10-17T18:27:48.894+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I3-4130 3.40 GHZ                                                                                         |
+[2024-10-17T18:27:48.894+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5-9400                                                                                                  |
+[2024-10-17T18:27:48.894+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I7 7700                                                                                                  |
+[2024-10-17T18:27:48.895+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I9 10900F 2.80GHZ - 5.20GHZ TURBO 20MB                                                                   |
+[2024-10-17T18:27:48.895+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL I5-7500T / 3.30GHZ / 6MB CACHE / FCLGA 1151                                                                   |
+[2024-10-17T18:27:48.896+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I3 14100                                                                                                 |
+[2024-10-17T18:27:48.896+0000] {spark_submit.py:634} INFO - |XPG                                                                                                                             |
+[2024-10-17T18:27:48.896+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5-4590                                                                                                  |
+[2024-10-17T18:27:48.897+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I7-10700KA                                                                                               |
+[2024-10-17T18:27:48.897+0000] {spark_submit.py:634} INFO - |BRX                                                                                                                             |
+[2024-10-17T18:27:48.897+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5-4570T  2.90GHZ CACHE 4MB  LGA  1150  OEM                                                              |
+[2024-10-17T18:27:48.898+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I3 13100F 3.4GHZ (4.5GHZ TURBO) 13                                                                       |
+[2024-10-17T18:27:48.898+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5 14400F 14                                                                                             |
+[2024-10-17T18:27:48.898+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 5                                                                                                         |
+[2024-10-17T18:27:48.899+0000] {spark_submit.py:634} INFO - |IOWAY                                                                                                                           |
+[2024-10-17T18:27:48.899+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL XEON SILVER 4314 - LGA 4189 3GEN - 16 CORES - 2.40GHZ - 24MB - TDP                                            |
+[2024-10-17T18:27:48.899+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 9 9950X                                                                                                   |
+[2024-10-17T18:27:48.900+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 7-9700X                                                                                                   |
+[2024-10-17T18:27:48.900+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I7 3770                                                                                                  |
+[2024-10-17T18:27:48.901+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I7-12700                                                                                                 |
+[2024-10-17T18:27:48.901+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL 1150 CORE I3 4160                                                                                             |
+[2024-10-17T18:27:48.901+0000] {spark_submit.py:634} INFO - |SAMSUNG                                                                                                                         |
+[2024-10-17T18:27:48.901+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL I7-12700F                                                                                                     |
+[2024-10-17T18:27:48.902+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD A10-5800K                                                                                                       |
+[2024-10-17T18:27:48.902+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE PENTIUM G4400T  2.90GHZ 3MB CACHE 1151 OEM                                                               |
+[2024-10-17T18:27:48.902+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 5 8400F AM5 4.2GHZ                                                                                        |
+[2024-10-17T18:27:48.903+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN THREADRIPPER PRO 5995WX                                                                                   |
+[2024-10-17T18:27:48.903+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL XEON E2124                                                                                                    |
+[2024-10-17T18:27:48.903+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 9 7900 4.00GHZ                                                                                            |
+[2024-10-17T18:27:48.904+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL XEON GOLD 5315Y  - LGA 4189 3GEN - 08 CORES 3.60GHZ - 12MB - TDP                                              |
+[2024-10-17T18:27:48.904+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I7-12700F                                                                                                |
+[2024-10-17T18:27:48.904+0000] {spark_submit.py:634} INFO - |PCWARE                                                                                                                          |
+[2024-10-17T18:27:48.904+0000] {spark_submit.py:634} INFO - |KABUM!                                                                                                                          |
+[2024-10-17T18:27:48.905+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5-12400 CACHE 18MB 4.40GHZ 1700 OEM                                                                     |
+[2024-10-17T18:27:48.905+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5-12600KF 12                                                                                            |
+[2024-10-17T18:27:48.905+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL I3-6100                                                                                                       |
+[2024-10-17T18:27:48.906+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL 1151 I3-6100 3.7GHZ 6M                                                                                        |
+[2024-10-17T18:27:48.906+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I3 14100F                                                                                                |
+[2024-10-17T18:27:48.906+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL CORE I5 6500 3.6GHZ LGA 1151 6 GERA                                                                           |
+[2024-10-17T18:27:48.907+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD RYZEN 9 5900XT 3.3GHZ (4.8GHZ TURBO) 16 CORES 32 THREADS AM4 72MB CACHE SEM V                                   |
+[2024-10-17T18:27:48.907+0000] {spark_submit.py:634} INFO - |HUSKY                                                                                                                           |
+[2024-10-17T18:27:48.907+0000] {spark_submit.py:634} INFO - +--------------------------------------------------------------------------------------------------------------------------------+
+[2024-10-17T18:27:48.908+0000] {spark_submit.py:634} INFO - 
+[2024-10-17T18:27:48.908+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:48 INFO BlockManagerInfo: Removed broadcast_5_piece0 on cc66b6895e01:39133 in memory (size: 19.1 KiB, free: 434.3 MiB)
+[2024-10-17T18:27:48.934+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:48 INFO FileSourceStrategy: Pushed Filters:
+[2024-10-17T18:27:48.934+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:48 INFO FileSourceStrategy: Post-Scan Filters:
+[2024-10-17T18:27:48.935+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:48 INFO FileSourceStrategy: Pushed Filters:
+[2024-10-17T18:27:48.935+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:48 INFO FileSourceStrategy: Post-Scan Filters:
+[2024-10-17T18:27:48.957+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:48 INFO MemoryStore: Block broadcast_6 stored as values in memory (estimated size 202.6 KiB, free 433.7 MiB)
+[2024-10-17T18:27:48.969+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:48 INFO MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 35.4 KiB, free 433.7 MiB)
+[2024-10-17T18:27:48.970+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:48 INFO BlockManagerInfo: Added broadcast_6_piece0 in memory on cc66b6895e01:39133 (size: 35.4 KiB, free: 434.3 MiB)
+[2024-10-17T18:27:48.971+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:48 INFO SparkContext: Created broadcast 6 from jdbc at NativeMethodAccessorImpl.java:0
+[2024-10-17T18:27:48.972+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:48 INFO FileSourceScanExec: Planning scan with bin packing, max size: 16782037 bytes, open cost is considered as scanning 4194304 bytes.
+[2024-10-17T18:27:48.977+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:48 INFO MemoryStore: Block broadcast_7 stored as values in memory (estimated size 202.6 KiB, free 433.5 MiB)
+[2024-10-17T18:27:48.984+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:48 INFO MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 35.4 KiB, free 433.5 MiB)
+[2024-10-17T18:27:48.985+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:48 INFO BlockManagerInfo: Added broadcast_7_piece0 in memory on cc66b6895e01:39133 (size: 35.4 KiB, free: 434.3 MiB)
+[2024-10-17T18:27:48.985+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:48 INFO SparkContext: Created broadcast 7 from jdbc at NativeMethodAccessorImpl.java:0
+[2024-10-17T18:27:48.999+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:48 INFO FileSourceScanExec: Planning scan with bin packing, max size: 16798470 bytes, open cost is considered as scanning 4194304 bytes.
+[2024-10-17T18:27:49.000+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:48 INFO DAGScheduler: Registering RDD 20 (jdbc at NativeMethodAccessorImpl.java:0) as input to shuffle 1
+[2024-10-17T18:27:49.000+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:48 INFO DAGScheduler: Got map stage job 4 (jdbc at NativeMethodAccessorImpl.java:0) with 2 output partitions
+[2024-10-17T18:27:49.001+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:48 INFO DAGScheduler: Final stage: ShuffleMapStage 5 (jdbc at NativeMethodAccessorImpl.java:0)
+[2024-10-17T18:27:49.001+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:48 INFO DAGScheduler: Parents of final stage: List()
+[2024-10-17T18:27:49.002+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:48 INFO DAGScheduler: Missing parents: List()
+[2024-10-17T18:27:49.002+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:48 INFO DAGScheduler: Submitting ShuffleMapStage 5 (MapPartitionsRDD[20] at jdbc at NativeMethodAccessorImpl.java:0), which has no missing parents
+[2024-10-17T18:27:49.003+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO MemoryStore: Block broadcast_8 stored as values in memory (estimated size 31.1 KiB, free 433.4 MiB)
+[2024-10-17T18:27:49.006+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO MemoryStore: Block broadcast_8_piece0 stored as bytes in memory (estimated size 13.5 KiB, free 433.4 MiB)
+[2024-10-17T18:27:49.006+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO BlockManagerInfo: Added broadcast_8_piece0 in memory on cc66b6895e01:39133 (size: 13.5 KiB, free: 434.2 MiB)
+[2024-10-17T18:27:49.007+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO SparkContext: Created broadcast 8 from broadcast at DAGScheduler.scala:1585
+[2024-10-17T18:27:49.008+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 5 (MapPartitionsRDD[20] at jdbc at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1))
+[2024-10-17T18:27:49.008+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO TaskSchedulerImpl: Adding task set 5.0 with 2 tasks resource profile 0
+[2024-10-17T18:27:49.009+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO TaskSetManager: Starting task 0.0 in stage 5.0 (TID 5) (cc66b6895e01, executor driver, partition 0, PROCESS_LOCAL, 10583 bytes)
+[2024-10-17T18:27:49.010+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO Executor: Running task 0.0 in stage 5.0 (TID 5)
+[2024-10-17T18:27:49.020+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/pichau_2024-10-08/dim_marca.parquet/part-00000-eaf0b330-5a42-4a4a-abb7-5c1b2a5487cc-c000.snappy.parquet, range: 0-1246, partition values: [empty row]
+[2024-10-17T18:27:49.034+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO BlockManagerInfo: Removed broadcast_2_piece0 on cc66b6895e01:39133 in memory (size: 35.4 KiB, free: 434.3 MiB)
+[2024-10-17T18:27:49.037+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO BlockManagerInfo: Removed broadcast_3_piece0 on cc66b6895e01:39133 in memory (size: 35.4 KiB, free: 434.3 MiB)
+[2024-10-17T18:27:49.074+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/pichau_2024-10-11/dim_marca.parquet/part-00000-b9a8b591-4aa2-4f41-b3f2-7bc66dfa3fd5-c000.snappy.parquet, range: 0-1224, partition values: [empty row]
+[2024-10-17T18:27:49.125+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/pichau_2024-10-16/dim_marca.parquet/part-00000-a1f91b58-8964-4ceb-ae65-2ba4926f5517-c000.snappy.parquet, range: 0-1177, partition values: [empty row]
+[2024-10-17T18:27:49.189+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/pichau_2024-10-15/dim_marca.parquet/part-00000-2ca7ede2-4a68-4273-914c-5fcead13cc3d-c000.snappy.parquet, range: 0-1174, partition values: [empty row]
+[2024-10-17T18:27:49.266+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO Executor: Finished task 0.0 in stage 5.0 (TID 5). 3296 bytes result sent to driver
+[2024-10-17T18:27:49.267+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO TaskSetManager: Starting task 1.0 in stage 5.0 (TID 6) (cc66b6895e01, executor driver, partition 1, PROCESS_LOCAL, 10579 bytes)
+[2024-10-17T18:27:49.268+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO TaskSetManager: Finished task 0.0 in stage 5.0 (TID 5) in 258 ms on cc66b6895e01 (executor driver) (1/2)
+[2024-10-17T18:27:49.273+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO Executor: Running task 1.0 in stage 5.0 (TID 6)
+[2024-10-17T18:27:49.283+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/kabum_2024-10-11/dim_marca.parquet/part-00000-d8228eec-115b-4488-9160-cbb0376594df-c000.snappy.parquet, range: 0-5464, partition values: [empty row]
+[2024-10-17T18:27:49.347+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/kabum_2024-10-08/dim_marca.parquet/part-00000-a70cc15e-091c-494d-a8b5-6557e879fc0d-c000.snappy.parquet, range: 0-5416, partition values: [empty row]
+[2024-10-17T18:27:49.415+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/kabum_2024-10-16/dim_marca.parquet/part-00000-62b3fd2b-0716-4fac-a704-c78d499b75ca-c000.snappy.parquet, range: 0-5200, partition values: [empty row]
+[2024-10-17T18:27:49.475+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/kabum_2024-10-15/dim_marca.parquet/part-00000-25967887-4b45-490a-a9af-271e6dacd0d9-c000.snappy.parquet, range: 0-5174, partition values: [empty row]
+[2024-10-17T18:27:49.568+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO Executor: Finished task 1.0 in stage 5.0 (TID 6). 3296 bytes result sent to driver
+[2024-10-17T18:27:49.569+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO TaskSetManager: Finished task 1.0 in stage 5.0 (TID 6) in 302 ms on cc66b6895e01 (executor driver) (2/2)
+[2024-10-17T18:27:49.574+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO TaskSchedulerImpl: Removed TaskSet 5.0, whose tasks have all completed, from pool
+[2024-10-17T18:27:49.575+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO DAGScheduler: ShuffleMapStage 5 (jdbc at NativeMethodAccessorImpl.java:0) finished in 0.575 s
+[2024-10-17T18:27:49.576+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO DAGScheduler: looking for newly runnable stages
+[2024-10-17T18:27:49.576+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO DAGScheduler: running: Set()
+[2024-10-17T18:27:49.577+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO DAGScheduler: waiting: Set()
+[2024-10-17T18:27:49.578+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO DAGScheduler: failed: Set()
+[2024-10-17T18:27:49.580+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO ShufflePartitionsUtil: For shuffle(1), advisory target size: 67108864, actual target size 1048576, minimum partition size: 1048576
+[2024-10-17T18:27:49.611+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO CodeGenerator: Code generated in 21.71396 ms
+[2024-10-17T18:27:49.642+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO SparkContext: Starting job: jdbc at NativeMethodAccessorImpl.java:0
+[2024-10-17T18:27:49.643+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO DAGScheduler: Got job 5 (jdbc at NativeMethodAccessorImpl.java:0) with 1 output partitions
+[2024-10-17T18:27:49.644+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO DAGScheduler: Final stage: ResultStage 7 (jdbc at NativeMethodAccessorImpl.java:0)
+[2024-10-17T18:27:49.644+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 6)
+[2024-10-17T18:27:49.645+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO DAGScheduler: Missing parents: List()
+[2024-10-17T18:27:49.645+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO DAGScheduler: Submitting ResultStage 7 (MapPartitionsRDD[25] at jdbc at NativeMethodAccessorImpl.java:0), which has no missing parents
+[2024-10-17T18:27:49.657+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO MemoryStore: Block broadcast_9 stored as values in memory (estimated size 49.1 KiB, free 433.8 MiB)
+[2024-10-17T18:27:49.662+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO MemoryStore: Block broadcast_9_piece0 stored as bytes in memory (estimated size 22.3 KiB, free 433.8 MiB)
+[2024-10-17T18:27:49.663+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO BlockManagerInfo: Added broadcast_9_piece0 in memory on cc66b6895e01:39133 (size: 22.3 KiB, free: 434.3 MiB)
+[2024-10-17T18:27:49.664+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO BlockManagerInfo: Removed broadcast_8_piece0 on cc66b6895e01:39133 in memory (size: 13.5 KiB, free: 434.3 MiB)
+[2024-10-17T18:27:49.664+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO SparkContext: Created broadcast 9 from broadcast at DAGScheduler.scala:1585
+[2024-10-17T18:27:49.664+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 7 (MapPartitionsRDD[25] at jdbc at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+[2024-10-17T18:27:49.665+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO TaskSchedulerImpl: Adding task set 7.0 with 1 tasks resource profile 0
+[2024-10-17T18:27:49.666+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO TaskSetManager: Starting task 0.0 in stage 7.0 (TID 7) (cc66b6895e01, executor driver, partition 0, NODE_LOCAL, 9179 bytes)
+[2024-10-17T18:27:49.667+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO Executor: Running task 0.0 in stage 7.0 (TID 7)
+[2024-10-17T18:27:49.686+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO ShuffleBlockFetcherIterator: Getting 2 (31.3 KiB) non-empty blocks including 2 (31.3 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+[2024-10-17T18:27:49.687+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+[2024-10-17T18:27:49.706+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO CodeGenerator: Code generated in 18.705299 ms
+[2024-10-17T18:27:49.714+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO CodeGenerator: Code generated in 5.134674 ms
+[2024-10-17T18:27:49.769+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO Executor: Finished task 0.0 in stage 7.0 (TID 7). 5457 bytes result sent to driver
+[2024-10-17T18:27:49.770+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO TaskSetManager: Finished task 0.0 in stage 7.0 (TID 7) in 104 ms on cc66b6895e01 (executor driver) (1/1)
+[2024-10-17T18:27:49.770+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO TaskSchedulerImpl: Removed TaskSet 7.0, whose tasks have all completed, from pool
+[2024-10-17T18:27:49.771+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO DAGScheduler: ResultStage 7 (jdbc at NativeMethodAccessorImpl.java:0) finished in 0.120 s
+[2024-10-17T18:27:49.771+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO DAGScheduler: Job 5 is finished. Cancelling potential speculative or zombie tasks for this job
+[2024-10-17T18:27:49.772+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO TaskSchedulerImpl: Killing all running tasks in stage 7: Stage finished
+[2024-10-17T18:27:49.772+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO DAGScheduler: Job 5 finished: jdbc at NativeMethodAccessorImpl.java:0, took 0.129760 s
+[2024-10-17T18:27:49.838+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO SparkContext: Invoking stop() from shutdown hook
+[2024-10-17T18:27:49.839+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO SparkContext: SparkContext is stopping with exitCode 0.
+[2024-10-17T18:27:49.846+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO SparkUI: Stopped Spark web UI at http://cc66b6895e01:4040
+[2024-10-17T18:27:49.854+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+[2024-10-17T18:27:49.869+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO MemoryStore: MemoryStore cleared
+[2024-10-17T18:27:49.869+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO BlockManager: BlockManager stopped
+[2024-10-17T18:27:49.872+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO BlockManagerMaster: BlockManagerMaster stopped
+[2024-10-17T18:27:49.874+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+[2024-10-17T18:27:49.880+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO SparkContext: Successfully stopped SparkContext
+[2024-10-17T18:27:49.880+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO ShutdownHookManager: Shutdown hook called
+[2024-10-17T18:27:49.881+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO ShutdownHookManager: Deleting directory /tmp/spark-8dd8ec4f-385c-4b00-85e2-6883f67fb0bf
+[2024-10-17T18:27:49.884+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO ShutdownHookManager: Deleting directory /tmp/spark-7a73f4a4-4218-4e43-abf9-bf915d56146d/pyspark-87e07f17-da67-4be7-9d6c-1d5ac1fb4a34
+[2024-10-17T18:27:49.888+0000] {spark_submit.py:634} INFO - 24/10/17 18:27:49 INFO ShutdownHookManager: Deleting directory /tmp/spark-7a73f4a4-4218-4e43-abf9-bf915d56146d
+[2024-10-17T18:27:49.961+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-10-17T18:27:49.962+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=LoadWebScraping, task_id=spark_job, run_id=manual__2024-10-17T18:27:37.439384+00:00, execution_date=20241017T182737, start_date=20241017T182739, end_date=20241017T182749
+[2024-10-17T18:27:50.002+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-10-17T18:27:50.014+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-17T18:27:50.017+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

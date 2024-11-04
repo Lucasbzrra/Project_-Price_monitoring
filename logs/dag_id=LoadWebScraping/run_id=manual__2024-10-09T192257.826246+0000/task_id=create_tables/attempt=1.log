@@ -1,0 +1,295 @@
+[2024-10-09T19:23:00.661+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-10-09T19:23:00.675+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: LoadWebScraping.create_tables manual__2024-10-09T19:22:57.826246+00:00 [queued]>
+[2024-10-09T19:23:00.681+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: LoadWebScraping.create_tables manual__2024-10-09T19:22:57.826246+00:00 [queued]>
+[2024-10-09T19:23:00.682+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2024-10-09T19:23:00.695+0000] {taskinstance.py:2888} INFO - Executing <Task(PostgresOperator): create_tables> on 2024-10-09 19:22:57.826246+00:00
+[2024-10-09T19:23:00.701+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1085) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-09T19:23:00.702+0000] {standard_task_runner.py:72} INFO - Started process 1087 to run task
+[2024-10-09T19:23:00.702+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'LoadWebScraping', 'create_tables', 'manual__2024-10-09T19:22:57.826246+00:00', '--job-id', '1464', '--raw', '--subdir', 'DAGS_FOLDER/LoadWebScraping.py', '--cfg-path', '/tmp/tmpm9xa8m3x']
+[2024-10-09T19:23:00.705+0000] {standard_task_runner.py:105} INFO - Job 1464: Subtask create_tables
+[2024-10-09T19:23:00.755+0000] {task_command.py:467} INFO - Running <TaskInstance: LoadWebScraping.create_tables manual__2024-10-09T19:22:57.826246+00:00 [running]> on host 97b4e38b3eb9
+[2024-10-09T19:23:00.832+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='LoadWebScraping' AIRFLOW_CTX_TASK_ID='create_tables' AIRFLOW_CTX_EXECUTION_DATE='2024-10-09T19:22:57.826246+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-09T19:22:57.826246+00:00'
+[2024-10-09T19:23:00.833+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-10-09T19:23:00.851+0000] {sql.py:266} INFO - Executing:  
+
+                CREATE TABLE IF NOT EXISTS TB_DIM_SITE
+                (
+                ID_SITE SERIAL PRIMARY KEY,
+                NAME_SITE VARCHAR(255) 
+                );
+
+                CREATE TABLE IF NOT EXISTS TB_DIM_CATEGORY 
+                (   
+                    ID_CATEGORY SERIAL PRIMARY KEY,
+                    NAME_CATEGORY VARCHAR(255)  
+                );
+
+                CREATE TABLE IF NOT EXISTS TB_DIM_MARK
+                (
+                    ID_MARK SERIAL PRIMARY KEY,
+                    NAME_MARK VARCHAR(255) 
+                );
+
+                CREATE TABLE IF NOT EXISTS TB_FACT_MEMORY 
+                (
+                    ID_MEMORY SERIAL PRIMARY KEY,
+                    MHZ BIGINT,
+                    DDR BIGINT,
+                    LATENCY BIGINT,
+                    VALUE DECIMAL(10,2),
+                    URI VARCHAR(255),
+                    DATA_COLLECT VARCHAR(255),
+                    ID_CATEGORY_FK BIGINT,
+                    ID_SITE_FK BIGINT,
+                    ID_MARK_FK BIGINT,
+
+                    FOREIGN KEY (ID_MARK_FK) REFERENCES TB_DIM_MARK(ID_MARK) ON DELETE CASCADE, 
+                    FOREIGN KEY (ID_SITE_FK) REFERENCES TB_DIM_SITE(ID_SITE) ON DELETE CASCADE,
+                    FOREIGN KEY (ID_CATEGORY_FK) REFERENCES TB_DIM_CATEGORY(ID_CATEGORY) ON DELETE CASCADE
+                )
+
+                CREATE TABLE IF NOT EXISTS TB_FACT_PROCESSOR
+                (
+                    ID_PROCESSOR SERIAL PRIMARY KEY,
+                    MODEL VARCHAR(255),
+                    FREQUENCY_BASE FLOAT,
+                    CACHE BIGINT,
+                    SOCKET VARCHAR(255),
+                    VALUE DECIMAL(10,2),
+                    URI VARCHAR(255),
+                    DATA_COLLECT VARCHAR(255),
+                    ID_CATEGORY_FK BIGINT,
+                    ID_SITE_FK BIGINT,
+                    ID_MARK_FK BIGINT,
+
+                    FOREIGN KEY (ID_MARK_FK) REFERENCES TB_DIM_MARK(ID_MARK) ON DELETE CASCADE, 
+                    FOREIGN KEY (ID_SITE_FK) REFERENCES TB_DIM_SITE(ID_SITE) ON DELETE CASCADE,
+                    FOREIGN KEY (ID_CATEGORY_FK) REFERENCES TB_DIM_CATEGORY(ID_CATEGORY) ON DELETE CASCADE
+                );
+
+                CREATE TABLE IF NOT EXISTS TB_FACT_VIDEO_CARD
+                (
+                    ID_VIDEO_CARD SERIAL PRIMARY KEY,
+                    MODEL VARCHAR(255),
+                    GB INT,
+                    MEMORY VARCHAR(255),
+                    VALUE DECIMAL(10,2),
+                    URI VARCHAR(255),
+                    DATA_COLLECT VARCHAR(255),
+                    ID_CATEGORY_FK BIGINT,
+                    ID_SITE_FK BIGINT,
+                    ID_MARK_FK BIGINT,
+
+                    FOREIGN KEY (ID_MARK_FK) REFERENCES TB_DIM_MARK(ID_MARK) ON DELETE CASCADE, 
+                    FOREIGN KEY (ID_SITE_FK) REFERENCES TB_DIM_SITE(ID_SITE) ON DELETE CASCADE,
+                    FOREIGN KEY (ID_CATEGORY_FK) REFERENCES TB_DIM_CATEGORY(ID_CATEGORY) ON DELETE CASCADE
+                );
+
+                CREATE TABLE IF NOT EXISTS TB_FACT_MOTHERBOARD
+                (
+                    ID_MOTHERBOARD SERIAL PRIMARY KEY,
+                    SOCKET VARCHAR(255),
+                    DDR BIGINT,
+                    MODEL VARCHAR(255),
+                    VALUE DECIMAL(10,2),
+                    URI VARCHAR(255),
+                    DATA_COLLECT VARCHAR(255),
+                    ID_CATEGORY_FK BIGINT,
+                    ID_SITE_FK BIGINT,
+                    ID_MARK_FK BIGINT,
+
+                   FOREIGN KEY (ID_MARK_FK) REFERENCES TB_DIM_MARK(ID_MARK) ON DELETE CASCADE, 
+                    FOREIGN KEY (ID_SITE_FK) REFERENCES TB_DIM_SITE(ID_SITE) ON DELETE CASCADE,
+                    FOREIGN KEY (ID_CATEGORY_FK) REFERENCES TB_DIM_CATEGORY(ID_CATEGORY) ON DELETE CASCADE
+                    
+                );
+[2024-10-09T19:23:00.859+0000] {base.py:84} INFO - Retrieving connection 'postgres-***'
+[2024-10-09T19:23:00.871+0000] {base.py:84} INFO - Retrieving connection 'postgres-***'
+[2024-10-09T19:23:00.888+0000] {sql.py:509} INFO - Running statement:  
+
+                CREATE TABLE IF NOT EXISTS TB_DIM_SITE
+                (
+                ID_SITE SERIAL PRIMARY KEY,
+                NAME_SITE VARCHAR(255) 
+                );
+
+                CREATE TABLE IF NOT EXISTS TB_DIM_CATEGORY 
+                (   
+                    ID_CATEGORY SERIAL PRIMARY KEY,
+                    NAME_CATEGORY VARCHAR(255)  
+                );
+
+                CREATE TABLE IF NOT EXISTS TB_DIM_MARK
+                (
+                    ID_MARK SERIAL PRIMARY KEY,
+                    NAME_MARK VARCHAR(255) 
+                );
+
+                CREATE TABLE IF NOT EXISTS TB_FACT_MEMORY 
+                (
+                    ID_MEMORY SERIAL PRIMARY KEY,
+                    MHZ BIGINT,
+                    DDR BIGINT,
+                    LATENCY BIGINT,
+                    VALUE DECIMAL(10,2),
+                    URI VARCHAR(255),
+                    DATA_COLLECT VARCHAR(255),
+                    ID_CATEGORY_FK BIGINT,
+                    ID_SITE_FK BIGINT,
+                    ID_MARK_FK BIGINT,
+
+                    FOREIGN KEY (ID_MARK_FK) REFERENCES TB_DIM_MARK(ID_MARK) ON DELETE CASCADE, 
+                    FOREIGN KEY (ID_SITE_FK) REFERENCES TB_DIM_SITE(ID_SITE) ON DELETE CASCADE,
+                    FOREIGN KEY (ID_CATEGORY_FK) REFERENCES TB_DIM_CATEGORY(ID_CATEGORY) ON DELETE CASCADE
+                )
+
+                CREATE TABLE IF NOT EXISTS TB_FACT_PROCESSOR
+                (
+                    ID_PROCESSOR SERIAL PRIMARY KEY,
+                    MODEL VARCHAR(255),
+                    FREQUENCY_BASE FLOAT,
+                    CACHE BIGINT,
+                    SOCKET VARCHAR(255),
+                    VALUE DECIMAL(10,2),
+                    URI VARCHAR(255),
+                    DATA_COLLECT VARCHAR(255),
+                    ID_CATEGORY_FK BIGINT,
+                    ID_SITE_FK BIGINT,
+                    ID_MARK_FK BIGINT,
+
+                    FOREIGN KEY (ID_MARK_FK) REFERENCES TB_DIM_MARK(ID_MARK) ON DELETE CASCADE, 
+                    FOREIGN KEY (ID_SITE_FK) REFERENCES TB_DIM_SITE(ID_SITE) ON DELETE CASCADE,
+                    FOREIGN KEY (ID_CATEGORY_FK) REFERENCES TB_DIM_CATEGORY(ID_CATEGORY) ON DELETE CASCADE
+                );
+
+                CREATE TABLE IF NOT EXISTS TB_FACT_VIDEO_CARD
+                (
+                    ID_VIDEO_CARD SERIAL PRIMARY KEY,
+                    MODEL VARCHAR(255),
+                    GB INT,
+                    MEMORY VARCHAR(255),
+                    VALUE DECIMAL(10,2),
+                    URI VARCHAR(255),
+                    DATA_COLLECT VARCHAR(255),
+                    ID_CATEGORY_FK BIGINT,
+                    ID_SITE_FK BIGINT,
+                    ID_MARK_FK BIGINT,
+
+                    FOREIGN KEY (ID_MARK_FK) REFERENCES TB_DIM_MARK(ID_MARK) ON DELETE CASCADE, 
+                    FOREIGN KEY (ID_SITE_FK) REFERENCES TB_DIM_SITE(ID_SITE) ON DELETE CASCADE,
+                    FOREIGN KEY (ID_CATEGORY_FK) REFERENCES TB_DIM_CATEGORY(ID_CATEGORY) ON DELETE CASCADE
+                );
+
+                CREATE TABLE IF NOT EXISTS TB_FACT_MOTHERBOARD
+                (
+                    ID_MOTHERBOARD SERIAL PRIMARY KEY,
+                    SOCKET VARCHAR(255),
+                    DDR BIGINT,
+                    MODEL VARCHAR(255),
+                    VALUE DECIMAL(10,2),
+                    URI VARCHAR(255),
+                    DATA_COLLECT VARCHAR(255),
+                    ID_CATEGORY_FK BIGINT,
+                    ID_SITE_FK BIGINT,
+                    ID_MARK_FK BIGINT,
+
+                   FOREIGN KEY (ID_MARK_FK) REFERENCES TB_DIM_MARK(ID_MARK) ON DELETE CASCADE, 
+                    FOREIGN KEY (ID_SITE_FK) REFERENCES TB_DIM_SITE(ID_SITE) ON DELETE CASCADE,
+                    FOREIGN KEY (ID_CATEGORY_FK) REFERENCES TB_DIM_CATEGORY(ID_CATEGORY) ON DELETE CASCADE
+                    
+                );, parameters: None
+[2024-10-09T19:23:00.892+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/common/sql/operators/sql.py", line 272, in execute
+    output = hook.run(
+             ^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/common/sql/hooks/sql.py", line 456, in run
+    self._run_command(cur, sql_statement, parameters)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/common/sql/hooks/sql.py", line 514, in _run_command
+    cur.execute(sql_statement)
+psycopg2.errors.SyntaxError: syntax error at or near "CREATE"
+LINE 39:                 CREATE TABLE IF NOT EXISTS TB_FACT_PROCESSOR
+                         ^
+
+[2024-10-09T19:23:00.900+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=LoadWebScraping, task_id=create_tables, run_id=manual__2024-10-09T19:22:57.826246+00:00, execution_date=20241009T192257, start_date=20241009T192300, end_date=20241009T192300
+[2024-10-09T19:23:00.917+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-10-09T19:23:00.918+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 1464 for task create_tables (syntax error at or near "CREATE"
+LINE 39:                 CREATE TABLE IF NOT EXISTS TB_FACT_PROCESSOR
+                         ^
+; 1087)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3004, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3158, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3182, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/common/sql/operators/sql.py", line 272, in execute
+    output = hook.run(
+             ^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/common/sql/hooks/sql.py", line 456, in run
+    self._run_command(cur, sql_statement, parameters)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/common/sql/hooks/sql.py", line 514, in _run_command
+    cur.execute(sql_statement)
+psycopg2.errors.SyntaxError: syntax error at or near "CREATE"
+LINE 39:                 CREATE TABLE IF NOT EXISTS TB_FACT_PROCESSOR
+                         ^
+
+[2024-10-09T19:23:00.958+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2024-10-09T19:23:00.966+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/models/baseoperator.py:1378: AirflowProviderDeprecationWarning: Call to deprecated class PostgresOperator. (Please use `***.providers.common.sql.operators.sql.SQLExecuteQueryOperator`.Also, you can provide `hook_params={'schema': <database>}`.)
+  result = cls.__new__(cls)
+
+[2024-10-09T19:23:00.973+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-09T19:23:00.979+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

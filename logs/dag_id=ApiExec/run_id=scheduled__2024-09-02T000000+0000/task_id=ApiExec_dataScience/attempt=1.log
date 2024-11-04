@@ -1,0 +1,29 @@
+[2024-09-03T19:20:51.084+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ApiExec.ApiExec_dataScience scheduled__2024-09-02T00:00:00+00:00 [queued]>
+[2024-09-03T19:20:51.098+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ApiExec.ApiExec_dataScience scheduled__2024-09-02T00:00:00+00:00 [queued]>
+[2024-09-03T19:20:51.099+0000] {taskinstance.py:2171} INFO - Starting attempt 1 of 1
+[2024-09-03T19:20:51.117+0000] {taskinstance.py:2192} INFO - Executing <Task(ApiExternaOperator): ApiExec_dataScience> on 2024-09-02 00:00:00+00:00
+[2024-09-03T19:20:51.123+0000] {standard_task_runner.py:60} INFO - Started process 70 to run task
+[2024-09-03T19:20:51.126+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'ApiExec', 'ApiExec_dataScience', 'scheduled__2024-09-02T00:00:00+00:00', '--job-id', '316', '--raw', '--subdir', 'DAGS_FOLDER/ApiExecDag.py', '--cfg-path', '/tmp/tmpo9rejvtp']
+[2024-09-03T19:20:51.138+0000] {standard_task_runner.py:88} INFO - Job 316: Subtask ApiExec_dataScience
+[2024-09-03T19:20:51.218+0000] {task_command.py:423} INFO - Running <TaskInstance: ApiExec.ApiExec_dataScience scheduled__2024-09-02T00:00:00+00:00 [running]> on host 0648ceca68fa
+[2024-09-03T19:20:51.320+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ApiExec' AIRFLOW_CTX_TASK_ID='ApiExec_dataScience' AIRFLOW_CTX_EXECUTION_DATE='2024-09-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-09-02T00:00:00+00:00'
+[2024-09-03T19:20:51.332+0000] {base.py:83} INFO - Using connection ID 'Api_Externa' for task execution.
+[2024-09-03T19:20:51.334+0000] {ApiExterna.py:33} INFO - URL: https://labdados.com/2/tweets/search/recent?query=&tweet.fields=author_id,conversation_id,created_at,id,in_reply_to_user_id,public_metrics,lang,text&expansions=author_id&user.fields=id,name,username,created_at&start_time=2024-09-02T00:00:00.00Z&end_time=2024-09-03T00:00:00.00Z
+[2024-09-03T19:20:52.090+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=ApiExec, task_id=ApiExec_dataScience, execution_date=20240902T000000, start_date=20240903T192051, end_date=20240903T192052
+[2024-09-03T19:20:52.150+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-09-03T19:20:52.174+0000] {taskinstance.py:3281} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-03T19:57:09.028+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ApiExec.ApiExec_dataScience scheduled__2024-09-02T00:00:00+00:00 [queued]>
+[2024-09-03T19:57:09.041+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ApiExec.ApiExec_dataScience scheduled__2024-09-02T00:00:00+00:00 [queued]>
+[2024-09-03T19:57:09.041+0000] {taskinstance.py:2171} INFO - Starting attempt 1 of 1
+[2024-09-03T19:57:09.060+0000] {taskinstance.py:2192} INFO - Executing <Task(ApiExternaOperator): ApiExec_dataScience> on 2024-09-02 00:00:00+00:00
+[2024-09-03T19:57:09.065+0000] {standard_task_runner.py:60} INFO - Started process 110 to run task
+[2024-09-03T19:57:09.072+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'ApiExec', 'ApiExec_dataScience', 'scheduled__2024-09-02T00:00:00+00:00', '--job-id', '336', '--raw', '--subdir', 'DAGS_FOLDER/ApiExecDag.py', '--cfg-path', '/tmp/tmp5ly4yewa']
+[2024-09-03T19:57:09.078+0000] {standard_task_runner.py:88} INFO - Job 336: Subtask ApiExec_dataScience
+[2024-09-03T19:57:09.144+0000] {task_command.py:423} INFO - Running <TaskInstance: ApiExec.ApiExec_dataScience scheduled__2024-09-02T00:00:00+00:00 [running]> on host 7bd139ff6549
+[2024-09-03T19:57:09.240+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ApiExec' AIRFLOW_CTX_TASK_ID='ApiExec_dataScience' AIRFLOW_CTX_EXECUTION_DATE='2024-09-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-09-02T00:00:00+00:00'
+[2024-09-03T19:57:09.253+0000] {base.py:83} INFO - Using connection ID 'Api_Externa' for task execution.
+[2024-09-03T19:57:09.255+0000] {ApiExterna.py:33} INFO - URL: https://labdados.com/2/tweets/search/recent?query=&tweet.fields=author_id,conversation_id,created_at,id,in_reply_to_user_id,public_metrics,lang,text&expansions=author_id&user.fields=id,name,username,created_at&start_time=2024-09-02T00:00:00.00Z&end_time=2024-09-03T00:00:00.00Z
+[2024-09-03T19:57:09.709+0000] {ApiExterna.py:33} INFO - URL: https://labdados.com/2/tweets/search/recent?query=&tweet.fields=author_id,conversation_id,created_at,id,in_reply_to_user_id,public_metrics,lang,text&expansions=author_id&user.fields=id,name,username,created_at&start_time=2024-09-02T00:00:00.00Z&end_time=2024-09-03T00:00:00.00Z&next_token=1234567890abcdef
+[2024-09-03T19:57:09.868+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=ApiExec, task_id=ApiExec_dataScience, execution_date=20240902T000000, start_date=20240903T195709, end_date=20240903T195709
+[2024-09-03T19:57:09.934+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-09-03T19:57:09.964+0000] {taskinstance.py:3281} INFO - 0 downstream tasks scheduled from follow-on schedule check

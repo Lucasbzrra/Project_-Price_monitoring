@@ -1,0 +1,21 @@
+# Use a imagem do Bitnami Spark como base
+FROM bitnami/spark:3.5
+
+# Execute como root para instalar o driver
+USER root
+
+# Instale o curl, se necessário
+RUN apt-get update && \
+    apt-get install -y curl && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# Baixe os drivers e bibliotecas para S3 e PostgreSQL
+# RUN curl -L -o /opt/bitnami/spark/jars/hadoop-aws-3.2.2.jar https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-aws/3.2.2/hadoop-aws/3.2.2.jar
+# RUN curl -L -o /opt/bitnami/spark/jars/aws-java-sdk-bundle-1.11.375.jar https://repo1.maven.org/maven2/com/amazonaws/aws-java-sdk-bundle/1.11.375/aws-java-sdk-bundle-1.11.375.jar
+RUN curl -L -o /opt/bitnami/spark/jars/postgresql-42.5.0.jar https://jdbc.postgresql.org/download/postgresql-42.5.0.jar
+
+# Configura a variável de ambiente SPARK_JARS
+ENV SPARK_JARS /opt/bitnami/spark/jars/*
+
+# Volte para o usuário padrão do Bitnami Spark
+USER 1001

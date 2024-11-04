@@ -1,0 +1,21 @@
+[2024-10-05T21:43:48.110+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-10-05T21:43:48.136+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pipeline_webscraping.Check_for_file_pichau manual__2024-10-05T21:37:13.542807+00:00 [queued]>
+[2024-10-05T21:43:48.147+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pipeline_webscraping.Check_for_file_pichau manual__2024-10-05T21:37:13.542807+00:00 [queued]>
+[2024-10-05T21:43:48.154+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2024-10-05T21:43:48.170+0000] {taskinstance.py:2888} INFO - Executing <Task(OperatorFileSensor): Check_for_file_pichau> on 2024-10-05 21:37:13.542807+00:00
+[2024-10-05T21:43:48.178+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=12966) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-05T21:43:48.181+0000] {standard_task_runner.py:72} INFO - Started process 12970 to run task
+[2024-10-05T21:43:48.182+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pipeline_webscraping', 'Check_for_file_pichau', 'manual__2024-10-05T21:37:13.542807+00:00', '--job-id', '1251', '--raw', '--subdir', 'DAGS_FOLDER/DagWebScraping.py', '--cfg-path', '/tmp/tmpy5h94biz']
+[2024-10-05T21:43:48.185+0000] {standard_task_runner.py:105} INFO - Job 1251: Subtask Check_for_file_pichau
+[2024-10-05T21:43:48.250+0000] {task_command.py:467} INFO - Running <TaskInstance: pipeline_webscraping.Check_for_file_pichau manual__2024-10-05T21:37:13.542807+00:00 [running]> on host e823e678f418
+[2024-10-05T21:43:48.340+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pipeline_webscraping' AIRFLOW_CTX_TASK_ID='Check_for_file_pichau' AIRFLOW_CTX_EXECUTION_DATE='2024-10-05T21:37:13.542807+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-05T21:37:13.542807+00:00'
+[2024-10-05T21:43:48.342+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-10-05T21:43:48.357+0000] {baseoperator.py:405} WARNING - OperatorFileSensor.execute cannot be called outside TaskInstance!
+[2024-10-05T21:43:48.450+0000] {base.py:336} INFO - Success criteria met. Exiting.
+[2024-10-05T21:43:48.490+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-10-05T21:43:48.491+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=pipeline_webscraping, task_id=Check_for_file_pichau, run_id=manual__2024-10-05T21:37:13.542807+00:00, execution_date=20241005T213713, start_date=20241005T214348, end_date=20241005T214348
+[2024-10-05T21:43:48.556+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-10-05T21:43:48.614+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-05T21:43:48.625+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

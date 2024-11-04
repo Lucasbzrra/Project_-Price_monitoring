@@ -1,0 +1,4394 @@
+[2024-10-03T21:37:12.611+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-10-03T21:37:12.627+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: SitesWebScraping.Web_Extraction_siteA manual__2024-10-03T21:37:10.374769+00:00 [queued]>
+[2024-10-03T21:37:12.635+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: SitesWebScraping.Web_Extraction_siteA manual__2024-10-03T21:37:10.374769+00:00 [queued]>
+[2024-10-03T21:37:12.636+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2024-10-03T21:37:12.651+0000] {taskinstance.py:2888} INFO - Executing <Task(OperatorSiteA): Web_Extraction_siteA> on 2024-10-03 21:37:10.374769+00:00
+[2024-10-03T21:37:12.655+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=5290) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-03T21:37:12.657+0000] {standard_task_runner.py:72} INFO - Started process 5291 to run task
+[2024-10-03T21:37:12.657+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'SitesWebScraping', 'Web_Extraction_siteA', 'manual__2024-10-03T21:37:10.374769+00:00', '--job-id', '995', '--raw', '--subdir', 'DAGS_FOLDER/DagWebScraping.py', '--cfg-path', '/tmp/tmpn4sopo7v']
+[2024-10-03T21:37:12.659+0000] {standard_task_runner.py:105} INFO - Job 995: Subtask Web_Extraction_siteA
+[2024-10-03T21:37:12.702+0000] {task_command.py:467} INFO - Running <TaskInstance: SitesWebScraping.Web_Extraction_siteA manual__2024-10-03T21:37:10.374769+00:00 [running]> on host f8603ea05473
+[2024-10-03T21:37:12.774+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='SitesWebScraping' AIRFLOW_CTX_TASK_ID='Web_Extraction_siteA' AIRFLOW_CTX_EXECUTION_DATE='2024-10-03T21:37:10.374769+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-03T21:37:10.374769+00:00'
+[2024-10-03T21:37:12.775+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-10-03T21:37:22.003+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55c6c8a0186a <unknown>
+#1 0x55c6c86cfe50 <unknown>
+#2 0x55c6c871f644 <unknown>
+#3 0x55c6c871f931 <unknown>
+#4 0x55c6c8713f96 <unknown>
+#5 0x55c6c87444bd <unknown>
+#6 0x55c6c8713e89 <unknown>
+#7 0x55c6c874465e <unknown>
+#8 0x55c6c87629c6 <unknown>
+#9 0x55c6c8744233 <unknown>
+#10 0x55c6c8712093 <unknown>
+#11 0x55c6c871309e <unknown>
+#12 0x55c6c89c8acb <unknown>
+#13 0x55c6c89cca81 <unknown>
+#14 0x55c6c89b4695 <unknown>
+#15 0x55c6c89cd5f2 <unknown>
+#16 0x55c6c899986f <unknown>
+#17 0x55c6c89f0668 <unknown>
+#18 0x55c6c89f0832 <unknown>
+#19 0x55c6c8a0065c <unknown>
+#20 0x7f9abf89aa94 <unknown>
+#21 0x7f9abf927c3c <unknown>
+[2024-10-03T21:37:22.020+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55c6c8a0186a <unknown>
+#1 0x55c6c86cfe50 <unknown>
+#2 0x55c6c871f644 <unknown>
+#3 0x55c6c871f931 <unknown>
+#4 0x55c6c8713f96 <unknown>
+#5 0x55c6c87444bd <unknown>
+#6 0x55c6c8713e89 <unknown>
+#7 0x55c6c874465e <unknown>
+#8 0x55c6c87629c6 <unknown>
+#9 0x55c6c8744233 <unknown>
+#10 0x55c6c8712093 <unknown>
+#11 0x55c6c871309e <unknown>
+#12 0x55c6c89c8acb <unknown>
+#13 0x55c6c89cca81 <unknown>
+#14 0x55c6c89b4695 <unknown>
+#15 0x55c6c89cd5f2 <unknown>
+#16 0x55c6c899986f <unknown>
+#17 0x55c6c89f0668 <unknown>
+#18 0x55c6c89f0832 <unknown>
+#19 0x55c6c8a0065c <unknown>
+#20 0x7f9abf89aa94 <unknown>
+#21 0x7f9abf927c3c <unknown>
+[2024-10-03T21:37:24.135+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55c6c8a0186a <unknown>
+#1 0x55c6c86cfe50 <unknown>
+#2 0x55c6c871f644 <unknown>
+#3 0x55c6c871f931 <unknown>
+#4 0x55c6c8713f96 <unknown>
+#5 0x55c6c87444bd <unknown>
+#6 0x55c6c8713e89 <unknown>
+#7 0x55c6c874465e <unknown>
+#8 0x55c6c87629c6 <unknown>
+#9 0x55c6c8744233 <unknown>
+#10 0x55c6c8712093 <unknown>
+#11 0x55c6c871309e <unknown>
+#12 0x55c6c89c8acb <unknown>
+#13 0x55c6c89cca81 <unknown>
+#14 0x55c6c89b4695 <unknown>
+#15 0x55c6c89cd5f2 <unknown>
+#16 0x55c6c899986f <unknown>
+#17 0x55c6c89f0668 <unknown>
+#18 0x55c6c89f0832 <unknown>
+#19 0x55c6c8a0065c <unknown>
+#20 0x7f9abf89aa94 <unknown>
+#21 0x7f9abf927c3c <unknown>
+[2024-10-03T21:37:24.172+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55c6c8a0186a <unknown>
+#1 0x55c6c86cfe50 <unknown>
+#2 0x55c6c871f644 <unknown>
+#3 0x55c6c871f931 <unknown>
+#4 0x55c6c8713f96 <unknown>
+#5 0x55c6c87444bd <unknown>
+#6 0x55c6c8713e89 <unknown>
+#7 0x55c6c874465e <unknown>
+#8 0x55c6c87629c6 <unknown>
+#9 0x55c6c8744233 <unknown>
+#10 0x55c6c8712093 <unknown>
+#11 0x55c6c871309e <unknown>
+#12 0x55c6c89c8acb <unknown>
+#13 0x55c6c89cca81 <unknown>
+#14 0x55c6c89b4695 <unknown>
+#15 0x55c6c89cd5f2 <unknown>
+#16 0x55c6c899986f <unknown>
+#17 0x55c6c89f0668 <unknown>
+#18 0x55c6c89f0832 <unknown>
+#19 0x55c6c8a0065c <unknown>
+#20 0x7f9abf89aa94 <unknown>
+#21 0x7f9abf927c3c <unknown>
+[2024-10-03T21:37:24.190+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55c6c8a0186a <unknown>
+#1 0x55c6c86cfe50 <unknown>
+#2 0x55c6c871f644 <unknown>
+#3 0x55c6c871f931 <unknown>
+#4 0x55c6c8713f96 <unknown>
+#5 0x55c6c87444bd <unknown>
+#6 0x55c6c8713e89 <unknown>
+#7 0x55c6c874465e <unknown>
+#8 0x55c6c87629c6 <unknown>
+#9 0x55c6c8744233 <unknown>
+#10 0x55c6c8712093 <unknown>
+#11 0x55c6c871309e <unknown>
+#12 0x55c6c89c8acb <unknown>
+#13 0x55c6c89cca81 <unknown>
+#14 0x55c6c89b4695 <unknown>
+#15 0x55c6c89cd5f2 <unknown>
+#16 0x55c6c899986f <unknown>
+#17 0x55c6c89f0668 <unknown>
+#18 0x55c6c89f0832 <unknown>
+#19 0x55c6c8a0065c <unknown>
+#20 0x7f9abf89aa94 <unknown>
+#21 0x7f9abf927c3c <unknown>
+[2024-10-03T21:37:24.227+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55c6c8a0186a <unknown>
+#1 0x55c6c86cfe50 <unknown>
+#2 0x55c6c871f644 <unknown>
+#3 0x55c6c871f931 <unknown>
+#4 0x55c6c8713f96 <unknown>
+#5 0x55c6c87444bd <unknown>
+#6 0x55c6c8713e89 <unknown>
+#7 0x55c6c874465e <unknown>
+#8 0x55c6c87629c6 <unknown>
+#9 0x55c6c8744233 <unknown>
+#10 0x55c6c8712093 <unknown>
+#11 0x55c6c871309e <unknown>
+#12 0x55c6c89c8acb <unknown>
+#13 0x55c6c89cca81 <unknown>
+#14 0x55c6c89b4695 <unknown>
+#15 0x55c6c89cd5f2 <unknown>
+#16 0x55c6c899986f <unknown>
+#17 0x55c6c89f0668 <unknown>
+#18 0x55c6c89f0832 <unknown>
+#19 0x55c6c8a0065c <unknown>
+#20 0x7f9abf89aa94 <unknown>
+#21 0x7f9abf927c3c <unknown>
+[2024-10-03T21:37:24.244+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55c6c8a0186a <unknown>
+#1 0x55c6c86cfe50 <unknown>
+#2 0x55c6c871f644 <unknown>
+#3 0x55c6c871f931 <unknown>
+#4 0x55c6c8713f96 <unknown>
+#5 0x55c6c87444bd <unknown>
+#6 0x55c6c8713e89 <unknown>
+#7 0x55c6c874465e <unknown>
+#8 0x55c6c87629c6 <unknown>
+#9 0x55c6c8744233 <unknown>
+#10 0x55c6c8712093 <unknown>
+#11 0x55c6c871309e <unknown>
+#12 0x55c6c89c8acb <unknown>
+#13 0x55c6c89cca81 <unknown>
+#14 0x55c6c89b4695 <unknown>
+#15 0x55c6c89cd5f2 <unknown>
+#16 0x55c6c899986f <unknown>
+#17 0x55c6c89f0668 <unknown>
+#18 0x55c6c89f0832 <unknown>
+#19 0x55c6c8a0065c <unknown>
+#20 0x7f9abf89aa94 <unknown>
+#21 0x7f9abf927c3c <unknown>
+[2024-10-03T21:37:24.287+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55c6c8a0186a <unknown>
+#1 0x55c6c86cfe50 <unknown>
+#2 0x55c6c871f644 <unknown>
+#3 0x55c6c871f931 <unknown>
+#4 0x55c6c8713f96 <unknown>
+#5 0x55c6c87444bd <unknown>
+#6 0x55c6c8713e89 <unknown>
+#7 0x55c6c874465e <unknown>
+#8 0x55c6c87629c6 <unknown>
+#9 0x55c6c8744233 <unknown>
+#10 0x55c6c8712093 <unknown>
+#11 0x55c6c871309e <unknown>
+#12 0x55c6c89c8acb <unknown>
+#13 0x55c6c89cca81 <unknown>
+#14 0x55c6c89b4695 <unknown>
+#15 0x55c6c89cd5f2 <unknown>
+#16 0x55c6c899986f <unknown>
+#17 0x55c6c89f0668 <unknown>
+#18 0x55c6c89f0832 <unknown>
+#19 0x55c6c8a0065c <unknown>
+#20 0x7f9abf89aa94 <unknown>
+#21 0x7f9abf927c3c <unknown>
+[2024-10-03T21:37:24.308+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55c6c8a0186a <unknown>
+#1 0x55c6c86cfe50 <unknown>
+#2 0x55c6c871f644 <unknown>
+#3 0x55c6c871f931 <unknown>
+#4 0x55c6c8713f96 <unknown>
+#5 0x55c6c87444bd <unknown>
+#6 0x55c6c8713e89 <unknown>
+#7 0x55c6c874465e <unknown>
+#8 0x55c6c87629c6 <unknown>
+#9 0x55c6c8744233 <unknown>
+#10 0x55c6c8712093 <unknown>
+#11 0x55c6c871309e <unknown>
+#12 0x55c6c89c8acb <unknown>
+#13 0x55c6c89cca81 <unknown>
+#14 0x55c6c89b4695 <unknown>
+#15 0x55c6c89cd5f2 <unknown>
+#16 0x55c6c899986f <unknown>
+#17 0x55c6c89f0668 <unknown>
+#18 0x55c6c89f0832 <unknown>
+#19 0x55c6c8a0065c <unknown>
+#20 0x7f9abf89aa94 <unknown>
+#21 0x7f9abf927c3c <unknown>
+[2024-10-03T21:37:24.350+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55c6c8a0186a <unknown>
+#1 0x55c6c86cfe50 <unknown>
+#2 0x55c6c871f644 <unknown>
+#3 0x55c6c871f931 <unknown>
+#4 0x55c6c8713f96 <unknown>
+#5 0x55c6c87444bd <unknown>
+#6 0x55c6c8713e89 <unknown>
+#7 0x55c6c874465e <unknown>
+#8 0x55c6c87629c6 <unknown>
+#9 0x55c6c8744233 <unknown>
+#10 0x55c6c8712093 <unknown>
+#11 0x55c6c871309e <unknown>
+#12 0x55c6c89c8acb <unknown>
+#13 0x55c6c89cca81 <unknown>
+#14 0x55c6c89b4695 <unknown>
+#15 0x55c6c89cd5f2 <unknown>
+#16 0x55c6c899986f <unknown>
+#17 0x55c6c89f0668 <unknown>
+#18 0x55c6c89f0832 <unknown>
+#19 0x55c6c8a0065c <unknown>
+#20 0x7f9abf89aa94 <unknown>
+#21 0x7f9abf927c3c <unknown>
+[2024-10-03T21:37:24.368+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55c6c8a0186a <unknown>
+#1 0x55c6c86cfe50 <unknown>
+#2 0x55c6c871f644 <unknown>
+#3 0x55c6c871f931 <unknown>
+#4 0x55c6c8713f96 <unknown>
+#5 0x55c6c87444bd <unknown>
+#6 0x55c6c8713e89 <unknown>
+#7 0x55c6c874465e <unknown>
+#8 0x55c6c87629c6 <unknown>
+#9 0x55c6c8744233 <unknown>
+#10 0x55c6c8712093 <unknown>
+#11 0x55c6c871309e <unknown>
+#12 0x55c6c89c8acb <unknown>
+#13 0x55c6c89cca81 <unknown>
+#14 0x55c6c89b4695 <unknown>
+#15 0x55c6c89cd5f2 <unknown>
+#16 0x55c6c899986f <unknown>
+#17 0x55c6c89f0668 <unknown>
+#18 0x55c6c89f0832 <unknown>
+#19 0x55c6c8a0065c <unknown>
+#20 0x7f9abf89aa94 <unknown>
+#21 0x7f9abf927c3c <unknown>
+[2024-10-03T21:37:33.161+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55e80aedb86a <unknown>
+#1 0x55e80aba9e50 <unknown>
+#2 0x55e80abf9644 <unknown>
+#3 0x55e80abf9931 <unknown>
+#4 0x55e80abedf96 <unknown>
+#5 0x55e80ac1e4bd <unknown>
+#6 0x55e80abede89 <unknown>
+#7 0x55e80ac1e65e <unknown>
+#8 0x55e80ac3c9c6 <unknown>
+#9 0x55e80ac1e233 <unknown>
+#10 0x55e80abec093 <unknown>
+#11 0x55e80abed09e <unknown>
+#12 0x55e80aea2acb <unknown>
+#13 0x55e80aea6a81 <unknown>
+#14 0x55e80ae8e695 <unknown>
+#15 0x55e80aea75f2 <unknown>
+#16 0x55e80ae7386f <unknown>
+#17 0x55e80aeca668 <unknown>
+#18 0x55e80aeca832 <unknown>
+#19 0x55e80aeda65c <unknown>
+#20 0x7fb6de16aa94 <unknown>
+#21 0x7fb6de1f7c3c <unknown>
+[2024-10-03T21:37:33.196+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55e80aedb86a <unknown>
+#1 0x55e80aba9e50 <unknown>
+#2 0x55e80abf9644 <unknown>
+#3 0x55e80abf9931 <unknown>
+#4 0x55e80abedf96 <unknown>
+#5 0x55e80ac1e4bd <unknown>
+#6 0x55e80abede89 <unknown>
+#7 0x55e80ac1e65e <unknown>
+#8 0x55e80ac3c9c6 <unknown>
+#9 0x55e80ac1e233 <unknown>
+#10 0x55e80abec093 <unknown>
+#11 0x55e80abed09e <unknown>
+#12 0x55e80aea2acb <unknown>
+#13 0x55e80aea6a81 <unknown>
+#14 0x55e80ae8e695 <unknown>
+#15 0x55e80aea75f2 <unknown>
+#16 0x55e80ae7386f <unknown>
+#17 0x55e80aeca668 <unknown>
+#18 0x55e80aeca832 <unknown>
+#19 0x55e80aeda65c <unknown>
+#20 0x7fb6de16aa94 <unknown>
+#21 0x7fb6de1f7c3c <unknown>
+[2024-10-03T21:37:33.213+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55e80aedb86a <unknown>
+#1 0x55e80aba9e50 <unknown>
+#2 0x55e80abf9644 <unknown>
+#3 0x55e80abf9931 <unknown>
+#4 0x55e80abedf96 <unknown>
+#5 0x55e80ac1e4bd <unknown>
+#6 0x55e80abede89 <unknown>
+#7 0x55e80ac1e65e <unknown>
+#8 0x55e80ac3c9c6 <unknown>
+#9 0x55e80ac1e233 <unknown>
+#10 0x55e80abec093 <unknown>
+#11 0x55e80abed09e <unknown>
+#12 0x55e80aea2acb <unknown>
+#13 0x55e80aea6a81 <unknown>
+#14 0x55e80ae8e695 <unknown>
+#15 0x55e80aea75f2 <unknown>
+#16 0x55e80ae7386f <unknown>
+#17 0x55e80aeca668 <unknown>
+#18 0x55e80aeca832 <unknown>
+#19 0x55e80aeda65c <unknown>
+#20 0x7fb6de16aa94 <unknown>
+#21 0x7fb6de1f7c3c <unknown>
+[2024-10-03T21:37:33.231+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55e80aedb86a <unknown>
+#1 0x55e80aba9e50 <unknown>
+#2 0x55e80abf9644 <unknown>
+#3 0x55e80abf9931 <unknown>
+#4 0x55e80abedf96 <unknown>
+#5 0x55e80ac1e4bd <unknown>
+#6 0x55e80abede89 <unknown>
+#7 0x55e80ac1e65e <unknown>
+#8 0x55e80ac3c9c6 <unknown>
+#9 0x55e80ac1e233 <unknown>
+#10 0x55e80abec093 <unknown>
+#11 0x55e80abed09e <unknown>
+#12 0x55e80aea2acb <unknown>
+#13 0x55e80aea6a81 <unknown>
+#14 0x55e80ae8e695 <unknown>
+#15 0x55e80aea75f2 <unknown>
+#16 0x55e80ae7386f <unknown>
+#17 0x55e80aeca668 <unknown>
+#18 0x55e80aeca832 <unknown>
+#19 0x55e80aeda65c <unknown>
+#20 0x7fb6de16aa94 <unknown>
+#21 0x7fb6de1f7c3c <unknown>
+[2024-10-03T21:37:35.426+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55e80aedb86a <unknown>
+#1 0x55e80aba9e50 <unknown>
+#2 0x55e80abf9644 <unknown>
+#3 0x55e80abf9931 <unknown>
+#4 0x55e80abedf96 <unknown>
+#5 0x55e80ac1e4bd <unknown>
+#6 0x55e80abede89 <unknown>
+#7 0x55e80ac1e65e <unknown>
+#8 0x55e80ac3c9c6 <unknown>
+#9 0x55e80ac1e233 <unknown>
+#10 0x55e80abec093 <unknown>
+#11 0x55e80abed09e <unknown>
+#12 0x55e80aea2acb <unknown>
+#13 0x55e80aea6a81 <unknown>
+#14 0x55e80ae8e695 <unknown>
+#15 0x55e80aea75f2 <unknown>
+#16 0x55e80ae7386f <unknown>
+#17 0x55e80aeca668 <unknown>
+#18 0x55e80aeca832 <unknown>
+#19 0x55e80aeda65c <unknown>
+#20 0x7fb6de16aa94 <unknown>
+#21 0x7fb6de1f7c3c <unknown>
+[2024-10-03T21:37:35.464+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55e80aedb86a <unknown>
+#1 0x55e80aba9e50 <unknown>
+#2 0x55e80abf9644 <unknown>
+#3 0x55e80abf9931 <unknown>
+#4 0x55e80abedf96 <unknown>
+#5 0x55e80ac1e4bd <unknown>
+#6 0x55e80abede89 <unknown>
+#7 0x55e80ac1e65e <unknown>
+#8 0x55e80ac3c9c6 <unknown>
+#9 0x55e80ac1e233 <unknown>
+#10 0x55e80abec093 <unknown>
+#11 0x55e80abed09e <unknown>
+#12 0x55e80aea2acb <unknown>
+#13 0x55e80aea6a81 <unknown>
+#14 0x55e80ae8e695 <unknown>
+#15 0x55e80aea75f2 <unknown>
+#16 0x55e80ae7386f <unknown>
+#17 0x55e80aeca668 <unknown>
+#18 0x55e80aeca832 <unknown>
+#19 0x55e80aeda65c <unknown>
+#20 0x7fb6de16aa94 <unknown>
+#21 0x7fb6de1f7c3c <unknown>
+[2024-10-03T21:37:35.481+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55e80aedb86a <unknown>
+#1 0x55e80aba9e50 <unknown>
+#2 0x55e80abf9644 <unknown>
+#3 0x55e80abf9931 <unknown>
+#4 0x55e80abedf96 <unknown>
+#5 0x55e80ac1e4bd <unknown>
+#6 0x55e80abede89 <unknown>
+#7 0x55e80ac1e65e <unknown>
+#8 0x55e80ac3c9c6 <unknown>
+#9 0x55e80ac1e233 <unknown>
+#10 0x55e80abec093 <unknown>
+#11 0x55e80abed09e <unknown>
+#12 0x55e80aea2acb <unknown>
+#13 0x55e80aea6a81 <unknown>
+#14 0x55e80ae8e695 <unknown>
+#15 0x55e80aea75f2 <unknown>
+#16 0x55e80ae7386f <unknown>
+#17 0x55e80aeca668 <unknown>
+#18 0x55e80aeca832 <unknown>
+#19 0x55e80aeda65c <unknown>
+#20 0x7fb6de16aa94 <unknown>
+#21 0x7fb6de1f7c3c <unknown>
+[2024-10-03T21:37:35.516+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55e80aedb86a <unknown>
+#1 0x55e80aba9e50 <unknown>
+#2 0x55e80abf9644 <unknown>
+#3 0x55e80abf9931 <unknown>
+#4 0x55e80abedf96 <unknown>
+#5 0x55e80ac1e4bd <unknown>
+#6 0x55e80abede89 <unknown>
+#7 0x55e80ac1e65e <unknown>
+#8 0x55e80ac3c9c6 <unknown>
+#9 0x55e80ac1e233 <unknown>
+#10 0x55e80abec093 <unknown>
+#11 0x55e80abed09e <unknown>
+#12 0x55e80aea2acb <unknown>
+#13 0x55e80aea6a81 <unknown>
+#14 0x55e80ae8e695 <unknown>
+#15 0x55e80aea75f2 <unknown>
+#16 0x55e80ae7386f <unknown>
+#17 0x55e80aeca668 <unknown>
+#18 0x55e80aeca832 <unknown>
+#19 0x55e80aeda65c <unknown>
+#20 0x7fb6de16aa94 <unknown>
+#21 0x7fb6de1f7c3c <unknown>
+[2024-10-03T21:37:35.534+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55e80aedb86a <unknown>
+#1 0x55e80aba9e50 <unknown>
+#2 0x55e80abf9644 <unknown>
+#3 0x55e80abf9931 <unknown>
+#4 0x55e80abedf96 <unknown>
+#5 0x55e80ac1e4bd <unknown>
+#6 0x55e80abede89 <unknown>
+#7 0x55e80ac1e65e <unknown>
+#8 0x55e80ac3c9c6 <unknown>
+#9 0x55e80ac1e233 <unknown>
+#10 0x55e80abec093 <unknown>
+#11 0x55e80abed09e <unknown>
+#12 0x55e80aea2acb <unknown>
+#13 0x55e80aea6a81 <unknown>
+#14 0x55e80ae8e695 <unknown>
+#15 0x55e80aea75f2 <unknown>
+#16 0x55e80ae7386f <unknown>
+#17 0x55e80aeca668 <unknown>
+#18 0x55e80aeca832 <unknown>
+#19 0x55e80aeda65c <unknown>
+#20 0x7fb6de16aa94 <unknown>
+#21 0x7fb6de1f7c3c <unknown>
+[2024-10-03T21:37:35.575+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55e80aedb86a <unknown>
+#1 0x55e80aba9e50 <unknown>
+#2 0x55e80abf9644 <unknown>
+#3 0x55e80abf9931 <unknown>
+#4 0x55e80abedf96 <unknown>
+#5 0x55e80ac1e4bd <unknown>
+#6 0x55e80abede89 <unknown>
+#7 0x55e80ac1e65e <unknown>
+#8 0x55e80ac3c9c6 <unknown>
+#9 0x55e80ac1e233 <unknown>
+#10 0x55e80abec093 <unknown>
+#11 0x55e80abed09e <unknown>
+#12 0x55e80aea2acb <unknown>
+#13 0x55e80aea6a81 <unknown>
+#14 0x55e80ae8e695 <unknown>
+#15 0x55e80aea75f2 <unknown>
+#16 0x55e80ae7386f <unknown>
+#17 0x55e80aeca668 <unknown>
+#18 0x55e80aeca832 <unknown>
+#19 0x55e80aeda65c <unknown>
+#20 0x7fb6de16aa94 <unknown>
+#21 0x7fb6de1f7c3c <unknown>
+[2024-10-03T21:37:35.593+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55e80aedb86a <unknown>
+#1 0x55e80aba9e50 <unknown>
+#2 0x55e80abf9644 <unknown>
+#3 0x55e80abf9931 <unknown>
+#4 0x55e80abedf96 <unknown>
+#5 0x55e80ac1e4bd <unknown>
+#6 0x55e80abede89 <unknown>
+#7 0x55e80ac1e65e <unknown>
+#8 0x55e80ac3c9c6 <unknown>
+#9 0x55e80ac1e233 <unknown>
+#10 0x55e80abec093 <unknown>
+#11 0x55e80abed09e <unknown>
+#12 0x55e80aea2acb <unknown>
+#13 0x55e80aea6a81 <unknown>
+#14 0x55e80ae8e695 <unknown>
+#15 0x55e80aea75f2 <unknown>
+#16 0x55e80ae7386f <unknown>
+#17 0x55e80aeca668 <unknown>
+#18 0x55e80aeca832 <unknown>
+#19 0x55e80aeda65c <unknown>
+#20 0x7fb6de16aa94 <unknown>
+#21 0x7fb6de1f7c3c <unknown>
+[2024-10-03T21:37:35.629+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55e80aedb86a <unknown>
+#1 0x55e80aba9e50 <unknown>
+#2 0x55e80abf9644 <unknown>
+#3 0x55e80abf9931 <unknown>
+#4 0x55e80abedf96 <unknown>
+#5 0x55e80ac1e4bd <unknown>
+#6 0x55e80abede89 <unknown>
+#7 0x55e80ac1e65e <unknown>
+#8 0x55e80ac3c9c6 <unknown>
+#9 0x55e80ac1e233 <unknown>
+#10 0x55e80abec093 <unknown>
+#11 0x55e80abed09e <unknown>
+#12 0x55e80aea2acb <unknown>
+#13 0x55e80aea6a81 <unknown>
+#14 0x55e80ae8e695 <unknown>
+#15 0x55e80aea75f2 <unknown>
+#16 0x55e80ae7386f <unknown>
+#17 0x55e80aeca668 <unknown>
+#18 0x55e80aeca832 <unknown>
+#19 0x55e80aeda65c <unknown>
+#20 0x7fb6de16aa94 <unknown>
+#21 0x7fb6de1f7c3c <unknown>
+[2024-10-03T21:37:35.644+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55e80aedb86a <unknown>
+#1 0x55e80aba9e50 <unknown>
+#2 0x55e80abf9644 <unknown>
+#3 0x55e80abf9931 <unknown>
+#4 0x55e80abedf96 <unknown>
+#5 0x55e80ac1e4bd <unknown>
+#6 0x55e80abede89 <unknown>
+#7 0x55e80ac1e65e <unknown>
+#8 0x55e80ac3c9c6 <unknown>
+#9 0x55e80ac1e233 <unknown>
+#10 0x55e80abec093 <unknown>
+#11 0x55e80abed09e <unknown>
+#12 0x55e80aea2acb <unknown>
+#13 0x55e80aea6a81 <unknown>
+#14 0x55e80ae8e695 <unknown>
+#15 0x55e80aea75f2 <unknown>
+#16 0x55e80ae7386f <unknown>
+#17 0x55e80aeca668 <unknown>
+#18 0x55e80aeca832 <unknown>
+#19 0x55e80aeda65c <unknown>
+#20 0x7fb6de16aa94 <unknown>
+#21 0x7fb6de1f7c3c <unknown>
+[2024-10-03T21:37:45.143+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55b68d36286a <unknown>
+#1 0x55b68d030e50 <unknown>
+#2 0x55b68d080644 <unknown>
+#3 0x55b68d080931 <unknown>
+#4 0x55b68d074f96 <unknown>
+#5 0x55b68d0a54bd <unknown>
+#6 0x55b68d074e89 <unknown>
+#7 0x55b68d0a565e <unknown>
+#8 0x55b68d0c39c6 <unknown>
+#9 0x55b68d0a5233 <unknown>
+#10 0x55b68d073093 <unknown>
+#11 0x55b68d07409e <unknown>
+#12 0x55b68d329acb <unknown>
+#13 0x55b68d32da81 <unknown>
+#14 0x55b68d315695 <unknown>
+#15 0x55b68d32e5f2 <unknown>
+#16 0x55b68d2fa86f <unknown>
+#17 0x55b68d351668 <unknown>
+#18 0x55b68d351832 <unknown>
+#19 0x55b68d36165c <unknown>
+#20 0x7f381606ea94 <unknown>
+#21 0x7f38160fbc3c <unknown>
+[2024-10-03T21:37:45.162+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55b68d36286a <unknown>
+#1 0x55b68d030e50 <unknown>
+#2 0x55b68d080644 <unknown>
+#3 0x55b68d080931 <unknown>
+#4 0x55b68d074f96 <unknown>
+#5 0x55b68d0a54bd <unknown>
+#6 0x55b68d074e89 <unknown>
+#7 0x55b68d0a565e <unknown>
+#8 0x55b68d0c39c6 <unknown>
+#9 0x55b68d0a5233 <unknown>
+#10 0x55b68d073093 <unknown>
+#11 0x55b68d07409e <unknown>
+#12 0x55b68d329acb <unknown>
+#13 0x55b68d32da81 <unknown>
+#14 0x55b68d315695 <unknown>
+#15 0x55b68d32e5f2 <unknown>
+#16 0x55b68d2fa86f <unknown>
+#17 0x55b68d351668 <unknown>
+#18 0x55b68d351832 <unknown>
+#19 0x55b68d36165c <unknown>
+#20 0x7f381606ea94 <unknown>
+#21 0x7f38160fbc3c <unknown>
+[2024-10-03T21:37:47.303+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55b68d36286a <unknown>
+#1 0x55b68d030e50 <unknown>
+#2 0x55b68d080644 <unknown>
+#3 0x55b68d080931 <unknown>
+#4 0x55b68d074f96 <unknown>
+#5 0x55b68d0a54bd <unknown>
+#6 0x55b68d074e89 <unknown>
+#7 0x55b68d0a565e <unknown>
+#8 0x55b68d0c39c6 <unknown>
+#9 0x55b68d0a5233 <unknown>
+#10 0x55b68d073093 <unknown>
+#11 0x55b68d07409e <unknown>
+#12 0x55b68d329acb <unknown>
+#13 0x55b68d32da81 <unknown>
+#14 0x55b68d315695 <unknown>
+#15 0x55b68d32e5f2 <unknown>
+#16 0x55b68d2fa86f <unknown>
+#17 0x55b68d351668 <unknown>
+#18 0x55b68d351832 <unknown>
+#19 0x55b68d36165c <unknown>
+#20 0x7f381606ea94 <unknown>
+#21 0x7f38160fbc3c <unknown>
+[2024-10-03T21:37:47.337+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55b68d36286a <unknown>
+#1 0x55b68d030e50 <unknown>
+#2 0x55b68d080644 <unknown>
+#3 0x55b68d080931 <unknown>
+#4 0x55b68d074f96 <unknown>
+#5 0x55b68d0a54bd <unknown>
+#6 0x55b68d074e89 <unknown>
+#7 0x55b68d0a565e <unknown>
+#8 0x55b68d0c39c6 <unknown>
+#9 0x55b68d0a5233 <unknown>
+#10 0x55b68d073093 <unknown>
+#11 0x55b68d07409e <unknown>
+#12 0x55b68d329acb <unknown>
+#13 0x55b68d32da81 <unknown>
+#14 0x55b68d315695 <unknown>
+#15 0x55b68d32e5f2 <unknown>
+#16 0x55b68d2fa86f <unknown>
+#17 0x55b68d351668 <unknown>
+#18 0x55b68d351832 <unknown>
+#19 0x55b68d36165c <unknown>
+#20 0x7f381606ea94 <unknown>
+#21 0x7f38160fbc3c <unknown>
+[2024-10-03T21:37:47.354+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55b68d36286a <unknown>
+#1 0x55b68d030e50 <unknown>
+#2 0x55b68d080644 <unknown>
+#3 0x55b68d080931 <unknown>
+#4 0x55b68d074f96 <unknown>
+#5 0x55b68d0a54bd <unknown>
+#6 0x55b68d074e89 <unknown>
+#7 0x55b68d0a565e <unknown>
+#8 0x55b68d0c39c6 <unknown>
+#9 0x55b68d0a5233 <unknown>
+#10 0x55b68d073093 <unknown>
+#11 0x55b68d07409e <unknown>
+#12 0x55b68d329acb <unknown>
+#13 0x55b68d32da81 <unknown>
+#14 0x55b68d315695 <unknown>
+#15 0x55b68d32e5f2 <unknown>
+#16 0x55b68d2fa86f <unknown>
+#17 0x55b68d351668 <unknown>
+#18 0x55b68d351832 <unknown>
+#19 0x55b68d36165c <unknown>
+#20 0x7f381606ea94 <unknown>
+#21 0x7f38160fbc3c <unknown>
+[2024-10-03T21:37:47.388+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55b68d36286a <unknown>
+#1 0x55b68d030e50 <unknown>
+#2 0x55b68d080644 <unknown>
+#3 0x55b68d080931 <unknown>
+#4 0x55b68d074f96 <unknown>
+#5 0x55b68d0a54bd <unknown>
+#6 0x55b68d074e89 <unknown>
+#7 0x55b68d0a565e <unknown>
+#8 0x55b68d0c39c6 <unknown>
+#9 0x55b68d0a5233 <unknown>
+#10 0x55b68d073093 <unknown>
+#11 0x55b68d07409e <unknown>
+#12 0x55b68d329acb <unknown>
+#13 0x55b68d32da81 <unknown>
+#14 0x55b68d315695 <unknown>
+#15 0x55b68d32e5f2 <unknown>
+#16 0x55b68d2fa86f <unknown>
+#17 0x55b68d351668 <unknown>
+#18 0x55b68d351832 <unknown>
+#19 0x55b68d36165c <unknown>
+#20 0x7f381606ea94 <unknown>
+#21 0x7f38160fbc3c <unknown>
+[2024-10-03T21:37:47.407+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55b68d36286a <unknown>
+#1 0x55b68d030e50 <unknown>
+#2 0x55b68d080644 <unknown>
+#3 0x55b68d080931 <unknown>
+#4 0x55b68d074f96 <unknown>
+#5 0x55b68d0a54bd <unknown>
+#6 0x55b68d074e89 <unknown>
+#7 0x55b68d0a565e <unknown>
+#8 0x55b68d0c39c6 <unknown>
+#9 0x55b68d0a5233 <unknown>
+#10 0x55b68d073093 <unknown>
+#11 0x55b68d07409e <unknown>
+#12 0x55b68d329acb <unknown>
+#13 0x55b68d32da81 <unknown>
+#14 0x55b68d315695 <unknown>
+#15 0x55b68d32e5f2 <unknown>
+#16 0x55b68d2fa86f <unknown>
+#17 0x55b68d351668 <unknown>
+#18 0x55b68d351832 <unknown>
+#19 0x55b68d36165c <unknown>
+#20 0x7f381606ea94 <unknown>
+#21 0x7f38160fbc3c <unknown>
+[2024-10-03T21:37:47.514+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55b68d36286a <unknown>
+#1 0x55b68d030e50 <unknown>
+#2 0x55b68d080644 <unknown>
+#3 0x55b68d080931 <unknown>
+#4 0x55b68d074f96 <unknown>
+#5 0x55b68d0a54bd <unknown>
+#6 0x55b68d074e89 <unknown>
+#7 0x55b68d0a565e <unknown>
+#8 0x55b68d0c39c6 <unknown>
+#9 0x55b68d0a5233 <unknown>
+#10 0x55b68d073093 <unknown>
+#11 0x55b68d07409e <unknown>
+#12 0x55b68d329acb <unknown>
+#13 0x55b68d32da81 <unknown>
+#14 0x55b68d315695 <unknown>
+#15 0x55b68d32e5f2 <unknown>
+#16 0x55b68d2fa86f <unknown>
+#17 0x55b68d351668 <unknown>
+#18 0x55b68d351832 <unknown>
+#19 0x55b68d36165c <unknown>
+#20 0x7f381606ea94 <unknown>
+#21 0x7f38160fbc3c <unknown>
+[2024-10-03T21:37:47.543+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55b68d36286a <unknown>
+#1 0x55b68d030e50 <unknown>
+#2 0x55b68d080644 <unknown>
+#3 0x55b68d080931 <unknown>
+#4 0x55b68d074f96 <unknown>
+#5 0x55b68d0a54bd <unknown>
+#6 0x55b68d074e89 <unknown>
+#7 0x55b68d0a565e <unknown>
+#8 0x55b68d0c39c6 <unknown>
+#9 0x55b68d0a5233 <unknown>
+#10 0x55b68d073093 <unknown>
+#11 0x55b68d07409e <unknown>
+#12 0x55b68d329acb <unknown>
+#13 0x55b68d32da81 <unknown>
+#14 0x55b68d315695 <unknown>
+#15 0x55b68d32e5f2 <unknown>
+#16 0x55b68d2fa86f <unknown>
+#17 0x55b68d351668 <unknown>
+#18 0x55b68d351832 <unknown>
+#19 0x55b68d36165c <unknown>
+#20 0x7f381606ea94 <unknown>
+#21 0x7f38160fbc3c <unknown>
+[2024-10-03T21:37:47.584+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55b68d36286a <unknown>
+#1 0x55b68d030e50 <unknown>
+#2 0x55b68d080644 <unknown>
+#3 0x55b68d080931 <unknown>
+#4 0x55b68d074f96 <unknown>
+#5 0x55b68d0a54bd <unknown>
+#6 0x55b68d074e89 <unknown>
+#7 0x55b68d0a565e <unknown>
+#8 0x55b68d0c39c6 <unknown>
+#9 0x55b68d0a5233 <unknown>
+#10 0x55b68d073093 <unknown>
+#11 0x55b68d07409e <unknown>
+#12 0x55b68d329acb <unknown>
+#13 0x55b68d32da81 <unknown>
+#14 0x55b68d315695 <unknown>
+#15 0x55b68d32e5f2 <unknown>
+#16 0x55b68d2fa86f <unknown>
+#17 0x55b68d351668 <unknown>
+#18 0x55b68d351832 <unknown>
+#19 0x55b68d36165c <unknown>
+#20 0x7f381606ea94 <unknown>
+#21 0x7f38160fbc3c <unknown>
+[2024-10-03T21:37:47.600+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55b68d36286a <unknown>
+#1 0x55b68d030e50 <unknown>
+#2 0x55b68d080644 <unknown>
+#3 0x55b68d080931 <unknown>
+#4 0x55b68d074f96 <unknown>
+#5 0x55b68d0a54bd <unknown>
+#6 0x55b68d074e89 <unknown>
+#7 0x55b68d0a565e <unknown>
+#8 0x55b68d0c39c6 <unknown>
+#9 0x55b68d0a5233 <unknown>
+#10 0x55b68d073093 <unknown>
+#11 0x55b68d07409e <unknown>
+#12 0x55b68d329acb <unknown>
+#13 0x55b68d32da81 <unknown>
+#14 0x55b68d315695 <unknown>
+#15 0x55b68d32e5f2 <unknown>
+#16 0x55b68d2fa86f <unknown>
+#17 0x55b68d351668 <unknown>
+#18 0x55b68d351832 <unknown>
+#19 0x55b68d36165c <unknown>
+#20 0x7f381606ea94 <unknown>
+#21 0x7f38160fbc3c <unknown>
+[2024-10-03T21:37:56.915+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x564e371fe86a <unknown>
+#1 0x564e36ecce50 <unknown>
+#2 0x564e36f1c644 <unknown>
+#3 0x564e36f1c931 <unknown>
+#4 0x564e36f10f96 <unknown>
+#5 0x564e36f414bd <unknown>
+#6 0x564e36f10e89 <unknown>
+#7 0x564e36f4165e <unknown>
+#8 0x564e36f5f9c6 <unknown>
+#9 0x564e36f41233 <unknown>
+#10 0x564e36f0f093 <unknown>
+#11 0x564e36f1009e <unknown>
+#12 0x564e371c5acb <unknown>
+#13 0x564e371c9a81 <unknown>
+#14 0x564e371b1695 <unknown>
+#15 0x564e371ca5f2 <unknown>
+#16 0x564e3719686f <unknown>
+#17 0x564e371ed668 <unknown>
+#18 0x564e371ed832 <unknown>
+#19 0x564e371fd65c <unknown>
+#20 0x7f0abd072a94 <unknown>
+#21 0x7f0abd0ffc3c <unknown>
+[2024-10-03T21:37:56.952+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x564e371fe86a <unknown>
+#1 0x564e36ecce50 <unknown>
+#2 0x564e36f1c644 <unknown>
+#3 0x564e36f1c931 <unknown>
+#4 0x564e36f10f96 <unknown>
+#5 0x564e36f414bd <unknown>
+#6 0x564e36f10e89 <unknown>
+#7 0x564e36f4165e <unknown>
+#8 0x564e36f5f9c6 <unknown>
+#9 0x564e36f41233 <unknown>
+#10 0x564e36f0f093 <unknown>
+#11 0x564e36f1009e <unknown>
+#12 0x564e371c5acb <unknown>
+#13 0x564e371c9a81 <unknown>
+#14 0x564e371b1695 <unknown>
+#15 0x564e371ca5f2 <unknown>
+#16 0x564e3719686f <unknown>
+#17 0x564e371ed668 <unknown>
+#18 0x564e371ed832 <unknown>
+#19 0x564e371fd65c <unknown>
+#20 0x7f0abd072a94 <unknown>
+#21 0x7f0abd0ffc3c <unknown>
+[2024-10-03T21:37:56.969+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x564e371fe86a <unknown>
+#1 0x564e36ecce50 <unknown>
+#2 0x564e36f1c644 <unknown>
+#3 0x564e36f1c931 <unknown>
+#4 0x564e36f10f96 <unknown>
+#5 0x564e36f414bd <unknown>
+#6 0x564e36f10e89 <unknown>
+#7 0x564e36f4165e <unknown>
+#8 0x564e36f5f9c6 <unknown>
+#9 0x564e36f41233 <unknown>
+#10 0x564e36f0f093 <unknown>
+#11 0x564e36f1009e <unknown>
+#12 0x564e371c5acb <unknown>
+#13 0x564e371c9a81 <unknown>
+#14 0x564e371b1695 <unknown>
+#15 0x564e371ca5f2 <unknown>
+#16 0x564e3719686f <unknown>
+#17 0x564e371ed668 <unknown>
+#18 0x564e371ed832 <unknown>
+#19 0x564e371fd65c <unknown>
+#20 0x7f0abd072a94 <unknown>
+#21 0x7f0abd0ffc3c <unknown>
+[2024-10-03T21:37:56.987+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x564e371fe86a <unknown>
+#1 0x564e36ecce50 <unknown>
+#2 0x564e36f1c644 <unknown>
+#3 0x564e36f1c931 <unknown>
+#4 0x564e36f10f96 <unknown>
+#5 0x564e36f414bd <unknown>
+#6 0x564e36f10e89 <unknown>
+#7 0x564e36f4165e <unknown>
+#8 0x564e36f5f9c6 <unknown>
+#9 0x564e36f41233 <unknown>
+#10 0x564e36f0f093 <unknown>
+#11 0x564e36f1009e <unknown>
+#12 0x564e371c5acb <unknown>
+#13 0x564e371c9a81 <unknown>
+#14 0x564e371b1695 <unknown>
+#15 0x564e371ca5f2 <unknown>
+#16 0x564e3719686f <unknown>
+#17 0x564e371ed668 <unknown>
+#18 0x564e371ed832 <unknown>
+#19 0x564e371fd65c <unknown>
+#20 0x7f0abd072a94 <unknown>
+#21 0x7f0abd0ffc3c <unknown>
+[2024-10-03T21:37:58.134+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//div[contains(text(), "R$")]"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x564e371fe86a <unknown>
+#1 0x564e36ecce50 <unknown>
+#2 0x564e36f1c644 <unknown>
+#3 0x564e36f1c931 <unknown>
+#4 0x564e36f10f96 <unknown>
+#5 0x564e36f414bd <unknown>
+#6 0x564e36f10e89 <unknown>
+#7 0x564e36f4165e <unknown>
+#8 0x564e36f5f9c6 <unknown>
+#9 0x564e36f41233 <unknown>
+#10 0x564e36f0f093 <unknown>
+#11 0x564e36f1009e <unknown>
+#12 0x564e371c5acb <unknown>
+#13 0x564e371c9a81 <unknown>
+#14 0x564e371b1695 <unknown>
+#15 0x564e371ca5f2 <unknown>
+#16 0x564e3719686f <unknown>
+#17 0x564e371ed668 <unknown>
+#18 0x564e371ed832 <unknown>
+#19 0x564e371fd65c <unknown>
+#20 0x7f0abd072a94 <unknown>
+#21 0x7f0abd0ffc3c <unknown>
+[2024-10-03T21:37:59.227+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x564e371fe86a <unknown>
+#1 0x564e36ecce50 <unknown>
+#2 0x564e36f1c644 <unknown>
+#3 0x564e36f1c931 <unknown>
+#4 0x564e36f10f96 <unknown>
+#5 0x564e36f414bd <unknown>
+#6 0x564e36f10e89 <unknown>
+#7 0x564e36f4165e <unknown>
+#8 0x564e36f5f9c6 <unknown>
+#9 0x564e36f41233 <unknown>
+#10 0x564e36f0f093 <unknown>
+#11 0x564e36f1009e <unknown>
+#12 0x564e371c5acb <unknown>
+#13 0x564e371c9a81 <unknown>
+#14 0x564e371b1695 <unknown>
+#15 0x564e371ca5f2 <unknown>
+#16 0x564e3719686f <unknown>
+#17 0x564e371ed668 <unknown>
+#18 0x564e371ed832 <unknown>
+#19 0x564e371fd65c <unknown>
+#20 0x7f0abd072a94 <unknown>
+#21 0x7f0abd0ffc3c <unknown>
+[2024-10-03T21:37:59.263+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x564e371fe86a <unknown>
+#1 0x564e36ecce50 <unknown>
+#2 0x564e36f1c644 <unknown>
+#3 0x564e36f1c931 <unknown>
+#4 0x564e36f10f96 <unknown>
+#5 0x564e36f414bd <unknown>
+#6 0x564e36f10e89 <unknown>
+#7 0x564e36f4165e <unknown>
+#8 0x564e36f5f9c6 <unknown>
+#9 0x564e36f41233 <unknown>
+#10 0x564e36f0f093 <unknown>
+#11 0x564e36f1009e <unknown>
+#12 0x564e371c5acb <unknown>
+#13 0x564e371c9a81 <unknown>
+#14 0x564e371b1695 <unknown>
+#15 0x564e371ca5f2 <unknown>
+#16 0x564e3719686f <unknown>
+#17 0x564e371ed668 <unknown>
+#18 0x564e371ed832 <unknown>
+#19 0x564e371fd65c <unknown>
+#20 0x7f0abd072a94 <unknown>
+#21 0x7f0abd0ffc3c <unknown>
+[2024-10-03T21:37:59.281+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x564e371fe86a <unknown>
+#1 0x564e36ecce50 <unknown>
+#2 0x564e36f1c644 <unknown>
+#3 0x564e36f1c931 <unknown>
+#4 0x564e36f10f96 <unknown>
+#5 0x564e36f414bd <unknown>
+#6 0x564e36f10e89 <unknown>
+#7 0x564e36f4165e <unknown>
+#8 0x564e36f5f9c6 <unknown>
+#9 0x564e36f41233 <unknown>
+#10 0x564e36f0f093 <unknown>
+#11 0x564e36f1009e <unknown>
+#12 0x564e371c5acb <unknown>
+#13 0x564e371c9a81 <unknown>
+#14 0x564e371b1695 <unknown>
+#15 0x564e371ca5f2 <unknown>
+#16 0x564e3719686f <unknown>
+#17 0x564e371ed668 <unknown>
+#18 0x564e371ed832 <unknown>
+#19 0x564e371fd65c <unknown>
+#20 0x7f0abd072a94 <unknown>
+#21 0x7f0abd0ffc3c <unknown>
+[2024-10-03T21:37:59.319+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x564e371fe86a <unknown>
+#1 0x564e36ecce50 <unknown>
+#2 0x564e36f1c644 <unknown>
+#3 0x564e36f1c931 <unknown>
+#4 0x564e36f10f96 <unknown>
+#5 0x564e36f414bd <unknown>
+#6 0x564e36f10e89 <unknown>
+#7 0x564e36f4165e <unknown>
+#8 0x564e36f5f9c6 <unknown>
+#9 0x564e36f41233 <unknown>
+#10 0x564e36f0f093 <unknown>
+#11 0x564e36f1009e <unknown>
+#12 0x564e371c5acb <unknown>
+#13 0x564e371c9a81 <unknown>
+#14 0x564e371b1695 <unknown>
+#15 0x564e371ca5f2 <unknown>
+#16 0x564e3719686f <unknown>
+#17 0x564e371ed668 <unknown>
+#18 0x564e371ed832 <unknown>
+#19 0x564e371fd65c <unknown>
+#20 0x7f0abd072a94 <unknown>
+#21 0x7f0abd0ffc3c <unknown>
+[2024-10-03T21:37:59.338+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x564e371fe86a <unknown>
+#1 0x564e36ecce50 <unknown>
+#2 0x564e36f1c644 <unknown>
+#3 0x564e36f1c931 <unknown>
+#4 0x564e36f10f96 <unknown>
+#5 0x564e36f414bd <unknown>
+#6 0x564e36f10e89 <unknown>
+#7 0x564e36f4165e <unknown>
+#8 0x564e36f5f9c6 <unknown>
+#9 0x564e36f41233 <unknown>
+#10 0x564e36f0f093 <unknown>
+#11 0x564e36f1009e <unknown>
+#12 0x564e371c5acb <unknown>
+#13 0x564e371c9a81 <unknown>
+#14 0x564e371b1695 <unknown>
+#15 0x564e371ca5f2 <unknown>
+#16 0x564e3719686f <unknown>
+#17 0x564e371ed668 <unknown>
+#18 0x564e371ed832 <unknown>
+#19 0x564e371fd65c <unknown>
+#20 0x7f0abd072a94 <unknown>
+#21 0x7f0abd0ffc3c <unknown>
+[2024-10-03T21:37:59.375+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x564e371fe86a <unknown>
+#1 0x564e36ecce50 <unknown>
+#2 0x564e36f1c644 <unknown>
+#3 0x564e36f1c931 <unknown>
+#4 0x564e36f10f96 <unknown>
+#5 0x564e36f414bd <unknown>
+#6 0x564e36f10e89 <unknown>
+#7 0x564e36f4165e <unknown>
+#8 0x564e36f5f9c6 <unknown>
+#9 0x564e36f41233 <unknown>
+#10 0x564e36f0f093 <unknown>
+#11 0x564e36f1009e <unknown>
+#12 0x564e371c5acb <unknown>
+#13 0x564e371c9a81 <unknown>
+#14 0x564e371b1695 <unknown>
+#15 0x564e371ca5f2 <unknown>
+#16 0x564e3719686f <unknown>
+#17 0x564e371ed668 <unknown>
+#18 0x564e371ed832 <unknown>
+#19 0x564e371fd65c <unknown>
+#20 0x7f0abd072a94 <unknown>
+#21 0x7f0abd0ffc3c <unknown>
+[2024-10-03T21:37:59.393+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x564e371fe86a <unknown>
+#1 0x564e36ecce50 <unknown>
+#2 0x564e36f1c644 <unknown>
+#3 0x564e36f1c931 <unknown>
+#4 0x564e36f10f96 <unknown>
+#5 0x564e36f414bd <unknown>
+#6 0x564e36f10e89 <unknown>
+#7 0x564e36f4165e <unknown>
+#8 0x564e36f5f9c6 <unknown>
+#9 0x564e36f41233 <unknown>
+#10 0x564e36f0f093 <unknown>
+#11 0x564e36f1009e <unknown>
+#12 0x564e371c5acb <unknown>
+#13 0x564e371c9a81 <unknown>
+#14 0x564e371b1695 <unknown>
+#15 0x564e371ca5f2 <unknown>
+#16 0x564e3719686f <unknown>
+#17 0x564e371ed668 <unknown>
+#18 0x564e371ed832 <unknown>
+#19 0x564e371fd65c <unknown>
+#20 0x7f0abd072a94 <unknown>
+#21 0x7f0abd0ffc3c <unknown>
+[2024-10-03T21:37:59.440+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x564e371fe86a <unknown>
+#1 0x564e36ecce50 <unknown>
+#2 0x564e36f1c644 <unknown>
+#3 0x564e36f1c931 <unknown>
+#4 0x564e36f10f96 <unknown>
+#5 0x564e36f414bd <unknown>
+#6 0x564e36f10e89 <unknown>
+#7 0x564e36f4165e <unknown>
+#8 0x564e36f5f9c6 <unknown>
+#9 0x564e36f41233 <unknown>
+#10 0x564e36f0f093 <unknown>
+#11 0x564e36f1009e <unknown>
+#12 0x564e371c5acb <unknown>
+#13 0x564e371c9a81 <unknown>
+#14 0x564e371b1695 <unknown>
+#15 0x564e371ca5f2 <unknown>
+#16 0x564e3719686f <unknown>
+#17 0x564e371ed668 <unknown>
+#18 0x564e371ed832 <unknown>
+#19 0x564e371fd65c <unknown>
+#20 0x7f0abd072a94 <unknown>
+#21 0x7f0abd0ffc3c <unknown>
+[2024-10-03T21:37:59.460+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x564e371fe86a <unknown>
+#1 0x564e36ecce50 <unknown>
+#2 0x564e36f1c644 <unknown>
+#3 0x564e36f1c931 <unknown>
+#4 0x564e36f10f96 <unknown>
+#5 0x564e36f414bd <unknown>
+#6 0x564e36f10e89 <unknown>
+#7 0x564e36f4165e <unknown>
+#8 0x564e36f5f9c6 <unknown>
+#9 0x564e36f41233 <unknown>
+#10 0x564e36f0f093 <unknown>
+#11 0x564e36f1009e <unknown>
+#12 0x564e371c5acb <unknown>
+#13 0x564e371c9a81 <unknown>
+#14 0x564e371b1695 <unknown>
+#15 0x564e371ca5f2 <unknown>
+#16 0x564e3719686f <unknown>
+#17 0x564e371ed668 <unknown>
+#18 0x564e371ed832 <unknown>
+#19 0x564e371fd65c <unknown>
+#20 0x7f0abd072a94 <unknown>
+#21 0x7f0abd0ffc3c <unknown>
+[2024-10-03T21:38:09.415+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x556832d8686a <unknown>
+#1 0x556832a54e50 <unknown>
+#2 0x556832aa4644 <unknown>
+#3 0x556832aa4931 <unknown>
+#4 0x556832a98f96 <unknown>
+#5 0x556832ac94bd <unknown>
+#6 0x556832a98e89 <unknown>
+#7 0x556832ac965e <unknown>
+#8 0x556832ae79c6 <unknown>
+#9 0x556832ac9233 <unknown>
+#10 0x556832a97093 <unknown>
+#11 0x556832a9809e <unknown>
+#12 0x556832d4dacb <unknown>
+#13 0x556832d51a81 <unknown>
+#14 0x556832d39695 <unknown>
+#15 0x556832d525f2 <unknown>
+#16 0x556832d1e86f <unknown>
+#17 0x556832d75668 <unknown>
+#18 0x556832d75832 <unknown>
+#19 0x556832d8565c <unknown>
+#20 0x7f4d225fda94 <unknown>
+#21 0x7f4d2268ac3c <unknown>
+[2024-10-03T21:38:09.449+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x556832d8686a <unknown>
+#1 0x556832a54e50 <unknown>
+#2 0x556832aa4644 <unknown>
+#3 0x556832aa4931 <unknown>
+#4 0x556832a98f96 <unknown>
+#5 0x556832ac94bd <unknown>
+#6 0x556832a98e89 <unknown>
+#7 0x556832ac965e <unknown>
+#8 0x556832ae79c6 <unknown>
+#9 0x556832ac9233 <unknown>
+#10 0x556832a97093 <unknown>
+#11 0x556832a9809e <unknown>
+#12 0x556832d4dacb <unknown>
+#13 0x556832d51a81 <unknown>
+#14 0x556832d39695 <unknown>
+#15 0x556832d525f2 <unknown>
+#16 0x556832d1e86f <unknown>
+#17 0x556832d75668 <unknown>
+#18 0x556832d75832 <unknown>
+#19 0x556832d8565c <unknown>
+#20 0x7f4d225fda94 <unknown>
+#21 0x7f4d2268ac3c <unknown>
+[2024-10-03T21:38:09.469+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x556832d8686a <unknown>
+#1 0x556832a54e50 <unknown>
+#2 0x556832aa4644 <unknown>
+#3 0x556832aa4931 <unknown>
+#4 0x556832a98f96 <unknown>
+#5 0x556832ac94bd <unknown>
+#6 0x556832a98e89 <unknown>
+#7 0x556832ac965e <unknown>
+#8 0x556832ae79c6 <unknown>
+#9 0x556832ac9233 <unknown>
+#10 0x556832a97093 <unknown>
+#11 0x556832a9809e <unknown>
+#12 0x556832d4dacb <unknown>
+#13 0x556832d51a81 <unknown>
+#14 0x556832d39695 <unknown>
+#15 0x556832d525f2 <unknown>
+#16 0x556832d1e86f <unknown>
+#17 0x556832d75668 <unknown>
+#18 0x556832d75832 <unknown>
+#19 0x556832d8565c <unknown>
+#20 0x7f4d225fda94 <unknown>
+#21 0x7f4d2268ac3c <unknown>
+[2024-10-03T21:38:09.488+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x556832d8686a <unknown>
+#1 0x556832a54e50 <unknown>
+#2 0x556832aa4644 <unknown>
+#3 0x556832aa4931 <unknown>
+#4 0x556832a98f96 <unknown>
+#5 0x556832ac94bd <unknown>
+#6 0x556832a98e89 <unknown>
+#7 0x556832ac965e <unknown>
+#8 0x556832ae79c6 <unknown>
+#9 0x556832ac9233 <unknown>
+#10 0x556832a97093 <unknown>
+#11 0x556832a9809e <unknown>
+#12 0x556832d4dacb <unknown>
+#13 0x556832d51a81 <unknown>
+#14 0x556832d39695 <unknown>
+#15 0x556832d525f2 <unknown>
+#16 0x556832d1e86f <unknown>
+#17 0x556832d75668 <unknown>
+#18 0x556832d75832 <unknown>
+#19 0x556832d8565c <unknown>
+#20 0x7f4d225fda94 <unknown>
+#21 0x7f4d2268ac3c <unknown>
+[2024-10-03T21:38:11.955+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x556832d8686a <unknown>
+#1 0x556832a54e50 <unknown>
+#2 0x556832aa4644 <unknown>
+#3 0x556832aa4931 <unknown>
+#4 0x556832a98f96 <unknown>
+#5 0x556832ac94bd <unknown>
+#6 0x556832a98e89 <unknown>
+#7 0x556832ac965e <unknown>
+#8 0x556832ae79c6 <unknown>
+#9 0x556832ac9233 <unknown>
+#10 0x556832a97093 <unknown>
+#11 0x556832a9809e <unknown>
+#12 0x556832d4dacb <unknown>
+#13 0x556832d51a81 <unknown>
+#14 0x556832d39695 <unknown>
+#15 0x556832d525f2 <unknown>
+#16 0x556832d1e86f <unknown>
+#17 0x556832d75668 <unknown>
+#18 0x556832d75832 <unknown>
+#19 0x556832d8565c <unknown>
+#20 0x7f4d225fda94 <unknown>
+#21 0x7f4d2268ac3c <unknown>
+[2024-10-03T21:38:12.002+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x556832d8686a <unknown>
+#1 0x556832a54e50 <unknown>
+#2 0x556832aa4644 <unknown>
+#3 0x556832aa4931 <unknown>
+#4 0x556832a98f96 <unknown>
+#5 0x556832ac94bd <unknown>
+#6 0x556832a98e89 <unknown>
+#7 0x556832ac965e <unknown>
+#8 0x556832ae79c6 <unknown>
+#9 0x556832ac9233 <unknown>
+#10 0x556832a97093 <unknown>
+#11 0x556832a9809e <unknown>
+#12 0x556832d4dacb <unknown>
+#13 0x556832d51a81 <unknown>
+#14 0x556832d39695 <unknown>
+#15 0x556832d525f2 <unknown>
+#16 0x556832d1e86f <unknown>
+#17 0x556832d75668 <unknown>
+#18 0x556832d75832 <unknown>
+#19 0x556832d8565c <unknown>
+#20 0x7f4d225fda94 <unknown>
+#21 0x7f4d2268ac3c <unknown>
+[2024-10-03T21:38:12.023+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x556832d8686a <unknown>
+#1 0x556832a54e50 <unknown>
+#2 0x556832aa4644 <unknown>
+#3 0x556832aa4931 <unknown>
+#4 0x556832a98f96 <unknown>
+#5 0x556832ac94bd <unknown>
+#6 0x556832a98e89 <unknown>
+#7 0x556832ac965e <unknown>
+#8 0x556832ae79c6 <unknown>
+#9 0x556832ac9233 <unknown>
+#10 0x556832a97093 <unknown>
+#11 0x556832a9809e <unknown>
+#12 0x556832d4dacb <unknown>
+#13 0x556832d51a81 <unknown>
+#14 0x556832d39695 <unknown>
+#15 0x556832d525f2 <unknown>
+#16 0x556832d1e86f <unknown>
+#17 0x556832d75668 <unknown>
+#18 0x556832d75832 <unknown>
+#19 0x556832d8565c <unknown>
+#20 0x7f4d225fda94 <unknown>
+#21 0x7f4d2268ac3c <unknown>
+[2024-10-03T21:38:12.063+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x556832d8686a <unknown>
+#1 0x556832a54e50 <unknown>
+#2 0x556832aa4644 <unknown>
+#3 0x556832aa4931 <unknown>
+#4 0x556832a98f96 <unknown>
+#5 0x556832ac94bd <unknown>
+#6 0x556832a98e89 <unknown>
+#7 0x556832ac965e <unknown>
+#8 0x556832ae79c6 <unknown>
+#9 0x556832ac9233 <unknown>
+#10 0x556832a97093 <unknown>
+#11 0x556832a9809e <unknown>
+#12 0x556832d4dacb <unknown>
+#13 0x556832d51a81 <unknown>
+#14 0x556832d39695 <unknown>
+#15 0x556832d525f2 <unknown>
+#16 0x556832d1e86f <unknown>
+#17 0x556832d75668 <unknown>
+#18 0x556832d75832 <unknown>
+#19 0x556832d8565c <unknown>
+#20 0x7f4d225fda94 <unknown>
+#21 0x7f4d2268ac3c <unknown>
+[2024-10-03T21:38:12.082+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x556832d8686a <unknown>
+#1 0x556832a54e50 <unknown>
+#2 0x556832aa4644 <unknown>
+#3 0x556832aa4931 <unknown>
+#4 0x556832a98f96 <unknown>
+#5 0x556832ac94bd <unknown>
+#6 0x556832a98e89 <unknown>
+#7 0x556832ac965e <unknown>
+#8 0x556832ae79c6 <unknown>
+#9 0x556832ac9233 <unknown>
+#10 0x556832a97093 <unknown>
+#11 0x556832a9809e <unknown>
+#12 0x556832d4dacb <unknown>
+#13 0x556832d51a81 <unknown>
+#14 0x556832d39695 <unknown>
+#15 0x556832d525f2 <unknown>
+#16 0x556832d1e86f <unknown>
+#17 0x556832d75668 <unknown>
+#18 0x556832d75832 <unknown>
+#19 0x556832d8565c <unknown>
+#20 0x7f4d225fda94 <unknown>
+#21 0x7f4d2268ac3c <unknown>
+[2024-10-03T21:38:12.117+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x556832d8686a <unknown>
+#1 0x556832a54e50 <unknown>
+#2 0x556832aa4644 <unknown>
+#3 0x556832aa4931 <unknown>
+#4 0x556832a98f96 <unknown>
+#5 0x556832ac94bd <unknown>
+#6 0x556832a98e89 <unknown>
+#7 0x556832ac965e <unknown>
+#8 0x556832ae79c6 <unknown>
+#9 0x556832ac9233 <unknown>
+#10 0x556832a97093 <unknown>
+#11 0x556832a9809e <unknown>
+#12 0x556832d4dacb <unknown>
+#13 0x556832d51a81 <unknown>
+#14 0x556832d39695 <unknown>
+#15 0x556832d525f2 <unknown>
+#16 0x556832d1e86f <unknown>
+#17 0x556832d75668 <unknown>
+#18 0x556832d75832 <unknown>
+#19 0x556832d8565c <unknown>
+#20 0x7f4d225fda94 <unknown>
+#21 0x7f4d2268ac3c <unknown>
+[2024-10-03T21:38:12.134+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x556832d8686a <unknown>
+#1 0x556832a54e50 <unknown>
+#2 0x556832aa4644 <unknown>
+#3 0x556832aa4931 <unknown>
+#4 0x556832a98f96 <unknown>
+#5 0x556832ac94bd <unknown>
+#6 0x556832a98e89 <unknown>
+#7 0x556832ac965e <unknown>
+#8 0x556832ae79c6 <unknown>
+#9 0x556832ac9233 <unknown>
+#10 0x556832a97093 <unknown>
+#11 0x556832a9809e <unknown>
+#12 0x556832d4dacb <unknown>
+#13 0x556832d51a81 <unknown>
+#14 0x556832d39695 <unknown>
+#15 0x556832d525f2 <unknown>
+#16 0x556832d1e86f <unknown>
+#17 0x556832d75668 <unknown>
+#18 0x556832d75832 <unknown>
+#19 0x556832d8565c <unknown>
+#20 0x7f4d225fda94 <unknown>
+#21 0x7f4d2268ac3c <unknown>
+[2024-10-03T21:38:12.172+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x556832d8686a <unknown>
+#1 0x556832a54e50 <unknown>
+#2 0x556832aa4644 <unknown>
+#3 0x556832aa4931 <unknown>
+#4 0x556832a98f96 <unknown>
+#5 0x556832ac94bd <unknown>
+#6 0x556832a98e89 <unknown>
+#7 0x556832ac965e <unknown>
+#8 0x556832ae79c6 <unknown>
+#9 0x556832ac9233 <unknown>
+#10 0x556832a97093 <unknown>
+#11 0x556832a9809e <unknown>
+#12 0x556832d4dacb <unknown>
+#13 0x556832d51a81 <unknown>
+#14 0x556832d39695 <unknown>
+#15 0x556832d525f2 <unknown>
+#16 0x556832d1e86f <unknown>
+#17 0x556832d75668 <unknown>
+#18 0x556832d75832 <unknown>
+#19 0x556832d8565c <unknown>
+#20 0x7f4d225fda94 <unknown>
+#21 0x7f4d2268ac3c <unknown>
+[2024-10-03T21:38:12.192+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x556832d8686a <unknown>
+#1 0x556832a54e50 <unknown>
+#2 0x556832aa4644 <unknown>
+#3 0x556832aa4931 <unknown>
+#4 0x556832a98f96 <unknown>
+#5 0x556832ac94bd <unknown>
+#6 0x556832a98e89 <unknown>
+#7 0x556832ac965e <unknown>
+#8 0x556832ae79c6 <unknown>
+#9 0x556832ac9233 <unknown>
+#10 0x556832a97093 <unknown>
+#11 0x556832a9809e <unknown>
+#12 0x556832d4dacb <unknown>
+#13 0x556832d51a81 <unknown>
+#14 0x556832d39695 <unknown>
+#15 0x556832d525f2 <unknown>
+#16 0x556832d1e86f <unknown>
+#17 0x556832d75668 <unknown>
+#18 0x556832d75832 <unknown>
+#19 0x556832d8565c <unknown>
+#20 0x7f4d225fda94 <unknown>
+#21 0x7f4d2268ac3c <unknown>
+[2024-10-03T21:38:21.956+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5586d84f086a <unknown>
+#1 0x5586d81bee50 <unknown>
+#2 0x5586d820e644 <unknown>
+#3 0x5586d820e931 <unknown>
+#4 0x5586d8202f96 <unknown>
+#5 0x5586d82334bd <unknown>
+#6 0x5586d8202e89 <unknown>
+#7 0x5586d823365e <unknown>
+#8 0x5586d82519c6 <unknown>
+#9 0x5586d8233233 <unknown>
+#10 0x5586d8201093 <unknown>
+#11 0x5586d820209e <unknown>
+#12 0x5586d84b7acb <unknown>
+#13 0x5586d84bba81 <unknown>
+#14 0x5586d84a3695 <unknown>
+#15 0x5586d84bc5f2 <unknown>
+#16 0x5586d848886f <unknown>
+#17 0x5586d84df668 <unknown>
+#18 0x5586d84df832 <unknown>
+#19 0x5586d84ef65c <unknown>
+#20 0x7fbed9e72a94 <unknown>
+#21 0x7fbed9effc3c <unknown>
+[2024-10-03T21:38:21.993+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5586d84f086a <unknown>
+#1 0x5586d81bee50 <unknown>
+#2 0x5586d820e644 <unknown>
+#3 0x5586d820e931 <unknown>
+#4 0x5586d8202f96 <unknown>
+#5 0x5586d82334bd <unknown>
+#6 0x5586d8202e89 <unknown>
+#7 0x5586d823365e <unknown>
+#8 0x5586d82519c6 <unknown>
+#9 0x5586d8233233 <unknown>
+#10 0x5586d8201093 <unknown>
+#11 0x5586d820209e <unknown>
+#12 0x5586d84b7acb <unknown>
+#13 0x5586d84bba81 <unknown>
+#14 0x5586d84a3695 <unknown>
+#15 0x5586d84bc5f2 <unknown>
+#16 0x5586d848886f <unknown>
+#17 0x5586d84df668 <unknown>
+#18 0x5586d84df832 <unknown>
+#19 0x5586d84ef65c <unknown>
+#20 0x7fbed9e72a94 <unknown>
+#21 0x7fbed9effc3c <unknown>
+[2024-10-03T21:38:22.011+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5586d84f086a <unknown>
+#1 0x5586d81bee50 <unknown>
+#2 0x5586d820e644 <unknown>
+#3 0x5586d820e931 <unknown>
+#4 0x5586d8202f96 <unknown>
+#5 0x5586d82334bd <unknown>
+#6 0x5586d8202e89 <unknown>
+#7 0x5586d823365e <unknown>
+#8 0x5586d82519c6 <unknown>
+#9 0x5586d8233233 <unknown>
+#10 0x5586d8201093 <unknown>
+#11 0x5586d820209e <unknown>
+#12 0x5586d84b7acb <unknown>
+#13 0x5586d84bba81 <unknown>
+#14 0x5586d84a3695 <unknown>
+#15 0x5586d84bc5f2 <unknown>
+#16 0x5586d848886f <unknown>
+#17 0x5586d84df668 <unknown>
+#18 0x5586d84df832 <unknown>
+#19 0x5586d84ef65c <unknown>
+#20 0x7fbed9e72a94 <unknown>
+#21 0x7fbed9effc3c <unknown>
+[2024-10-03T21:38:22.030+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5586d84f086a <unknown>
+#1 0x5586d81bee50 <unknown>
+#2 0x5586d820e644 <unknown>
+#3 0x5586d820e931 <unknown>
+#4 0x5586d8202f96 <unknown>
+#5 0x5586d82334bd <unknown>
+#6 0x5586d8202e89 <unknown>
+#7 0x5586d823365e <unknown>
+#8 0x5586d82519c6 <unknown>
+#9 0x5586d8233233 <unknown>
+#10 0x5586d8201093 <unknown>
+#11 0x5586d820209e <unknown>
+#12 0x5586d84b7acb <unknown>
+#13 0x5586d84bba81 <unknown>
+#14 0x5586d84a3695 <unknown>
+#15 0x5586d84bc5f2 <unknown>
+#16 0x5586d848886f <unknown>
+#17 0x5586d84df668 <unknown>
+#18 0x5586d84df832 <unknown>
+#19 0x5586d84ef65c <unknown>
+#20 0x7fbed9e72a94 <unknown>
+#21 0x7fbed9effc3c <unknown>
+[2024-10-03T21:38:22.862+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//div[contains(text(), "R$")]"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5586d84f086a <unknown>
+#1 0x5586d81bee50 <unknown>
+#2 0x5586d820e644 <unknown>
+#3 0x5586d820e931 <unknown>
+#4 0x5586d8202f96 <unknown>
+#5 0x5586d82334bd <unknown>
+#6 0x5586d8202e89 <unknown>
+#7 0x5586d823365e <unknown>
+#8 0x5586d82519c6 <unknown>
+#9 0x5586d8233233 <unknown>
+#10 0x5586d8201093 <unknown>
+#11 0x5586d820209e <unknown>
+#12 0x5586d84b7acb <unknown>
+#13 0x5586d84bba81 <unknown>
+#14 0x5586d84a3695 <unknown>
+#15 0x5586d84bc5f2 <unknown>
+#16 0x5586d848886f <unknown>
+#17 0x5586d84df668 <unknown>
+#18 0x5586d84df832 <unknown>
+#19 0x5586d84ef65c <unknown>
+#20 0x7fbed9e72a94 <unknown>
+#21 0x7fbed9effc3c <unknown>
+[2024-10-03T21:38:22.918+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//div[contains(text(), "R$")]"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5586d84f086a <unknown>
+#1 0x5586d81bee50 <unknown>
+#2 0x5586d820e644 <unknown>
+#3 0x5586d820e931 <unknown>
+#4 0x5586d8202f96 <unknown>
+#5 0x5586d82334bd <unknown>
+#6 0x5586d8202e89 <unknown>
+#7 0x5586d823365e <unknown>
+#8 0x5586d82519c6 <unknown>
+#9 0x5586d8233233 <unknown>
+#10 0x5586d8201093 <unknown>
+#11 0x5586d820209e <unknown>
+#12 0x5586d84b7acb <unknown>
+#13 0x5586d84bba81 <unknown>
+#14 0x5586d84a3695 <unknown>
+#15 0x5586d84bc5f2 <unknown>
+#16 0x5586d848886f <unknown>
+#17 0x5586d84df668 <unknown>
+#18 0x5586d84df832 <unknown>
+#19 0x5586d84ef65c <unknown>
+#20 0x7fbed9e72a94 <unknown>
+#21 0x7fbed9effc3c <unknown>
+[2024-10-03T21:38:22.984+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//div[contains(text(), "R$")]"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5586d84f086a <unknown>
+#1 0x5586d81bee50 <unknown>
+#2 0x5586d820e644 <unknown>
+#3 0x5586d820e931 <unknown>
+#4 0x5586d8202f96 <unknown>
+#5 0x5586d82334bd <unknown>
+#6 0x5586d8202e89 <unknown>
+#7 0x5586d823365e <unknown>
+#8 0x5586d82519c6 <unknown>
+#9 0x5586d8233233 <unknown>
+#10 0x5586d8201093 <unknown>
+#11 0x5586d820209e <unknown>
+#12 0x5586d84b7acb <unknown>
+#13 0x5586d84bba81 <unknown>
+#14 0x5586d84a3695 <unknown>
+#15 0x5586d84bc5f2 <unknown>
+#16 0x5586d848886f <unknown>
+#17 0x5586d84df668 <unknown>
+#18 0x5586d84df832 <unknown>
+#19 0x5586d84ef65c <unknown>
+#20 0x7fbed9e72a94 <unknown>
+#21 0x7fbed9effc3c <unknown>
+[2024-10-03T21:38:23.035+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//div[contains(text(), "R$")]"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5586d84f086a <unknown>
+#1 0x5586d81bee50 <unknown>
+#2 0x5586d820e644 <unknown>
+#3 0x5586d820e931 <unknown>
+#4 0x5586d8202f96 <unknown>
+#5 0x5586d82334bd <unknown>
+#6 0x5586d8202e89 <unknown>
+#7 0x5586d823365e <unknown>
+#8 0x5586d82519c6 <unknown>
+#9 0x5586d8233233 <unknown>
+#10 0x5586d8201093 <unknown>
+#11 0x5586d820209e <unknown>
+#12 0x5586d84b7acb <unknown>
+#13 0x5586d84bba81 <unknown>
+#14 0x5586d84a3695 <unknown>
+#15 0x5586d84bc5f2 <unknown>
+#16 0x5586d848886f <unknown>
+#17 0x5586d84df668 <unknown>
+#18 0x5586d84df832 <unknown>
+#19 0x5586d84ef65c <unknown>
+#20 0x7fbed9e72a94 <unknown>
+#21 0x7fbed9effc3c <unknown>
+[2024-10-03T21:38:23.083+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//div[contains(text(), "R$")]"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5586d84f086a <unknown>
+#1 0x5586d81bee50 <unknown>
+#2 0x5586d820e644 <unknown>
+#3 0x5586d820e931 <unknown>
+#4 0x5586d8202f96 <unknown>
+#5 0x5586d82334bd <unknown>
+#6 0x5586d8202e89 <unknown>
+#7 0x5586d823365e <unknown>
+#8 0x5586d82519c6 <unknown>
+#9 0x5586d8233233 <unknown>
+#10 0x5586d8201093 <unknown>
+#11 0x5586d820209e <unknown>
+#12 0x5586d84b7acb <unknown>
+#13 0x5586d84bba81 <unknown>
+#14 0x5586d84a3695 <unknown>
+#15 0x5586d84bc5f2 <unknown>
+#16 0x5586d848886f <unknown>
+#17 0x5586d84df668 <unknown>
+#18 0x5586d84df832 <unknown>
+#19 0x5586d84ef65c <unknown>
+#20 0x7fbed9e72a94 <unknown>
+#21 0x7fbed9effc3c <unknown>
+[2024-10-03T21:38:23.146+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//div[contains(text(), "R$")]"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5586d84f086a <unknown>
+#1 0x5586d81bee50 <unknown>
+#2 0x5586d820e644 <unknown>
+#3 0x5586d820e931 <unknown>
+#4 0x5586d8202f96 <unknown>
+#5 0x5586d82334bd <unknown>
+#6 0x5586d8202e89 <unknown>
+#7 0x5586d823365e <unknown>
+#8 0x5586d82519c6 <unknown>
+#9 0x5586d8233233 <unknown>
+#10 0x5586d8201093 <unknown>
+#11 0x5586d820209e <unknown>
+#12 0x5586d84b7acb <unknown>
+#13 0x5586d84bba81 <unknown>
+#14 0x5586d84a3695 <unknown>
+#15 0x5586d84bc5f2 <unknown>
+#16 0x5586d848886f <unknown>
+#17 0x5586d84df668 <unknown>
+#18 0x5586d84df832 <unknown>
+#19 0x5586d84ef65c <unknown>
+#20 0x7fbed9e72a94 <unknown>
+#21 0x7fbed9effc3c <unknown>
+[2024-10-03T21:38:23.208+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//div[contains(text(), "R$")]"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5586d84f086a <unknown>
+#1 0x5586d81bee50 <unknown>
+#2 0x5586d820e644 <unknown>
+#3 0x5586d820e931 <unknown>
+#4 0x5586d8202f96 <unknown>
+#5 0x5586d82334bd <unknown>
+#6 0x5586d8202e89 <unknown>
+#7 0x5586d823365e <unknown>
+#8 0x5586d82519c6 <unknown>
+#9 0x5586d8233233 <unknown>
+#10 0x5586d8201093 <unknown>
+#11 0x5586d820209e <unknown>
+#12 0x5586d84b7acb <unknown>
+#13 0x5586d84bba81 <unknown>
+#14 0x5586d84a3695 <unknown>
+#15 0x5586d84bc5f2 <unknown>
+#16 0x5586d848886f <unknown>
+#17 0x5586d84df668 <unknown>
+#18 0x5586d84df832 <unknown>
+#19 0x5586d84ef65c <unknown>
+#20 0x7fbed9e72a94 <unknown>
+#21 0x7fbed9effc3c <unknown>
+[2024-10-03T21:38:23.266+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//div[contains(text(), "R$")]"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5586d84f086a <unknown>
+#1 0x5586d81bee50 <unknown>
+#2 0x5586d820e644 <unknown>
+#3 0x5586d820e931 <unknown>
+#4 0x5586d8202f96 <unknown>
+#5 0x5586d82334bd <unknown>
+#6 0x5586d8202e89 <unknown>
+#7 0x5586d823365e <unknown>
+#8 0x5586d82519c6 <unknown>
+#9 0x5586d8233233 <unknown>
+#10 0x5586d8201093 <unknown>
+#11 0x5586d820209e <unknown>
+#12 0x5586d84b7acb <unknown>
+#13 0x5586d84bba81 <unknown>
+#14 0x5586d84a3695 <unknown>
+#15 0x5586d84bc5f2 <unknown>
+#16 0x5586d848886f <unknown>
+#17 0x5586d84df668 <unknown>
+#18 0x5586d84df832 <unknown>
+#19 0x5586d84ef65c <unknown>
+#20 0x7fbed9e72a94 <unknown>
+#21 0x7fbed9effc3c <unknown>
+[2024-10-03T21:38:23.322+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//div[contains(text(), "R$")]"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5586d84f086a <unknown>
+#1 0x5586d81bee50 <unknown>
+#2 0x5586d820e644 <unknown>
+#3 0x5586d820e931 <unknown>
+#4 0x5586d8202f96 <unknown>
+#5 0x5586d82334bd <unknown>
+#6 0x5586d8202e89 <unknown>
+#7 0x5586d823365e <unknown>
+#8 0x5586d82519c6 <unknown>
+#9 0x5586d8233233 <unknown>
+#10 0x5586d8201093 <unknown>
+#11 0x5586d820209e <unknown>
+#12 0x5586d84b7acb <unknown>
+#13 0x5586d84bba81 <unknown>
+#14 0x5586d84a3695 <unknown>
+#15 0x5586d84bc5f2 <unknown>
+#16 0x5586d848886f <unknown>
+#17 0x5586d84df668 <unknown>
+#18 0x5586d84df832 <unknown>
+#19 0x5586d84ef65c <unknown>
+#20 0x7fbed9e72a94 <unknown>
+#21 0x7fbed9effc3c <unknown>
+[2024-10-03T21:38:23.380+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//div[contains(text(), "R$")]"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5586d84f086a <unknown>
+#1 0x5586d81bee50 <unknown>
+#2 0x5586d820e644 <unknown>
+#3 0x5586d820e931 <unknown>
+#4 0x5586d8202f96 <unknown>
+#5 0x5586d82334bd <unknown>
+#6 0x5586d8202e89 <unknown>
+#7 0x5586d823365e <unknown>
+#8 0x5586d82519c6 <unknown>
+#9 0x5586d8233233 <unknown>
+#10 0x5586d8201093 <unknown>
+#11 0x5586d820209e <unknown>
+#12 0x5586d84b7acb <unknown>
+#13 0x5586d84bba81 <unknown>
+#14 0x5586d84a3695 <unknown>
+#15 0x5586d84bc5f2 <unknown>
+#16 0x5586d848886f <unknown>
+#17 0x5586d84df668 <unknown>
+#18 0x5586d84df832 <unknown>
+#19 0x5586d84ef65c <unknown>
+#20 0x7fbed9e72a94 <unknown>
+#21 0x7fbed9effc3c <unknown>
+[2024-10-03T21:38:23.436+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//div[contains(text(), "R$")]"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5586d84f086a <unknown>
+#1 0x5586d81bee50 <unknown>
+#2 0x5586d820e644 <unknown>
+#3 0x5586d820e931 <unknown>
+#4 0x5586d8202f96 <unknown>
+#5 0x5586d82334bd <unknown>
+#6 0x5586d8202e89 <unknown>
+#7 0x5586d823365e <unknown>
+#8 0x5586d82519c6 <unknown>
+#9 0x5586d8233233 <unknown>
+#10 0x5586d8201093 <unknown>
+#11 0x5586d820209e <unknown>
+#12 0x5586d84b7acb <unknown>
+#13 0x5586d84bba81 <unknown>
+#14 0x5586d84a3695 <unknown>
+#15 0x5586d84bc5f2 <unknown>
+#16 0x5586d848886f <unknown>
+#17 0x5586d84df668 <unknown>
+#18 0x5586d84df832 <unknown>
+#19 0x5586d84ef65c <unknown>
+#20 0x7fbed9e72a94 <unknown>
+#21 0x7fbed9effc3c <unknown>
+[2024-10-03T21:38:23.492+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//div[contains(text(), "R$")]"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5586d84f086a <unknown>
+#1 0x5586d81bee50 <unknown>
+#2 0x5586d820e644 <unknown>
+#3 0x5586d820e931 <unknown>
+#4 0x5586d8202f96 <unknown>
+#5 0x5586d82334bd <unknown>
+#6 0x5586d8202e89 <unknown>
+#7 0x5586d823365e <unknown>
+#8 0x5586d82519c6 <unknown>
+#9 0x5586d8233233 <unknown>
+#10 0x5586d8201093 <unknown>
+#11 0x5586d820209e <unknown>
+#12 0x5586d84b7acb <unknown>
+#13 0x5586d84bba81 <unknown>
+#14 0x5586d84a3695 <unknown>
+#15 0x5586d84bc5f2 <unknown>
+#16 0x5586d848886f <unknown>
+#17 0x5586d84df668 <unknown>
+#18 0x5586d84df832 <unknown>
+#19 0x5586d84ef65c <unknown>
+#20 0x7fbed9e72a94 <unknown>
+#21 0x7fbed9effc3c <unknown>
+[2024-10-03T21:38:23.550+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//div[contains(text(), "R$")]"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5586d84f086a <unknown>
+#1 0x5586d81bee50 <unknown>
+#2 0x5586d820e644 <unknown>
+#3 0x5586d820e931 <unknown>
+#4 0x5586d8202f96 <unknown>
+#5 0x5586d82334bd <unknown>
+#6 0x5586d8202e89 <unknown>
+#7 0x5586d823365e <unknown>
+#8 0x5586d82519c6 <unknown>
+#9 0x5586d8233233 <unknown>
+#10 0x5586d8201093 <unknown>
+#11 0x5586d820209e <unknown>
+#12 0x5586d84b7acb <unknown>
+#13 0x5586d84bba81 <unknown>
+#14 0x5586d84a3695 <unknown>
+#15 0x5586d84bc5f2 <unknown>
+#16 0x5586d848886f <unknown>
+#17 0x5586d84df668 <unknown>
+#18 0x5586d84df832 <unknown>
+#19 0x5586d84ef65c <unknown>
+#20 0x7fbed9e72a94 <unknown>
+#21 0x7fbed9effc3c <unknown>
+[2024-10-03T21:38:23.609+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//div[contains(text(), "R$")]"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5586d84f086a <unknown>
+#1 0x5586d81bee50 <unknown>
+#2 0x5586d820e644 <unknown>
+#3 0x5586d820e931 <unknown>
+#4 0x5586d8202f96 <unknown>
+#5 0x5586d82334bd <unknown>
+#6 0x5586d8202e89 <unknown>
+#7 0x5586d823365e <unknown>
+#8 0x5586d82519c6 <unknown>
+#9 0x5586d8233233 <unknown>
+#10 0x5586d8201093 <unknown>
+#11 0x5586d820209e <unknown>
+#12 0x5586d84b7acb <unknown>
+#13 0x5586d84bba81 <unknown>
+#14 0x5586d84a3695 <unknown>
+#15 0x5586d84bc5f2 <unknown>
+#16 0x5586d848886f <unknown>
+#17 0x5586d84df668 <unknown>
+#18 0x5586d84df832 <unknown>
+#19 0x5586d84ef65c <unknown>
+#20 0x7fbed9e72a94 <unknown>
+#21 0x7fbed9effc3c <unknown>
+[2024-10-03T21:38:23.668+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//div[contains(text(), "R$")]"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5586d84f086a <unknown>
+#1 0x5586d81bee50 <unknown>
+#2 0x5586d820e644 <unknown>
+#3 0x5586d820e931 <unknown>
+#4 0x5586d8202f96 <unknown>
+#5 0x5586d82334bd <unknown>
+#6 0x5586d8202e89 <unknown>
+#7 0x5586d823365e <unknown>
+#8 0x5586d82519c6 <unknown>
+#9 0x5586d8233233 <unknown>
+#10 0x5586d8201093 <unknown>
+#11 0x5586d820209e <unknown>
+#12 0x5586d84b7acb <unknown>
+#13 0x5586d84bba81 <unknown>
+#14 0x5586d84a3695 <unknown>
+#15 0x5586d84bc5f2 <unknown>
+#16 0x5586d848886f <unknown>
+#17 0x5586d84df668 <unknown>
+#18 0x5586d84df832 <unknown>
+#19 0x5586d84ef65c <unknown>
+#20 0x7fbed9e72a94 <unknown>
+#21 0x7fbed9effc3c <unknown>
+[2024-10-03T21:38:23.724+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//div[contains(text(), "R$")]"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5586d84f086a <unknown>
+#1 0x5586d81bee50 <unknown>
+#2 0x5586d820e644 <unknown>
+#3 0x5586d820e931 <unknown>
+#4 0x5586d8202f96 <unknown>
+#5 0x5586d82334bd <unknown>
+#6 0x5586d8202e89 <unknown>
+#7 0x5586d823365e <unknown>
+#8 0x5586d82519c6 <unknown>
+#9 0x5586d8233233 <unknown>
+#10 0x5586d8201093 <unknown>
+#11 0x5586d820209e <unknown>
+#12 0x5586d84b7acb <unknown>
+#13 0x5586d84bba81 <unknown>
+#14 0x5586d84a3695 <unknown>
+#15 0x5586d84bc5f2 <unknown>
+#16 0x5586d848886f <unknown>
+#17 0x5586d84df668 <unknown>
+#18 0x5586d84df832 <unknown>
+#19 0x5586d84ef65c <unknown>
+#20 0x7fbed9e72a94 <unknown>
+#21 0x7fbed9effc3c <unknown>
+[2024-10-03T21:38:23.779+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//div[contains(text(), "R$")]"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5586d84f086a <unknown>
+#1 0x5586d81bee50 <unknown>
+#2 0x5586d820e644 <unknown>
+#3 0x5586d820e931 <unknown>
+#4 0x5586d8202f96 <unknown>
+#5 0x5586d82334bd <unknown>
+#6 0x5586d8202e89 <unknown>
+#7 0x5586d823365e <unknown>
+#8 0x5586d82519c6 <unknown>
+#9 0x5586d8233233 <unknown>
+#10 0x5586d8201093 <unknown>
+#11 0x5586d820209e <unknown>
+#12 0x5586d84b7acb <unknown>
+#13 0x5586d84bba81 <unknown>
+#14 0x5586d84a3695 <unknown>
+#15 0x5586d84bc5f2 <unknown>
+#16 0x5586d848886f <unknown>
+#17 0x5586d84df668 <unknown>
+#18 0x5586d84df832 <unknown>
+#19 0x5586d84ef65c <unknown>
+#20 0x7fbed9e72a94 <unknown>
+#21 0x7fbed9effc3c <unknown>
+[2024-10-03T21:38:23.839+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//div[contains(text(), "R$")]"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5586d84f086a <unknown>
+#1 0x5586d81bee50 <unknown>
+#2 0x5586d820e644 <unknown>
+#3 0x5586d820e931 <unknown>
+#4 0x5586d8202f96 <unknown>
+#5 0x5586d82334bd <unknown>
+#6 0x5586d8202e89 <unknown>
+#7 0x5586d823365e <unknown>
+#8 0x5586d82519c6 <unknown>
+#9 0x5586d8233233 <unknown>
+#10 0x5586d8201093 <unknown>
+#11 0x5586d820209e <unknown>
+#12 0x5586d84b7acb <unknown>
+#13 0x5586d84bba81 <unknown>
+#14 0x5586d84a3695 <unknown>
+#15 0x5586d84bc5f2 <unknown>
+#16 0x5586d848886f <unknown>
+#17 0x5586d84df668 <unknown>
+#18 0x5586d84df832 <unknown>
+#19 0x5586d84ef65c <unknown>
+#20 0x7fbed9e72a94 <unknown>
+#21 0x7fbed9effc3c <unknown>
+[2024-10-03T21:38:23.896+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//div[contains(text(), "R$")]"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5586d84f086a <unknown>
+#1 0x5586d81bee50 <unknown>
+#2 0x5586d820e644 <unknown>
+#3 0x5586d820e931 <unknown>
+#4 0x5586d8202f96 <unknown>
+#5 0x5586d82334bd <unknown>
+#6 0x5586d8202e89 <unknown>
+#7 0x5586d823365e <unknown>
+#8 0x5586d82519c6 <unknown>
+#9 0x5586d8233233 <unknown>
+#10 0x5586d8201093 <unknown>
+#11 0x5586d820209e <unknown>
+#12 0x5586d84b7acb <unknown>
+#13 0x5586d84bba81 <unknown>
+#14 0x5586d84a3695 <unknown>
+#15 0x5586d84bc5f2 <unknown>
+#16 0x5586d848886f <unknown>
+#17 0x5586d84df668 <unknown>
+#18 0x5586d84df832 <unknown>
+#19 0x5586d84ef65c <unknown>
+#20 0x7fbed9e72a94 <unknown>
+#21 0x7fbed9effc3c <unknown>
+[2024-10-03T21:38:23.953+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//div[contains(text(), "R$")]"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5586d84f086a <unknown>
+#1 0x5586d81bee50 <unknown>
+#2 0x5586d820e644 <unknown>
+#3 0x5586d820e931 <unknown>
+#4 0x5586d8202f96 <unknown>
+#5 0x5586d82334bd <unknown>
+#6 0x5586d8202e89 <unknown>
+#7 0x5586d823365e <unknown>
+#8 0x5586d82519c6 <unknown>
+#9 0x5586d8233233 <unknown>
+#10 0x5586d8201093 <unknown>
+#11 0x5586d820209e <unknown>
+#12 0x5586d84b7acb <unknown>
+#13 0x5586d84bba81 <unknown>
+#14 0x5586d84a3695 <unknown>
+#15 0x5586d84bc5f2 <unknown>
+#16 0x5586d848886f <unknown>
+#17 0x5586d84df668 <unknown>
+#18 0x5586d84df832 <unknown>
+#19 0x5586d84ef65c <unknown>
+#20 0x7fbed9e72a94 <unknown>
+#21 0x7fbed9effc3c <unknown>
+[2024-10-03T21:38:24.012+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//div[contains(text(), "R$")]"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5586d84f086a <unknown>
+#1 0x5586d81bee50 <unknown>
+#2 0x5586d820e644 <unknown>
+#3 0x5586d820e931 <unknown>
+#4 0x5586d8202f96 <unknown>
+#5 0x5586d82334bd <unknown>
+#6 0x5586d8202e89 <unknown>
+#7 0x5586d823365e <unknown>
+#8 0x5586d82519c6 <unknown>
+#9 0x5586d8233233 <unknown>
+#10 0x5586d8201093 <unknown>
+#11 0x5586d820209e <unknown>
+#12 0x5586d84b7acb <unknown>
+#13 0x5586d84bba81 <unknown>
+#14 0x5586d84a3695 <unknown>
+#15 0x5586d84bc5f2 <unknown>
+#16 0x5586d848886f <unknown>
+#17 0x5586d84df668 <unknown>
+#18 0x5586d84df832 <unknown>
+#19 0x5586d84ef65c <unknown>
+#20 0x7fbed9e72a94 <unknown>
+#21 0x7fbed9effc3c <unknown>
+[2024-10-03T21:38:24.067+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//div[contains(text(), "R$")]"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5586d84f086a <unknown>
+#1 0x5586d81bee50 <unknown>
+#2 0x5586d820e644 <unknown>
+#3 0x5586d820e931 <unknown>
+#4 0x5586d8202f96 <unknown>
+#5 0x5586d82334bd <unknown>
+#6 0x5586d8202e89 <unknown>
+#7 0x5586d823365e <unknown>
+#8 0x5586d82519c6 <unknown>
+#9 0x5586d8233233 <unknown>
+#10 0x5586d8201093 <unknown>
+#11 0x5586d820209e <unknown>
+#12 0x5586d84b7acb <unknown>
+#13 0x5586d84bba81 <unknown>
+#14 0x5586d84a3695 <unknown>
+#15 0x5586d84bc5f2 <unknown>
+#16 0x5586d848886f <unknown>
+#17 0x5586d84df668 <unknown>
+#18 0x5586d84df832 <unknown>
+#19 0x5586d84ef65c <unknown>
+#20 0x7fbed9e72a94 <unknown>
+#21 0x7fbed9effc3c <unknown>
+[2024-10-03T21:38:24.125+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//div[contains(text(), "R$")]"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5586d84f086a <unknown>
+#1 0x5586d81bee50 <unknown>
+#2 0x5586d820e644 <unknown>
+#3 0x5586d820e931 <unknown>
+#4 0x5586d8202f96 <unknown>
+#5 0x5586d82334bd <unknown>
+#6 0x5586d8202e89 <unknown>
+#7 0x5586d823365e <unknown>
+#8 0x5586d82519c6 <unknown>
+#9 0x5586d8233233 <unknown>
+#10 0x5586d8201093 <unknown>
+#11 0x5586d820209e <unknown>
+#12 0x5586d84b7acb <unknown>
+#13 0x5586d84bba81 <unknown>
+#14 0x5586d84a3695 <unknown>
+#15 0x5586d84bc5f2 <unknown>
+#16 0x5586d848886f <unknown>
+#17 0x5586d84df668 <unknown>
+#18 0x5586d84df832 <unknown>
+#19 0x5586d84ef65c <unknown>
+#20 0x7fbed9e72a94 <unknown>
+#21 0x7fbed9effc3c <unknown>
+[2024-10-03T21:38:24.182+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//div[contains(text(), "R$")]"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5586d84f086a <unknown>
+#1 0x5586d81bee50 <unknown>
+#2 0x5586d820e644 <unknown>
+#3 0x5586d820e931 <unknown>
+#4 0x5586d8202f96 <unknown>
+#5 0x5586d82334bd <unknown>
+#6 0x5586d8202e89 <unknown>
+#7 0x5586d823365e <unknown>
+#8 0x5586d82519c6 <unknown>
+#9 0x5586d8233233 <unknown>
+#10 0x5586d8201093 <unknown>
+#11 0x5586d820209e <unknown>
+#12 0x5586d84b7acb <unknown>
+#13 0x5586d84bba81 <unknown>
+#14 0x5586d84a3695 <unknown>
+#15 0x5586d84bc5f2 <unknown>
+#16 0x5586d848886f <unknown>
+#17 0x5586d84df668 <unknown>
+#18 0x5586d84df832 <unknown>
+#19 0x5586d84ef65c <unknown>
+#20 0x7fbed9e72a94 <unknown>
+#21 0x7fbed9effc3c <unknown>
+[2024-10-03T21:38:24.212+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5586d84f086a <unknown>
+#1 0x5586d81bee50 <unknown>
+#2 0x5586d820e644 <unknown>
+#3 0x5586d820e931 <unknown>
+#4 0x5586d8202f96 <unknown>
+#5 0x5586d82334bd <unknown>
+#6 0x5586d8202e89 <unknown>
+#7 0x5586d823365e <unknown>
+#8 0x5586d82519c6 <unknown>
+#9 0x5586d8233233 <unknown>
+#10 0x5586d8201093 <unknown>
+#11 0x5586d820209e <unknown>
+#12 0x5586d84b7acb <unknown>
+#13 0x5586d84bba81 <unknown>
+#14 0x5586d84a3695 <unknown>
+#15 0x5586d84bc5f2 <unknown>
+#16 0x5586d848886f <unknown>
+#17 0x5586d84df668 <unknown>
+#18 0x5586d84df832 <unknown>
+#19 0x5586d84ef65c <unknown>
+#20 0x7fbed9e72a94 <unknown>
+#21 0x7fbed9effc3c <unknown>
+[2024-10-03T21:38:24.259+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5586d84f086a <unknown>
+#1 0x5586d81bee50 <unknown>
+#2 0x5586d820e644 <unknown>
+#3 0x5586d820e931 <unknown>
+#4 0x5586d8202f96 <unknown>
+#5 0x5586d82334bd <unknown>
+#6 0x5586d8202e89 <unknown>
+#7 0x5586d823365e <unknown>
+#8 0x5586d82519c6 <unknown>
+#9 0x5586d8233233 <unknown>
+#10 0x5586d8201093 <unknown>
+#11 0x5586d820209e <unknown>
+#12 0x5586d84b7acb <unknown>
+#13 0x5586d84bba81 <unknown>
+#14 0x5586d84a3695 <unknown>
+#15 0x5586d84bc5f2 <unknown>
+#16 0x5586d848886f <unknown>
+#17 0x5586d84df668 <unknown>
+#18 0x5586d84df832 <unknown>
+#19 0x5586d84ef65c <unknown>
+#20 0x7fbed9e72a94 <unknown>
+#21 0x7fbed9effc3c <unknown>
+[2024-10-03T21:38:24.275+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5586d84f086a <unknown>
+#1 0x5586d81bee50 <unknown>
+#2 0x5586d820e644 <unknown>
+#3 0x5586d820e931 <unknown>
+#4 0x5586d8202f96 <unknown>
+#5 0x5586d82334bd <unknown>
+#6 0x5586d8202e89 <unknown>
+#7 0x5586d823365e <unknown>
+#8 0x5586d82519c6 <unknown>
+#9 0x5586d8233233 <unknown>
+#10 0x5586d8201093 <unknown>
+#11 0x5586d820209e <unknown>
+#12 0x5586d84b7acb <unknown>
+#13 0x5586d84bba81 <unknown>
+#14 0x5586d84a3695 <unknown>
+#15 0x5586d84bc5f2 <unknown>
+#16 0x5586d848886f <unknown>
+#17 0x5586d84df668 <unknown>
+#18 0x5586d84df832 <unknown>
+#19 0x5586d84ef65c <unknown>
+#20 0x7fbed9e72a94 <unknown>
+#21 0x7fbed9effc3c <unknown>
+[2024-10-03T21:38:24.306+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5586d84f086a <unknown>
+#1 0x5586d81bee50 <unknown>
+#2 0x5586d820e644 <unknown>
+#3 0x5586d820e931 <unknown>
+#4 0x5586d8202f96 <unknown>
+#5 0x5586d82334bd <unknown>
+#6 0x5586d8202e89 <unknown>
+#7 0x5586d823365e <unknown>
+#8 0x5586d82519c6 <unknown>
+#9 0x5586d8233233 <unknown>
+#10 0x5586d8201093 <unknown>
+#11 0x5586d820209e <unknown>
+#12 0x5586d84b7acb <unknown>
+#13 0x5586d84bba81 <unknown>
+#14 0x5586d84a3695 <unknown>
+#15 0x5586d84bc5f2 <unknown>
+#16 0x5586d848886f <unknown>
+#17 0x5586d84df668 <unknown>
+#18 0x5586d84df832 <unknown>
+#19 0x5586d84ef65c <unknown>
+#20 0x7fbed9e72a94 <unknown>
+#21 0x7fbed9effc3c <unknown>
+[2024-10-03T21:38:24.322+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5586d84f086a <unknown>
+#1 0x5586d81bee50 <unknown>
+#2 0x5586d820e644 <unknown>
+#3 0x5586d820e931 <unknown>
+#4 0x5586d8202f96 <unknown>
+#5 0x5586d82334bd <unknown>
+#6 0x5586d8202e89 <unknown>
+#7 0x5586d823365e <unknown>
+#8 0x5586d82519c6 <unknown>
+#9 0x5586d8233233 <unknown>
+#10 0x5586d8201093 <unknown>
+#11 0x5586d820209e <unknown>
+#12 0x5586d84b7acb <unknown>
+#13 0x5586d84bba81 <unknown>
+#14 0x5586d84a3695 <unknown>
+#15 0x5586d84bc5f2 <unknown>
+#16 0x5586d848886f <unknown>
+#17 0x5586d84df668 <unknown>
+#18 0x5586d84df832 <unknown>
+#19 0x5586d84ef65c <unknown>
+#20 0x7fbed9e72a94 <unknown>
+#21 0x7fbed9effc3c <unknown>
+[2024-10-03T21:38:24.352+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5586d84f086a <unknown>
+#1 0x5586d81bee50 <unknown>
+#2 0x5586d820e644 <unknown>
+#3 0x5586d820e931 <unknown>
+#4 0x5586d8202f96 <unknown>
+#5 0x5586d82334bd <unknown>
+#6 0x5586d8202e89 <unknown>
+#7 0x5586d823365e <unknown>
+#8 0x5586d82519c6 <unknown>
+#9 0x5586d8233233 <unknown>
+#10 0x5586d8201093 <unknown>
+#11 0x5586d820209e <unknown>
+#12 0x5586d84b7acb <unknown>
+#13 0x5586d84bba81 <unknown>
+#14 0x5586d84a3695 <unknown>
+#15 0x5586d84bc5f2 <unknown>
+#16 0x5586d848886f <unknown>
+#17 0x5586d84df668 <unknown>
+#18 0x5586d84df832 <unknown>
+#19 0x5586d84ef65c <unknown>
+#20 0x7fbed9e72a94 <unknown>
+#21 0x7fbed9effc3c <unknown>
+[2024-10-03T21:38:24.373+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5586d84f086a <unknown>
+#1 0x5586d81bee50 <unknown>
+#2 0x5586d820e644 <unknown>
+#3 0x5586d820e931 <unknown>
+#4 0x5586d8202f96 <unknown>
+#5 0x5586d82334bd <unknown>
+#6 0x5586d8202e89 <unknown>
+#7 0x5586d823365e <unknown>
+#8 0x5586d82519c6 <unknown>
+#9 0x5586d8233233 <unknown>
+#10 0x5586d8201093 <unknown>
+#11 0x5586d820209e <unknown>
+#12 0x5586d84b7acb <unknown>
+#13 0x5586d84bba81 <unknown>
+#14 0x5586d84a3695 <unknown>
+#15 0x5586d84bc5f2 <unknown>
+#16 0x5586d848886f <unknown>
+#17 0x5586d84df668 <unknown>
+#18 0x5586d84df832 <unknown>
+#19 0x5586d84ef65c <unknown>
+#20 0x7fbed9e72a94 <unknown>
+#21 0x7fbed9effc3c <unknown>
+[2024-10-03T21:38:24.416+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5586d84f086a <unknown>
+#1 0x5586d81bee50 <unknown>
+#2 0x5586d820e644 <unknown>
+#3 0x5586d820e931 <unknown>
+#4 0x5586d8202f96 <unknown>
+#5 0x5586d82334bd <unknown>
+#6 0x5586d8202e89 <unknown>
+#7 0x5586d823365e <unknown>
+#8 0x5586d82519c6 <unknown>
+#9 0x5586d8233233 <unknown>
+#10 0x5586d8201093 <unknown>
+#11 0x5586d820209e <unknown>
+#12 0x5586d84b7acb <unknown>
+#13 0x5586d84bba81 <unknown>
+#14 0x5586d84a3695 <unknown>
+#15 0x5586d84bc5f2 <unknown>
+#16 0x5586d848886f <unknown>
+#17 0x5586d84df668 <unknown>
+#18 0x5586d84df832 <unknown>
+#19 0x5586d84ef65c <unknown>
+#20 0x7fbed9e72a94 <unknown>
+#21 0x7fbed9effc3c <unknown>
+[2024-10-03T21:38:24.434+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5586d84f086a <unknown>
+#1 0x5586d81bee50 <unknown>
+#2 0x5586d820e644 <unknown>
+#3 0x5586d820e931 <unknown>
+#4 0x5586d8202f96 <unknown>
+#5 0x5586d82334bd <unknown>
+#6 0x5586d8202e89 <unknown>
+#7 0x5586d823365e <unknown>
+#8 0x5586d82519c6 <unknown>
+#9 0x5586d8233233 <unknown>
+#10 0x5586d8201093 <unknown>
+#11 0x5586d820209e <unknown>
+#12 0x5586d84b7acb <unknown>
+#13 0x5586d84bba81 <unknown>
+#14 0x5586d84a3695 <unknown>
+#15 0x5586d84bc5f2 <unknown>
+#16 0x5586d848886f <unknown>
+#17 0x5586d84df668 <unknown>
+#18 0x5586d84df832 <unknown>
+#19 0x5586d84ef65c <unknown>
+#20 0x7fbed9e72a94 <unknown>
+#21 0x7fbed9effc3c <unknown>
+[2024-10-03T21:38:34.267+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5630f2ced86a <unknown>
+#1 0x5630f29bbe50 <unknown>
+#2 0x5630f2a0b644 <unknown>
+#3 0x5630f2a0b931 <unknown>
+#4 0x5630f29fff96 <unknown>
+#5 0x5630f2a304bd <unknown>
+#6 0x5630f29ffe89 <unknown>
+#7 0x5630f2a3065e <unknown>
+#8 0x5630f2a4e9c6 <unknown>
+#9 0x5630f2a30233 <unknown>
+#10 0x5630f29fe093 <unknown>
+#11 0x5630f29ff09e <unknown>
+#12 0x5630f2cb4acb <unknown>
+#13 0x5630f2cb8a81 <unknown>
+#14 0x5630f2ca0695 <unknown>
+#15 0x5630f2cb95f2 <unknown>
+#16 0x5630f2c8586f <unknown>
+#17 0x5630f2cdc668 <unknown>
+#18 0x5630f2cdc832 <unknown>
+#19 0x5630f2cec65c <unknown>
+#20 0x7f1f1957ca94 <unknown>
+#21 0x7f1f19609c3c <unknown>
+[2024-10-03T21:38:34.284+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5630f2ced86a <unknown>
+#1 0x5630f29bbe50 <unknown>
+#2 0x5630f2a0b644 <unknown>
+#3 0x5630f2a0b931 <unknown>
+#4 0x5630f29fff96 <unknown>
+#5 0x5630f2a304bd <unknown>
+#6 0x5630f29ffe89 <unknown>
+#7 0x5630f2a3065e <unknown>
+#8 0x5630f2a4e9c6 <unknown>
+#9 0x5630f2a30233 <unknown>
+#10 0x5630f29fe093 <unknown>
+#11 0x5630f29ff09e <unknown>
+#12 0x5630f2cb4acb <unknown>
+#13 0x5630f2cb8a81 <unknown>
+#14 0x5630f2ca0695 <unknown>
+#15 0x5630f2cb95f2 <unknown>
+#16 0x5630f2c8586f <unknown>
+#17 0x5630f2cdc668 <unknown>
+#18 0x5630f2cdc832 <unknown>
+#19 0x5630f2cec65c <unknown>
+#20 0x7f1f1957ca94 <unknown>
+#21 0x7f1f19609c3c <unknown>
+[2024-10-03T21:38:36.416+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5630f2ced86a <unknown>
+#1 0x5630f29bbe50 <unknown>
+#2 0x5630f2a0b644 <unknown>
+#3 0x5630f2a0b931 <unknown>
+#4 0x5630f29fff96 <unknown>
+#5 0x5630f2a304bd <unknown>
+#6 0x5630f29ffe89 <unknown>
+#7 0x5630f2a3065e <unknown>
+#8 0x5630f2a4e9c6 <unknown>
+#9 0x5630f2a30233 <unknown>
+#10 0x5630f29fe093 <unknown>
+#11 0x5630f29ff09e <unknown>
+#12 0x5630f2cb4acb <unknown>
+#13 0x5630f2cb8a81 <unknown>
+#14 0x5630f2ca0695 <unknown>
+#15 0x5630f2cb95f2 <unknown>
+#16 0x5630f2c8586f <unknown>
+#17 0x5630f2cdc668 <unknown>
+#18 0x5630f2cdc832 <unknown>
+#19 0x5630f2cec65c <unknown>
+#20 0x7f1f1957ca94 <unknown>
+#21 0x7f1f19609c3c <unknown>
+[2024-10-03T21:38:36.451+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5630f2ced86a <unknown>
+#1 0x5630f29bbe50 <unknown>
+#2 0x5630f2a0b644 <unknown>
+#3 0x5630f2a0b931 <unknown>
+#4 0x5630f29fff96 <unknown>
+#5 0x5630f2a304bd <unknown>
+#6 0x5630f29ffe89 <unknown>
+#7 0x5630f2a3065e <unknown>
+#8 0x5630f2a4e9c6 <unknown>
+#9 0x5630f2a30233 <unknown>
+#10 0x5630f29fe093 <unknown>
+#11 0x5630f29ff09e <unknown>
+#12 0x5630f2cb4acb <unknown>
+#13 0x5630f2cb8a81 <unknown>
+#14 0x5630f2ca0695 <unknown>
+#15 0x5630f2cb95f2 <unknown>
+#16 0x5630f2c8586f <unknown>
+#17 0x5630f2cdc668 <unknown>
+#18 0x5630f2cdc832 <unknown>
+#19 0x5630f2cec65c <unknown>
+#20 0x7f1f1957ca94 <unknown>
+#21 0x7f1f19609c3c <unknown>
+[2024-10-03T21:38:36.472+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5630f2ced86a <unknown>
+#1 0x5630f29bbe50 <unknown>
+#2 0x5630f2a0b644 <unknown>
+#3 0x5630f2a0b931 <unknown>
+#4 0x5630f29fff96 <unknown>
+#5 0x5630f2a304bd <unknown>
+#6 0x5630f29ffe89 <unknown>
+#7 0x5630f2a3065e <unknown>
+#8 0x5630f2a4e9c6 <unknown>
+#9 0x5630f2a30233 <unknown>
+#10 0x5630f29fe093 <unknown>
+#11 0x5630f29ff09e <unknown>
+#12 0x5630f2cb4acb <unknown>
+#13 0x5630f2cb8a81 <unknown>
+#14 0x5630f2ca0695 <unknown>
+#15 0x5630f2cb95f2 <unknown>
+#16 0x5630f2c8586f <unknown>
+#17 0x5630f2cdc668 <unknown>
+#18 0x5630f2cdc832 <unknown>
+#19 0x5630f2cec65c <unknown>
+#20 0x7f1f1957ca94 <unknown>
+#21 0x7f1f19609c3c <unknown>
+[2024-10-03T21:38:36.520+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5630f2ced86a <unknown>
+#1 0x5630f29bbe50 <unknown>
+#2 0x5630f2a0b644 <unknown>
+#3 0x5630f2a0b931 <unknown>
+#4 0x5630f29fff96 <unknown>
+#5 0x5630f2a304bd <unknown>
+#6 0x5630f29ffe89 <unknown>
+#7 0x5630f2a3065e <unknown>
+#8 0x5630f2a4e9c6 <unknown>
+#9 0x5630f2a30233 <unknown>
+#10 0x5630f29fe093 <unknown>
+#11 0x5630f29ff09e <unknown>
+#12 0x5630f2cb4acb <unknown>
+#13 0x5630f2cb8a81 <unknown>
+#14 0x5630f2ca0695 <unknown>
+#15 0x5630f2cb95f2 <unknown>
+#16 0x5630f2c8586f <unknown>
+#17 0x5630f2cdc668 <unknown>
+#18 0x5630f2cdc832 <unknown>
+#19 0x5630f2cec65c <unknown>
+#20 0x7f1f1957ca94 <unknown>
+#21 0x7f1f19609c3c <unknown>
+[2024-10-03T21:38:36.544+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5630f2ced86a <unknown>
+#1 0x5630f29bbe50 <unknown>
+#2 0x5630f2a0b644 <unknown>
+#3 0x5630f2a0b931 <unknown>
+#4 0x5630f29fff96 <unknown>
+#5 0x5630f2a304bd <unknown>
+#6 0x5630f29ffe89 <unknown>
+#7 0x5630f2a3065e <unknown>
+#8 0x5630f2a4e9c6 <unknown>
+#9 0x5630f2a30233 <unknown>
+#10 0x5630f29fe093 <unknown>
+#11 0x5630f29ff09e <unknown>
+#12 0x5630f2cb4acb <unknown>
+#13 0x5630f2cb8a81 <unknown>
+#14 0x5630f2ca0695 <unknown>
+#15 0x5630f2cb95f2 <unknown>
+#16 0x5630f2c8586f <unknown>
+#17 0x5630f2cdc668 <unknown>
+#18 0x5630f2cdc832 <unknown>
+#19 0x5630f2cec65c <unknown>
+#20 0x7f1f1957ca94 <unknown>
+#21 0x7f1f19609c3c <unknown>
+[2024-10-03T21:38:36.594+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5630f2ced86a <unknown>
+#1 0x5630f29bbe50 <unknown>
+#2 0x5630f2a0b644 <unknown>
+#3 0x5630f2a0b931 <unknown>
+#4 0x5630f29fff96 <unknown>
+#5 0x5630f2a304bd <unknown>
+#6 0x5630f29ffe89 <unknown>
+#7 0x5630f2a3065e <unknown>
+#8 0x5630f2a4e9c6 <unknown>
+#9 0x5630f2a30233 <unknown>
+#10 0x5630f29fe093 <unknown>
+#11 0x5630f29ff09e <unknown>
+#12 0x5630f2cb4acb <unknown>
+#13 0x5630f2cb8a81 <unknown>
+#14 0x5630f2ca0695 <unknown>
+#15 0x5630f2cb95f2 <unknown>
+#16 0x5630f2c8586f <unknown>
+#17 0x5630f2cdc668 <unknown>
+#18 0x5630f2cdc832 <unknown>
+#19 0x5630f2cec65c <unknown>
+#20 0x7f1f1957ca94 <unknown>
+#21 0x7f1f19609c3c <unknown>
+[2024-10-03T21:38:36.616+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5630f2ced86a <unknown>
+#1 0x5630f29bbe50 <unknown>
+#2 0x5630f2a0b644 <unknown>
+#3 0x5630f2a0b931 <unknown>
+#4 0x5630f29fff96 <unknown>
+#5 0x5630f2a304bd <unknown>
+#6 0x5630f29ffe89 <unknown>
+#7 0x5630f2a3065e <unknown>
+#8 0x5630f2a4e9c6 <unknown>
+#9 0x5630f2a30233 <unknown>
+#10 0x5630f29fe093 <unknown>
+#11 0x5630f29ff09e <unknown>
+#12 0x5630f2cb4acb <unknown>
+#13 0x5630f2cb8a81 <unknown>
+#14 0x5630f2ca0695 <unknown>
+#15 0x5630f2cb95f2 <unknown>
+#16 0x5630f2c8586f <unknown>
+#17 0x5630f2cdc668 <unknown>
+#18 0x5630f2cdc832 <unknown>
+#19 0x5630f2cec65c <unknown>
+#20 0x7f1f1957ca94 <unknown>
+#21 0x7f1f19609c3c <unknown>
+[2024-10-03T21:38:36.660+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5630f2ced86a <unknown>
+#1 0x5630f29bbe50 <unknown>
+#2 0x5630f2a0b644 <unknown>
+#3 0x5630f2a0b931 <unknown>
+#4 0x5630f29fff96 <unknown>
+#5 0x5630f2a304bd <unknown>
+#6 0x5630f29ffe89 <unknown>
+#7 0x5630f2a3065e <unknown>
+#8 0x5630f2a4e9c6 <unknown>
+#9 0x5630f2a30233 <unknown>
+#10 0x5630f29fe093 <unknown>
+#11 0x5630f29ff09e <unknown>
+#12 0x5630f2cb4acb <unknown>
+#13 0x5630f2cb8a81 <unknown>
+#14 0x5630f2ca0695 <unknown>
+#15 0x5630f2cb95f2 <unknown>
+#16 0x5630f2c8586f <unknown>
+#17 0x5630f2cdc668 <unknown>
+#18 0x5630f2cdc832 <unknown>
+#19 0x5630f2cec65c <unknown>
+#20 0x7f1f1957ca94 <unknown>
+#21 0x7f1f19609c3c <unknown>
+[2024-10-03T21:38:36.678+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5630f2ced86a <unknown>
+#1 0x5630f29bbe50 <unknown>
+#2 0x5630f2a0b644 <unknown>
+#3 0x5630f2a0b931 <unknown>
+#4 0x5630f29fff96 <unknown>
+#5 0x5630f2a304bd <unknown>
+#6 0x5630f29ffe89 <unknown>
+#7 0x5630f2a3065e <unknown>
+#8 0x5630f2a4e9c6 <unknown>
+#9 0x5630f2a30233 <unknown>
+#10 0x5630f29fe093 <unknown>
+#11 0x5630f29ff09e <unknown>
+#12 0x5630f2cb4acb <unknown>
+#13 0x5630f2cb8a81 <unknown>
+#14 0x5630f2ca0695 <unknown>
+#15 0x5630f2cb95f2 <unknown>
+#16 0x5630f2c8586f <unknown>
+#17 0x5630f2cdc668 <unknown>
+#18 0x5630f2cdc832 <unknown>
+#19 0x5630f2cec65c <unknown>
+#20 0x7f1f1957ca94 <unknown>
+#21 0x7f1f19609c3c <unknown>
+[2024-10-03T21:38:46.096+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5602258a686a <unknown>
+#1 0x560225574e50 <unknown>
+#2 0x5602255c4644 <unknown>
+#3 0x5602255c4931 <unknown>
+#4 0x5602255b8f96 <unknown>
+#5 0x5602255e94bd <unknown>
+#6 0x5602255b8e89 <unknown>
+#7 0x5602255e965e <unknown>
+#8 0x5602256079c6 <unknown>
+#9 0x5602255e9233 <unknown>
+#10 0x5602255b7093 <unknown>
+#11 0x5602255b809e <unknown>
+#12 0x56022586dacb <unknown>
+#13 0x560225871a81 <unknown>
+#14 0x560225859695 <unknown>
+#15 0x5602258725f2 <unknown>
+#16 0x56022583e86f <unknown>
+#17 0x560225895668 <unknown>
+#18 0x560225895832 <unknown>
+#19 0x5602258a565c <unknown>
+#20 0x7f1cdd201a94 <unknown>
+#21 0x7f1cdd28ec3c <unknown>
+[2024-10-03T21:38:46.144+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5602258a686a <unknown>
+#1 0x560225574e50 <unknown>
+#2 0x5602255c4644 <unknown>
+#3 0x5602255c4931 <unknown>
+#4 0x5602255b8f96 <unknown>
+#5 0x5602255e94bd <unknown>
+#6 0x5602255b8e89 <unknown>
+#7 0x5602255e965e <unknown>
+#8 0x5602256079c6 <unknown>
+#9 0x5602255e9233 <unknown>
+#10 0x5602255b7093 <unknown>
+#11 0x5602255b809e <unknown>
+#12 0x56022586dacb <unknown>
+#13 0x560225871a81 <unknown>
+#14 0x560225859695 <unknown>
+#15 0x5602258725f2 <unknown>
+#16 0x56022583e86f <unknown>
+#17 0x560225895668 <unknown>
+#18 0x560225895832 <unknown>
+#19 0x5602258a565c <unknown>
+#20 0x7f1cdd201a94 <unknown>
+#21 0x7f1cdd28ec3c <unknown>
+[2024-10-03T21:38:46.163+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5602258a686a <unknown>
+#1 0x560225574e50 <unknown>
+#2 0x5602255c4644 <unknown>
+#3 0x5602255c4931 <unknown>
+#4 0x5602255b8f96 <unknown>
+#5 0x5602255e94bd <unknown>
+#6 0x5602255b8e89 <unknown>
+#7 0x5602255e965e <unknown>
+#8 0x5602256079c6 <unknown>
+#9 0x5602255e9233 <unknown>
+#10 0x5602255b7093 <unknown>
+#11 0x5602255b809e <unknown>
+#12 0x56022586dacb <unknown>
+#13 0x560225871a81 <unknown>
+#14 0x560225859695 <unknown>
+#15 0x5602258725f2 <unknown>
+#16 0x56022583e86f <unknown>
+#17 0x560225895668 <unknown>
+#18 0x560225895832 <unknown>
+#19 0x5602258a565c <unknown>
+#20 0x7f1cdd201a94 <unknown>
+#21 0x7f1cdd28ec3c <unknown>
+[2024-10-03T21:38:46.181+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5602258a686a <unknown>
+#1 0x560225574e50 <unknown>
+#2 0x5602255c4644 <unknown>
+#3 0x5602255c4931 <unknown>
+#4 0x5602255b8f96 <unknown>
+#5 0x5602255e94bd <unknown>
+#6 0x5602255b8e89 <unknown>
+#7 0x5602255e965e <unknown>
+#8 0x5602256079c6 <unknown>
+#9 0x5602255e9233 <unknown>
+#10 0x5602255b7093 <unknown>
+#11 0x5602255b809e <unknown>
+#12 0x56022586dacb <unknown>
+#13 0x560225871a81 <unknown>
+#14 0x560225859695 <unknown>
+#15 0x5602258725f2 <unknown>
+#16 0x56022583e86f <unknown>
+#17 0x560225895668 <unknown>
+#18 0x560225895832 <unknown>
+#19 0x5602258a565c <unknown>
+#20 0x7f1cdd201a94 <unknown>
+#21 0x7f1cdd28ec3c <unknown>
+[2024-10-03T21:38:48.380+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5602258a686a <unknown>
+#1 0x560225574e50 <unknown>
+#2 0x5602255c4644 <unknown>
+#3 0x5602255c4931 <unknown>
+#4 0x5602255b8f96 <unknown>
+#5 0x5602255e94bd <unknown>
+#6 0x5602255b8e89 <unknown>
+#7 0x5602255e965e <unknown>
+#8 0x5602256079c6 <unknown>
+#9 0x5602255e9233 <unknown>
+#10 0x5602255b7093 <unknown>
+#11 0x5602255b809e <unknown>
+#12 0x56022586dacb <unknown>
+#13 0x560225871a81 <unknown>
+#14 0x560225859695 <unknown>
+#15 0x5602258725f2 <unknown>
+#16 0x56022583e86f <unknown>
+#17 0x560225895668 <unknown>
+#18 0x560225895832 <unknown>
+#19 0x5602258a565c <unknown>
+#20 0x7f1cdd201a94 <unknown>
+#21 0x7f1cdd28ec3c <unknown>
+[2024-10-03T21:38:48.416+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5602258a686a <unknown>
+#1 0x560225574e50 <unknown>
+#2 0x5602255c4644 <unknown>
+#3 0x5602255c4931 <unknown>
+#4 0x5602255b8f96 <unknown>
+#5 0x5602255e94bd <unknown>
+#6 0x5602255b8e89 <unknown>
+#7 0x5602255e965e <unknown>
+#8 0x5602256079c6 <unknown>
+#9 0x5602255e9233 <unknown>
+#10 0x5602255b7093 <unknown>
+#11 0x5602255b809e <unknown>
+#12 0x56022586dacb <unknown>
+#13 0x560225871a81 <unknown>
+#14 0x560225859695 <unknown>
+#15 0x5602258725f2 <unknown>
+#16 0x56022583e86f <unknown>
+#17 0x560225895668 <unknown>
+#18 0x560225895832 <unknown>
+#19 0x5602258a565c <unknown>
+#20 0x7f1cdd201a94 <unknown>
+#21 0x7f1cdd28ec3c <unknown>
+[2024-10-03T21:38:48.433+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5602258a686a <unknown>
+#1 0x560225574e50 <unknown>
+#2 0x5602255c4644 <unknown>
+#3 0x5602255c4931 <unknown>
+#4 0x5602255b8f96 <unknown>
+#5 0x5602255e94bd <unknown>
+#6 0x5602255b8e89 <unknown>
+#7 0x5602255e965e <unknown>
+#8 0x5602256079c6 <unknown>
+#9 0x5602255e9233 <unknown>
+#10 0x5602255b7093 <unknown>
+#11 0x5602255b809e <unknown>
+#12 0x56022586dacb <unknown>
+#13 0x560225871a81 <unknown>
+#14 0x560225859695 <unknown>
+#15 0x5602258725f2 <unknown>
+#16 0x56022583e86f <unknown>
+#17 0x560225895668 <unknown>
+#18 0x560225895832 <unknown>
+#19 0x5602258a565c <unknown>
+#20 0x7f1cdd201a94 <unknown>
+#21 0x7f1cdd28ec3c <unknown>
+[2024-10-03T21:38:48.467+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5602258a686a <unknown>
+#1 0x560225574e50 <unknown>
+#2 0x5602255c4644 <unknown>
+#3 0x5602255c4931 <unknown>
+#4 0x5602255b8f96 <unknown>
+#5 0x5602255e94bd <unknown>
+#6 0x5602255b8e89 <unknown>
+#7 0x5602255e965e <unknown>
+#8 0x5602256079c6 <unknown>
+#9 0x5602255e9233 <unknown>
+#10 0x5602255b7093 <unknown>
+#11 0x5602255b809e <unknown>
+#12 0x56022586dacb <unknown>
+#13 0x560225871a81 <unknown>
+#14 0x560225859695 <unknown>
+#15 0x5602258725f2 <unknown>
+#16 0x56022583e86f <unknown>
+#17 0x560225895668 <unknown>
+#18 0x560225895832 <unknown>
+#19 0x5602258a565c <unknown>
+#20 0x7f1cdd201a94 <unknown>
+#21 0x7f1cdd28ec3c <unknown>
+[2024-10-03T21:38:48.485+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5602258a686a <unknown>
+#1 0x560225574e50 <unknown>
+#2 0x5602255c4644 <unknown>
+#3 0x5602255c4931 <unknown>
+#4 0x5602255b8f96 <unknown>
+#5 0x5602255e94bd <unknown>
+#6 0x5602255b8e89 <unknown>
+#7 0x5602255e965e <unknown>
+#8 0x5602256079c6 <unknown>
+#9 0x5602255e9233 <unknown>
+#10 0x5602255b7093 <unknown>
+#11 0x5602255b809e <unknown>
+#12 0x56022586dacb <unknown>
+#13 0x560225871a81 <unknown>
+#14 0x560225859695 <unknown>
+#15 0x5602258725f2 <unknown>
+#16 0x56022583e86f <unknown>
+#17 0x560225895668 <unknown>
+#18 0x560225895832 <unknown>
+#19 0x5602258a565c <unknown>
+#20 0x7f1cdd201a94 <unknown>
+#21 0x7f1cdd28ec3c <unknown>
+[2024-10-03T21:38:48.521+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5602258a686a <unknown>
+#1 0x560225574e50 <unknown>
+#2 0x5602255c4644 <unknown>
+#3 0x5602255c4931 <unknown>
+#4 0x5602255b8f96 <unknown>
+#5 0x5602255e94bd <unknown>
+#6 0x5602255b8e89 <unknown>
+#7 0x5602255e965e <unknown>
+#8 0x5602256079c6 <unknown>
+#9 0x5602255e9233 <unknown>
+#10 0x5602255b7093 <unknown>
+#11 0x5602255b809e <unknown>
+#12 0x56022586dacb <unknown>
+#13 0x560225871a81 <unknown>
+#14 0x560225859695 <unknown>
+#15 0x5602258725f2 <unknown>
+#16 0x56022583e86f <unknown>
+#17 0x560225895668 <unknown>
+#18 0x560225895832 <unknown>
+#19 0x5602258a565c <unknown>
+#20 0x7f1cdd201a94 <unknown>
+#21 0x7f1cdd28ec3c <unknown>
+[2024-10-03T21:38:48.538+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5602258a686a <unknown>
+#1 0x560225574e50 <unknown>
+#2 0x5602255c4644 <unknown>
+#3 0x5602255c4931 <unknown>
+#4 0x5602255b8f96 <unknown>
+#5 0x5602255e94bd <unknown>
+#6 0x5602255b8e89 <unknown>
+#7 0x5602255e965e <unknown>
+#8 0x5602256079c6 <unknown>
+#9 0x5602255e9233 <unknown>
+#10 0x5602255b7093 <unknown>
+#11 0x5602255b809e <unknown>
+#12 0x56022586dacb <unknown>
+#13 0x560225871a81 <unknown>
+#14 0x560225859695 <unknown>
+#15 0x5602258725f2 <unknown>
+#16 0x56022583e86f <unknown>
+#17 0x560225895668 <unknown>
+#18 0x560225895832 <unknown>
+#19 0x5602258a565c <unknown>
+#20 0x7f1cdd201a94 <unknown>
+#21 0x7f1cdd28ec3c <unknown>
+[2024-10-03T21:38:48.575+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5602258a686a <unknown>
+#1 0x560225574e50 <unknown>
+#2 0x5602255c4644 <unknown>
+#3 0x5602255c4931 <unknown>
+#4 0x5602255b8f96 <unknown>
+#5 0x5602255e94bd <unknown>
+#6 0x5602255b8e89 <unknown>
+#7 0x5602255e965e <unknown>
+#8 0x5602256079c6 <unknown>
+#9 0x5602255e9233 <unknown>
+#10 0x5602255b7093 <unknown>
+#11 0x5602255b809e <unknown>
+#12 0x56022586dacb <unknown>
+#13 0x560225871a81 <unknown>
+#14 0x560225859695 <unknown>
+#15 0x5602258725f2 <unknown>
+#16 0x56022583e86f <unknown>
+#17 0x560225895668 <unknown>
+#18 0x560225895832 <unknown>
+#19 0x5602258a565c <unknown>
+#20 0x7f1cdd201a94 <unknown>
+#21 0x7f1cdd28ec3c <unknown>
+[2024-10-03T21:38:48.592+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5602258a686a <unknown>
+#1 0x560225574e50 <unknown>
+#2 0x5602255c4644 <unknown>
+#3 0x5602255c4931 <unknown>
+#4 0x5602255b8f96 <unknown>
+#5 0x5602255e94bd <unknown>
+#6 0x5602255b8e89 <unknown>
+#7 0x5602255e965e <unknown>
+#8 0x5602256079c6 <unknown>
+#9 0x5602255e9233 <unknown>
+#10 0x5602255b7093 <unknown>
+#11 0x5602255b809e <unknown>
+#12 0x56022586dacb <unknown>
+#13 0x560225871a81 <unknown>
+#14 0x560225859695 <unknown>
+#15 0x5602258725f2 <unknown>
+#16 0x56022583e86f <unknown>
+#17 0x560225895668 <unknown>
+#18 0x560225895832 <unknown>
+#19 0x5602258a565c <unknown>
+#20 0x7f1cdd201a94 <unknown>
+#21 0x7f1cdd28ec3c <unknown>
+[2024-10-03T21:38:57.659+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x555f3046f86a <unknown>
+#1 0x555f3013de50 <unknown>
+#2 0x555f3018d644 <unknown>
+#3 0x555f3018d931 <unknown>
+#4 0x555f30181f96 <unknown>
+#5 0x555f301b24bd <unknown>
+#6 0x555f30181e89 <unknown>
+#7 0x555f301b265e <unknown>
+#8 0x555f301d09c6 <unknown>
+#9 0x555f301b2233 <unknown>
+#10 0x555f30180093 <unknown>
+#11 0x555f3018109e <unknown>
+#12 0x555f30436acb <unknown>
+#13 0x555f3043aa81 <unknown>
+#14 0x555f30422695 <unknown>
+#15 0x555f3043b5f2 <unknown>
+#16 0x555f3040786f <unknown>
+#17 0x555f3045e668 <unknown>
+#18 0x555f3045e832 <unknown>
+#19 0x555f3046e65c <unknown>
+#20 0x7f0390e7da94 <unknown>
+#21 0x7f0390f0ac3c <unknown>
+[2024-10-03T21:38:57.696+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x555f3046f86a <unknown>
+#1 0x555f3013de50 <unknown>
+#2 0x555f3018d644 <unknown>
+#3 0x555f3018d931 <unknown>
+#4 0x555f30181f96 <unknown>
+#5 0x555f301b24bd <unknown>
+#6 0x555f30181e89 <unknown>
+#7 0x555f301b265e <unknown>
+#8 0x555f301d09c6 <unknown>
+#9 0x555f301b2233 <unknown>
+#10 0x555f30180093 <unknown>
+#11 0x555f3018109e <unknown>
+#12 0x555f30436acb <unknown>
+#13 0x555f3043aa81 <unknown>
+#14 0x555f30422695 <unknown>
+#15 0x555f3043b5f2 <unknown>
+#16 0x555f3040786f <unknown>
+#17 0x555f3045e668 <unknown>
+#18 0x555f3045e832 <unknown>
+#19 0x555f3046e65c <unknown>
+#20 0x7f0390e7da94 <unknown>
+#21 0x7f0390f0ac3c <unknown>
+[2024-10-03T21:38:57.715+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x555f3046f86a <unknown>
+#1 0x555f3013de50 <unknown>
+#2 0x555f3018d644 <unknown>
+#3 0x555f3018d931 <unknown>
+#4 0x555f30181f96 <unknown>
+#5 0x555f301b24bd <unknown>
+#6 0x555f30181e89 <unknown>
+#7 0x555f301b265e <unknown>
+#8 0x555f301d09c6 <unknown>
+#9 0x555f301b2233 <unknown>
+#10 0x555f30180093 <unknown>
+#11 0x555f3018109e <unknown>
+#12 0x555f30436acb <unknown>
+#13 0x555f3043aa81 <unknown>
+#14 0x555f30422695 <unknown>
+#15 0x555f3043b5f2 <unknown>
+#16 0x555f3040786f <unknown>
+#17 0x555f3045e668 <unknown>
+#18 0x555f3045e832 <unknown>
+#19 0x555f3046e65c <unknown>
+#20 0x7f0390e7da94 <unknown>
+#21 0x7f0390f0ac3c <unknown>
+[2024-10-03T21:38:57.733+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x555f3046f86a <unknown>
+#1 0x555f3013de50 <unknown>
+#2 0x555f3018d644 <unknown>
+#3 0x555f3018d931 <unknown>
+#4 0x555f30181f96 <unknown>
+#5 0x555f301b24bd <unknown>
+#6 0x555f30181e89 <unknown>
+#7 0x555f301b265e <unknown>
+#8 0x555f301d09c6 <unknown>
+#9 0x555f301b2233 <unknown>
+#10 0x555f30180093 <unknown>
+#11 0x555f3018109e <unknown>
+#12 0x555f30436acb <unknown>
+#13 0x555f3043aa81 <unknown>
+#14 0x555f30422695 <unknown>
+#15 0x555f3043b5f2 <unknown>
+#16 0x555f3040786f <unknown>
+#17 0x555f3045e668 <unknown>
+#18 0x555f3045e832 <unknown>
+#19 0x555f3046e65c <unknown>
+#20 0x7f0390e7da94 <unknown>
+#21 0x7f0390f0ac3c <unknown>
+[2024-10-03T21:38:59.916+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x555f3046f86a <unknown>
+#1 0x555f3013de50 <unknown>
+#2 0x555f3018d644 <unknown>
+#3 0x555f3018d931 <unknown>
+#4 0x555f30181f96 <unknown>
+#5 0x555f301b24bd <unknown>
+#6 0x555f30181e89 <unknown>
+#7 0x555f301b265e <unknown>
+#8 0x555f301d09c6 <unknown>
+#9 0x555f301b2233 <unknown>
+#10 0x555f30180093 <unknown>
+#11 0x555f3018109e <unknown>
+#12 0x555f30436acb <unknown>
+#13 0x555f3043aa81 <unknown>
+#14 0x555f30422695 <unknown>
+#15 0x555f3043b5f2 <unknown>
+#16 0x555f3040786f <unknown>
+#17 0x555f3045e668 <unknown>
+#18 0x555f3045e832 <unknown>
+#19 0x555f3046e65c <unknown>
+#20 0x7f0390e7da94 <unknown>
+#21 0x7f0390f0ac3c <unknown>
+[2024-10-03T21:38:59.954+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x555f3046f86a <unknown>
+#1 0x555f3013de50 <unknown>
+#2 0x555f3018d644 <unknown>
+#3 0x555f3018d931 <unknown>
+#4 0x555f30181f96 <unknown>
+#5 0x555f301b24bd <unknown>
+#6 0x555f30181e89 <unknown>
+#7 0x555f301b265e <unknown>
+#8 0x555f301d09c6 <unknown>
+#9 0x555f301b2233 <unknown>
+#10 0x555f30180093 <unknown>
+#11 0x555f3018109e <unknown>
+#12 0x555f30436acb <unknown>
+#13 0x555f3043aa81 <unknown>
+#14 0x555f30422695 <unknown>
+#15 0x555f3043b5f2 <unknown>
+#16 0x555f3040786f <unknown>
+#17 0x555f3045e668 <unknown>
+#18 0x555f3045e832 <unknown>
+#19 0x555f3046e65c <unknown>
+#20 0x7f0390e7da94 <unknown>
+#21 0x7f0390f0ac3c <unknown>
+[2024-10-03T21:38:59.972+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x555f3046f86a <unknown>
+#1 0x555f3013de50 <unknown>
+#2 0x555f3018d644 <unknown>
+#3 0x555f3018d931 <unknown>
+#4 0x555f30181f96 <unknown>
+#5 0x555f301b24bd <unknown>
+#6 0x555f30181e89 <unknown>
+#7 0x555f301b265e <unknown>
+#8 0x555f301d09c6 <unknown>
+#9 0x555f301b2233 <unknown>
+#10 0x555f30180093 <unknown>
+#11 0x555f3018109e <unknown>
+#12 0x555f30436acb <unknown>
+#13 0x555f3043aa81 <unknown>
+#14 0x555f30422695 <unknown>
+#15 0x555f3043b5f2 <unknown>
+#16 0x555f3040786f <unknown>
+#17 0x555f3045e668 <unknown>
+#18 0x555f3045e832 <unknown>
+#19 0x555f3046e65c <unknown>
+#20 0x7f0390e7da94 <unknown>
+#21 0x7f0390f0ac3c <unknown>
+[2024-10-03T21:39:00.008+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x555f3046f86a <unknown>
+#1 0x555f3013de50 <unknown>
+#2 0x555f3018d644 <unknown>
+#3 0x555f3018d931 <unknown>
+#4 0x555f30181f96 <unknown>
+#5 0x555f301b24bd <unknown>
+#6 0x555f30181e89 <unknown>
+#7 0x555f301b265e <unknown>
+#8 0x555f301d09c6 <unknown>
+#9 0x555f301b2233 <unknown>
+#10 0x555f30180093 <unknown>
+#11 0x555f3018109e <unknown>
+#12 0x555f30436acb <unknown>
+#13 0x555f3043aa81 <unknown>
+#14 0x555f30422695 <unknown>
+#15 0x555f3043b5f2 <unknown>
+#16 0x555f3040786f <unknown>
+#17 0x555f3045e668 <unknown>
+#18 0x555f3045e832 <unknown>
+#19 0x555f3046e65c <unknown>
+#20 0x7f0390e7da94 <unknown>
+#21 0x7f0390f0ac3c <unknown>
+[2024-10-03T21:39:00.026+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x555f3046f86a <unknown>
+#1 0x555f3013de50 <unknown>
+#2 0x555f3018d644 <unknown>
+#3 0x555f3018d931 <unknown>
+#4 0x555f30181f96 <unknown>
+#5 0x555f301b24bd <unknown>
+#6 0x555f30181e89 <unknown>
+#7 0x555f301b265e <unknown>
+#8 0x555f301d09c6 <unknown>
+#9 0x555f301b2233 <unknown>
+#10 0x555f30180093 <unknown>
+#11 0x555f3018109e <unknown>
+#12 0x555f30436acb <unknown>
+#13 0x555f3043aa81 <unknown>
+#14 0x555f30422695 <unknown>
+#15 0x555f3043b5f2 <unknown>
+#16 0x555f3040786f <unknown>
+#17 0x555f3045e668 <unknown>
+#18 0x555f3045e832 <unknown>
+#19 0x555f3046e65c <unknown>
+#20 0x7f0390e7da94 <unknown>
+#21 0x7f0390f0ac3c <unknown>
+[2024-10-03T21:39:00.064+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x555f3046f86a <unknown>
+#1 0x555f3013de50 <unknown>
+#2 0x555f3018d644 <unknown>
+#3 0x555f3018d931 <unknown>
+#4 0x555f30181f96 <unknown>
+#5 0x555f301b24bd <unknown>
+#6 0x555f30181e89 <unknown>
+#7 0x555f301b265e <unknown>
+#8 0x555f301d09c6 <unknown>
+#9 0x555f301b2233 <unknown>
+#10 0x555f30180093 <unknown>
+#11 0x555f3018109e <unknown>
+#12 0x555f30436acb <unknown>
+#13 0x555f3043aa81 <unknown>
+#14 0x555f30422695 <unknown>
+#15 0x555f3043b5f2 <unknown>
+#16 0x555f3040786f <unknown>
+#17 0x555f3045e668 <unknown>
+#18 0x555f3045e832 <unknown>
+#19 0x555f3046e65c <unknown>
+#20 0x7f0390e7da94 <unknown>
+#21 0x7f0390f0ac3c <unknown>
+[2024-10-03T21:39:00.083+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x555f3046f86a <unknown>
+#1 0x555f3013de50 <unknown>
+#2 0x555f3018d644 <unknown>
+#3 0x555f3018d931 <unknown>
+#4 0x555f30181f96 <unknown>
+#5 0x555f301b24bd <unknown>
+#6 0x555f30181e89 <unknown>
+#7 0x555f301b265e <unknown>
+#8 0x555f301d09c6 <unknown>
+#9 0x555f301b2233 <unknown>
+#10 0x555f30180093 <unknown>
+#11 0x555f3018109e <unknown>
+#12 0x555f30436acb <unknown>
+#13 0x555f3043aa81 <unknown>
+#14 0x555f30422695 <unknown>
+#15 0x555f3043b5f2 <unknown>
+#16 0x555f3040786f <unknown>
+#17 0x555f3045e668 <unknown>
+#18 0x555f3045e832 <unknown>
+#19 0x555f3046e65c <unknown>
+#20 0x7f0390e7da94 <unknown>
+#21 0x7f0390f0ac3c <unknown>
+[2024-10-03T21:39:00.124+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x555f3046f86a <unknown>
+#1 0x555f3013de50 <unknown>
+#2 0x555f3018d644 <unknown>
+#3 0x555f3018d931 <unknown>
+#4 0x555f30181f96 <unknown>
+#5 0x555f301b24bd <unknown>
+#6 0x555f30181e89 <unknown>
+#7 0x555f301b265e <unknown>
+#8 0x555f301d09c6 <unknown>
+#9 0x555f301b2233 <unknown>
+#10 0x555f30180093 <unknown>
+#11 0x555f3018109e <unknown>
+#12 0x555f30436acb <unknown>
+#13 0x555f3043aa81 <unknown>
+#14 0x555f30422695 <unknown>
+#15 0x555f3043b5f2 <unknown>
+#16 0x555f3040786f <unknown>
+#17 0x555f3045e668 <unknown>
+#18 0x555f3045e832 <unknown>
+#19 0x555f3046e65c <unknown>
+#20 0x7f0390e7da94 <unknown>
+#21 0x7f0390f0ac3c <unknown>
+[2024-10-03T21:39:00.144+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x555f3046f86a <unknown>
+#1 0x555f3013de50 <unknown>
+#2 0x555f3018d644 <unknown>
+#3 0x555f3018d931 <unknown>
+#4 0x555f30181f96 <unknown>
+#5 0x555f301b24bd <unknown>
+#6 0x555f30181e89 <unknown>
+#7 0x555f301b265e <unknown>
+#8 0x555f301d09c6 <unknown>
+#9 0x555f301b2233 <unknown>
+#10 0x555f30180093 <unknown>
+#11 0x555f3018109e <unknown>
+#12 0x555f30436acb <unknown>
+#13 0x555f3043aa81 <unknown>
+#14 0x555f30422695 <unknown>
+#15 0x555f3043b5f2 <unknown>
+#16 0x555f3040786f <unknown>
+#17 0x555f3045e668 <unknown>
+#18 0x555f3045e832 <unknown>
+#19 0x555f3046e65c <unknown>
+#20 0x7f0390e7da94 <unknown>
+#21 0x7f0390f0ac3c <unknown>
+[2024-10-03T21:39:09.790+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x56457efed86a <unknown>
+#1 0x56457ecbbe50 <unknown>
+#2 0x56457ed0b644 <unknown>
+#3 0x56457ed0b931 <unknown>
+#4 0x56457ecfff96 <unknown>
+#5 0x56457ed304bd <unknown>
+#6 0x56457ecffe89 <unknown>
+#7 0x56457ed3065e <unknown>
+#8 0x56457ed4e9c6 <unknown>
+#9 0x56457ed30233 <unknown>
+#10 0x56457ecfe093 <unknown>
+#11 0x56457ecff09e <unknown>
+#12 0x56457efb4acb <unknown>
+#13 0x56457efb8a81 <unknown>
+#14 0x56457efa0695 <unknown>
+#15 0x56457efb95f2 <unknown>
+#16 0x56457ef8586f <unknown>
+#17 0x56457efdc668 <unknown>
+#18 0x56457efdc832 <unknown>
+#19 0x56457efec65c <unknown>
+#20 0x7f45c81d6a94 <unknown>
+#21 0x7f45c8263c3c <unknown>
+[2024-10-03T21:39:09.824+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x56457efed86a <unknown>
+#1 0x56457ecbbe50 <unknown>
+#2 0x56457ed0b644 <unknown>
+#3 0x56457ed0b931 <unknown>
+#4 0x56457ecfff96 <unknown>
+#5 0x56457ed304bd <unknown>
+#6 0x56457ecffe89 <unknown>
+#7 0x56457ed3065e <unknown>
+#8 0x56457ed4e9c6 <unknown>
+#9 0x56457ed30233 <unknown>
+#10 0x56457ecfe093 <unknown>
+#11 0x56457ecff09e <unknown>
+#12 0x56457efb4acb <unknown>
+#13 0x56457efb8a81 <unknown>
+#14 0x56457efa0695 <unknown>
+#15 0x56457efb95f2 <unknown>
+#16 0x56457ef8586f <unknown>
+#17 0x56457efdc668 <unknown>
+#18 0x56457efdc832 <unknown>
+#19 0x56457efec65c <unknown>
+#20 0x7f45c81d6a94 <unknown>
+#21 0x7f45c8263c3c <unknown>
+[2024-10-03T21:39:09.843+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x56457efed86a <unknown>
+#1 0x56457ecbbe50 <unknown>
+#2 0x56457ed0b644 <unknown>
+#3 0x56457ed0b931 <unknown>
+#4 0x56457ecfff96 <unknown>
+#5 0x56457ed304bd <unknown>
+#6 0x56457ecffe89 <unknown>
+#7 0x56457ed3065e <unknown>
+#8 0x56457ed4e9c6 <unknown>
+#9 0x56457ed30233 <unknown>
+#10 0x56457ecfe093 <unknown>
+#11 0x56457ecff09e <unknown>
+#12 0x56457efb4acb <unknown>
+#13 0x56457efb8a81 <unknown>
+#14 0x56457efa0695 <unknown>
+#15 0x56457efb95f2 <unknown>
+#16 0x56457ef8586f <unknown>
+#17 0x56457efdc668 <unknown>
+#18 0x56457efdc832 <unknown>
+#19 0x56457efec65c <unknown>
+#20 0x7f45c81d6a94 <unknown>
+#21 0x7f45c8263c3c <unknown>
+[2024-10-03T21:39:09.860+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x56457efed86a <unknown>
+#1 0x56457ecbbe50 <unknown>
+#2 0x56457ed0b644 <unknown>
+#3 0x56457ed0b931 <unknown>
+#4 0x56457ecfff96 <unknown>
+#5 0x56457ed304bd <unknown>
+#6 0x56457ecffe89 <unknown>
+#7 0x56457ed3065e <unknown>
+#8 0x56457ed4e9c6 <unknown>
+#9 0x56457ed30233 <unknown>
+#10 0x56457ecfe093 <unknown>
+#11 0x56457ecff09e <unknown>
+#12 0x56457efb4acb <unknown>
+#13 0x56457efb8a81 <unknown>
+#14 0x56457efa0695 <unknown>
+#15 0x56457efb95f2 <unknown>
+#16 0x56457ef8586f <unknown>
+#17 0x56457efdc668 <unknown>
+#18 0x56457efdc832 <unknown>
+#19 0x56457efec65c <unknown>
+#20 0x7f45c81d6a94 <unknown>
+#21 0x7f45c8263c3c <unknown>
+[2024-10-03T21:39:12.110+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x56457efed86a <unknown>
+#1 0x56457ecbbe50 <unknown>
+#2 0x56457ed0b644 <unknown>
+#3 0x56457ed0b931 <unknown>
+#4 0x56457ecfff96 <unknown>
+#5 0x56457ed304bd <unknown>
+#6 0x56457ecffe89 <unknown>
+#7 0x56457ed3065e <unknown>
+#8 0x56457ed4e9c6 <unknown>
+#9 0x56457ed30233 <unknown>
+#10 0x56457ecfe093 <unknown>
+#11 0x56457ecff09e <unknown>
+#12 0x56457efb4acb <unknown>
+#13 0x56457efb8a81 <unknown>
+#14 0x56457efa0695 <unknown>
+#15 0x56457efb95f2 <unknown>
+#16 0x56457ef8586f <unknown>
+#17 0x56457efdc668 <unknown>
+#18 0x56457efdc832 <unknown>
+#19 0x56457efec65c <unknown>
+#20 0x7f45c81d6a94 <unknown>
+#21 0x7f45c8263c3c <unknown>
+[2024-10-03T21:39:12.140+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x56457efed86a <unknown>
+#1 0x56457ecbbe50 <unknown>
+#2 0x56457ed0b644 <unknown>
+#3 0x56457ed0b931 <unknown>
+#4 0x56457ecfff96 <unknown>
+#5 0x56457ed304bd <unknown>
+#6 0x56457ecffe89 <unknown>
+#7 0x56457ed3065e <unknown>
+#8 0x56457ed4e9c6 <unknown>
+#9 0x56457ed30233 <unknown>
+#10 0x56457ecfe093 <unknown>
+#11 0x56457ecff09e <unknown>
+#12 0x56457efb4acb <unknown>
+#13 0x56457efb8a81 <unknown>
+#14 0x56457efa0695 <unknown>
+#15 0x56457efb95f2 <unknown>
+#16 0x56457ef8586f <unknown>
+#17 0x56457efdc668 <unknown>
+#18 0x56457efdc832 <unknown>
+#19 0x56457efec65c <unknown>
+#20 0x7f45c81d6a94 <unknown>
+#21 0x7f45c8263c3c <unknown>
+[2024-10-03T21:39:12.157+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x56457efed86a <unknown>
+#1 0x56457ecbbe50 <unknown>
+#2 0x56457ed0b644 <unknown>
+#3 0x56457ed0b931 <unknown>
+#4 0x56457ecfff96 <unknown>
+#5 0x56457ed304bd <unknown>
+#6 0x56457ecffe89 <unknown>
+#7 0x56457ed3065e <unknown>
+#8 0x56457ed4e9c6 <unknown>
+#9 0x56457ed30233 <unknown>
+#10 0x56457ecfe093 <unknown>
+#11 0x56457ecff09e <unknown>
+#12 0x56457efb4acb <unknown>
+#13 0x56457efb8a81 <unknown>
+#14 0x56457efa0695 <unknown>
+#15 0x56457efb95f2 <unknown>
+#16 0x56457ef8586f <unknown>
+#17 0x56457efdc668 <unknown>
+#18 0x56457efdc832 <unknown>
+#19 0x56457efec65c <unknown>
+#20 0x7f45c81d6a94 <unknown>
+#21 0x7f45c8263c3c <unknown>
+[2024-10-03T21:39:12.188+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x56457efed86a <unknown>
+#1 0x56457ecbbe50 <unknown>
+#2 0x56457ed0b644 <unknown>
+#3 0x56457ed0b931 <unknown>
+#4 0x56457ecfff96 <unknown>
+#5 0x56457ed304bd <unknown>
+#6 0x56457ecffe89 <unknown>
+#7 0x56457ed3065e <unknown>
+#8 0x56457ed4e9c6 <unknown>
+#9 0x56457ed30233 <unknown>
+#10 0x56457ecfe093 <unknown>
+#11 0x56457ecff09e <unknown>
+#12 0x56457efb4acb <unknown>
+#13 0x56457efb8a81 <unknown>
+#14 0x56457efa0695 <unknown>
+#15 0x56457efb95f2 <unknown>
+#16 0x56457ef8586f <unknown>
+#17 0x56457efdc668 <unknown>
+#18 0x56457efdc832 <unknown>
+#19 0x56457efec65c <unknown>
+#20 0x7f45c81d6a94 <unknown>
+#21 0x7f45c8263c3c <unknown>
+[2024-10-03T21:39:12.209+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x56457efed86a <unknown>
+#1 0x56457ecbbe50 <unknown>
+#2 0x56457ed0b644 <unknown>
+#3 0x56457ed0b931 <unknown>
+#4 0x56457ecfff96 <unknown>
+#5 0x56457ed304bd <unknown>
+#6 0x56457ecffe89 <unknown>
+#7 0x56457ed3065e <unknown>
+#8 0x56457ed4e9c6 <unknown>
+#9 0x56457ed30233 <unknown>
+#10 0x56457ecfe093 <unknown>
+#11 0x56457ecff09e <unknown>
+#12 0x56457efb4acb <unknown>
+#13 0x56457efb8a81 <unknown>
+#14 0x56457efa0695 <unknown>
+#15 0x56457efb95f2 <unknown>
+#16 0x56457ef8586f <unknown>
+#17 0x56457efdc668 <unknown>
+#18 0x56457efdc832 <unknown>
+#19 0x56457efec65c <unknown>
+#20 0x7f45c81d6a94 <unknown>
+#21 0x7f45c8263c3c <unknown>
+[2024-10-03T21:39:12.247+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x56457efed86a <unknown>
+#1 0x56457ecbbe50 <unknown>
+#2 0x56457ed0b644 <unknown>
+#3 0x56457ed0b931 <unknown>
+#4 0x56457ecfff96 <unknown>
+#5 0x56457ed304bd <unknown>
+#6 0x56457ecffe89 <unknown>
+#7 0x56457ed3065e <unknown>
+#8 0x56457ed4e9c6 <unknown>
+#9 0x56457ed30233 <unknown>
+#10 0x56457ecfe093 <unknown>
+#11 0x56457ecff09e <unknown>
+#12 0x56457efb4acb <unknown>
+#13 0x56457efb8a81 <unknown>
+#14 0x56457efa0695 <unknown>
+#15 0x56457efb95f2 <unknown>
+#16 0x56457ef8586f <unknown>
+#17 0x56457efdc668 <unknown>
+#18 0x56457efdc832 <unknown>
+#19 0x56457efec65c <unknown>
+#20 0x7f45c81d6a94 <unknown>
+#21 0x7f45c8263c3c <unknown>
+[2024-10-03T21:39:12.268+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x56457efed86a <unknown>
+#1 0x56457ecbbe50 <unknown>
+#2 0x56457ed0b644 <unknown>
+#3 0x56457ed0b931 <unknown>
+#4 0x56457ecfff96 <unknown>
+#5 0x56457ed304bd <unknown>
+#6 0x56457ecffe89 <unknown>
+#7 0x56457ed3065e <unknown>
+#8 0x56457ed4e9c6 <unknown>
+#9 0x56457ed30233 <unknown>
+#10 0x56457ecfe093 <unknown>
+#11 0x56457ecff09e <unknown>
+#12 0x56457efb4acb <unknown>
+#13 0x56457efb8a81 <unknown>
+#14 0x56457efa0695 <unknown>
+#15 0x56457efb95f2 <unknown>
+#16 0x56457ef8586f <unknown>
+#17 0x56457efdc668 <unknown>
+#18 0x56457efdc832 <unknown>
+#19 0x56457efec65c <unknown>
+#20 0x7f45c81d6a94 <unknown>
+#21 0x7f45c8263c3c <unknown>
+[2024-10-03T21:39:12.309+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x56457efed86a <unknown>
+#1 0x56457ecbbe50 <unknown>
+#2 0x56457ed0b644 <unknown>
+#3 0x56457ed0b931 <unknown>
+#4 0x56457ecfff96 <unknown>
+#5 0x56457ed304bd <unknown>
+#6 0x56457ecffe89 <unknown>
+#7 0x56457ed3065e <unknown>
+#8 0x56457ed4e9c6 <unknown>
+#9 0x56457ed30233 <unknown>
+#10 0x56457ecfe093 <unknown>
+#11 0x56457ecff09e <unknown>
+#12 0x56457efb4acb <unknown>
+#13 0x56457efb8a81 <unknown>
+#14 0x56457efa0695 <unknown>
+#15 0x56457efb95f2 <unknown>
+#16 0x56457ef8586f <unknown>
+#17 0x56457efdc668 <unknown>
+#18 0x56457efdc832 <unknown>
+#19 0x56457efec65c <unknown>
+#20 0x7f45c81d6a94 <unknown>
+#21 0x7f45c8263c3c <unknown>
+[2024-10-03T21:39:12.327+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x56457efed86a <unknown>
+#1 0x56457ecbbe50 <unknown>
+#2 0x56457ed0b644 <unknown>
+#3 0x56457ed0b931 <unknown>
+#4 0x56457ecfff96 <unknown>
+#5 0x56457ed304bd <unknown>
+#6 0x56457ecffe89 <unknown>
+#7 0x56457ed3065e <unknown>
+#8 0x56457ed4e9c6 <unknown>
+#9 0x56457ed30233 <unknown>
+#10 0x56457ecfe093 <unknown>
+#11 0x56457ecff09e <unknown>
+#12 0x56457efb4acb <unknown>
+#13 0x56457efb8a81 <unknown>
+#14 0x56457efa0695 <unknown>
+#15 0x56457efb95f2 <unknown>
+#16 0x56457ef8586f <unknown>
+#17 0x56457efdc668 <unknown>
+#18 0x56457efdc832 <unknown>
+#19 0x56457efec65c <unknown>
+#20 0x7f45c81d6a94 <unknown>
+#21 0x7f45c8263c3c <unknown>
+[2024-10-03T21:39:22.190+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x562aa702686a <unknown>
+#1 0x562aa6cf4e50 <unknown>
+#2 0x562aa6d44644 <unknown>
+#3 0x562aa6d44931 <unknown>
+#4 0x562aa6d38f96 <unknown>
+#5 0x562aa6d694bd <unknown>
+#6 0x562aa6d38e89 <unknown>
+#7 0x562aa6d6965e <unknown>
+#8 0x562aa6d879c6 <unknown>
+#9 0x562aa6d69233 <unknown>
+#10 0x562aa6d37093 <unknown>
+#11 0x562aa6d3809e <unknown>
+#12 0x562aa6fedacb <unknown>
+#13 0x562aa6ff1a81 <unknown>
+#14 0x562aa6fd9695 <unknown>
+#15 0x562aa6ff25f2 <unknown>
+#16 0x562aa6fbe86f <unknown>
+#17 0x562aa7015668 <unknown>
+#18 0x562aa7015832 <unknown>
+#19 0x562aa702565c <unknown>
+#20 0x7fa5deb6aa94 <unknown>
+#21 0x7fa5debf7c3c <unknown>
+[2024-10-03T21:39:22.226+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x562aa702686a <unknown>
+#1 0x562aa6cf4e50 <unknown>
+#2 0x562aa6d44644 <unknown>
+#3 0x562aa6d44931 <unknown>
+#4 0x562aa6d38f96 <unknown>
+#5 0x562aa6d694bd <unknown>
+#6 0x562aa6d38e89 <unknown>
+#7 0x562aa6d6965e <unknown>
+#8 0x562aa6d879c6 <unknown>
+#9 0x562aa6d69233 <unknown>
+#10 0x562aa6d37093 <unknown>
+#11 0x562aa6d3809e <unknown>
+#12 0x562aa6fedacb <unknown>
+#13 0x562aa6ff1a81 <unknown>
+#14 0x562aa6fd9695 <unknown>
+#15 0x562aa6ff25f2 <unknown>
+#16 0x562aa6fbe86f <unknown>
+#17 0x562aa7015668 <unknown>
+#18 0x562aa7015832 <unknown>
+#19 0x562aa702565c <unknown>
+#20 0x7fa5deb6aa94 <unknown>
+#21 0x7fa5debf7c3c <unknown>
+[2024-10-03T21:39:22.243+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x562aa702686a <unknown>
+#1 0x562aa6cf4e50 <unknown>
+#2 0x562aa6d44644 <unknown>
+#3 0x562aa6d44931 <unknown>
+#4 0x562aa6d38f96 <unknown>
+#5 0x562aa6d694bd <unknown>
+#6 0x562aa6d38e89 <unknown>
+#7 0x562aa6d6965e <unknown>
+#8 0x562aa6d879c6 <unknown>
+#9 0x562aa6d69233 <unknown>
+#10 0x562aa6d37093 <unknown>
+#11 0x562aa6d3809e <unknown>
+#12 0x562aa6fedacb <unknown>
+#13 0x562aa6ff1a81 <unknown>
+#14 0x562aa6fd9695 <unknown>
+#15 0x562aa6ff25f2 <unknown>
+#16 0x562aa6fbe86f <unknown>
+#17 0x562aa7015668 <unknown>
+#18 0x562aa7015832 <unknown>
+#19 0x562aa702565c <unknown>
+#20 0x7fa5deb6aa94 <unknown>
+#21 0x7fa5debf7c3c <unknown>
+[2024-10-03T21:39:22.261+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x562aa702686a <unknown>
+#1 0x562aa6cf4e50 <unknown>
+#2 0x562aa6d44644 <unknown>
+#3 0x562aa6d44931 <unknown>
+#4 0x562aa6d38f96 <unknown>
+#5 0x562aa6d694bd <unknown>
+#6 0x562aa6d38e89 <unknown>
+#7 0x562aa6d6965e <unknown>
+#8 0x562aa6d879c6 <unknown>
+#9 0x562aa6d69233 <unknown>
+#10 0x562aa6d37093 <unknown>
+#11 0x562aa6d3809e <unknown>
+#12 0x562aa6fedacb <unknown>
+#13 0x562aa6ff1a81 <unknown>
+#14 0x562aa6fd9695 <unknown>
+#15 0x562aa6ff25f2 <unknown>
+#16 0x562aa6fbe86f <unknown>
+#17 0x562aa7015668 <unknown>
+#18 0x562aa7015832 <unknown>
+#19 0x562aa702565c <unknown>
+#20 0x7fa5deb6aa94 <unknown>
+#21 0x7fa5debf7c3c <unknown>
+[2024-10-03T21:39:24.472+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x562aa702686a <unknown>
+#1 0x562aa6cf4e50 <unknown>
+#2 0x562aa6d44644 <unknown>
+#3 0x562aa6d44931 <unknown>
+#4 0x562aa6d38f96 <unknown>
+#5 0x562aa6d694bd <unknown>
+#6 0x562aa6d38e89 <unknown>
+#7 0x562aa6d6965e <unknown>
+#8 0x562aa6d879c6 <unknown>
+#9 0x562aa6d69233 <unknown>
+#10 0x562aa6d37093 <unknown>
+#11 0x562aa6d3809e <unknown>
+#12 0x562aa6fedacb <unknown>
+#13 0x562aa6ff1a81 <unknown>
+#14 0x562aa6fd9695 <unknown>
+#15 0x562aa6ff25f2 <unknown>
+#16 0x562aa6fbe86f <unknown>
+#17 0x562aa7015668 <unknown>
+#18 0x562aa7015832 <unknown>
+#19 0x562aa702565c <unknown>
+#20 0x7fa5deb6aa94 <unknown>
+#21 0x7fa5debf7c3c <unknown>
+[2024-10-03T21:39:24.516+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x562aa702686a <unknown>
+#1 0x562aa6cf4e50 <unknown>
+#2 0x562aa6d44644 <unknown>
+#3 0x562aa6d44931 <unknown>
+#4 0x562aa6d38f96 <unknown>
+#5 0x562aa6d694bd <unknown>
+#6 0x562aa6d38e89 <unknown>
+#7 0x562aa6d6965e <unknown>
+#8 0x562aa6d879c6 <unknown>
+#9 0x562aa6d69233 <unknown>
+#10 0x562aa6d37093 <unknown>
+#11 0x562aa6d3809e <unknown>
+#12 0x562aa6fedacb <unknown>
+#13 0x562aa6ff1a81 <unknown>
+#14 0x562aa6fd9695 <unknown>
+#15 0x562aa6ff25f2 <unknown>
+#16 0x562aa6fbe86f <unknown>
+#17 0x562aa7015668 <unknown>
+#18 0x562aa7015832 <unknown>
+#19 0x562aa702565c <unknown>
+#20 0x7fa5deb6aa94 <unknown>
+#21 0x7fa5debf7c3c <unknown>
+[2024-10-03T21:39:24.534+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x562aa702686a <unknown>
+#1 0x562aa6cf4e50 <unknown>
+#2 0x562aa6d44644 <unknown>
+#3 0x562aa6d44931 <unknown>
+#4 0x562aa6d38f96 <unknown>
+#5 0x562aa6d694bd <unknown>
+#6 0x562aa6d38e89 <unknown>
+#7 0x562aa6d6965e <unknown>
+#8 0x562aa6d879c6 <unknown>
+#9 0x562aa6d69233 <unknown>
+#10 0x562aa6d37093 <unknown>
+#11 0x562aa6d3809e <unknown>
+#12 0x562aa6fedacb <unknown>
+#13 0x562aa6ff1a81 <unknown>
+#14 0x562aa6fd9695 <unknown>
+#15 0x562aa6ff25f2 <unknown>
+#16 0x562aa6fbe86f <unknown>
+#17 0x562aa7015668 <unknown>
+#18 0x562aa7015832 <unknown>
+#19 0x562aa702565c <unknown>
+#20 0x7fa5deb6aa94 <unknown>
+#21 0x7fa5debf7c3c <unknown>
+[2024-10-03T21:39:24.566+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x562aa702686a <unknown>
+#1 0x562aa6cf4e50 <unknown>
+#2 0x562aa6d44644 <unknown>
+#3 0x562aa6d44931 <unknown>
+#4 0x562aa6d38f96 <unknown>
+#5 0x562aa6d694bd <unknown>
+#6 0x562aa6d38e89 <unknown>
+#7 0x562aa6d6965e <unknown>
+#8 0x562aa6d879c6 <unknown>
+#9 0x562aa6d69233 <unknown>
+#10 0x562aa6d37093 <unknown>
+#11 0x562aa6d3809e <unknown>
+#12 0x562aa6fedacb <unknown>
+#13 0x562aa6ff1a81 <unknown>
+#14 0x562aa6fd9695 <unknown>
+#15 0x562aa6ff25f2 <unknown>
+#16 0x562aa6fbe86f <unknown>
+#17 0x562aa7015668 <unknown>
+#18 0x562aa7015832 <unknown>
+#19 0x562aa702565c <unknown>
+#20 0x7fa5deb6aa94 <unknown>
+#21 0x7fa5debf7c3c <unknown>
+[2024-10-03T21:39:24.583+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x562aa702686a <unknown>
+#1 0x562aa6cf4e50 <unknown>
+#2 0x562aa6d44644 <unknown>
+#3 0x562aa6d44931 <unknown>
+#4 0x562aa6d38f96 <unknown>
+#5 0x562aa6d694bd <unknown>
+#6 0x562aa6d38e89 <unknown>
+#7 0x562aa6d6965e <unknown>
+#8 0x562aa6d879c6 <unknown>
+#9 0x562aa6d69233 <unknown>
+#10 0x562aa6d37093 <unknown>
+#11 0x562aa6d3809e <unknown>
+#12 0x562aa6fedacb <unknown>
+#13 0x562aa6ff1a81 <unknown>
+#14 0x562aa6fd9695 <unknown>
+#15 0x562aa6ff25f2 <unknown>
+#16 0x562aa6fbe86f <unknown>
+#17 0x562aa7015668 <unknown>
+#18 0x562aa7015832 <unknown>
+#19 0x562aa702565c <unknown>
+#20 0x7fa5deb6aa94 <unknown>
+#21 0x7fa5debf7c3c <unknown>
+[2024-10-03T21:39:24.625+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x562aa702686a <unknown>
+#1 0x562aa6cf4e50 <unknown>
+#2 0x562aa6d44644 <unknown>
+#3 0x562aa6d44931 <unknown>
+#4 0x562aa6d38f96 <unknown>
+#5 0x562aa6d694bd <unknown>
+#6 0x562aa6d38e89 <unknown>
+#7 0x562aa6d6965e <unknown>
+#8 0x562aa6d879c6 <unknown>
+#9 0x562aa6d69233 <unknown>
+#10 0x562aa6d37093 <unknown>
+#11 0x562aa6d3809e <unknown>
+#12 0x562aa6fedacb <unknown>
+#13 0x562aa6ff1a81 <unknown>
+#14 0x562aa6fd9695 <unknown>
+#15 0x562aa6ff25f2 <unknown>
+#16 0x562aa6fbe86f <unknown>
+#17 0x562aa7015668 <unknown>
+#18 0x562aa7015832 <unknown>
+#19 0x562aa702565c <unknown>
+#20 0x7fa5deb6aa94 <unknown>
+#21 0x7fa5debf7c3c <unknown>
+[2024-10-03T21:39:24.644+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x562aa702686a <unknown>
+#1 0x562aa6cf4e50 <unknown>
+#2 0x562aa6d44644 <unknown>
+#3 0x562aa6d44931 <unknown>
+#4 0x562aa6d38f96 <unknown>
+#5 0x562aa6d694bd <unknown>
+#6 0x562aa6d38e89 <unknown>
+#7 0x562aa6d6965e <unknown>
+#8 0x562aa6d879c6 <unknown>
+#9 0x562aa6d69233 <unknown>
+#10 0x562aa6d37093 <unknown>
+#11 0x562aa6d3809e <unknown>
+#12 0x562aa6fedacb <unknown>
+#13 0x562aa6ff1a81 <unknown>
+#14 0x562aa6fd9695 <unknown>
+#15 0x562aa6ff25f2 <unknown>
+#16 0x562aa6fbe86f <unknown>
+#17 0x562aa7015668 <unknown>
+#18 0x562aa7015832 <unknown>
+#19 0x562aa702565c <unknown>
+#20 0x7fa5deb6aa94 <unknown>
+#21 0x7fa5debf7c3c <unknown>
+[2024-10-03T21:39:24.681+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x562aa702686a <unknown>
+#1 0x562aa6cf4e50 <unknown>
+#2 0x562aa6d44644 <unknown>
+#3 0x562aa6d44931 <unknown>
+#4 0x562aa6d38f96 <unknown>
+#5 0x562aa6d694bd <unknown>
+#6 0x562aa6d38e89 <unknown>
+#7 0x562aa6d6965e <unknown>
+#8 0x562aa6d879c6 <unknown>
+#9 0x562aa6d69233 <unknown>
+#10 0x562aa6d37093 <unknown>
+#11 0x562aa6d3809e <unknown>
+#12 0x562aa6fedacb <unknown>
+#13 0x562aa6ff1a81 <unknown>
+#14 0x562aa6fd9695 <unknown>
+#15 0x562aa6ff25f2 <unknown>
+#16 0x562aa6fbe86f <unknown>
+#17 0x562aa7015668 <unknown>
+#18 0x562aa7015832 <unknown>
+#19 0x562aa702565c <unknown>
+#20 0x7fa5deb6aa94 <unknown>
+#21 0x7fa5debf7c3c <unknown>
+[2024-10-03T21:39:24.699+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x562aa702686a <unknown>
+#1 0x562aa6cf4e50 <unknown>
+#2 0x562aa6d44644 <unknown>
+#3 0x562aa6d44931 <unknown>
+#4 0x562aa6d38f96 <unknown>
+#5 0x562aa6d694bd <unknown>
+#6 0x562aa6d38e89 <unknown>
+#7 0x562aa6d6965e <unknown>
+#8 0x562aa6d879c6 <unknown>
+#9 0x562aa6d69233 <unknown>
+#10 0x562aa6d37093 <unknown>
+#11 0x562aa6d3809e <unknown>
+#12 0x562aa6fedacb <unknown>
+#13 0x562aa6ff1a81 <unknown>
+#14 0x562aa6fd9695 <unknown>
+#15 0x562aa6ff25f2 <unknown>
+#16 0x562aa6fbe86f <unknown>
+#17 0x562aa7015668 <unknown>
+#18 0x562aa7015832 <unknown>
+#19 0x562aa702565c <unknown>
+#20 0x7fa5deb6aa94 <unknown>
+#21 0x7fa5debf7c3c <unknown>
+[2024-10-03T21:39:33.846+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55677f07586a <unknown>
+#1 0x55677ed43e50 <unknown>
+#2 0x55677ed93644 <unknown>
+#3 0x55677ed93931 <unknown>
+#4 0x55677ed87f96 <unknown>
+#5 0x55677edb84bd <unknown>
+#6 0x55677ed87e89 <unknown>
+#7 0x55677edb865e <unknown>
+#8 0x55677edd69c6 <unknown>
+#9 0x55677edb8233 <unknown>
+#10 0x55677ed86093 <unknown>
+#11 0x55677ed8709e <unknown>
+#12 0x55677f03cacb <unknown>
+#13 0x55677f040a81 <unknown>
+#14 0x55677f028695 <unknown>
+#15 0x55677f0415f2 <unknown>
+#16 0x55677f00d86f <unknown>
+#17 0x55677f064668 <unknown>
+#18 0x55677f064832 <unknown>
+#19 0x55677f07465c <unknown>
+#20 0x7fd7855a6a94 <unknown>
+#21 0x7fd785633c3c <unknown>
+[2024-10-03T21:39:33.882+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55677f07586a <unknown>
+#1 0x55677ed43e50 <unknown>
+#2 0x55677ed93644 <unknown>
+#3 0x55677ed93931 <unknown>
+#4 0x55677ed87f96 <unknown>
+#5 0x55677edb84bd <unknown>
+#6 0x55677ed87e89 <unknown>
+#7 0x55677edb865e <unknown>
+#8 0x55677edd69c6 <unknown>
+#9 0x55677edb8233 <unknown>
+#10 0x55677ed86093 <unknown>
+#11 0x55677ed8709e <unknown>
+#12 0x55677f03cacb <unknown>
+#13 0x55677f040a81 <unknown>
+#14 0x55677f028695 <unknown>
+#15 0x55677f0415f2 <unknown>
+#16 0x55677f00d86f <unknown>
+#17 0x55677f064668 <unknown>
+#18 0x55677f064832 <unknown>
+#19 0x55677f07465c <unknown>
+#20 0x7fd7855a6a94 <unknown>
+#21 0x7fd785633c3c <unknown>
+[2024-10-03T21:39:33.900+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55677f07586a <unknown>
+#1 0x55677ed43e50 <unknown>
+#2 0x55677ed93644 <unknown>
+#3 0x55677ed93931 <unknown>
+#4 0x55677ed87f96 <unknown>
+#5 0x55677edb84bd <unknown>
+#6 0x55677ed87e89 <unknown>
+#7 0x55677edb865e <unknown>
+#8 0x55677edd69c6 <unknown>
+#9 0x55677edb8233 <unknown>
+#10 0x55677ed86093 <unknown>
+#11 0x55677ed8709e <unknown>
+#12 0x55677f03cacb <unknown>
+#13 0x55677f040a81 <unknown>
+#14 0x55677f028695 <unknown>
+#15 0x55677f0415f2 <unknown>
+#16 0x55677f00d86f <unknown>
+#17 0x55677f064668 <unknown>
+#18 0x55677f064832 <unknown>
+#19 0x55677f07465c <unknown>
+#20 0x7fd7855a6a94 <unknown>
+#21 0x7fd785633c3c <unknown>
+[2024-10-03T21:39:33.917+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55677f07586a <unknown>
+#1 0x55677ed43e50 <unknown>
+#2 0x55677ed93644 <unknown>
+#3 0x55677ed93931 <unknown>
+#4 0x55677ed87f96 <unknown>
+#5 0x55677edb84bd <unknown>
+#6 0x55677ed87e89 <unknown>
+#7 0x55677edb865e <unknown>
+#8 0x55677edd69c6 <unknown>
+#9 0x55677edb8233 <unknown>
+#10 0x55677ed86093 <unknown>
+#11 0x55677ed8709e <unknown>
+#12 0x55677f03cacb <unknown>
+#13 0x55677f040a81 <unknown>
+#14 0x55677f028695 <unknown>
+#15 0x55677f0415f2 <unknown>
+#16 0x55677f00d86f <unknown>
+#17 0x55677f064668 <unknown>
+#18 0x55677f064832 <unknown>
+#19 0x55677f07465c <unknown>
+#20 0x7fd7855a6a94 <unknown>
+#21 0x7fd785633c3c <unknown>
+[2024-10-03T21:39:36.129+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55677f07586a <unknown>
+#1 0x55677ed43e50 <unknown>
+#2 0x55677ed93644 <unknown>
+#3 0x55677ed93931 <unknown>
+#4 0x55677ed87f96 <unknown>
+#5 0x55677edb84bd <unknown>
+#6 0x55677ed87e89 <unknown>
+#7 0x55677edb865e <unknown>
+#8 0x55677edd69c6 <unknown>
+#9 0x55677edb8233 <unknown>
+#10 0x55677ed86093 <unknown>
+#11 0x55677ed8709e <unknown>
+#12 0x55677f03cacb <unknown>
+#13 0x55677f040a81 <unknown>
+#14 0x55677f028695 <unknown>
+#15 0x55677f0415f2 <unknown>
+#16 0x55677f00d86f <unknown>
+#17 0x55677f064668 <unknown>
+#18 0x55677f064832 <unknown>
+#19 0x55677f07465c <unknown>
+#20 0x7fd7855a6a94 <unknown>
+#21 0x7fd785633c3c <unknown>
+[2024-10-03T21:39:36.165+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55677f07586a <unknown>
+#1 0x55677ed43e50 <unknown>
+#2 0x55677ed93644 <unknown>
+#3 0x55677ed93931 <unknown>
+#4 0x55677ed87f96 <unknown>
+#5 0x55677edb84bd <unknown>
+#6 0x55677ed87e89 <unknown>
+#7 0x55677edb865e <unknown>
+#8 0x55677edd69c6 <unknown>
+#9 0x55677edb8233 <unknown>
+#10 0x55677ed86093 <unknown>
+#11 0x55677ed8709e <unknown>
+#12 0x55677f03cacb <unknown>
+#13 0x55677f040a81 <unknown>
+#14 0x55677f028695 <unknown>
+#15 0x55677f0415f2 <unknown>
+#16 0x55677f00d86f <unknown>
+#17 0x55677f064668 <unknown>
+#18 0x55677f064832 <unknown>
+#19 0x55677f07465c <unknown>
+#20 0x7fd7855a6a94 <unknown>
+#21 0x7fd785633c3c <unknown>
+[2024-10-03T21:39:36.182+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55677f07586a <unknown>
+#1 0x55677ed43e50 <unknown>
+#2 0x55677ed93644 <unknown>
+#3 0x55677ed93931 <unknown>
+#4 0x55677ed87f96 <unknown>
+#5 0x55677edb84bd <unknown>
+#6 0x55677ed87e89 <unknown>
+#7 0x55677edb865e <unknown>
+#8 0x55677edd69c6 <unknown>
+#9 0x55677edb8233 <unknown>
+#10 0x55677ed86093 <unknown>
+#11 0x55677ed8709e <unknown>
+#12 0x55677f03cacb <unknown>
+#13 0x55677f040a81 <unknown>
+#14 0x55677f028695 <unknown>
+#15 0x55677f0415f2 <unknown>
+#16 0x55677f00d86f <unknown>
+#17 0x55677f064668 <unknown>
+#18 0x55677f064832 <unknown>
+#19 0x55677f07465c <unknown>
+#20 0x7fd7855a6a94 <unknown>
+#21 0x7fd785633c3c <unknown>
+[2024-10-03T21:39:36.218+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55677f07586a <unknown>
+#1 0x55677ed43e50 <unknown>
+#2 0x55677ed93644 <unknown>
+#3 0x55677ed93931 <unknown>
+#4 0x55677ed87f96 <unknown>
+#5 0x55677edb84bd <unknown>
+#6 0x55677ed87e89 <unknown>
+#7 0x55677edb865e <unknown>
+#8 0x55677edd69c6 <unknown>
+#9 0x55677edb8233 <unknown>
+#10 0x55677ed86093 <unknown>
+#11 0x55677ed8709e <unknown>
+#12 0x55677f03cacb <unknown>
+#13 0x55677f040a81 <unknown>
+#14 0x55677f028695 <unknown>
+#15 0x55677f0415f2 <unknown>
+#16 0x55677f00d86f <unknown>
+#17 0x55677f064668 <unknown>
+#18 0x55677f064832 <unknown>
+#19 0x55677f07465c <unknown>
+#20 0x7fd7855a6a94 <unknown>
+#21 0x7fd785633c3c <unknown>
+[2024-10-03T21:39:36.235+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55677f07586a <unknown>
+#1 0x55677ed43e50 <unknown>
+#2 0x55677ed93644 <unknown>
+#3 0x55677ed93931 <unknown>
+#4 0x55677ed87f96 <unknown>
+#5 0x55677edb84bd <unknown>
+#6 0x55677ed87e89 <unknown>
+#7 0x55677edb865e <unknown>
+#8 0x55677edd69c6 <unknown>
+#9 0x55677edb8233 <unknown>
+#10 0x55677ed86093 <unknown>
+#11 0x55677ed8709e <unknown>
+#12 0x55677f03cacb <unknown>
+#13 0x55677f040a81 <unknown>
+#14 0x55677f028695 <unknown>
+#15 0x55677f0415f2 <unknown>
+#16 0x55677f00d86f <unknown>
+#17 0x55677f064668 <unknown>
+#18 0x55677f064832 <unknown>
+#19 0x55677f07465c <unknown>
+#20 0x7fd7855a6a94 <unknown>
+#21 0x7fd785633c3c <unknown>
+[2024-10-03T21:39:36.271+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55677f07586a <unknown>
+#1 0x55677ed43e50 <unknown>
+#2 0x55677ed93644 <unknown>
+#3 0x55677ed93931 <unknown>
+#4 0x55677ed87f96 <unknown>
+#5 0x55677edb84bd <unknown>
+#6 0x55677ed87e89 <unknown>
+#7 0x55677edb865e <unknown>
+#8 0x55677edd69c6 <unknown>
+#9 0x55677edb8233 <unknown>
+#10 0x55677ed86093 <unknown>
+#11 0x55677ed8709e <unknown>
+#12 0x55677f03cacb <unknown>
+#13 0x55677f040a81 <unknown>
+#14 0x55677f028695 <unknown>
+#15 0x55677f0415f2 <unknown>
+#16 0x55677f00d86f <unknown>
+#17 0x55677f064668 <unknown>
+#18 0x55677f064832 <unknown>
+#19 0x55677f07465c <unknown>
+#20 0x7fd7855a6a94 <unknown>
+#21 0x7fd785633c3c <unknown>
+[2024-10-03T21:39:36.288+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55677f07586a <unknown>
+#1 0x55677ed43e50 <unknown>
+#2 0x55677ed93644 <unknown>
+#3 0x55677ed93931 <unknown>
+#4 0x55677ed87f96 <unknown>
+#5 0x55677edb84bd <unknown>
+#6 0x55677ed87e89 <unknown>
+#7 0x55677edb865e <unknown>
+#8 0x55677edd69c6 <unknown>
+#9 0x55677edb8233 <unknown>
+#10 0x55677ed86093 <unknown>
+#11 0x55677ed8709e <unknown>
+#12 0x55677f03cacb <unknown>
+#13 0x55677f040a81 <unknown>
+#14 0x55677f028695 <unknown>
+#15 0x55677f0415f2 <unknown>
+#16 0x55677f00d86f <unknown>
+#17 0x55677f064668 <unknown>
+#18 0x55677f064832 <unknown>
+#19 0x55677f07465c <unknown>
+#20 0x7fd7855a6a94 <unknown>
+#21 0x7fd785633c3c <unknown>
+[2024-10-03T21:39:36.324+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//h2"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55677f07586a <unknown>
+#1 0x55677ed43e50 <unknown>
+#2 0x55677ed93644 <unknown>
+#3 0x55677ed93931 <unknown>
+#4 0x55677ed87f96 <unknown>
+#5 0x55677edb84bd <unknown>
+#6 0x55677ed87e89 <unknown>
+#7 0x55677edb865e <unknown>
+#8 0x55677edd69c6 <unknown>
+#9 0x55677edb8233 <unknown>
+#10 0x55677ed86093 <unknown>
+#11 0x55677ed8709e <unknown>
+#12 0x55677f03cacb <unknown>
+#13 0x55677f040a81 <unknown>
+#14 0x55677f028695 <unknown>
+#15 0x55677f0415f2 <unknown>
+#16 0x55677f00d86f <unknown>
+#17 0x55677f064668 <unknown>
+#18 0x55677f064832 <unknown>
+#19 0x55677f07465c <unknown>
+#20 0x7fd7855a6a94 <unknown>
+#21 0x7fd785633c3c <unknown>
+[2024-10-03T21:39:36.341+0000] {logging_mixin.py:190} INFO - Erro ao processar produto: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//a"}
+  (Session info: chrome=128.0.6613.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x55677f07586a <unknown>
+#1 0x55677ed43e50 <unknown>
+#2 0x55677ed93644 <unknown>
+#3 0x55677ed93931 <unknown>
+#4 0x55677ed87f96 <unknown>
+#5 0x55677edb84bd <unknown>
+#6 0x55677ed87e89 <unknown>
+#7 0x55677edb865e <unknown>
+#8 0x55677edd69c6 <unknown>
+#9 0x55677edb8233 <unknown>
+#10 0x55677ed86093 <unknown>
+#11 0x55677ed8709e <unknown>
+#12 0x55677f03cacb <unknown>
+#13 0x55677f040a81 <unknown>
+#14 0x55677f028695 <unknown>
+#15 0x55677f0415f2 <unknown>
+#16 0x55677f00d86f <unknown>
+#17 0x55677f064668 <unknown>
+#18 0x55677f064832 <unknown>
+#19 0x55677f07465c <unknown>
+#20 0x7fd7855a6a94 <unknown>
+#21 0x7fd785633c3c <unknown>
+[2024-10-03T21:39:36.458+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-10-03T21:39:36.459+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=SitesWebScraping, task_id=Web_Extraction_siteA, run_id=manual__2024-10-03T21:37:10.374769+00:00, execution_date=20241003T213710, start_date=20241003T213712, end_date=20241003T213936
+[2024-10-03T21:39:36.505+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-10-03T21:39:36.529+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-10-03T21:39:36.534+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

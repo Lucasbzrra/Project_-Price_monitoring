@@ -1,0 +1,25 @@
+[2024-09-03T19:30:00.808+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: SitesWebScraping.create_container_kabum manual__2024-09-03T19:29:58.830004+00:00 [queued]>
+[2024-09-03T19:30:00.815+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: SitesWebScraping.create_container_kabum manual__2024-09-03T19:29:58.830004+00:00 [queued]>
+[2024-09-03T19:30:00.816+0000] {taskinstance.py:2171} INFO - Starting attempt 1 of 1
+[2024-09-03T19:30:00.831+0000] {taskinstance.py:2192} INFO - Executing <Task(CreateContainerInDataLake): create_container_kabum> on 2024-09-03 19:29:58.830004+00:00
+[2024-09-03T19:30:00.835+0000] {standard_task_runner.py:60} INFO - Started process 157 to run task
+[2024-09-03T19:30:00.838+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'SitesWebScraping', 'create_container_kabum', 'manual__2024-09-03T19:29:58.830004+00:00', '--job-id', '322', '--raw', '--subdir', 'DAGS_FOLDER/DagWebScraping.py', '--cfg-path', '/tmp/tmp7977thvh']
+[2024-09-03T19:30:00.841+0000] {standard_task_runner.py:88} INFO - Job 322: Subtask create_container_kabum
+[2024-09-03T19:30:00.888+0000] {task_command.py:423} INFO - Running <TaskInstance: SitesWebScraping.create_container_kabum manual__2024-09-03T19:29:58.830004+00:00 [running]> on host 0648ceca68fa
+[2024-09-03T19:30:00.972+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='SitesWebScraping' AIRFLOW_CTX_TASK_ID='create_container_kabum' AIRFLOW_CTX_EXECUTION_DATE='2024-09-03T19:29:58.830004+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-03T19:29:58.830004+00:00'
+[2024-09-03T19:30:00.975+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-03T19:30:00.976+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'mkdir -p /usr/local/***/datalake/kabum=2024-09-03']
+[2024-09-03T19:30:00.987+0000] {subprocess.py:86} INFO - Output:
+[2024-09-03T19:30:00.990+0000] {subprocess.py:93} INFO - mkdir: cannot create directory ‘/usr/local/***/datalake’: Permission denied
+[2024-09-03T19:30:00.990+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2024-09-03T19:30:01.000+0000] {taskinstance.py:2699} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 212, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2024-09-03T19:30:01.004+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=SitesWebScraping, task_id=create_container_kabum, execution_date=20240903T192958, start_date=20240903T193000, end_date=20240903T193001
+[2024-09-03T19:30:01.019+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 322 for task create_container_kabum (Bash command failed. The command returned a non-zero exit code 1.; 157)
+[2024-09-03T19:30:01.050+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-09-03T19:30:01.066+0000] {taskinstance.py:3281} INFO - 0 downstream tasks scheduled from follow-on schedule check

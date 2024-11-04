@@ -1,0 +1,24 @@
+[2024-10-08T20:50:23.560+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-10-08T20:50:23.581+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pipeline_webscraping.kabum_tasks.Create_Container_Silver_kabum manual__2024-10-08T20:42:36.660530+00:00 [queued]>
+[2024-10-08T20:50:23.592+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pipeline_webscraping.kabum_tasks.Create_Container_Silver_kabum manual__2024-10-08T20:42:36.660530+00:00 [queued]>
+[2024-10-08T20:50:23.593+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2024-10-08T20:50:23.611+0000] {taskinstance.py:2888} INFO - Executing <Task(CreateContainerInDataLake): kabum_tasks.Create_Container_Silver_kabum> on 2024-10-08 20:42:36.660530+00:00
+[2024-10-08T20:50:23.617+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=4576) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-08T20:50:23.618+0000] {standard_task_runner.py:72} INFO - Started process 4578 to run task
+[2024-10-08T20:50:23.619+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pipeline_webscraping', 'kabum_tasks.Create_Container_Silver_kabum', 'manual__2024-10-08T20:42:36.660530+00:00', '--job-id', '1446', '--raw', '--subdir', 'DAGS_FOLDER/DagWebScraping.py', '--cfg-path', '/tmp/tmpnigjjrw3']
+[2024-10-08T20:50:23.622+0000] {standard_task_runner.py:105} INFO - Job 1446: Subtask kabum_tasks.Create_Container_Silver_kabum
+[2024-10-08T20:50:23.688+0000] {task_command.py:467} INFO - Running <TaskInstance: pipeline_webscraping.kabum_tasks.Create_Container_Silver_kabum manual__2024-10-08T20:42:36.660530+00:00 [running]> on host 97b4e38b3eb9
+[2024-10-08T20:50:23.813+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pipeline_webscraping' AIRFLOW_CTX_TASK_ID='kabum_tasks.Create_Container_Silver_kabum' AIRFLOW_CTX_EXECUTION_DATE='2024-10-08T20:42:36.660530+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-08T20:42:36.660530+00:00'
+[2024-10-08T20:50:23.814+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-10-08T20:50:23.828+0000] {baseoperator.py:405} WARNING - CreateContainerInDataLake.execute cannot be called outside TaskInstance!
+[2024-10-08T20:50:23.829+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-10-08T20:50:23.830+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'mkdir -p /opt/***/datalake/silverzone/kabum_2024-10-08']
+[2024-10-08T20:50:23.844+0000] {subprocess.py:86} INFO - Output:
+[2024-10-08T20:50:23.849+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-10-08T20:50:23.885+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-10-08T20:50:23.886+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=pipeline_webscraping, task_id=kabum_tasks.Create_Container_Silver_kabum, run_id=manual__2024-10-08T20:42:36.660530+00:00, execution_date=20241008T204236, start_date=20241008T205023, end_date=20241008T205023
+[2024-10-08T20:50:23.914+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-10-08T20:50:23.939+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-10-08T20:50:23.955+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

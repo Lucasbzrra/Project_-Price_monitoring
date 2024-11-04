@@ -1,0 +1,920 @@
+[2024-11-02T11:34:30.915+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-02T11:34:30.930+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: LoadWebScraping.insert manual__2024-11-02T11:34:27.204190+00:00 [queued]>
+[2024-11-02T11:34:30.938+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: LoadWebScraping.insert manual__2024-11-02T11:34:27.204190+00:00 [queued]>
+[2024-11-02T11:34:30.939+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2024-11-02T11:34:30.957+0000] {taskinstance.py:2888} INFO - Executing <Task(SparkSubmitOperator): insert> on 2024-11-02 11:34:27.204190+00:00
+[2024-11-02T11:34:30.962+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=3455) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-11-02T11:34:30.964+0000] {standard_task_runner.py:72} INFO - Started process 3457 to run task
+[2024-11-02T11:34:30.964+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'LoadWebScraping', 'insert', 'manual__2024-11-02T11:34:27.204190+00:00', '--job-id', '172', '--raw', '--subdir', 'DAGS_FOLDER/LoadWebScraping.py', '--cfg-path', '/tmp/tmplc8n6fu9']
+[2024-11-02T11:34:30.967+0000] {standard_task_runner.py:105} INFO - Job 172: Subtask insert
+[2024-11-02T11:34:31.010+0000] {task_command.py:467} INFO - Running <TaskInstance: LoadWebScraping.insert manual__2024-11-02T11:34:27.204190+00:00 [running]> on host c9f99735a600
+[2024-11-02T11:34:31.090+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='LoadWebScraping' AIRFLOW_CTX_TASK_ID='insert' AIRFLOW_CTX_EXECUTION_DATE='2024-11-02T11:34:27.204190+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-02T11:34:27.204190+00:00'
+[2024-11-02T11:34:31.091+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-02T11:34:31.112+0000] {base.py:84} INFO - Retrieving connection 'spark_default'
+[2024-11-02T11:34:31.113+0000] {spark_submit.py:327} ERROR - Failed to decode base64 keytab: Incorrect padding
+[2024-11-02T11:34:31.114+0000] {spark_submit.py:304} INFO - Could not load connection string spark_default, defaulting to spark://spark:7077
+[2024-11-02T11:34:31.116+0000] {spark_submit.py:473} INFO - Spark-Submit cmd: spark-submit --master spark://spark:7077 --driver-class-path /opt/***/jars/postgresql-42.5.0.jar --jars /opt/***/jars/postgresql-42.5.0.jar --packages org.postgresql:postgresql:42.5.0 --name arrow-spark --deploy-mode client /opt/bitnami/spark/src/scripts_spark/LoadFileToDB.py
+[2024-11-02T11:34:32.471+0000] {spark_submit.py:634} INFO - :: loading settings :: url = jar:file:/home/***/.local/lib/python3.12/site-packages/pyspark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[2024-11-02T11:34:32.535+0000] {spark_submit.py:634} INFO - Ivy Default Cache set to: /home/***/.ivy2/cache
+[2024-11-02T11:34:32.536+0000] {spark_submit.py:634} INFO - The jars for the packages stored in: /home/***/.ivy2/jars
+[2024-11-02T11:34:32.548+0000] {spark_submit.py:634} INFO - org.postgresql#postgresql added as a dependency
+[2024-11-02T11:34:32.549+0000] {spark_submit.py:634} INFO - :: resolving dependencies :: org.apache.spark#spark-submit-parent-50a5afea-d10e-49da-8722-a67680c346f3;1.0
+[2024-11-02T11:34:32.549+0000] {spark_submit.py:634} INFO - confs: [default]
+[2024-11-02T11:34:32.644+0000] {spark_submit.py:634} INFO - found org.postgresql#postgresql;42.5.0 in central
+[2024-11-02T11:34:32.666+0000] {spark_submit.py:634} INFO - found org.checkerframework#checker-qual;3.5.0 in central
+[2024-11-02T11:34:32.684+0000] {spark_submit.py:634} INFO - :: resolution report :: resolve 127ms :: artifacts dl 7ms
+[2024-11-02T11:34:32.685+0000] {spark_submit.py:634} INFO - :: modules in use:
+[2024-11-02T11:34:32.688+0000] {spark_submit.py:634} INFO - org.checkerframework#checker-qual;3.5.0 from central in [default]
+[2024-11-02T11:34:32.689+0000] {spark_submit.py:634} INFO - org.postgresql#postgresql;42.5.0 from central in [default]
+[2024-11-02T11:34:32.690+0000] {spark_submit.py:634} INFO - ---------------------------------------------------------------------
+[2024-11-02T11:34:32.692+0000] {spark_submit.py:634} INFO - |                  |            modules            ||   artifacts   |
+[2024-11-02T11:34:32.696+0000] {spark_submit.py:634} INFO - |       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+[2024-11-02T11:34:32.697+0000] {spark_submit.py:634} INFO - ---------------------------------------------------------------------
+[2024-11-02T11:34:32.698+0000] {spark_submit.py:634} INFO - |      default     |   2   |   0   |   0   |   0   ||   2   |   0   |
+[2024-11-02T11:34:32.698+0000] {spark_submit.py:634} INFO - ---------------------------------------------------------------------
+[2024-11-02T11:34:32.699+0000] {spark_submit.py:634} INFO - :: retrieving :: org.apache.spark#spark-submit-parent-50a5afea-d10e-49da-8722-a67680c346f3
+[2024-11-02T11:34:32.699+0000] {spark_submit.py:634} INFO - confs: [default]
+[2024-11-02T11:34:32.700+0000] {spark_submit.py:634} INFO - 0 artifacts copied, 2 already retrieved (0kB/5ms)
+[2024-11-02T11:34:32.877+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:32 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2024-11-02T11:34:33.071+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:33 WARN DependencyUtils: Local jar /opt/***/jars/postgresql-42.5.0.jar does not exist, skipping.
+[2024-11-02T11:34:35.836+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:35 INFO SparkContext: Running Spark version 3.5.2
+[2024-11-02T11:34:35.837+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:35 INFO SparkContext: OS info Linux, 5.15.153.1-microsoft-standard-WSL2, amd64
+[2024-11-02T11:34:35.837+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:35 INFO SparkContext: Java version 17.0.13
+[2024-11-02T11:34:35.856+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:35 INFO ResourceUtils: ==============================================================
+[2024-11-02T11:34:35.856+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:35 INFO ResourceUtils: No custom resources configured for spark.driver.
+[2024-11-02T11:34:35.857+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:35 INFO ResourceUtils: ==============================================================
+[2024-11-02T11:34:35.857+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:35 INFO SparkContext: Submitted application: Insert_data
+[2024-11-02T11:34:35.877+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:35 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[2024-11-02T11:34:35.885+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:35 INFO ResourceProfile: Limiting resource is cpu
+[2024-11-02T11:34:35.886+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:35 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[2024-11-02T11:34:35.928+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:35 INFO SecurityManager: Changing view acls to: ***
+[2024-11-02T11:34:35.929+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:35 INFO SecurityManager: Changing modify acls to: ***
+[2024-11-02T11:34:35.929+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:35 INFO SecurityManager: Changing view acls groups to:
+[2024-11-02T11:34:35.930+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:35 INFO SecurityManager: Changing modify acls groups to:
+[2024-11-02T11:34:35.930+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:35 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: ***; groups with view permissions: EMPTY; users with modify permissions: ***; groups with modify permissions: EMPTY
+[2024-11-02T11:34:36.096+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:36 INFO Utils: Successfully started service 'sparkDriver' on port 33849.
+[2024-11-02T11:34:36.124+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:36 INFO SparkEnv: Registering MapOutputTracker
+[2024-11-02T11:34:36.151+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:36 INFO SparkEnv: Registering BlockManagerMaster
+[2024-11-02T11:34:36.181+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:36 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2024-11-02T11:34:36.182+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:36 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[2024-11-02T11:34:36.186+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:36 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[2024-11-02T11:34:36.203+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:36 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-b60a8e6c-bb41-44fe-a89d-ea3878994428
+[2024-11-02T11:34:36.214+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:36 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+[2024-11-02T11:34:36.226+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:36 INFO SparkEnv: Registering OutputCommitCoordinator
+[2024-11-02T11:34:36.322+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:36 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+[2024-11-02T11:34:36.373+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:36 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[2024-11-02T11:34:36.401+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:36 ERROR SparkContext: Failed to add /opt/bitnami/spark/jars/postgresql-42.5.0.jar to Spark environment
+[2024-11-02T11:34:36.402+0000] {spark_submit.py:634} INFO - java.io.FileNotFoundException: Jar /opt/bitnami/spark/jars/postgresql-42.5.0.jar not found
+[2024-11-02T11:34:36.403+0000] {spark_submit.py:634} INFO - at org.apache.spark.SparkContext.addLocalJarFile$1(SparkContext.scala:2095)
+[2024-11-02T11:34:36.403+0000] {spark_submit.py:634} INFO - at org.apache.spark.SparkContext.addJar(SparkContext.scala:2151)
+[2024-11-02T11:34:36.404+0000] {spark_submit.py:634} INFO - at org.apache.spark.SparkContext.$anonfun$new$15(SparkContext.scala:521)
+[2024-11-02T11:34:36.404+0000] {spark_submit.py:634} INFO - at org.apache.spark.SparkContext.$anonfun$new$15$adapted(SparkContext.scala:521)
+[2024-11-02T11:34:36.405+0000] {spark_submit.py:634} INFO - at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+[2024-11-02T11:34:36.405+0000] {spark_submit.py:634} INFO - at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+[2024-11-02T11:34:36.406+0000] {spark_submit.py:634} INFO - at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+[2024-11-02T11:34:36.406+0000] {spark_submit.py:634} INFO - at org.apache.spark.SparkContext.<init>(SparkContext.scala:521)
+[2024-11-02T11:34:36.407+0000] {spark_submit.py:634} INFO - at org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:58)
+[2024-11-02T11:34:36.407+0000] {spark_submit.py:634} INFO - at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+[2024-11-02T11:34:36.408+0000] {spark_submit.py:634} INFO - at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+[2024-11-02T11:34:36.408+0000] {spark_submit.py:634} INFO - at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+[2024-11-02T11:34:36.409+0000] {spark_submit.py:634} INFO - at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+[2024-11-02T11:34:36.409+0000] {spark_submit.py:634} INFO - at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+[2024-11-02T11:34:36.410+0000] {spark_submit.py:634} INFO - at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:247)
+[2024-11-02T11:34:36.410+0000] {spark_submit.py:634} INFO - at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+[2024-11-02T11:34:36.411+0000] {spark_submit.py:634} INFO - at py4j.Gateway.invoke(Gateway.java:238)
+[2024-11-02T11:34:36.411+0000] {spark_submit.py:634} INFO - at py4j.commands.ConstructorCommand.invokeConstructor(ConstructorCommand.java:80)
+[2024-11-02T11:34:36.411+0000] {spark_submit.py:634} INFO - at py4j.commands.ConstructorCommand.execute(ConstructorCommand.java:69)
+[2024-11-02T11:34:36.412+0000] {spark_submit.py:634} INFO - at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+[2024-11-02T11:34:36.412+0000] {spark_submit.py:634} INFO - at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+[2024-11-02T11:34:36.412+0000] {spark_submit.py:634} INFO - at java.base/java.lang.Thread.run(Thread.java:840)
+[2024-11-02T11:34:36.413+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:36 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.postgresql_postgresql-42.5.0.jar at file:///home/***/.ivy2/jars/org.postgresql_postgresql-42.5.0.jar with timestamp 1730547275830
+[2024-11-02T11:34:36.413+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:36 INFO Utils: Copying /home/***/.ivy2/jars/org.postgresql_postgresql-42.5.0.jar to /tmp/spark-24607bee-b57a-469d-bcfd-0ed424ea37bc/userFiles-57e9429e-eb50-47f8-95c6-3f2c7bcf31cb/org.postgresql_postgresql-42.5.0.jar
+[2024-11-02T11:34:36.415+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:36 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.checkerframework_checker-qual-3.5.0.jar at file:///home/***/.ivy2/jars/org.checkerframework_checker-qual-3.5.0.jar with timestamp 1730547275830
+[2024-11-02T11:34:36.415+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:36 INFO Utils: Copying /home/***/.ivy2/jars/org.checkerframework_checker-qual-3.5.0.jar to /tmp/spark-24607bee-b57a-469d-bcfd-0ed424ea37bc/userFiles-57e9429e-eb50-47f8-95c6-3f2c7bcf31cb/org.checkerframework_checker-qual-3.5.0.jar
+[2024-11-02T11:34:36.475+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:36 INFO Executor: Starting executor ID driver on host c9f99735a600
+[2024-11-02T11:34:36.476+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:36 INFO Executor: OS info Linux, 5.15.153.1-microsoft-standard-WSL2, amd64
+[2024-11-02T11:34:36.477+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:36 INFO Executor: Java version 17.0.13
+[2024-11-02T11:34:36.482+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:36 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+[2024-11-02T11:34:36.483+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:36 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@165a4aa9 for default.
+[2024-11-02T11:34:36.493+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:36 INFO Executor: Fetching file:///home/***/.ivy2/jars/org.checkerframework_checker-qual-3.5.0.jar with timestamp 1730547275830
+[2024-11-02T11:34:36.508+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:36 INFO Utils: /home/***/.ivy2/jars/org.checkerframework_checker-qual-3.5.0.jar has been previously copied to /tmp/spark-24607bee-b57a-469d-bcfd-0ed424ea37bc/userFiles-57e9429e-eb50-47f8-95c6-3f2c7bcf31cb/org.checkerframework_checker-qual-3.5.0.jar
+[2024-11-02T11:34:36.513+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:36 INFO Executor: Fetching file:///home/***/.ivy2/jars/org.postgresql_postgresql-42.5.0.jar with timestamp 1730547275830
+[2024-11-02T11:34:36.516+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:36 INFO Utils: /home/***/.ivy2/jars/org.postgresql_postgresql-42.5.0.jar has been previously copied to /tmp/spark-24607bee-b57a-469d-bcfd-0ed424ea37bc/userFiles-57e9429e-eb50-47f8-95c6-3f2c7bcf31cb/org.postgresql_postgresql-42.5.0.jar
+[2024-11-02T11:34:36.529+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:36 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 35601.
+[2024-11-02T11:34:36.529+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:36 INFO NettyBlockTransferService: Server created on c9f99735a600:35601
+[2024-11-02T11:34:36.531+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:36 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[2024-11-02T11:34:36.536+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:36 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, c9f99735a600, 35601, None)
+[2024-11-02T11:34:36.539+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:36 INFO BlockManagerMasterEndpoint: Registering block manager c9f99735a600:35601 with 434.4 MiB RAM, BlockManagerId(driver, c9f99735a600, 35601, None)
+[2024-11-02T11:34:36.541+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:36 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, c9f99735a600, 35601, None)
+[2024-11-02T11:34:36.542+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:36 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, c9f99735a600, 35601, None)
+[2024-11-02T11:34:37.473+0000] {spark_submit.py:634} INFO - [2024-11-02T11:34:37.472+0000] {base.py:84} INFO - Retrieving connection 's3_connect'
+[2024-11-02T11:34:37.473+0000] {spark_submit.py:634} INFO - [2024-11-02T11:34:37.473+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connect', conn_type='aws') credentials retrieved from login and password.
+[2024-11-02T11:34:41.771+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:41 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+[2024-11-02T11:34:41.773+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:41 INFO SharedState: Warehouse path is 'file:/opt/***/spark-warehouse'.
+[2024-11-02T11:34:42.927+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:42 INFO InMemoryFileIndex: It took 446 ms to list leaf files for 13 paths.
+[2024-11-02T11:34:43.239+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:43 INFO SparkContext: Starting job: parquet at NativeMethodAccessorImpl.java:0
+[2024-11-02T11:34:43.250+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:43 INFO DAGScheduler: Got job 0 (parquet at NativeMethodAccessorImpl.java:0) with 1 output partitions
+[2024-11-02T11:34:43.251+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:43 INFO DAGScheduler: Final stage: ResultStage 0 (parquet at NativeMethodAccessorImpl.java:0)
+[2024-11-02T11:34:43.251+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:43 INFO DAGScheduler: Parents of final stage: List()
+[2024-11-02T11:34:43.252+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:43 INFO DAGScheduler: Missing parents: List()
+[2024-11-02T11:34:43.255+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:43 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[1] at parquet at NativeMethodAccessorImpl.java:0), which has no missing parents
+[2024-11-02T11:34:43.314+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:43 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 104.2 KiB, free 434.3 MiB)
+[2024-11-02T11:34:43.344+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:43 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 37.6 KiB, free 434.3 MiB)
+[2024-11-02T11:34:43.347+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:43 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on c9f99735a600:35601 (size: 37.6 KiB, free: 434.4 MiB)
+[2024-11-02T11:34:43.350+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:43 INFO SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:1585
+[2024-11-02T11:34:43.366+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:43 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[1] at parquet at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+[2024-11-02T11:34:43.367+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:43 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks resource profile 0
+[2024-11-02T11:34:43.411+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:43 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (c9f99735a600, executor driver, partition 0, PROCESS_LOCAL, 9514 bytes)
+[2024-11-02T11:34:43.428+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:43 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+[2024-11-02T11:34:43.724+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:43 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 2165 bytes result sent to driver
+[2024-11-02T11:34:43.732+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:43 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 338 ms on c9f99735a600 (executor driver) (1/1)
+[2024-11-02T11:34:43.734+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:43 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool
+[2024-11-02T11:34:43.737+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:43 INFO DAGScheduler: ResultStage 0 (parquet at NativeMethodAccessorImpl.java:0) finished in 0.472 s
+[2024-11-02T11:34:43.740+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:43 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+[2024-11-02T11:34:43.740+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:43 INFO TaskSchedulerImpl: Killing all running tasks in stage 0: Stage finished
+[2024-11-02T11:34:43.742+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:43 INFO DAGScheduler: Job 0 finished: parquet at NativeMethodAccessorImpl.java:0, took 0.502756 s
+[2024-11-02T11:34:43.793+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:43 INFO BlockManagerInfo: Removed broadcast_0_piece0 on c9f99735a600:35601 in memory (size: 37.6 KiB, free: 434.4 MiB)
+[2024-11-02T11:34:44.553+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:44 INFO FileSourceStrategy: Pushed Filters:
+[2024-11-02T11:34:44.554+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:44 INFO FileSourceStrategy: Post-Scan Filters:
+[2024-11-02T11:34:44.886+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:44 INFO CodeGenerator: Code generated in 182.988179 ms
+[2024-11-02T11:34:44.913+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:44 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 203.1 KiB, free 434.2 MiB)
+[2024-11-02T11:34:44.921+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:44 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 35.5 KiB, free 434.2 MiB)
+[2024-11-02T11:34:44.922+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:44 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on c9f99735a600:35601 (size: 35.5 KiB, free: 434.4 MiB)
+[2024-11-02T11:34:44.923+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:44 INFO SparkContext: Created broadcast 1 from showString at NativeMethodAccessorImpl.java:0
+[2024-11-02T11:34:44.934+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:44 INFO FileSourceScanExec: Planning scan with bin packing, max size: 54722245 bytes, open cost is considered as scanning 4194304 bytes.
+[2024-11-02T11:34:44.971+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:44 INFO SparkContext: Starting job: showString at NativeMethodAccessorImpl.java:0
+[2024-11-02T11:34:44.972+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:44 INFO DAGScheduler: Got job 1 (showString at NativeMethodAccessorImpl.java:0) with 1 output partitions
+[2024-11-02T11:34:44.972+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:44 INFO DAGScheduler: Final stage: ResultStage 1 (showString at NativeMethodAccessorImpl.java:0)
+[2024-11-02T11:34:44.973+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:44 INFO DAGScheduler: Parents of final stage: List()
+[2024-11-02T11:34:44.973+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:44 INFO DAGScheduler: Missing parents: List()
+[2024-11-02T11:34:44.974+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:44 INFO DAGScheduler: Submitting ResultStage 1 (MapPartitionsRDD[5] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+[2024-11-02T11:34:44.993+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:44 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 19.8 KiB, free 434.1 MiB)
+[2024-11-02T11:34:44.995+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:44 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 7.6 KiB, free 434.1 MiB)
+[2024-11-02T11:34:44.996+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:44 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on c9f99735a600:35601 (size: 7.6 KiB, free: 434.4 MiB)
+[2024-11-02T11:34:44.997+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:44 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1585
+[2024-11-02T11:34:44.999+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:44 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 1 (MapPartitionsRDD[5] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+[2024-11-02T11:34:44.999+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:44 INFO TaskSchedulerImpl: Adding task set 1.0 with 1 tasks resource profile 0
+[2024-11-02T11:34:45.003+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:45 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1) (c9f99735a600, executor driver, partition 0, PROCESS_LOCAL, 12464 bytes)
+[2024-11-02T11:34:45.004+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:45 INFO Executor: Running task 0.0 in stage 1.0 (TID 1)
+[2024-11-02T11:34:45.067+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:45 INFO CodeGenerator: Code generated in 24.484555 ms
+[2024-11-02T11:34:45.071+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:45 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/kabum_2024-11-01/processador_k.parquet/part-00000-5cb709ff-1e04-42b1-9e46-cb090321b0a3-c000.snappy.parquet, range: 0-27806, partition values: [empty row]
+[2024-11-02T11:34:45.199+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:45 INFO CodecPool: Got brand-new decompressor [.snappy]
+[2024-11-02T11:34:45.320+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:45 INFO Executor: Finished task 0.0 in stage 1.0 (TID 1). 3886 bytes result sent to driver
+[2024-11-02T11:34:45.322+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:45 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 1) in 322 ms on c9f99735a600 (executor driver) (1/1)
+[2024-11-02T11:34:45.323+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:45 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool
+[2024-11-02T11:34:45.324+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:45 INFO DAGScheduler: ResultStage 1 (showString at NativeMethodAccessorImpl.java:0) finished in 0.348 s
+[2024-11-02T11:34:45.324+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:45 INFO DAGScheduler: Job 1 is finished. Cancelling potential speculative or zombie tasks for this job
+[2024-11-02T11:34:45.325+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:45 INFO TaskSchedulerImpl: Killing all running tasks in stage 1: Stage finished
+[2024-11-02T11:34:45.326+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:45 INFO DAGScheduler: Job 1 finished: showString at NativeMethodAccessorImpl.java:0, took 0.353868 s
+[2024-11-02T11:34:46.050+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:46 INFO CodeGenerator: Code generated in 14.893964 ms
+[2024-11-02T11:34:46.064+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:46 INFO BlockManagerInfo: Removed broadcast_2_piece0 on c9f99735a600:35601 in memory (size: 7.6 KiB, free: 434.4 MiB)
+[2024-11-02T11:34:46.066+0000] {spark_submit.py:634} INFO - +--------------------+-------+--------------+-----+-------+--------------------+------------+-------------+
+[2024-11-02T11:34:46.067+0000] {spark_submit.py:634} INFO - |           name_mark|  model|frequency_base|cache|  value|                 uri|data_collect|     category|
+[2024-11-02T11:34:46.068+0000] {spark_submit.py:634} INFO - +--------------------+-------+--------------+-----+-------+--------------------+------------+-------------+
+[2024-11-02T11:34:46.068+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD R...|RYZEN 7|           4.1|    4|1397.99|https://www.kabum...|  2024-11-01|processadores|
+[2024-11-02T11:34:46.068+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL...|CORE I5|           2.5|   18| 669.99|https://www.kabum...|  2024-11-01|processadores|
+[2024-11-02T11:34:46.069+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD R...|RYZEN 5|           4.6|    4| 847.99|https://www.kabum...|  2024-11-01|processadores|
+[2024-11-02T11:34:46.069+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD R...|RYZEN 5|           3.5|   35| 898.99|https://www.kabum...|  2024-11-01|processadores|
+[2024-11-02T11:34:46.069+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD R...|RYZEN 5|           3.7|   11| 698.99|https://www.kabum...|  2024-11-01|processadores|
+[2024-11-02T11:34:46.070+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD R...|RYZEN 7|           3.4|   36|1249.99|https://www.kabum...|  2024-11-01|processadores|
+[2024-11-02T11:34:46.070+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD R...|RYZEN 5|           3.6|   16| 572.90|https://www.kabum...|  2024-11-01|processadores|
+[2024-11-02T11:34:46.071+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD R...|RYZEN 5|           3.6|   19| 629.99|https://www.kabum...|  2024-11-01|processadores|
+[2024-11-02T11:34:46.071+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD R...|RYZEN 3|           3.6|    4| 398.99|https://www.kabum...|  2024-11-01|processadores|
+[2024-11-02T11:34:46.071+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD R...|RYZEN 5|           3.7|   35| 998.99|https://www.kabum...|  2024-11-01|processadores|
+[2024-11-02T11:34:46.072+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD R...|RYZEN 7|           3.8|   20|1159.99|https://www.kabum...|  2024-11-01|processadores|
+[2024-11-02T11:34:46.072+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD R...|RYZEN 7|           5.0|  104|2999.99|https://www.kabum...|  2024-11-01|processadores|
+[2024-11-02T11:34:46.073+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL...|CORE I5|           2.5|   18| 849.99|https://www.kabum...|  2024-11-01|processadores|
+[2024-11-02T11:34:46.073+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL...|CORE I5|           2.9|   12| 579.90|https://www.kabum...|  2024-11-01|processadores|
+[2024-11-02T11:34:46.073+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD R...|RYZEN 5|           5.1|   38|1339.99|https://www.kabum...|  2024-11-01|processadores|
+[2024-11-02T11:34:46.074+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD R...|RYZEN 7|           3.8|   36|1399.99|https://www.kabum...|  2024-11-01|processadores|
+[2024-11-02T11:34:46.074+0000] {spark_submit.py:634} INFO - |PROCESSADOR INTEL...|CORE I3|           3.7|    6| 599.99|https://www.kabum...|  2024-11-01|processadores|
+[2024-11-02T11:34:46.074+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD R...|RYZEN 5|           3.6|   11| 569.99|https://www.kabum...|  2024-11-01|processadores|
+[2024-11-02T11:34:46.074+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD R...|RYZEN 7|           4.6|    4| 999.99|https://www.kabum...|  2024-11-01|processadores|
+[2024-11-02T11:34:46.075+0000] {spark_submit.py:634} INFO - |PROCESSADOR AMD R...|RYZEN 5|           4.6|   19| 789.90|https://www.kabum...|  2024-11-01|processadores|
+[2024-11-02T11:34:46.075+0000] {spark_submit.py:634} INFO - +--------------------+-------+--------------+-----+-------+--------------------+------------+-------------+
+[2024-11-02T11:34:46.075+0000] {spark_submit.py:634} INFO - only showing top 20 rows
+[2024-11-02T11:34:46.076+0000] {spark_submit.py:634} INFO - 
+[2024-11-02T11:34:46.462+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:46 INFO FileSourceStrategy: Pushed Filters: IsNotNull(name_mark)
+[2024-11-02T11:34:46.463+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:46 INFO FileSourceStrategy: Post-Scan Filters: isnotnull(name_mark#0)
+[2024-11-02T11:34:46.567+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:46 INFO CodeGenerator: Code generated in 17.016572 ms
+[2024-11-02T11:34:46.571+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:46 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 203.0 KiB, free 434.0 MiB)
+[2024-11-02T11:34:46.579+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:46 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 35.5 KiB, free 433.9 MiB)
+[2024-11-02T11:34:46.579+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:46 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on c9f99735a600:35601 (size: 35.5 KiB, free: 434.3 MiB)
+[2024-11-02T11:34:46.580+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:46 INFO SparkContext: Created broadcast 3 from $anonfun$withThreadLocalCaptured$1 at FutureTask.java:264
+[2024-11-02T11:34:46.582+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:46 INFO FileSourceScanExec: Planning scan with bin packing, max size: 54722245 bytes, open cost is considered as scanning 4194304 bytes.
+[2024-11-02T11:34:46.595+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:46 INFO SparkContext: Starting job: $anonfun$withThreadLocalCaptured$1 at FutureTask.java:264
+[2024-11-02T11:34:46.596+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:46 INFO DAGScheduler: Got job 2 ($anonfun$withThreadLocalCaptured$1 at FutureTask.java:264) with 1 output partitions
+[2024-11-02T11:34:46.597+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:46 INFO DAGScheduler: Final stage: ResultStage 2 ($anonfun$withThreadLocalCaptured$1 at FutureTask.java:264)
+[2024-11-02T11:34:46.597+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:46 INFO DAGScheduler: Parents of final stage: List()
+[2024-11-02T11:34:46.598+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:46 INFO DAGScheduler: Missing parents: List()
+[2024-11-02T11:34:46.598+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:46 INFO DAGScheduler: Submitting ResultStage 2 (MapPartitionsRDD[10] at $anonfun$withThreadLocalCaptured$1 at FutureTask.java:264), which has no missing parents
+[2024-11-02T11:34:46.599+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:46 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 18.9 KiB, free 433.9 MiB)
+[2024-11-02T11:34:46.607+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:46 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 7.4 KiB, free 433.9 MiB)
+[2024-11-02T11:34:46.608+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:46 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on c9f99735a600:35601 (size: 7.4 KiB, free: 434.3 MiB)
+[2024-11-02T11:34:46.608+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:46 INFO SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:1585
+[2024-11-02T11:34:46.609+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:46 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 2 (MapPartitionsRDD[10] at $anonfun$withThreadLocalCaptured$1 at FutureTask.java:264) (first 15 tasks are for partitions Vector(0))
+[2024-11-02T11:34:46.609+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:46 INFO TaskSchedulerImpl: Adding task set 2.0 with 1 tasks resource profile 0
+[2024-11-02T11:34:46.610+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:46 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 2) (c9f99735a600, executor driver, partition 0, PROCESS_LOCAL, 12464 bytes)
+[2024-11-02T11:34:46.611+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:46 INFO Executor: Running task 0.0 in stage 2.0 (TID 2)
+[2024-11-02T11:34:46.631+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:46 INFO CodeGenerator: Code generated in 14.608249 ms
+[2024-11-02T11:34:46.632+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:46 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/kabum_2024-11-01/processador_k.parquet/part-00000-5cb709ff-1e04-42b1-9e46-cb090321b0a3-c000.snappy.parquet, range: 0-27806, partition values: [empty row]
+[2024-11-02T11:34:46.692+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:46 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:46.743+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:46 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/kabum_2024-10-26/processador_k.parquet/part-00000-6ad4696e-f9ea-4819-884d-b4775a66b29b-c000.snappy.parquet, range: 0-25001, partition values: [empty row]
+[2024-11-02T11:34:46.805+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:46 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:46.815+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:46 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/kabum_2024-10-23/processador_k.parquet/part-00000-6649498c-1913-4c36-95a8-af5345514ae4-c000.snappy.parquet, range: 0-24687, partition values: [empty row]
+[2024-11-02T11:34:46.878+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:46 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:46.886+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:46 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/kabum_2024-10-25/processador_k.parquet/part-00000-61a7979d-93aa-4e18-8693-2698ad227e4c-c000.snappy.parquet, range: 0-24680, partition values: [empty row]
+[2024-11-02T11:34:46.952+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:46 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:46.960+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:46 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/kabum_2024-10-21/processador_k.parquet/part-00000-b647d611-5ff2-40e9-b446-f43820ff111c-c000.snappy.parquet, range: 0-24606, partition values: [empty row]
+[2024-11-02T11:34:47.026+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:47.033+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/kabum_2024-10-22/processador_k.parquet/part-00000-15586bea-32b5-490b-b975-4c9218e73f3c-c000.snappy.parquet, range: 0-24227, partition values: [empty row]
+[2024-11-02T11:34:47.100+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:47.109+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/pichau_2024-11-01/processador_k.parquet/part-00000-f597554f-6b8f-4798-aace-2c93761637d4-c000.snappy.parquet, range: 0-6820, partition values: [empty row]
+[2024-11-02T11:34:47.166+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:47.173+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/pichau_2024-10-23/processador_k.parquet/part-00000-47c2ed78-84f2-4f93-b675-1ae93be332aa-c000.snappy.parquet, range: 0-6771, partition values: [empty row]
+[2024-11-02T11:34:47.236+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:47.243+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/pichau_2024-10-27/processador_k.parquet/part-00000-fef550f8-143d-4870-95d7-424df5c94588-c000.snappy.parquet, range: 0-6514, partition values: [empty row]
+[2024-11-02T11:34:47.295+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:47.302+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/pichau_2024-10-25/processador_k.parquet/part-00000-677cf95f-23a1-4745-9130-d9ac23a5332c-c000.snappy.parquet, range: 0-6378, partition values: [empty row]
+[2024-11-02T11:34:47.368+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:47.375+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/pichau_2024-10-21/processador_k.parquet/part-00000-41ba3713-b8c0-404c-bbb9-a2aef64ee2fb-c000.snappy.parquet, range: 0-6353, partition values: [empty row]
+[2024-11-02T11:34:47.432+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:47.438+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/pichau_2024-10-22/processador_k.parquet/part-00000-c9f66eb2-2a01-4e6c-a0be-f0201abd1e56-c000.snappy.parquet, range: 0-6276, partition values: [empty row]
+[2024-11-02T11:34:47.499+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:47.508+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/pichau_2024-10-26/processador_k.parquet/part-00000-51e8e3a1-b04a-4dc8-b0e1-79cf2df64eec-c000.snappy.parquet, range: 0-6174, partition values: [empty row]
+[2024-11-02T11:34:47.566+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:47.579+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO Executor: Finished task 0.0 in stage 2.0 (TID 2). 229371 bytes result sent to driver
+[2024-11-02T11:34:47.585+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO TaskSetManager: Finished task 0.0 in stage 2.0 (TID 2) in 975 ms on c9f99735a600 (executor driver) (1/1)
+[2024-11-02T11:34:47.586+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO TaskSchedulerImpl: Removed TaskSet 2.0, whose tasks have all completed, from pool
+[2024-11-02T11:34:47.586+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO DAGScheduler: ResultStage 2 ($anonfun$withThreadLocalCaptured$1 at FutureTask.java:264) finished in 0.988 s
+[2024-11-02T11:34:47.587+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO DAGScheduler: Job 2 is finished. Cancelling potential speculative or zombie tasks for this job
+[2024-11-02T11:34:47.587+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO TaskSchedulerImpl: Killing all running tasks in stage 2: Stage finished
+[2024-11-02T11:34:47.588+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO DAGScheduler: Job 2 finished: $anonfun$withThreadLocalCaptured$1 at FutureTask.java:264, took 0.991666 s
+[2024-11-02T11:34:47.615+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO BlockManagerInfo: Removed broadcast_1_piece0 on c9f99735a600:35601 in memory (size: 35.5 KiB, free: 434.4 MiB)
+[2024-11-02T11:34:47.616+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO CodeGenerator: Code generated in 11.435986 ms
+[2024-11-02T11:34:47.634+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 16.1 MiB, free 418.0 MiB)
+[2024-11-02T11:34:47.643+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 273.7 KiB, free 417.7 MiB)
+[2024-11-02T11:34:47.645+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on c9f99735a600:35601 (size: 273.7 KiB, free: 434.1 MiB)
+[2024-11-02T11:34:47.646+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO SparkContext: Created broadcast 5 from $anonfun$withThreadLocalCaptured$1 at FutureTask.java:264
+[2024-11-02T11:34:47.711+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO CodeGenerator: Code generated in 16.483045 ms
+[2024-11-02T11:34:47.719+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO SparkContext: Starting job: showString at NativeMethodAccessorImpl.java:0
+[2024-11-02T11:34:47.720+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO DAGScheduler: Got job 3 (showString at NativeMethodAccessorImpl.java:0) with 1 output partitions
+[2024-11-02T11:34:47.720+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO DAGScheduler: Final stage: ResultStage 3 (showString at NativeMethodAccessorImpl.java:0)
+[2024-11-02T11:34:47.721+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO DAGScheduler: Parents of final stage: List()
+[2024-11-02T11:34:47.721+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO DAGScheduler: Missing parents: List()
+[2024-11-02T11:34:47.722+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO DAGScheduler: Submitting ResultStage 3 (MapPartitionsRDD[13] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+[2024-11-02T11:34:47.737+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO MemoryStore: Block broadcast_6 stored as values in memory (estimated size 17.3 KiB, free 417.7 MiB)
+[2024-11-02T11:34:47.746+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 8.2 KiB, free 417.7 MiB)
+[2024-11-02T11:34:47.748+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO BlockManagerInfo: Added broadcast_6_piece0 in memory on c9f99735a600:35601 (size: 8.2 KiB, free: 434.1 MiB)
+[2024-11-02T11:34:47.749+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO SparkContext: Created broadcast 6 from broadcast at DAGScheduler.scala:1585
+[2024-11-02T11:34:47.750+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 3 (MapPartitionsRDD[13] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+[2024-11-02T11:34:47.751+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO TaskSchedulerImpl: Adding task set 3.0 with 1 tasks resource profile 0
+[2024-11-02T11:34:47.753+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO TaskSetManager: Starting task 0.0 in stage 3.0 (TID 3) (c9f99735a600, executor driver, partition 0, PROCESS_LOCAL, 9158 bytes)
+[2024-11-02T11:34:47.753+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO Executor: Running task 0.0 in stage 3.0 (TID 3)
+[2024-11-02T11:34:47.840+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO CodeGenerator: Code generated in 15.427991 ms
+[2024-11-02T11:34:47.851+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO JDBCRDD: closed connection
+[2024-11-02T11:34:47.855+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO Executor: Finished task 0.0 in stage 3.0 (TID 3). 2380 bytes result sent to driver
+[2024-11-02T11:34:47.859+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO TaskSetManager: Finished task 0.0 in stage 3.0 (TID 3) in 106 ms on c9f99735a600 (executor driver) (1/1)
+[2024-11-02T11:34:47.859+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO TaskSchedulerImpl: Removed TaskSet 3.0, whose tasks have all completed, from pool
+[2024-11-02T11:34:47.862+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO DAGScheduler: ResultStage 3 (showString at NativeMethodAccessorImpl.java:0) finished in 0.137 s
+[2024-11-02T11:34:47.863+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO DAGScheduler: Job 3 is finished. Cancelling potential speculative or zombie tasks for this job
+[2024-11-02T11:34:47.865+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO TaskSchedulerImpl: Killing all running tasks in stage 3: Stage finished
+[2024-11-02T11:34:47.865+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO DAGScheduler: Job 3 finished: showString at NativeMethodAccessorImpl.java:0, took 0.140948 s
+[2024-11-02T11:34:47.879+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:47 INFO CodeGenerator: Code generated in 10.33653 ms
+[2024-11-02T11:34:47.882+0000] {spark_submit.py:634} INFO - +----------+--------+--------------+-----+-------+--------------------+------------+--------------+----------+
+[2024-11-02T11:34:47.883+0000] {spark_submit.py:634} INFO - |id_mark_fk|   model|frequency_base|cache|  value|                 uri|data_collect|ID_CATEGORY_FK|ID_SITE_FK|
+[2024-11-02T11:34:47.883+0000] {spark_submit.py:634} INFO - +----------+--------+--------------+-----+-------+--------------------+------------+--------------+----------+
+[2024-11-02T11:34:47.883+0000] {spark_submit.py:634} INFO - |       715|NOT_INFO|           2.6|    0|1025.99|https://www.kabum...|  2024-10-22|             2|         1|
+[2024-11-02T11:34:47.884+0000] {spark_submit.py:634} INFO - |       715|NOT_INFO|           2.6|    0|1025.99|https://www.kabum...|  2024-10-21|             2|         1|
+[2024-11-02T11:34:47.884+0000] {spark_submit.py:634} INFO - |       715|NOT_INFO|           2.6|    0|1025.99|https://www.kabum...|  2024-10-25|             2|         1|
+[2024-11-02T11:34:47.885+0000] {spark_submit.py:634} INFO - |       715|NOT_INFO|           2.6|    0|1025.99|https://www.kabum...|  2024-10-23|             2|         1|
+[2024-11-02T11:34:47.885+0000] {spark_submit.py:634} INFO - |       715|NOT_INFO|           2.6|    0|1025.99|https://www.kabum...|  2024-10-26|             2|         1|
+[2024-11-02T11:34:47.885+0000] {spark_submit.py:634} INFO - |       715|NOT_INFO|           2.6|    0|1025.99|https://www.kabum...|  2024-11-01|             2|         1|
+[2024-11-02T11:34:47.886+0000] {spark_submit.py:634} INFO - |       716| CORE I9|           3.8|    0|2583.86|https://www.kabum...|  2024-10-22|             2|         1|
+[2024-11-02T11:34:47.886+0000] {spark_submit.py:634} INFO - |       716| CORE I9|           3.8|    0|2583.86|https://www.kabum...|  2024-10-21|             2|         1|
+[2024-11-02T11:34:47.886+0000] {spark_submit.py:634} INFO - |       716| CORE I9|           3.8|    0|2221.90|https://www.kabum...|  2024-10-25|             2|         1|
+[2024-11-02T11:34:47.887+0000] {spark_submit.py:634} INFO - |       716| CORE I9|           3.8|    0|2221.90|https://www.kabum...|  2024-10-23|             2|         1|
+[2024-11-02T11:34:47.887+0000] {spark_submit.py:634} INFO - |       716| CORE I9|           3.8|    0|2221.90|https://www.kabum...|  2024-10-26|             2|         1|
+[2024-11-02T11:34:47.887+0000] {spark_submit.py:634} INFO - |       716| CORE I9|           3.8|    0|2221.90|https://www.kabum...|  2024-11-01|             2|         1|
+[2024-11-02T11:34:47.888+0000] {spark_submit.py:634} INFO - |       717| RYZEN 3|           4.0|    8| 639.99|https://www.picha...|  2024-10-26|             2|         2|
+[2024-11-02T11:34:47.888+0000] {spark_submit.py:634} INFO - |       717| RYZEN 3|           4.0|    8| 639.99|https://www.picha...|  2024-10-22|             2|         2|
+[2024-11-02T11:34:47.888+0000] {spark_submit.py:634} INFO - |       717| RYZEN 3|           4.0|    8| 599.99|https://www.picha...|  2024-10-21|             2|         2|
+[2024-11-02T11:34:47.892+0000] {spark_submit.py:634} INFO - |       717| RYZEN 3|           4.0|    8| 639.99|https://www.picha...|  2024-10-25|             2|         2|
+[2024-11-02T11:34:47.893+0000] {spark_submit.py:634} INFO - |       717| RYZEN 3|           4.0|    8| 639.99|https://www.picha...|  2024-10-30|             2|         2|
+[2024-11-02T11:34:47.895+0000] {spark_submit.py:634} INFO - |       717| RYZEN 3|           4.0|    8| 639.99|https://www.picha...|  2024-10-23|             2|         2|
+[2024-11-02T11:34:47.898+0000] {spark_submit.py:634} INFO - |       717| RYZEN 3|           4.0|    8| 639.99|https://www.picha...|  2024-11-01|             2|         2|
+[2024-11-02T11:34:47.898+0000] {spark_submit.py:634} INFO - |       717| RYZEN 3|           4.2|    8| 639.99|https://www.kabum...|  2024-10-22|             2|         1|
+[2024-11-02T11:34:47.899+0000] {spark_submit.py:634} INFO - +----------+--------+--------------+-----+-------+--------------------+------------+--------------+----------+
+[2024-11-02T11:34:47.899+0000] {spark_submit.py:634} INFO - only showing top 20 rows
+[2024-11-02T11:34:47.899+0000] {spark_submit.py:634} INFO - 
+[2024-11-02T11:34:48.445+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO InMemoryFileIndex: It took 417 ms to list leaf files for 13 paths.
+[2024-11-02T11:34:48.478+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO SparkContext: Starting job: parquet at NativeMethodAccessorImpl.java:0
+[2024-11-02T11:34:48.479+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO DAGScheduler: Got job 4 (parquet at NativeMethodAccessorImpl.java:0) with 1 output partitions
+[2024-11-02T11:34:48.480+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO DAGScheduler: Final stage: ResultStage 4 (parquet at NativeMethodAccessorImpl.java:0)
+[2024-11-02T11:34:48.481+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO DAGScheduler: Parents of final stage: List()
+[2024-11-02T11:34:48.481+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO DAGScheduler: Missing parents: List()
+[2024-11-02T11:34:48.482+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO DAGScheduler: Submitting ResultStage 4 (MapPartitionsRDD[15] at parquet at NativeMethodAccessorImpl.java:0), which has no missing parents
+[2024-11-02T11:34:48.486+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO MemoryStore: Block broadcast_7 stored as values in memory (estimated size 104.2 KiB, free 417.6 MiB)
+[2024-11-02T11:34:48.492+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 37.6 KiB, free 417.6 MiB)
+[2024-11-02T11:34:48.494+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO BlockManagerInfo: Added broadcast_7_piece0 in memory on c9f99735a600:35601 (size: 37.6 KiB, free: 434.0 MiB)
+[2024-11-02T11:34:48.495+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO BlockManagerInfo: Removed broadcast_6_piece0 on c9f99735a600:35601 in memory (size: 8.2 KiB, free: 434.1 MiB)
+[2024-11-02T11:34:48.496+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO SparkContext: Created broadcast 7 from broadcast at DAGScheduler.scala:1585
+[2024-11-02T11:34:48.498+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 4 (MapPartitionsRDD[15] at parquet at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+[2024-11-02T11:34:48.502+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO TaskSchedulerImpl: Adding task set 4.0 with 1 tasks resource profile 0
+[2024-11-02T11:34:48.502+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO TaskSetManager: Starting task 0.0 in stage 4.0 (TID 4) (c9f99735a600, executor driver, partition 0, PROCESS_LOCAL, 9510 bytes)
+[2024-11-02T11:34:48.503+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO Executor: Running task 0.0 in stage 4.0 (TID 4)
+[2024-11-02T11:34:48.559+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO Executor: Finished task 0.0 in stage 4.0 (TID 4). 2222 bytes result sent to driver
+[2024-11-02T11:34:48.560+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO TaskSetManager: Finished task 0.0 in stage 4.0 (TID 4) in 63 ms on c9f99735a600 (executor driver) (1/1)
+[2024-11-02T11:34:48.562+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO TaskSchedulerImpl: Removed TaskSet 4.0, whose tasks have all completed, from pool
+[2024-11-02T11:34:48.563+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO DAGScheduler: ResultStage 4 (parquet at NativeMethodAccessorImpl.java:0) finished in 0.081 s
+[2024-11-02T11:34:48.564+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO DAGScheduler: Job 4 is finished. Cancelling potential speculative or zombie tasks for this job
+[2024-11-02T11:34:48.564+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO TaskSchedulerImpl: Killing all running tasks in stage 4: Stage finished
+[2024-11-02T11:34:48.564+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO DAGScheduler: Job 4 finished: parquet at NativeMethodAccessorImpl.java:0, took 0.085142 s
+[2024-11-02T11:34:48.602+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO FileSourceStrategy: Pushed Filters:
+[2024-11-02T11:34:48.602+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO FileSourceStrategy: Post-Scan Filters:
+[2024-11-02T11:34:48.633+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO CodeGenerator: Code generated in 16.58845 ms
+[2024-11-02T11:34:48.637+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO MemoryStore: Block broadcast_8 stored as values in memory (estimated size 203.3 KiB, free 417.4 MiB)
+[2024-11-02T11:34:48.647+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO MemoryStore: Block broadcast_8_piece0 stored as bytes in memory (estimated size 35.7 KiB, free 417.4 MiB)
+[2024-11-02T11:34:48.650+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO BlockManagerInfo: Added broadcast_8_piece0 in memory on c9f99735a600:35601 (size: 35.7 KiB, free: 434.0 MiB)
+[2024-11-02T11:34:48.650+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO SparkContext: Created broadcast 8 from showString at NativeMethodAccessorImpl.java:0
+[2024-11-02T11:34:48.652+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO FileSourceScanExec: Planning scan with bin packing, max size: 54841209 bytes, open cost is considered as scanning 4194304 bytes.
+[2024-11-02T11:34:48.653+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO BlockManagerInfo: Removed broadcast_7_piece0 on c9f99735a600:35601 in memory (size: 37.6 KiB, free: 434.1 MiB)
+[2024-11-02T11:34:48.659+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO SparkContext: Starting job: showString at NativeMethodAccessorImpl.java:0
+[2024-11-02T11:34:48.660+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO DAGScheduler: Got job 5 (showString at NativeMethodAccessorImpl.java:0) with 1 output partitions
+[2024-11-02T11:34:48.660+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO DAGScheduler: Final stage: ResultStage 5 (showString at NativeMethodAccessorImpl.java:0)
+[2024-11-02T11:34:48.661+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO DAGScheduler: Parents of final stage: List()
+[2024-11-02T11:34:48.661+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO DAGScheduler: Missing parents: List()
+[2024-11-02T11:34:48.662+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO DAGScheduler: Submitting ResultStage 5 (MapPartitionsRDD[19] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+[2024-11-02T11:34:48.664+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO MemoryStore: Block broadcast_9 stored as values in memory (estimated size 21.1 KiB, free 417.5 MiB)
+[2024-11-02T11:34:48.666+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO MemoryStore: Block broadcast_9_piece0 stored as bytes in memory (estimated size 7.8 KiB, free 417.5 MiB)
+[2024-11-02T11:34:48.667+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO BlockManagerInfo: Added broadcast_9_piece0 in memory on c9f99735a600:35601 (size: 7.8 KiB, free: 434.0 MiB)
+[2024-11-02T11:34:48.667+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO SparkContext: Created broadcast 9 from broadcast at DAGScheduler.scala:1585
+[2024-11-02T11:34:48.668+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 5 (MapPartitionsRDD[19] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+[2024-11-02T11:34:48.668+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO TaskSchedulerImpl: Adding task set 5.0 with 1 tasks resource profile 0
+[2024-11-02T11:34:48.669+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO TaskSetManager: Starting task 0.0 in stage 5.0 (TID 5) (c9f99735a600, executor driver, partition 0, PROCESS_LOCAL, 12412 bytes)
+[2024-11-02T11:34:48.674+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO Executor: Running task 0.0 in stage 5.0 (TID 5)
+[2024-11-02T11:34:48.691+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO CodeGenerator: Code generated in 13.248679 ms
+[2024-11-02T11:34:48.692+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/kabum_2024-10-26/memoria_k.parquet/part-00000-a15506cc-228c-48bd-b96a-972e027598da-c000.snappy.parquet, range: 0-39369, partition values: [empty row]
+[2024-11-02T11:34:48.763+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO Executor: Finished task 0.0 in stage 5.0 (TID 5). 4730 bytes result sent to driver
+[2024-11-02T11:34:48.764+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO TaskSetManager: Finished task 0.0 in stage 5.0 (TID 5) in 94 ms on c9f99735a600 (executor driver) (1/1)
+[2024-11-02T11:34:48.764+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO TaskSchedulerImpl: Removed TaskSet 5.0, whose tasks have all completed, from pool
+[2024-11-02T11:34:48.765+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO DAGScheduler: ResultStage 5 (showString at NativeMethodAccessorImpl.java:0) finished in 0.102 s
+[2024-11-02T11:34:48.766+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO DAGScheduler: Job 5 is finished. Cancelling potential speculative or zombie tasks for this job
+[2024-11-02T11:34:48.767+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO TaskSchedulerImpl: Killing all running tasks in stage 5: Stage finished
+[2024-11-02T11:34:48.767+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO DAGScheduler: Job 5 finished: showString at NativeMethodAccessorImpl.java:0, took 0.107307 s
+[2024-11-02T11:34:48.779+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO CodeGenerator: Code generated in 8.737648 ms
+[2024-11-02T11:34:48.784+0000] {spark_submit.py:634} INFO - +--------------------+---------+----+---+---+-------+------+--------------------+------------+-----------+
+[2024-11-02T11:34:48.784+0000] {spark_submit.py:634} INFO - |         memory_name|name_mark| MHZ| GB|DDR|latency| value|                 uri|data_collect|   category|
+[2024-11-02T11:34:48.785+0000] {spark_submit.py:634} INFO - +--------------------+---------+----+---+---+-------+------+--------------------+------------+-----------+
+[2024-11-02T11:34:48.785+0000] {spark_submit.py:634} INFO - |MEMÓRIA RAM KINGS...| KINGSTON|3200|  8|  4|     16|119.99|https://www.kabum...|  2024-10-26|memoria-ram|
+[2024-11-02T11:34:48.786+0000] {spark_submit.py:634} INFO - |MEMÓRIA RAM KINGS...| KINGSTON|3200| 16|  4|     16|273.99|https://www.kabum...|  2024-10-26|memoria-ram|
+[2024-11-02T11:34:48.786+0000] {spark_submit.py:634} INFO - |MEMÓRIA RAM XPG G...|      XPG|3200|  8|  4|     16|134.99|https://www.kabum...|  2024-10-26|memoria-ram|
+[2024-11-02T11:34:48.787+0000] {spark_submit.py:634} INFO - |MEMÓRIA RAM XPG S...|      XPG|3200| 16|  4|     16|279.99|https://www.kabum...|  2024-10-26|memoria-ram|
+[2024-11-02T11:34:48.787+0000] {spark_submit.py:634} INFO - |MEMÓRIA RAM RISE ...|RISE MODE|1600|  8|  3|     11| 59.99|https://www.kabum...|  2024-10-26|memoria-ram|
+[2024-11-02T11:34:48.788+0000] {spark_submit.py:634} INFO - |MEMÓRIA RAM GAMER...|    HUSKY|3200| 16|  4|     19|209.99|https://www.kabum...|  2024-10-26|memoria-ram|
+[2024-11-02T11:34:48.788+0000] {spark_submit.py:634} INFO - |MEMÓRIA RAM KINGS...| KINGSTON|3200| 16|  4|     16|299.99|https://www.kabum...|  2024-10-26|memoria-ram|
+[2024-11-02T11:34:48.789+0000] {spark_submit.py:634} INFO - |MEMÓRIA RAM PARA ...|RISE MODE|1600|  8|  3|     11| 59.99|https://www.kabum...|  2024-10-26|memoria-ram|
+[2024-11-02T11:34:48.789+0000] {spark_submit.py:634} INFO - |MEMÓRIA RAM XPG G...|      XPG|3200| 16|  4|     16|244.99|https://www.kabum...|  2024-10-26|memoria-ram|
+[2024-11-02T11:34:48.790+0000] {spark_submit.py:634} INFO - |MEMÓRIA RAM 8GB K...| NOT_INFO|   0|  8|  4|     22|124.99|https://www.kabum...|  2024-10-26|memoria-ram|
+[2024-11-02T11:34:48.790+0000] {spark_submit.py:634} INFO - |MEMÓRIA RAM PARA ...|   KABUM!|2666|  8|  4|     19| 94.99|https://www.kabum...|  2024-10-26|memoria-ram|
+[2024-11-02T11:34:48.790+0000] {spark_submit.py:634} INFO - |MEMÓRIA RAM GAMER...|RISE MODE|1600|  8|  3|     11| 59.99|https://www.kabum...|  2024-10-26|memoria-ram|
+[2024-11-02T11:34:48.791+0000] {spark_submit.py:634} INFO - |MEMÓRIA RAM HUSKY...|    HUSKY|2666|  8|  4|     19|114.99|https://www.kabum...|  2024-10-26|memoria-ram|
+[2024-11-02T11:34:48.791+0000] {spark_submit.py:634} INFO - |MEMÓRIA RAM RISE ...|RISE MODE|3200|  8|  4|     19|119.99|https://www.kabum...|  2024-10-26|memoria-ram|
+[2024-11-02T11:34:48.792+0000] {spark_submit.py:634} INFO - |MEMÓRIA HUSKY TEC...|    HUSKY|3200|  8|  4|     19|109.99|https://www.kabum...|  2024-10-26|memoria-ram|
+[2024-11-02T11:34:48.792+0000] {spark_submit.py:634} INFO - |MEMORIA RAM PARA ...|RISE MODE|2666| 16|  4|     19|219.99|https://www.kabum...|  2024-10-26|memoria-ram|
+[2024-11-02T11:34:48.792+0000] {spark_submit.py:634} INFO - |MEMÓRIA RAM RISE ...|RISE MODE|3200|  8|  4|     19|124.99|https://www.kabum...|  2024-10-26|memoria-ram|
+[2024-11-02T11:34:48.793+0000] {spark_submit.py:634} INFO - |MEMÓRIA RAM PARA ...| KINGSTON|3200| 16|  4|     20|309.99|https://www.kabum...|  2024-10-26|memoria-ram|
+[2024-11-02T11:34:48.793+0000] {spark_submit.py:634} INFO - |MEMÓRIA RAM PARA ...| KINGSTON|3200|  8|  4|     20|167.99|https://www.kabum...|  2024-10-26|memoria-ram|
+[2024-11-02T11:34:48.794+0000] {spark_submit.py:634} INFO - |MEMORIA RAM PARA ...|RISE MODE|2666|  8|  4|     19|129.99|https://www.kabum...|  2024-10-26|memoria-ram|
+[2024-11-02T11:34:48.794+0000] {spark_submit.py:634} INFO - +--------------------+---------+----+---+---+-------+------+--------------------+------------+-----------+
+[2024-11-02T11:34:48.794+0000] {spark_submit.py:634} INFO - only showing top 20 rows
+[2024-11-02T11:34:48.795+0000] {spark_submit.py:634} INFO - 
+[2024-11-02T11:34:48.905+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO FileSourceStrategy: Pushed Filters: IsNotNull(name_mark)
+[2024-11-02T11:34:48.906+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO FileSourceStrategy: Post-Scan Filters: isnotnull(name_mark#145)
+[2024-11-02T11:34:48.942+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO CodeGenerator: Code generated in 11.066767 ms
+[2024-11-02T11:34:48.945+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO MemoryStore: Block broadcast_10 stored as values in memory (estimated size 203.2 KiB, free 417.3 MiB)
+[2024-11-02T11:34:48.953+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO BlockManagerInfo: Removed broadcast_8_piece0 on c9f99735a600:35601 in memory (size: 35.7 KiB, free: 434.1 MiB)
+[2024-11-02T11:34:48.956+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO MemoryStore: Block broadcast_10_piece0 stored as bytes in memory (estimated size 35.6 KiB, free 417.5 MiB)
+[2024-11-02T11:34:48.956+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO BlockManagerInfo: Removed broadcast_9_piece0 on c9f99735a600:35601 in memory (size: 7.8 KiB, free: 434.1 MiB)
+[2024-11-02T11:34:48.957+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO BlockManagerInfo: Added broadcast_10_piece0 in memory on c9f99735a600:35601 (size: 35.6 KiB, free: 434.1 MiB)
+[2024-11-02T11:34:48.958+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO SparkContext: Created broadcast 10 from $anonfun$withThreadLocalCaptured$1 at FutureTask.java:264
+[2024-11-02T11:34:48.959+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO FileSourceScanExec: Planning scan with bin packing, max size: 54841209 bytes, open cost is considered as scanning 4194304 bytes.
+[2024-11-02T11:34:48.968+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO SparkContext: Starting job: $anonfun$withThreadLocalCaptured$1 at FutureTask.java:264
+[2024-11-02T11:34:48.969+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO DAGScheduler: Got job 6 ($anonfun$withThreadLocalCaptured$1 at FutureTask.java:264) with 1 output partitions
+[2024-11-02T11:34:48.969+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO DAGScheduler: Final stage: ResultStage 6 ($anonfun$withThreadLocalCaptured$1 at FutureTask.java:264)
+[2024-11-02T11:34:48.969+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO DAGScheduler: Parents of final stage: List()
+[2024-11-02T11:34:48.970+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO DAGScheduler: Missing parents: List()
+[2024-11-02T11:34:48.970+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO DAGScheduler: Submitting ResultStage 6 (MapPartitionsRDD[24] at $anonfun$withThreadLocalCaptured$1 at FutureTask.java:264), which has no missing parents
+[2024-11-02T11:34:48.971+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO MemoryStore: Block broadcast_11 stored as values in memory (estimated size 20.0 KiB, free 417.5 MiB)
+[2024-11-02T11:34:48.973+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO MemoryStore: Block broadcast_11_piece0 stored as bytes in memory (estimated size 7.5 KiB, free 417.5 MiB)
+[2024-11-02T11:34:48.974+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on c9f99735a600:35601 (size: 7.5 KiB, free: 434.0 MiB)
+[2024-11-02T11:34:48.975+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO SparkContext: Created broadcast 11 from broadcast at DAGScheduler.scala:1585
+[2024-11-02T11:34:48.975+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 6 (MapPartitionsRDD[24] at $anonfun$withThreadLocalCaptured$1 at FutureTask.java:264) (first 15 tasks are for partitions Vector(0))
+[2024-11-02T11:34:48.976+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO TaskSchedulerImpl: Adding task set 6.0 with 1 tasks resource profile 0
+[2024-11-02T11:34:48.976+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO TaskSetManager: Starting task 0.0 in stage 6.0 (TID 6) (c9f99735a600, executor driver, partition 0, PROCESS_LOCAL, 12412 bytes)
+[2024-11-02T11:34:48.977+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO Executor: Running task 0.0 in stage 6.0 (TID 6)
+[2024-11-02T11:34:48.997+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO CodeGenerator: Code generated in 15.41869 ms
+[2024-11-02T11:34:48.998+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:48 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/kabum_2024-10-26/memoria_k.parquet/part-00000-a15506cc-228c-48bd-b96a-972e027598da-c000.snappy.parquet, range: 0-39369, partition values: [empty row]
+[2024-11-02T11:34:49.056+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:49.067+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/kabum_2024-10-22/memoria_k.parquet/part-00000-15d7eef6-9a5e-4b4f-8c88-cf3548b591fb-c000.snappy.parquet, range: 0-39343, partition values: [empty row]
+[2024-11-02T11:34:49.097+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO BlockManagerInfo: Removed broadcast_4_piece0 on c9f99735a600:35601 in memory (size: 7.4 KiB, free: 434.1 MiB)
+[2024-11-02T11:34:49.126+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:49.135+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/kabum_2024-10-25/memoria_k.parquet/part-00000-2b07a3bf-ee56-4493-beaa-27cbd4a90d74-c000.snappy.parquet, range: 0-39293, partition values: [empty row]
+[2024-11-02T11:34:49.198+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:49.206+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/kabum_2024-11-01/memoria_k.parquet/part-00000-b9851b28-2993-4b2d-89d9-813bfbd71440-c000.snappy.parquet, range: 0-39226, partition values: [empty row]
+[2024-11-02T11:34:49.253+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:49.260+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/kabum_2024-10-23/memoria_k.parquet/part-00000-f70119d3-81a9-4565-ae44-46546eead037-c000.snappy.parquet, range: 0-39207, partition values: [empty row]
+[2024-11-02T11:34:49.308+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:49.314+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/kabum_2024-10-21/memoria_k.parquet/part-00000-53d39fe5-f799-4787-a256-c891732844dd-c000.snappy.parquet, range: 0-38833, partition values: [empty row]
+[2024-11-02T11:34:49.362+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:49.369+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/pichau_2024-11-01/memoria_k.parquet/part-00000-f093b989-b8d0-470e-86b3-76b85dfd781f-c000.snappy.parquet, range: 0-11494, partition values: [empty row]
+[2024-11-02T11:34:49.413+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:49.419+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/pichau_2024-10-26/memoria_k.parquet/part-00000-92df5641-85db-4b6b-bece-783d416ad66e-c000.snappy.parquet, range: 0-11465, partition values: [empty row]
+[2024-11-02T11:34:49.482+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:49.489+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/pichau_2024-10-27/memoria_k.parquet/part-00000-b01d03a3-e4b3-4a29-8e5c-636c098d899a-c000.snappy.parquet, range: 0-11441, partition values: [empty row]
+[2024-11-02T11:34:49.547+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:49.554+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/pichau_2024-10-25/memoria_k.parquet/part-00000-18f7fcc6-a278-47ad-985b-855ab6c66c9f-c000.snappy.parquet, range: 0-11438, partition values: [empty row]
+[2024-11-02T11:34:49.611+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:49.617+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/pichau_2024-10-21/memoria_k.parquet/part-00000-5baf237e-a582-4df9-b8d8-9ba5dfa8f141-c000.snappy.parquet, range: 0-11419, partition values: [empty row]
+[2024-11-02T11:34:49.678+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:49.683+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/pichau_2024-10-23/memoria_k.parquet/part-00000-340e459f-ffed-4119-9395-0d154f457e57-c000.snappy.parquet, range: 0-11381, partition values: [empty row]
+[2024-11-02T11:34:49.740+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:49.746+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/pichau_2024-10-22/memoria_k.parquet/part-00000-9bff8ed4-b21c-4eee-b7ab-8db12397b551-c000.snappy.parquet, range: 0-11348, partition values: [empty row]
+[2024-11-02T11:34:49.805+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:49.816+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO Executor: Finished task 0.0 in stage 6.0 (TID 6). 424955 bytes result sent to driver
+[2024-11-02T11:34:49.818+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO TaskSetManager: Finished task 0.0 in stage 6.0 (TID 6) in 841 ms on c9f99735a600 (executor driver) (1/1)
+[2024-11-02T11:34:49.818+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO TaskSchedulerImpl: Removed TaskSet 6.0, whose tasks have all completed, from pool
+[2024-11-02T11:34:49.819+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO DAGScheduler: ResultStage 6 ($anonfun$withThreadLocalCaptured$1 at FutureTask.java:264) finished in 0.848 s
+[2024-11-02T11:34:49.820+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO DAGScheduler: Job 6 is finished. Cancelling potential speculative or zombie tasks for this job
+[2024-11-02T11:34:49.820+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO TaskSchedulerImpl: Killing all running tasks in stage 6: Stage finished
+[2024-11-02T11:34:49.821+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO DAGScheduler: Job 6 finished: $anonfun$withThreadLocalCaptured$1 at FutureTask.java:264, took 0.851026 s
+[2024-11-02T11:34:49.826+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO CodeGenerator: Code generated in 4.360623 ms
+[2024-11-02T11:34:49.833+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO MemoryStore: Block broadcast_12 stored as values in memory (estimated size 16.1 MiB, free 401.4 MiB)
+[2024-11-02T11:34:49.839+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO MemoryStore: Block broadcast_12_piece0 stored as bytes in memory (estimated size 465.7 KiB, free 400.9 MiB)
+[2024-11-02T11:34:49.840+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO BlockManagerInfo: Added broadcast_12_piece0 in memory on c9f99735a600:35601 (size: 465.7 KiB, free: 433.6 MiB)
+[2024-11-02T11:34:49.841+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO SparkContext: Created broadcast 12 from $anonfun$withThreadLocalCaptured$1 at FutureTask.java:264
+[2024-11-02T11:34:49.868+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO CodeGenerator: Code generated in 10.547541 ms
+[2024-11-02T11:34:49.873+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO SparkContext: Starting job: showString at NativeMethodAccessorImpl.java:0
+[2024-11-02T11:34:49.874+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO DAGScheduler: Got job 7 (showString at NativeMethodAccessorImpl.java:0) with 1 output partitions
+[2024-11-02T11:34:49.874+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO DAGScheduler: Final stage: ResultStage 7 (showString at NativeMethodAccessorImpl.java:0)
+[2024-11-02T11:34:49.875+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO DAGScheduler: Parents of final stage: List()
+[2024-11-02T11:34:49.875+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO DAGScheduler: Missing parents: List()
+[2024-11-02T11:34:49.876+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO DAGScheduler: Submitting ResultStage 7 (MapPartitionsRDD[27] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+[2024-11-02T11:34:49.876+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO MemoryStore: Block broadcast_13 stored as values in memory (estimated size 18.0 KiB, free 400.9 MiB)
+[2024-11-02T11:34:49.882+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO MemoryStore: Block broadcast_13_piece0 stored as bytes in memory (estimated size 8.3 KiB, free 400.9 MiB)
+[2024-11-02T11:34:49.883+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO BlockManagerInfo: Added broadcast_13_piece0 in memory on c9f99735a600:35601 (size: 8.3 KiB, free: 433.6 MiB)
+[2024-11-02T11:34:49.884+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO BlockManagerInfo: Removed broadcast_11_piece0 on c9f99735a600:35601 in memory (size: 7.5 KiB, free: 433.6 MiB)
+[2024-11-02T11:34:49.884+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO SparkContext: Created broadcast 13 from broadcast at DAGScheduler.scala:1585
+[2024-11-02T11:34:49.885+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 7 (MapPartitionsRDD[27] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+[2024-11-02T11:34:49.886+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO TaskSchedulerImpl: Adding task set 7.0 with 1 tasks resource profile 0
+[2024-11-02T11:34:49.886+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO TaskSetManager: Starting task 0.0 in stage 7.0 (TID 7) (c9f99735a600, executor driver, partition 0, PROCESS_LOCAL, 9158 bytes)
+[2024-11-02T11:34:49.887+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO Executor: Running task 0.0 in stage 7.0 (TID 7)
+[2024-11-02T11:34:49.913+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO CodeGenerator: Code generated in 9.36378 ms
+[2024-11-02T11:34:49.915+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO JDBCRDD: closed connection
+[2024-11-02T11:34:49.921+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO Executor: Finished task 0.0 in stage 7.0 (TID 7). 2619 bytes result sent to driver
+[2024-11-02T11:34:49.922+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO TaskSetManager: Finished task 0.0 in stage 7.0 (TID 7) in 38 ms on c9f99735a600 (executor driver) (1/1)
+[2024-11-02T11:34:49.922+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO TaskSchedulerImpl: Removed TaskSet 7.0, whose tasks have all completed, from pool
+[2024-11-02T11:34:49.923+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO DAGScheduler: ResultStage 7 (showString at NativeMethodAccessorImpl.java:0) finished in 0.047 s
+[2024-11-02T11:34:49.924+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO DAGScheduler: Job 7 is finished. Cancelling potential speculative or zombie tasks for this job
+[2024-11-02T11:34:49.924+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO TaskSchedulerImpl: Killing all running tasks in stage 7: Stage finished
+[2024-11-02T11:34:49.925+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO DAGScheduler: Job 7 finished: showString at NativeMethodAccessorImpl.java:0, took 0.050182 s
+[2024-11-02T11:34:49.934+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:49 INFO CodeGenerator: Code generated in 6.922055 ms
+[2024-11-02T11:34:49.937+0000] {spark_submit.py:634} INFO - +----------+--------------------+----+---+---+-------+------+--------------------+------------+--------------+----------+
+[2024-11-02T11:34:49.937+0000] {spark_submit.py:634} INFO - |id_mark_fk|         memory_name| MHZ| GB|DDR|latency| value|                 uri|data_collect|ID_CATEGORY_FK|ID_SITE_FK|
+[2024-11-02T11:34:49.938+0000] {spark_submit.py:634} INFO - +----------+--------------------+----+---+---+-------+------+--------------------+------------+--------------+----------+
+[2024-11-02T11:34:49.938+0000] {spark_submit.py:634} INFO - |       722|MEMÓRIA HIKVISION...|2666|  4|  4|     19| 93.00|https://www.kabum...|  2024-10-21|             1|         1|
+[2024-11-02T11:34:49.939+0000] {spark_submit.py:634} INFO - |       722|MEMÓRIA HIKVISION...|2666|  4|  4|     19| 82.71|https://www.kabum...|  2024-10-21|             1|         1|
+[2024-11-02T11:34:49.939+0000] {spark_submit.py:634} INFO - |       722|MEMÓRIA HIKVISION...|2666|  4|  4|     19| 93.00|https://www.kabum...|  2024-10-23|             1|         1|
+[2024-11-02T11:34:49.939+0000] {spark_submit.py:634} INFO - |       722|MEMÓRIA HIKVISION...|2666|  4|  4|     19| 73.82|https://www.kabum...|  2024-10-23|             1|         1|
+[2024-11-02T11:34:49.940+0000] {spark_submit.py:634} INFO - |       722|MEMÓRIA HIKVISION...|2666|  4|  4|     19| 93.00|https://www.kabum...|  2024-11-01|             1|         1|
+[2024-11-02T11:34:49.940+0000] {spark_submit.py:634} INFO - |       722|MEMÓRIA HIKVISION...|2666|  4|  4|     19| 75.17|https://www.kabum...|  2024-11-01|             1|         1|
+[2024-11-02T11:34:49.941+0000] {spark_submit.py:634} INFO - |       722|MEMÓRIA HIKVISION...|2666|  4|  4|     19| 93.00|https://www.kabum...|  2024-10-25|             1|         1|
+[2024-11-02T11:34:49.941+0000] {spark_submit.py:634} INFO - |       722|MEMÓRIA HIKVISION...|2666|  4|  4|     19| 75.17|https://www.kabum...|  2024-10-25|             1|         1|
+[2024-11-02T11:34:49.941+0000] {spark_submit.py:634} INFO - |       722|MEMÓRIA HIKVISION...|2666|  4|  4|     19| 93.00|https://www.kabum...|  2024-10-22|             1|         1|
+[2024-11-02T11:34:49.942+0000] {spark_submit.py:634} INFO - |       722|MEMÓRIA HIKVISION...|2666|  4|  4|     19| 73.82|https://www.kabum...|  2024-10-22|             1|         1|
+[2024-11-02T11:34:49.942+0000] {spark_submit.py:634} INFO - |       722|MEMÓRIA HIKVISION...|2666|  4|  4|     19| 93.00|https://www.kabum...|  2024-10-26|             1|         1|
+[2024-11-02T11:34:49.943+0000] {spark_submit.py:634} INFO - |       722|MEMÓRIA HIKVISION...|2666|  4|  4|     19| 75.17|https://www.kabum...|  2024-10-26|             1|         1|
+[2024-11-02T11:34:49.943+0000] {spark_submit.py:634} INFO - |       723|MEMÓRIA GAMER KTR...|3200|  8|  4|      0|229.90|https://www.kabum...|  2024-10-21|             1|         1|
+[2024-11-02T11:34:49.944+0000] {spark_submit.py:634} INFO - |       723|MEMÓRIA KTROK UDI...|2666|  8|  4|      0|139.82|https://www.kabum...|  2024-10-21|             1|         1|
+[2024-11-02T11:34:49.944+0000] {spark_submit.py:634} INFO - |       723|MEMÓRIA GAMER KTR...|3200|  8|  4|      0|229.90|https://www.kabum...|  2024-10-23|             1|         1|
+[2024-11-02T11:34:49.944+0000] {spark_submit.py:634} INFO - |       723|MEMÓRIA KTROK UDI...|2666|  8|  4|      0|139.82|https://www.kabum...|  2024-10-23|             1|         1|
+[2024-11-02T11:34:49.945+0000] {spark_submit.py:634} INFO - |       723|MEMÓRIA KTROK UDI...|2666|  8|  4|      0|139.82|https://www.kabum...|  2024-11-01|             1|         1|
+[2024-11-02T11:34:49.945+0000] {spark_submit.py:634} INFO - |       723|MEMÓRIA GAMER KTR...|3200|  8|  4|      0|229.90|https://www.kabum...|  2024-10-25|             1|         1|
+[2024-11-02T11:34:49.946+0000] {spark_submit.py:634} INFO - |       723|MEMÓRIA KTROK UDI...|2666|  8|  4|      0|139.82|https://www.kabum...|  2024-10-25|             1|         1|
+[2024-11-02T11:34:49.946+0000] {spark_submit.py:634} INFO - |       723|MEMÓRIA GAMER KTR...|3200|  8|  4|      0|229.90|https://www.kabum...|  2024-10-22|             1|         1|
+[2024-11-02T11:34:49.947+0000] {spark_submit.py:634} INFO - +----------+--------------------+----+---+---+-------+------+--------------------+------------+--------------+----------+
+[2024-11-02T11:34:49.947+0000] {spark_submit.py:634} INFO - only showing top 20 rows
+[2024-11-02T11:34:49.947+0000] {spark_submit.py:634} INFO - 
+[2024-11-02T11:34:50.470+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO InMemoryFileIndex: It took 395 ms to list leaf files for 13 paths.
+[2024-11-02T11:34:50.493+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO SparkContext: Starting job: parquet at NativeMethodAccessorImpl.java:0
+[2024-11-02T11:34:50.494+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO DAGScheduler: Got job 8 (parquet at NativeMethodAccessorImpl.java:0) with 1 output partitions
+[2024-11-02T11:34:50.495+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO DAGScheduler: Final stage: ResultStage 8 (parquet at NativeMethodAccessorImpl.java:0)
+[2024-11-02T11:34:50.495+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO DAGScheduler: Parents of final stage: List()
+[2024-11-02T11:34:50.496+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO DAGScheduler: Missing parents: List()
+[2024-11-02T11:34:50.496+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO DAGScheduler: Submitting ResultStage 8 (MapPartitionsRDD[29] at parquet at NativeMethodAccessorImpl.java:0), which has no missing parents
+[2024-11-02T11:34:50.502+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO MemoryStore: Block broadcast_14 stored as values in memory (estimated size 104.2 KiB, free 400.8 MiB)
+[2024-11-02T11:34:50.504+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO MemoryStore: Block broadcast_14_piece0 stored as bytes in memory (estimated size 37.6 KiB, free 400.8 MiB)
+[2024-11-02T11:34:50.504+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO BlockManagerInfo: Added broadcast_14_piece0 in memory on c9f99735a600:35601 (size: 37.6 KiB, free: 433.6 MiB)
+[2024-11-02T11:34:50.505+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO SparkContext: Created broadcast 14 from broadcast at DAGScheduler.scala:1585
+[2024-11-02T11:34:50.505+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 8 (MapPartitionsRDD[29] at parquet at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+[2024-11-02T11:34:50.506+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO TaskSchedulerImpl: Adding task set 8.0 with 1 tasks resource profile 0
+[2024-11-02T11:34:50.507+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO TaskSetManager: Starting task 0.0 in stage 8.0 (TID 8) (c9f99735a600, executor driver, partition 0, PROCESS_LOCAL, 9510 bytes)
+[2024-11-02T11:34:50.507+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO Executor: Running task 0.0 in stage 8.0 (TID 8)
+[2024-11-02T11:34:50.544+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO Executor: Finished task 0.0 in stage 8.0 (TID 8). 2145 bytes result sent to driver
+[2024-11-02T11:34:50.544+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO BlockManagerInfo: Removed broadcast_10_piece0 on c9f99735a600:35601 in memory (size: 35.6 KiB, free: 433.6 MiB)
+[2024-11-02T11:34:50.545+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO TaskSetManager: Finished task 0.0 in stage 8.0 (TID 8) in 38 ms on c9f99735a600 (executor driver) (1/1)
+[2024-11-02T11:34:50.545+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO TaskSchedulerImpl: Removed TaskSet 8.0, whose tasks have all completed, from pool
+[2024-11-02T11:34:50.546+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO DAGScheduler: ResultStage 8 (parquet at NativeMethodAccessorImpl.java:0) finished in 0.050 s
+[2024-11-02T11:34:50.546+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO DAGScheduler: Job 8 is finished. Cancelling potential speculative or zombie tasks for this job
+[2024-11-02T11:34:50.547+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO TaskSchedulerImpl: Killing all running tasks in stage 8: Stage finished
+[2024-11-02T11:34:50.548+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO DAGScheduler: Job 8 finished: parquet at NativeMethodAccessorImpl.java:0, took 0.052129 s
+[2024-11-02T11:34:50.548+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO BlockManagerInfo: Removed broadcast_12_piece0 on c9f99735a600:35601 in memory (size: 465.7 KiB, free: 434.1 MiB)
+[2024-11-02T11:34:50.551+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO BlockManagerInfo: Removed broadcast_13_piece0 on c9f99735a600:35601 in memory (size: 8.3 KiB, free: 434.1 MiB)
+[2024-11-02T11:34:50.567+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO FileSourceStrategy: Pushed Filters:
+[2024-11-02T11:34:50.568+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO FileSourceStrategy: Post-Scan Filters:
+[2024-11-02T11:34:50.589+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO CodeGenerator: Code generated in 9.638594 ms
+[2024-11-02T11:34:50.592+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO MemoryStore: Block broadcast_15 stored as values in memory (estimated size 203.1 KiB, free 417.4 MiB)
+[2024-11-02T11:34:50.598+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO MemoryStore: Block broadcast_15_piece0 stored as bytes in memory (estimated size 35.6 KiB, free 417.4 MiB)
+[2024-11-02T11:34:50.599+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO BlockManagerInfo: Added broadcast_15_piece0 in memory on c9f99735a600:35601 (size: 35.6 KiB, free: 434.0 MiB)
+[2024-11-02T11:34:50.600+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO SparkContext: Created broadcast 15 from showString at NativeMethodAccessorImpl.java:0
+[2024-11-02T11:34:50.600+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO FileSourceScanExec: Planning scan with bin packing, max size: 54717267 bytes, open cost is considered as scanning 4194304 bytes.
+[2024-11-02T11:34:50.606+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO SparkContext: Starting job: showString at NativeMethodAccessorImpl.java:0
+[2024-11-02T11:34:50.607+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO DAGScheduler: Got job 9 (showString at NativeMethodAccessorImpl.java:0) with 1 output partitions
+[2024-11-02T11:34:50.607+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO DAGScheduler: Final stage: ResultStage 9 (showString at NativeMethodAccessorImpl.java:0)
+[2024-11-02T11:34:50.608+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO DAGScheduler: Parents of final stage: List()
+[2024-11-02T11:34:50.609+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO DAGScheduler: Missing parents: List()
+[2024-11-02T11:34:50.609+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO DAGScheduler: Submitting ResultStage 9 (MapPartitionsRDD[33] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+[2024-11-02T11:34:50.610+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO MemoryStore: Block broadcast_16 stored as values in memory (estimated size 19.7 KiB, free 417.4 MiB)
+[2024-11-02T11:34:50.614+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO MemoryStore: Block broadcast_16_piece0 stored as bytes in memory (estimated size 7.6 KiB, free 417.4 MiB)
+[2024-11-02T11:34:50.615+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on c9f99735a600:35601 (size: 7.6 KiB, free: 434.0 MiB)
+[2024-11-02T11:34:50.616+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO SparkContext: Created broadcast 16 from broadcast at DAGScheduler.scala:1585
+[2024-11-02T11:34:50.617+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO BlockManagerInfo: Removed broadcast_14_piece0 on c9f99735a600:35601 in memory (size: 37.6 KiB, free: 434.1 MiB)
+[2024-11-02T11:34:50.618+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 9 (MapPartitionsRDD[33] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+[2024-11-02T11:34:50.618+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO TaskSchedulerImpl: Adding task set 9.0 with 1 tasks resource profile 0
+[2024-11-02T11:34:50.619+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO TaskSetManager: Starting task 0.0 in stage 9.0 (TID 9) (c9f99735a600, executor driver, partition 0, PROCESS_LOCAL, 12412 bytes)
+[2024-11-02T11:34:50.619+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO Executor: Running task 0.0 in stage 9.0 (TID 9)
+[2024-11-02T11:34:50.631+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO CodeGenerator: Code generated in 9.37548 ms
+[2024-11-02T11:34:50.633+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/kabum_2024-10-26/placa_mae.parquet/part-00000-8346a064-9c2f-44cb-a42e-d6b043b771ed-c000.snappy.parquet, range: 0-24087, partition values: [empty row]
+[2024-11-02T11:34:50.696+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO Executor: Finished task 0.0 in stage 9.0 (TID 9). 3399 bytes result sent to driver
+[2024-11-02T11:34:50.697+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO TaskSetManager: Finished task 0.0 in stage 9.0 (TID 9) in 78 ms on c9f99735a600 (executor driver) (1/1)
+[2024-11-02T11:34:50.698+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO TaskSchedulerImpl: Removed TaskSet 9.0, whose tasks have all completed, from pool
+[2024-11-02T11:34:50.698+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO DAGScheduler: ResultStage 9 (showString at NativeMethodAccessorImpl.java:0) finished in 0.089 s
+[2024-11-02T11:34:50.699+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO DAGScheduler: Job 9 is finished. Cancelling potential speculative or zombie tasks for this job
+[2024-11-02T11:34:50.699+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO TaskSchedulerImpl: Killing all running tasks in stage 9: Stage finished
+[2024-11-02T11:34:50.700+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO DAGScheduler: Job 9 finished: showString at NativeMethodAccessorImpl.java:0, took 0.091483 s
+[2024-11-02T11:34:50.703+0000] {spark_submit.py:634} INFO - +---------+-----+--------+---+-------+--------------------+------------+----------+
+[2024-11-02T11:34:50.703+0000] {spark_submit.py:634} INFO - |name_mark|model|  socket|DDR|  value|                 uri|data_collect|  category|
+[2024-11-02T11:34:50.704+0000] {spark_submit.py:634} INFO - +---------+-----+--------+---+-------+--------------------+------------+----------+
+[2024-11-02T11:34:50.704+0000] {spark_submit.py:634} INFO - |     ASUS| A520|     AM4|  4| 599.99|https://www.kabum...|  2024-10-26|placas-mae|
+[2024-11-02T11:34:50.705+0000] {spark_submit.py:634} INFO - | GIGABYTE| B550|     AM4|  4| 939.99|https://www.kabum...|  2024-10-26|placas-mae|
+[2024-11-02T11:34:50.705+0000] {spark_submit.py:634} INFO - |      MSI| A520|     AM4|  4| 399.99|https://www.kabum...|  2024-10-26|placas-mae|
+[2024-11-02T11:34:50.706+0000] {spark_submit.py:634} INFO - |      MSI| B550|     AM4|  0| 879.99|https://www.kabum...|  2024-10-26|placas-mae|
+[2024-11-02T11:34:50.706+0000] {spark_submit.py:634} INFO - |      MSI| B550|     AM4|  0| 859.99|https://www.kabum...|  2024-10-26|placas-mae|
+[2024-11-02T11:34:50.706+0000] {spark_submit.py:634} INFO - | GIGABYTE| H610| LGA1700|  4| 609.99|https://www.kabum...|  2024-10-26|placas-mae|
+[2024-11-02T11:34:50.707+0000] {spark_submit.py:634} INFO - |     ASUS| B550|     AM4|  4|1064.98|https://www.kabum...|  2024-10-26|placas-mae|
+[2024-11-02T11:34:50.707+0000] {spark_submit.py:634} INFO - |     ASUS| H610|LGA 1700|  4| 599.99|https://www.kabum...|  2024-10-26|placas-mae|
+[2024-11-02T11:34:50.708+0000] {spark_submit.py:634} INFO - |   ASROCK| B450|     AM4|  4| 769.99|https://www.kabum...|  2024-10-26|placas-mae|
+[2024-11-02T11:34:50.708+0000] {spark_submit.py:634} INFO - |     ASUS| H510|LGA 1200|  4| 589.99|https://www.kabum...|  2024-10-26|placas-mae|
+[2024-11-02T11:34:50.708+0000] {spark_submit.py:634} INFO - | GIGABYTE| B650|     AM5|  5| 919.99|https://www.kabum...|  2024-10-26|placas-mae|
+[2024-11-02T11:34:50.709+0000] {spark_submit.py:634} INFO - |     ASUS| B550|     AM4|  4| 807.99|https://www.kabum...|  2024-10-26|placas-mae|
+[2024-11-02T11:34:50.709+0000] {spark_submit.py:634} INFO - |     ASUS| A520|     AM4|  4| 564.99|https://www.kabum...|  2024-10-26|placas-mae|
+[2024-11-02T11:34:50.710+0000] {spark_submit.py:634} INFO - |     ASUS| B650|     AM5|  5|1198.99|https://www.kabum...|  2024-10-26|placas-mae|
+[2024-11-02T11:34:50.710+0000] {spark_submit.py:634} INFO - |   ASROCK| B660|LGA 1700|  4| 869.99|https://www.kabum...|  2024-10-26|placas-mae|
+[2024-11-02T11:34:50.711+0000] {spark_submit.py:634} INFO - |      MSI| B450|     AM4|  4| 494.99|https://www.kabum...|  2024-10-26|placas-mae|
+[2024-11-02T11:34:50.711+0000] {spark_submit.py:634} INFO - |      MSI| B450|     AM4|  4| 634.99|https://www.kabum...|  2024-10-26|placas-mae|
+[2024-11-02T11:34:50.711+0000] {spark_submit.py:634} INFO - |      MSI| H610|LGA 1700|  4| 549.99|https://www.kabum...|  2024-10-26|placas-mae|
+[2024-11-02T11:34:50.712+0000] {spark_submit.py:634} INFO - |     ASUS| A520|     AM4|  4| 689.99|https://www.kabum...|  2024-10-26|placas-mae|
+[2024-11-02T11:34:50.712+0000] {spark_submit.py:634} INFO - |      MSI| B560|LGA 1200|  4| 564.99|https://www.kabum...|  2024-10-26|placas-mae|
+[2024-11-02T11:34:50.713+0000] {spark_submit.py:634} INFO - +---------+-----+--------+---+-------+--------------------+------------+----------+
+[2024-11-02T11:34:50.713+0000] {spark_submit.py:634} INFO - only showing top 20 rows
+[2024-11-02T11:34:50.714+0000] {spark_submit.py:634} INFO - 
+[2024-11-02T11:34:50.797+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO FileSourceStrategy: Pushed Filters: IsNotNull(name_mark)
+[2024-11-02T11:34:50.798+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO FileSourceStrategy: Post-Scan Filters: isnotnull(name_mark#318)
+[2024-11-02T11:34:50.829+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO CodeGenerator: Code generated in 11.209575 ms
+[2024-11-02T11:34:50.832+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO MemoryStore: Block broadcast_17 stored as values in memory (estimated size 202.9 KiB, free 417.3 MiB)
+[2024-11-02T11:34:50.838+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO MemoryStore: Block broadcast_17_piece0 stored as bytes in memory (estimated size 35.4 KiB, free 417.3 MiB)
+[2024-11-02T11:34:50.839+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO BlockManagerInfo: Added broadcast_17_piece0 in memory on c9f99735a600:35601 (size: 35.4 KiB, free: 434.0 MiB)
+[2024-11-02T11:34:50.839+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO SparkContext: Created broadcast 17 from $anonfun$withThreadLocalCaptured$1 at FutureTask.java:264
+[2024-11-02T11:34:50.840+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO FileSourceScanExec: Planning scan with bin packing, max size: 54717267 bytes, open cost is considered as scanning 4194304 bytes.
+[2024-11-02T11:34:50.847+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO SparkContext: Starting job: $anonfun$withThreadLocalCaptured$1 at FutureTask.java:264
+[2024-11-02T11:34:50.848+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO DAGScheduler: Got job 10 ($anonfun$withThreadLocalCaptured$1 at FutureTask.java:264) with 1 output partitions
+[2024-11-02T11:34:50.849+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO DAGScheduler: Final stage: ResultStage 10 ($anonfun$withThreadLocalCaptured$1 at FutureTask.java:264)
+[2024-11-02T11:34:50.849+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO DAGScheduler: Parents of final stage: List()
+[2024-11-02T11:34:50.850+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO DAGScheduler: Missing parents: List()
+[2024-11-02T11:34:50.850+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO DAGScheduler: Submitting ResultStage 10 (MapPartitionsRDD[38] at $anonfun$withThreadLocalCaptured$1 at FutureTask.java:264), which has no missing parents
+[2024-11-02T11:34:50.851+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO MemoryStore: Block broadcast_18 stored as values in memory (estimated size 18.9 KiB, free 417.3 MiB)
+[2024-11-02T11:34:50.853+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO MemoryStore: Block broadcast_18_piece0 stored as bytes in memory (estimated size 7.3 KiB, free 417.3 MiB)
+[2024-11-02T11:34:50.853+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO BlockManagerInfo: Added broadcast_18_piece0 in memory on c9f99735a600:35601 (size: 7.3 KiB, free: 434.0 MiB)
+[2024-11-02T11:34:50.854+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO SparkContext: Created broadcast 18 from broadcast at DAGScheduler.scala:1585
+[2024-11-02T11:34:50.854+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 10 (MapPartitionsRDD[38] at $anonfun$withThreadLocalCaptured$1 at FutureTask.java:264) (first 15 tasks are for partitions Vector(0))
+[2024-11-02T11:34:50.855+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO TaskSchedulerImpl: Adding task set 10.0 with 1 tasks resource profile 0
+[2024-11-02T11:34:50.855+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO TaskSetManager: Starting task 0.0 in stage 10.0 (TID 10) (c9f99735a600, executor driver, partition 0, PROCESS_LOCAL, 12412 bytes)
+[2024-11-02T11:34:50.856+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO Executor: Running task 0.0 in stage 10.0 (TID 10)
+[2024-11-02T11:34:50.868+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO CodeGenerator: Code generated in 8.20252 ms
+[2024-11-02T11:34:50.869+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/kabum_2024-10-26/placa_mae.parquet/part-00000-8346a064-9c2f-44cb-a42e-d6b043b771ed-c000.snappy.parquet, range: 0-24087, partition values: [empty row]
+[2024-11-02T11:34:50.925+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:50.932+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/kabum_2024-10-23/placa_mae.parquet/part-00000-e0d17dae-dccf-4cea-93e7-8699aba9f661-c000.snappy.parquet, range: 0-23999, partition values: [empty row]
+[2024-11-02T11:34:50.989+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:50.995+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:50 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/kabum_2024-11-01/placa_mae.parquet/part-00000-60806892-a557-4bd6-8966-e3719ff48cd4-c000.snappy.parquet, range: 0-23988, partition values: [empty row]
+[2024-11-02T11:34:51.046+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:51.052+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/kabum_2024-10-25/placa_mae.parquet/part-00000-79c0a525-f01d-47ad-bfc6-66ec06032a96-c000.snappy.parquet, range: 0-23985, partition values: [empty row]
+[2024-11-02T11:34:51.109+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:51.116+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/kabum_2024-10-21/placa_mae.parquet/part-00000-6e4446d2-2071-4dd0-97a6-5188cab666ab-c000.snappy.parquet, range: 0-23919, partition values: [empty row]
+[2024-11-02T11:34:51.178+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:51.184+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/kabum_2024-10-22/placa_mae.parquet/part-00000-b010fe31-0eee-4f12-b8f8-1460e66af9ff-c000.snappy.parquet, range: 0-23874, partition values: [empty row]
+[2024-11-02T11:34:51.242+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:51.248+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/pichau_2024-10-26/placa_mae.parquet/part-00000-e706537c-63ff-422c-8174-7ff912a7fc81-c000.snappy.parquet, range: 0-6806, partition values: [empty row]
+[2024-11-02T11:34:51.299+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:51.306+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/pichau_2024-10-25/placa_mae.parquet/part-00000-44ed8d8c-cd1f-4cea-a992-a2388743e723-c000.snappy.parquet, range: 0-6788, partition values: [empty row]
+[2024-11-02T11:34:51.362+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:51.369+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/pichau_2024-10-23/placa_mae.parquet/part-00000-0ccb4cd4-fd7a-4833-8e7d-c3f112190152-c000.snappy.parquet, range: 0-6778, partition values: [empty row]
+[2024-11-02T11:34:51.427+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:51.432+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/pichau_2024-10-22/placa_mae.parquet/part-00000-510b166f-4f03-4462-b1f8-490c68fa479d-c000.snappy.parquet, range: 0-6777, partition values: [empty row]
+[2024-11-02T11:34:51.488+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:51.493+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/pichau_2024-10-21/placa_mae.parquet/part-00000-d521cd6d-3831-4926-b128-332026032c55-c000.snappy.parquet, range: 0-6776, partition values: [empty row]
+[2024-11-02T11:34:51.553+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:51.560+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/pichau_2024-11-01/placa_mae.parquet/part-00000-9f2b3678-622f-4a21-9448-fcd7dff817a6-c000.snappy.parquet, range: 0-6771, partition values: [empty row]
+[2024-11-02T11:34:51.611+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:51.616+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/pichau_2024-10-27/placa_mae.parquet/part-00000-0c61547b-bd1e-47a1-9fcf-2e46a2f57527-c000.snappy.parquet, range: 0-6767, partition values: [empty row]
+[2024-11-02T11:34:51.663+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:51.669+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO Executor: Finished task 0.0 in stage 10.0 (TID 10). 259284 bytes result sent to driver
+[2024-11-02T11:34:51.670+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO TaskSetManager: Finished task 0.0 in stage 10.0 (TID 10) in 815 ms on c9f99735a600 (executor driver) (1/1)
+[2024-11-02T11:34:51.671+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO TaskSchedulerImpl: Removed TaskSet 10.0, whose tasks have all completed, from pool
+[2024-11-02T11:34:51.674+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO DAGScheduler: ResultStage 10 ($anonfun$withThreadLocalCaptured$1 at FutureTask.java:264) finished in 0.822 s
+[2024-11-02T11:34:51.675+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO DAGScheduler: Job 10 is finished. Cancelling potential speculative or zombie tasks for this job
+[2024-11-02T11:34:51.677+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO TaskSchedulerImpl: Killing all running tasks in stage 10: Stage finished
+[2024-11-02T11:34:51.677+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO DAGScheduler: Job 10 finished: $anonfun$withThreadLocalCaptured$1 at FutureTask.java:264, took 0.824304 s
+[2024-11-02T11:34:51.680+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO BlockManagerInfo: Removed broadcast_15_piece0 on c9f99735a600:35601 in memory (size: 35.6 KiB, free: 434.0 MiB)
+[2024-11-02T11:34:51.683+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO MemoryStore: Block broadcast_19 stored as values in memory (estimated size 16.1 MiB, free 401.4 MiB)
+[2024-11-02T11:34:51.684+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO BlockManagerInfo: Removed broadcast_16_piece0 on c9f99735a600:35601 in memory (size: 7.6 KiB, free: 434.1 MiB)
+[2024-11-02T11:34:51.688+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO BlockManagerInfo: Removed broadcast_18_piece0 on c9f99735a600:35601 in memory (size: 7.3 KiB, free: 434.1 MiB)
+[2024-11-02T11:34:51.689+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO MemoryStore: Block broadcast_19_piece0 stored as bytes in memory (estimated size 292.4 KiB, free 401.1 MiB)
+[2024-11-02T11:34:51.690+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO BlockManagerInfo: Added broadcast_19_piece0 in memory on c9f99735a600:35601 (size: 292.4 KiB, free: 433.8 MiB)
+[2024-11-02T11:34:51.690+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO SparkContext: Created broadcast 19 from $anonfun$withThreadLocalCaptured$1 at FutureTask.java:264
+[2024-11-02T11:34:51.713+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO CodeGenerator: Code generated in 8.068013 ms
+[2024-11-02T11:34:51.718+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO SparkContext: Starting job: showString at NativeMethodAccessorImpl.java:0
+[2024-11-02T11:34:51.719+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO DAGScheduler: Got job 11 (showString at NativeMethodAccessorImpl.java:0) with 1 output partitions
+[2024-11-02T11:34:51.719+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO DAGScheduler: Final stage: ResultStage 11 (showString at NativeMethodAccessorImpl.java:0)
+[2024-11-02T11:34:51.720+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO DAGScheduler: Parents of final stage: List()
+[2024-11-02T11:34:51.720+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO DAGScheduler: Missing parents: List()
+[2024-11-02T11:34:51.721+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO DAGScheduler: Submitting ResultStage 11 (MapPartitionsRDD[41] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+[2024-11-02T11:34:51.721+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO MemoryStore: Block broadcast_20 stored as values in memory (estimated size 17.3 KiB, free 401.1 MiB)
+[2024-11-02T11:34:51.725+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO MemoryStore: Block broadcast_20_piece0 stored as bytes in memory (estimated size 8.2 KiB, free 401.1 MiB)
+[2024-11-02T11:34:51.726+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO BlockManagerInfo: Added broadcast_20_piece0 in memory on c9f99735a600:35601 (size: 8.2 KiB, free: 433.8 MiB)
+[2024-11-02T11:34:51.727+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO SparkContext: Created broadcast 20 from broadcast at DAGScheduler.scala:1585
+[2024-11-02T11:34:51.727+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 11 (MapPartitionsRDD[41] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+[2024-11-02T11:34:51.728+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO TaskSchedulerImpl: Adding task set 11.0 with 1 tasks resource profile 0
+[2024-11-02T11:34:51.728+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO TaskSetManager: Starting task 0.0 in stage 11.0 (TID 11) (c9f99735a600, executor driver, partition 0, PROCESS_LOCAL, 9158 bytes)
+[2024-11-02T11:34:51.729+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO Executor: Running task 0.0 in stage 11.0 (TID 11)
+[2024-11-02T11:34:51.753+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO CodeGenerator: Code generated in 8.433833 ms
+[2024-11-02T11:34:51.755+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO JDBCRDD: closed connection
+[2024-11-02T11:34:51.761+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO Executor: Finished task 0.0 in stage 11.0 (TID 11). 2294 bytes result sent to driver
+[2024-11-02T11:34:51.762+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO TaskSetManager: Finished task 0.0 in stage 11.0 (TID 11) in 34 ms on c9f99735a600 (executor driver) (1/1)
+[2024-11-02T11:34:51.763+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO TaskSchedulerImpl: Removed TaskSet 11.0, whose tasks have all completed, from pool
+[2024-11-02T11:34:51.763+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO DAGScheduler: ResultStage 11 (showString at NativeMethodAccessorImpl.java:0) finished in 0.044 s
+[2024-11-02T11:34:51.764+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO DAGScheduler: Job 11 is finished. Cancelling potential speculative or zombie tasks for this job
+[2024-11-02T11:34:51.764+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO TaskSchedulerImpl: Killing all running tasks in stage 11: Stage finished
+[2024-11-02T11:34:51.765+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:51 INFO DAGScheduler: Job 11 finished: showString at NativeMethodAccessorImpl.java:0, took 0.046144 s
+[2024-11-02T11:34:51.770+0000] {spark_submit.py:634} INFO - +----------+-----+--------+---+------+--------------------+------------+--------------+----------+
+[2024-11-02T11:34:51.770+0000] {spark_submit.py:634} INFO - |id_mark_fk|model|  socket|DDR| value|                 uri|data_collect|ID_CATEGORY_FK|ID_SITE_FK|
+[2024-11-02T11:34:51.771+0000] {spark_submit.py:634} INFO - +----------+-----+--------+---+------+--------------------+------------+--------------+----------+
+[2024-11-02T11:34:51.771+0000] {spark_submit.py:634} INFO - |       724| H510|LGA 1200|  0|539.39|https://www.kabum...|  2024-10-22|             4|         1|
+[2024-11-02T11:34:51.772+0000] {spark_submit.py:634} INFO - |       724| H110|LGA 1151|  3|410.38|https://www.kabum...|  2024-10-22|             4|         1|
+[2024-11-02T11:34:51.772+0000] {spark_submit.py:634} INFO - |       724| H110|LGA 1151|  4|398.65|https://www.kabum...|  2024-10-22|             4|         1|
+[2024-11-02T11:34:51.772+0000] {spark_submit.py:634} INFO - |       724|  H81|LGA 1150|  3|240.31|https://www.kabum...|  2024-10-22|             4|         1|
+[2024-11-02T11:34:51.773+0000] {spark_submit.py:634} INFO - |       724|  H61|LGA 1155|  3|175.81|https://www.kabum...|  2024-10-22|             4|         1|
+[2024-11-02T11:34:51.773+0000] {spark_submit.py:634} INFO - |       724| H510|LGA 1200|  0|539.39|https://www.kabum...|  2024-10-21|             4|         1|
+[2024-11-02T11:34:51.774+0000] {spark_submit.py:634} INFO - |       724| H110|LGA 1151|  4|398.65|https://www.kabum...|  2024-10-21|             4|         1|
+[2024-11-02T11:34:51.774+0000] {spark_submit.py:634} INFO - |       724| H110|LGA 1151|  3|410.38|https://www.kabum...|  2024-10-21|             4|         1|
+[2024-11-02T11:34:51.774+0000] {spark_submit.py:634} INFO - |       724|  H81|LGA 1150|  3|240.31|https://www.kabum...|  2024-10-21|             4|         1|
+[2024-11-02T11:34:51.775+0000] {spark_submit.py:634} INFO - |       724|  H61|LGA 1155|  3|175.81|https://www.kabum...|  2024-10-21|             4|         1|
+[2024-11-02T11:34:51.775+0000] {spark_submit.py:634} INFO - |       724| H510|LGA 1200|  0|539.39|https://www.kabum...|  2024-10-25|             4|         1|
+[2024-11-02T11:34:51.776+0000] {spark_submit.py:634} INFO - |       724| H110|LGA 1151|  3|410.38|https://www.kabum...|  2024-10-25|             4|         1|
+[2024-11-02T11:34:51.776+0000] {spark_submit.py:634} INFO - |       724| H110|LGA 1151|  4|398.65|https://www.kabum...|  2024-10-25|             4|         1|
+[2024-11-02T11:34:51.776+0000] {spark_submit.py:634} INFO - |       724|  H81|LGA 1150|  3|240.31|https://www.kabum...|  2024-10-25|             4|         1|
+[2024-11-02T11:34:51.777+0000] {spark_submit.py:634} INFO - |       724|  H61|LGA 1155|  3|175.81|https://www.kabum...|  2024-10-25|             4|         1|
+[2024-11-02T11:34:51.777+0000] {spark_submit.py:634} INFO - |       724| H510|LGA 1200|  0|539.39|https://www.kabum...|  2024-11-01|             4|         1|
+[2024-11-02T11:34:51.777+0000] {spark_submit.py:634} INFO - |       724| H110|LGA 1151|  3|410.38|https://www.kabum...|  2024-11-01|             4|         1|
+[2024-11-02T11:34:51.778+0000] {spark_submit.py:634} INFO - |       724| H110|LGA 1151|  4|398.65|https://www.kabum...|  2024-11-01|             4|         1|
+[2024-11-02T11:34:51.778+0000] {spark_submit.py:634} INFO - |       724|  H61|LGA 1155|  3|175.81|https://www.kabum...|  2024-11-01|             4|         1|
+[2024-11-02T11:34:51.778+0000] {spark_submit.py:634} INFO - |       724|  H81|LGA 1150|  3|240.31|https://www.kabum...|  2024-11-01|             4|         1|
+[2024-11-02T11:34:51.779+0000] {spark_submit.py:634} INFO - +----------+-----+--------+---+------+--------------------+------------+--------------+----------+
+[2024-11-02T11:34:51.779+0000] {spark_submit.py:634} INFO - only showing top 20 rows
+[2024-11-02T11:34:51.779+0000] {spark_submit.py:634} INFO - 
+[2024-11-02T11:34:52.311+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO InMemoryFileIndex: It took 415 ms to list leaf files for 13 paths.
+[2024-11-02T11:34:52.336+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO SparkContext: Starting job: parquet at NativeMethodAccessorImpl.java:0
+[2024-11-02T11:34:52.337+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO DAGScheduler: Got job 12 (parquet at NativeMethodAccessorImpl.java:0) with 1 output partitions
+[2024-11-02T11:34:52.338+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO DAGScheduler: Final stage: ResultStage 12 (parquet at NativeMethodAccessorImpl.java:0)
+[2024-11-02T11:34:52.339+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO DAGScheduler: Parents of final stage: List()
+[2024-11-02T11:34:52.339+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO DAGScheduler: Missing parents: List()
+[2024-11-02T11:34:52.339+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO DAGScheduler: Submitting ResultStage 12 (MapPartitionsRDD[43] at parquet at NativeMethodAccessorImpl.java:0), which has no missing parents
+[2024-11-02T11:34:52.344+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO MemoryStore: Block broadcast_21 stored as values in memory (estimated size 104.2 KiB, free 401.0 MiB)
+[2024-11-02T11:34:52.345+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO MemoryStore: Block broadcast_21_piece0 stored as bytes in memory (estimated size 37.6 KiB, free 401.0 MiB)
+[2024-11-02T11:34:52.346+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO BlockManagerInfo: Added broadcast_21_piece0 in memory on c9f99735a600:35601 (size: 37.6 KiB, free: 433.7 MiB)
+[2024-11-02T11:34:52.348+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO SparkContext: Created broadcast 21 from broadcast at DAGScheduler.scala:1585
+[2024-11-02T11:34:52.348+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 12 (MapPartitionsRDD[43] at parquet at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+[2024-11-02T11:34:52.349+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO TaskSchedulerImpl: Adding task set 12.0 with 1 tasks resource profile 0
+[2024-11-02T11:34:52.349+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO TaskSetManager: Starting task 0.0 in stage 12.0 (TID 12) (c9f99735a600, executor driver, partition 0, PROCESS_LOCAL, 9514 bytes)
+[2024-11-02T11:34:52.350+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO Executor: Running task 0.0 in stage 12.0 (TID 12)
+[2024-11-02T11:34:52.381+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO Executor: Finished task 0.0 in stage 12.0 (TID 12). 2058 bytes result sent to driver
+[2024-11-02T11:34:52.382+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO TaskSetManager: Finished task 0.0 in stage 12.0 (TID 12) in 34 ms on c9f99735a600 (executor driver) (1/1)
+[2024-11-02T11:34:52.382+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO TaskSchedulerImpl: Removed TaskSet 12.0, whose tasks have all completed, from pool
+[2024-11-02T11:34:52.383+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO DAGScheduler: ResultStage 12 (parquet at NativeMethodAccessorImpl.java:0) finished in 0.044 s
+[2024-11-02T11:34:52.383+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO DAGScheduler: Job 12 is finished. Cancelling potential speculative or zombie tasks for this job
+[2024-11-02T11:34:52.384+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO TaskSchedulerImpl: Killing all running tasks in stage 12: Stage finished
+[2024-11-02T11:34:52.384+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO DAGScheduler: Job 12 finished: parquet at NativeMethodAccessorImpl.java:0, took 0.046658 s
+[2024-11-02T11:34:52.400+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO FileSourceStrategy: Pushed Filters:
+[2024-11-02T11:34:52.402+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO FileSourceStrategy: Post-Scan Filters:
+[2024-11-02T11:34:52.419+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO CodeGenerator: Code generated in 8.660744 ms
+[2024-11-02T11:34:52.422+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO MemoryStore: Block broadcast_22 stored as values in memory (estimated size 203.1 KiB, free 400.8 MiB)
+[2024-11-02T11:34:52.429+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO MemoryStore: Block broadcast_22_piece0 stored as bytes in memory (estimated size 35.6 KiB, free 400.7 MiB)
+[2024-11-02T11:34:52.430+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO BlockManagerInfo: Added broadcast_22_piece0 in memory on c9f99735a600:35601 (size: 35.6 KiB, free: 433.7 MiB)
+[2024-11-02T11:34:52.430+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO SparkContext: Created broadcast 22 from showString at NativeMethodAccessorImpl.java:0
+[2024-11-02T11:34:52.431+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO FileSourceScanExec: Planning scan with bin packing, max size: 54742971 bytes, open cost is considered as scanning 4194304 bytes.
+[2024-11-02T11:34:52.438+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO SparkContext: Starting job: showString at NativeMethodAccessorImpl.java:0
+[2024-11-02T11:34:52.438+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO DAGScheduler: Got job 13 (showString at NativeMethodAccessorImpl.java:0) with 1 output partitions
+[2024-11-02T11:34:52.439+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO DAGScheduler: Final stage: ResultStage 13 (showString at NativeMethodAccessorImpl.java:0)
+[2024-11-02T11:34:52.440+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO DAGScheduler: Parents of final stage: List()
+[2024-11-02T11:34:52.440+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO DAGScheduler: Missing parents: List()
+[2024-11-02T11:34:52.440+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO DAGScheduler: Submitting ResultStage 13 (MapPartitionsRDD[47] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+[2024-11-02T11:34:52.441+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO MemoryStore: Block broadcast_23 stored as values in memory (estimated size 19.7 KiB, free 400.7 MiB)
+[2024-11-02T11:34:52.442+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO MemoryStore: Block broadcast_23_piece0 stored as bytes in memory (estimated size 7.6 KiB, free 400.7 MiB)
+[2024-11-02T11:34:52.442+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO BlockManagerInfo: Added broadcast_23_piece0 in memory on c9f99735a600:35601 (size: 7.6 KiB, free: 433.7 MiB)
+[2024-11-02T11:34:52.443+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO SparkContext: Created broadcast 23 from broadcast at DAGScheduler.scala:1585
+[2024-11-02T11:34:52.443+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 13 (MapPartitionsRDD[47] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+[2024-11-02T11:34:52.444+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO TaskSchedulerImpl: Adding task set 13.0 with 1 tasks resource profile 0
+[2024-11-02T11:34:52.444+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO TaskSetManager: Starting task 0.0 in stage 13.0 (TID 13) (c9f99735a600, executor driver, partition 0, PROCESS_LOCAL, 12464 bytes)
+[2024-11-02T11:34:52.445+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO Executor: Running task 0.0 in stage 13.0 (TID 13)
+[2024-11-02T11:34:52.461+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO CodeGenerator: Code generated in 13.549894 ms
+[2024-11-02T11:34:52.464+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/kabum_2024-10-23/placa_video_k.parquet/part-00000-0020e0d1-587c-411c-a22b-629620d6791f-c000.snappy.parquet, range: 0-27787, partition values: [empty row]
+[2024-11-02T11:34:52.526+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO Executor: Finished task 0.0 in stage 13.0 (TID 13). 3765 bytes result sent to driver
+[2024-11-02T11:34:52.527+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO TaskSetManager: Finished task 0.0 in stage 13.0 (TID 13) in 83 ms on c9f99735a600 (executor driver) (1/1)
+[2024-11-02T11:34:52.528+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO TaskSchedulerImpl: Removed TaskSet 13.0, whose tasks have all completed, from pool
+[2024-11-02T11:34:52.528+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO DAGScheduler: ResultStage 13 (showString at NativeMethodAccessorImpl.java:0) finished in 0.089 s
+[2024-11-02T11:34:52.529+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO DAGScheduler: Job 13 is finished. Cancelling potential speculative or zombie tasks for this job
+[2024-11-02T11:34:52.530+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO TaskSchedulerImpl: Killing all running tasks in stage 13: Stage finished
+[2024-11-02T11:34:52.530+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO DAGScheduler: Job 13 finished: showString at NativeMethodAccessorImpl.java:0, took 0.091189 s
+[2024-11-02T11:34:52.534+0000] {spark_submit.py:634} INFO - +---------+---------+---+------+-------+--------------------+------------+------------------+
+[2024-11-02T11:34:52.534+0000] {spark_submit.py:634} INFO - |name_mark|    model| GB|memory|  value|                 uri|data_collect|          category|
+[2024-11-02T11:34:52.535+0000] {spark_submit.py:634} INFO - +---------+---------+---+------+-------+--------------------+------------+------------------+
+[2024-11-02T11:34:52.535+0000] {spark_submit.py:634} INFO - |   NVIDIA| RTX 4060|  8| GDDR6|1969.99|https://www.kabum...|  2024-10-23|placa-de-video-vga|
+[2024-11-02T11:34:52.536+0000] {spark_submit.py:634} INFO - |   ASROCK|  RX 6600|  8| GDDR6|1399.99|https://www.kabum...|  2024-10-23|placa-de-video-vga|
+[2024-11-02T11:34:52.536+0000] {spark_submit.py:634} INFO - |   NVIDIA|  RTX4060|  8| GDDR6|1959.99|https://www.kabum...|  2024-10-23|placa-de-video-vga|
+[2024-11-02T11:34:52.537+0000] {spark_submit.py:634} INFO - |      AMD|RX 6750XT| 12| GDDR6|2199.99|https://www.kabum...|  2024-10-23|placa-de-video-vga|
+[2024-11-02T11:34:52.537+0000] {spark_submit.py:634} INFO - |      AMD|RX 6650XT|  8| GDDR6|1649.99|https://www.kabum...|  2024-10-23|placa-de-video-vga|
+[2024-11-02T11:34:52.538+0000] {spark_submit.py:634} INFO - |   NVIDIA| RTX 3060| 12| GDDR6|1639.99|https://www.kabum...|  2024-10-23|placa-de-video-vga|
+[2024-11-02T11:34:52.538+0000] {spark_submit.py:634} INFO - |   NVIDIA| RTX 4060|  8| GDDR6|2499.99|https://www.kabum...|  2024-10-23|placa-de-video-vga|
+[2024-11-02T11:34:52.538+0000] {spark_submit.py:634} INFO - |      AMD|  RX 6600|  8| GDDR6|1499.99|https://www.kabum...|  2024-10-23|placa-de-video-vga|
+[2024-11-02T11:34:52.539+0000] {spark_submit.py:634} INFO - |   NVIDIA| RTX 3050|  6| GDDR6|1119.99|https://www.kabum...|  2024-10-23|placa-de-video-vga|
+[2024-11-02T11:34:52.539+0000] {spark_submit.py:634} INFO - |   NVIDIA| RTX 4060|  8| GDDR6|2139.99|https://www.kabum...|  2024-10-23|placa-de-video-vga|
+[2024-11-02T11:34:52.540+0000] {spark_submit.py:634} INFO - |   NVIDIA| RTX 3060| 12| GDDR6|1899.99|https://www.kabum...|  2024-10-23|placa-de-video-vga|
+[2024-11-02T11:34:52.540+0000] {spark_submit.py:634} INFO - |   NVIDIA| RTX 3060| 12| GDDR6|1779.99|https://www.kabum...|  2024-10-23|placa-de-video-vga|
+[2024-11-02T11:34:52.540+0000] {spark_submit.py:634} INFO - |   NVIDIA| RTX 4060|  8| GDDR6|2199.99|https://www.kabum...|  2024-10-23|placa-de-video-vga|
+[2024-11-02T11:34:52.541+0000] {spark_submit.py:634} INFO - |      AMD|  RX 7600|  8| GDDR6|1799.99|https://www.kabum...|  2024-10-23|placa-de-video-vga|
+[2024-11-02T11:34:52.541+0000] {spark_submit.py:634} INFO - |   NVIDIA| RTX 4060|  8| GDDR6|2441.41|https://www.kabum...|  2024-10-23|placa-de-video-vga|
+[2024-11-02T11:34:52.542+0000] {spark_submit.py:634} INFO - |      AMD|  RX 6600|  8| GDDR6|1369.99|https://www.kabum...|  2024-10-23|placa-de-video-vga|
+[2024-11-02T11:34:52.542+0000] {spark_submit.py:634} INFO - |   NVIDIA| RTX 4070| 12|GDDR6X|4199.99|https://www.kabum...|  2024-10-23|placa-de-video-vga|
+[2024-11-02T11:34:52.542+0000] {spark_submit.py:634} INFO - |   NVIDIA| RTX 4060|  0| GDDR6|2649.99|https://www.kabum...|  2024-10-23|placa-de-video-vga|
+[2024-11-02T11:34:52.543+0000] {spark_submit.py:634} INFO - |      AMD|  RX 6600|  8| GDDR6|1459.99|https://www.kabum...|  2024-10-23|placa-de-video-vga|
+[2024-11-02T11:34:52.543+0000] {spark_submit.py:634} INFO - |   NVIDIA| RTX 3050|  8| GDDR6|1299.99|https://www.kabum...|  2024-10-23|placa-de-video-vga|
+[2024-11-02T11:34:52.543+0000] {spark_submit.py:634} INFO - +---------+---------+---+------+-------+--------------------+------------+------------------+
+[2024-11-02T11:34:52.544+0000] {spark_submit.py:634} INFO - only showing top 20 rows
+[2024-11-02T11:34:52.544+0000] {spark_submit.py:634} INFO - 
+[2024-11-02T11:34:52.623+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO FileSourceStrategy: Pushed Filters: IsNotNull(name_mark)
+[2024-11-02T11:34:52.623+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO FileSourceStrategy: Post-Scan Filters: isnotnull(name_mark#462)
+[2024-11-02T11:34:52.649+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO CodeGenerator: Code generated in 7.38607 ms
+[2024-11-02T11:34:52.652+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO MemoryStore: Block broadcast_24 stored as values in memory (estimated size 202.9 KiB, free 400.5 MiB)
+[2024-11-02T11:34:52.659+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO MemoryStore: Block broadcast_24_piece0 stored as bytes in memory (estimated size 35.4 KiB, free 400.5 MiB)
+[2024-11-02T11:34:52.659+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO BlockManagerInfo: Added broadcast_24_piece0 in memory on c9f99735a600:35601 (size: 35.4 KiB, free: 433.7 MiB)
+[2024-11-02T11:34:52.660+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO SparkContext: Created broadcast 24 from $anonfun$withThreadLocalCaptured$1 at FutureTask.java:264
+[2024-11-02T11:34:52.661+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO FileSourceScanExec: Planning scan with bin packing, max size: 54742971 bytes, open cost is considered as scanning 4194304 bytes.
+[2024-11-02T11:34:52.669+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO SparkContext: Starting job: $anonfun$withThreadLocalCaptured$1 at FutureTask.java:264
+[2024-11-02T11:34:52.670+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO DAGScheduler: Got job 14 ($anonfun$withThreadLocalCaptured$1 at FutureTask.java:264) with 1 output partitions
+[2024-11-02T11:34:52.670+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO DAGScheduler: Final stage: ResultStage 14 ($anonfun$withThreadLocalCaptured$1 at FutureTask.java:264)
+[2024-11-02T11:34:52.671+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO DAGScheduler: Parents of final stage: List()
+[2024-11-02T11:34:52.672+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO DAGScheduler: Missing parents: List()
+[2024-11-02T11:34:52.672+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO DAGScheduler: Submitting ResultStage 14 (MapPartitionsRDD[52] at $anonfun$withThreadLocalCaptured$1 at FutureTask.java:264), which has no missing parents
+[2024-11-02T11:34:52.673+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO MemoryStore: Block broadcast_25 stored as values in memory (estimated size 18.9 KiB, free 400.5 MiB)
+[2024-11-02T11:34:52.679+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO MemoryStore: Block broadcast_25_piece0 stored as bytes in memory (estimated size 7.3 KiB, free 400.5 MiB)
+[2024-11-02T11:34:52.679+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO BlockManagerInfo: Added broadcast_25_piece0 in memory on c9f99735a600:35601 (size: 7.3 KiB, free: 433.6 MiB)
+[2024-11-02T11:34:52.680+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO BlockManagerInfo: Removed broadcast_22_piece0 on c9f99735a600:35601 in memory (size: 35.6 KiB, free: 433.7 MiB)
+[2024-11-02T11:34:52.684+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO SparkContext: Created broadcast 25 from broadcast at DAGScheduler.scala:1585
+[2024-11-02T11:34:52.685+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 14 (MapPartitionsRDD[52] at $anonfun$withThreadLocalCaptured$1 at FutureTask.java:264) (first 15 tasks are for partitions Vector(0))
+[2024-11-02T11:34:52.686+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO TaskSchedulerImpl: Adding task set 14.0 with 1 tasks resource profile 0
+[2024-11-02T11:34:52.686+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO TaskSetManager: Starting task 0.0 in stage 14.0 (TID 14) (c9f99735a600, executor driver, partition 0, PROCESS_LOCAL, 12464 bytes)
+[2024-11-02T11:34:52.687+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO Executor: Running task 0.0 in stage 14.0 (TID 14)
+[2024-11-02T11:34:52.687+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO BlockManagerInfo: Removed broadcast_23_piece0 on c9f99735a600:35601 in memory (size: 7.6 KiB, free: 433.7 MiB)
+[2024-11-02T11:34:52.688+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO BlockManagerInfo: Removed broadcast_21_piece0 on c9f99735a600:35601 in memory (size: 37.6 KiB, free: 433.7 MiB)
+[2024-11-02T11:34:52.693+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO CodeGenerator: Code generated in 8.931447 ms
+[2024-11-02T11:34:52.694+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/kabum_2024-10-23/placa_video_k.parquet/part-00000-0020e0d1-587c-411c-a22b-629620d6791f-c000.snappy.parquet, range: 0-27787, partition values: [empty row]
+[2024-11-02T11:34:52.697+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO BlockManagerInfo: Removed broadcast_19_piece0 on c9f99735a600:35601 in memory (size: 292.4 KiB, free: 434.0 MiB)
+[2024-11-02T11:34:52.701+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO BlockManagerInfo: Removed broadcast_17_piece0 on c9f99735a600:35601 in memory (size: 35.4 KiB, free: 434.0 MiB)
+[2024-11-02T11:34:52.705+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO BlockManagerInfo: Removed broadcast_20_piece0 on c9f99735a600:35601 in memory (size: 8.2 KiB, free: 434.1 MiB)
+[2024-11-02T11:34:52.754+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:52.760+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/kabum_2024-10-22/placa_video_k.parquet/part-00000-11aaa50a-112b-464b-ab4b-ee21b3291234-c000.snappy.parquet, range: 0-27744, partition values: [empty row]
+[2024-11-02T11:34:52.815+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:52.821+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/kabum_2024-10-26/placa_video_k.parquet/part-00000-6d0fc020-8286-4c4a-95cd-245fb1a1aa5b-c000.snappy.parquet, range: 0-27666, partition values: [empty row]
+[2024-11-02T11:34:52.880+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:52.885+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/kabum_2024-10-25/placa_video_k.parquet/part-00000-80661817-d9d1-44f7-b15c-8a5cf81b30c7-c000.snappy.parquet, range: 0-27648, partition values: [empty row]
+[2024-11-02T11:34:52.945+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:52.951+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:52 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/kabum_2024-10-21/placa_video_k.parquet/part-00000-1bef1fe3-41e5-408a-a3fd-2ce07bb90e1f-c000.snappy.parquet, range: 0-27236, partition values: [empty row]
+[2024-11-02T11:34:53.010+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:53.016+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/kabum_2024-11-01/placa_video_k.parquet/part-00000-58e45ba8-e603-4b13-9735-20672b4d3841-c000.snappy.parquet, range: 0-27174, partition values: [empty row]
+[2024-11-02T11:34:53.064+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:53.069+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/pichau_2024-10-23/placa_video_k.parquet/part-00000-4908c341-3134-470d-afad-df9d80273aba-c000.snappy.parquet, range: 0-7421, partition values: [empty row]
+[2024-11-02T11:34:53.124+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:53.129+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/pichau_2024-10-25/placa_video_k.parquet/part-00000-51297999-bfef-4be6-93bf-401a49c08017-c000.snappy.parquet, range: 0-7413, partition values: [empty row]
+[2024-11-02T11:34:53.188+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:53.193+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/pichau_2024-10-27/placa_video_k.parquet/part-00000-ba6ac679-86d5-4b84-86c0-4e6fc68eae81-c000.snappy.parquet, range: 0-7407, partition values: [empty row]
+[2024-11-02T11:34:53.241+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:53.245+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/pichau_2024-10-26/placa_video_k.parquet/part-00000-0efa7e58-e59a-46e0-b355-03c2b166ad83-c000.snappy.parquet, range: 0-7397, partition values: [empty row]
+[2024-11-02T11:34:53.299+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:53.305+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/pichau_2024-10-22/placa_video_k.parquet/part-00000-2f219fc3-45ae-46d5-961c-e333f0ad1741-c000.snappy.parquet, range: 0-7390, partition values: [empty row]
+[2024-11-02T11:34:53.361+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:53.366+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/pichau_2024-10-21/placa_video_k.parquet/part-00000-c9b2126c-7fc2-4cc9-9a73-04ee7c785794-c000.snappy.parquet, range: 0-7381, partition values: [empty row]
+[2024-11-02T11:34:53.421+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:53.426+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO FileScanRDD: Reading File path: file:///opt/***/datalake/silverzone/pichau_2024-11-01/placa_video_k.parquet/part-00000-a1b5e3f2-ab3d-40ed-a7e0-34107f5d8bfa-c000.snappy.parquet, range: 0-7355, partition values: [empty row]
+[2024-11-02T11:34:53.476+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO FilterCompat: Filtering using predicate: noteq(name_mark, null)
+[2024-11-02T11:34:53.482+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO Executor: Finished task 0.0 in stage 14.0 (TID 14). 285699 bytes result sent to driver
+[2024-11-02T11:34:53.483+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO TaskSetManager: Finished task 0.0 in stage 14.0 (TID 14) in 803 ms on c9f99735a600 (executor driver) (1/1)
+[2024-11-02T11:34:53.483+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO TaskSchedulerImpl: Removed TaskSet 14.0, whose tasks have all completed, from pool
+[2024-11-02T11:34:53.484+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO DAGScheduler: ResultStage 14 ($anonfun$withThreadLocalCaptured$1 at FutureTask.java:264) finished in 0.812 s
+[2024-11-02T11:34:53.490+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO DAGScheduler: Job 14 is finished. Cancelling potential speculative or zombie tasks for this job
+[2024-11-02T11:34:53.491+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO TaskSchedulerImpl: Killing all running tasks in stage 14: Stage finished
+[2024-11-02T11:34:53.491+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO DAGScheduler: Job 14 finished: $anonfun$withThreadLocalCaptured$1 at FutureTask.java:264, took 0.816338 s
+[2024-11-02T11:34:53.492+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO MemoryStore: Block broadcast_26 stored as values in memory (estimated size 16.1 MiB, free 401.4 MiB)
+[2024-11-02T11:34:53.495+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO MemoryStore: Block broadcast_26_piece0 stored as bytes in memory (estimated size 323.6 KiB, free 401.1 MiB)
+[2024-11-02T11:34:53.496+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO BlockManagerInfo: Added broadcast_26_piece0 in memory on c9f99735a600:35601 (size: 323.6 KiB, free: 433.7 MiB)
+[2024-11-02T11:34:53.496+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO SparkContext: Created broadcast 26 from $anonfun$withThreadLocalCaptured$1 at FutureTask.java:264
+[2024-11-02T11:34:53.516+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO CodeGenerator: Code generated in 7.097455 ms
+[2024-11-02T11:34:53.520+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO SparkContext: Starting job: showString at NativeMethodAccessorImpl.java:0
+[2024-11-02T11:34:53.521+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO DAGScheduler: Got job 15 (showString at NativeMethodAccessorImpl.java:0) with 1 output partitions
+[2024-11-02T11:34:53.522+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO DAGScheduler: Final stage: ResultStage 15 (showString at NativeMethodAccessorImpl.java:0)
+[2024-11-02T11:34:53.522+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO DAGScheduler: Parents of final stage: List()
+[2024-11-02T11:34:53.522+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO DAGScheduler: Missing parents: List()
+[2024-11-02T11:34:53.523+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO DAGScheduler: Submitting ResultStage 15 (MapPartitionsRDD[55] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+[2024-11-02T11:34:53.523+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO MemoryStore: Block broadcast_27 stored as values in memory (estimated size 17.3 KiB, free 401.1 MiB)
+[2024-11-02T11:34:53.529+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO MemoryStore: Block broadcast_27_piece0 stored as bytes in memory (estimated size 8.2 KiB, free 401.1 MiB)
+[2024-11-02T11:34:53.530+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO BlockManagerInfo: Added broadcast_27_piece0 in memory on c9f99735a600:35601 (size: 8.2 KiB, free: 433.7 MiB)
+[2024-11-02T11:34:53.531+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO BlockManagerInfo: Removed broadcast_25_piece0 on c9f99735a600:35601 in memory (size: 7.3 KiB, free: 433.7 MiB)
+[2024-11-02T11:34:53.531+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO SparkContext: Created broadcast 27 from broadcast at DAGScheduler.scala:1585
+[2024-11-02T11:34:53.532+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 15 (MapPartitionsRDD[55] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+[2024-11-02T11:34:53.532+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO TaskSchedulerImpl: Adding task set 15.0 with 1 tasks resource profile 0
+[2024-11-02T11:34:53.533+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO TaskSetManager: Starting task 0.0 in stage 15.0 (TID 15) (c9f99735a600, executor driver, partition 0, PROCESS_LOCAL, 9158 bytes)
+[2024-11-02T11:34:53.533+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO Executor: Running task 0.0 in stage 15.0 (TID 15)
+[2024-11-02T11:34:53.557+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO CodeGenerator: Code generated in 6.866844 ms
+[2024-11-02T11:34:53.559+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO JDBCRDD: closed connection
+[2024-11-02T11:34:53.561+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO Executor: Finished task 0.0 in stage 15.0 (TID 15). 2343 bytes result sent to driver
+[2024-11-02T11:34:53.562+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO TaskSetManager: Finished task 0.0 in stage 15.0 (TID 15) in 30 ms on c9f99735a600 (executor driver) (1/1)
+[2024-11-02T11:34:53.562+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO TaskSchedulerImpl: Removed TaskSet 15.0, whose tasks have all completed, from pool
+[2024-11-02T11:34:53.563+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO DAGScheduler: ResultStage 15 (showString at NativeMethodAccessorImpl.java:0) finished in 0.040 s
+[2024-11-02T11:34:53.563+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO DAGScheduler: Job 15 is finished. Cancelling potential speculative or zombie tasks for this job
+[2024-11-02T11:34:53.564+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO TaskSchedulerImpl: Killing all running tasks in stage 15: Stage finished
+[2024-11-02T11:34:53.564+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO DAGScheduler: Job 15 finished: showString at NativeMethodAccessorImpl.java:0, took 0.042281 s
+[2024-11-02T11:34:53.569+0000] {spark_submit.py:634} INFO - +----------+--------+---+--------+------+--------------------+------------+--------------+----------+
+[2024-11-02T11:34:53.571+0000] {spark_submit.py:634} INFO - |id_mark_fk|   model| GB|  memory| value|                 uri|data_collect|ID_CATEGORY_FK|ID_SITE_FK|
+[2024-11-02T11:34:53.571+0000] {spark_submit.py:634} INFO - +----------+--------+---+--------+------+--------------------+------------+--------------+----------+
+[2024-11-02T11:34:53.572+0000] {spark_submit.py:634} INFO - |       764|  RX 580|  8|NOT_INFO|896.00|https://www.kabum...|  2024-11-01|             3|         1|
+[2024-11-02T11:34:53.572+0000] {spark_submit.py:634} INFO - |       764|  GTX550|  2|    DDR5|536.63|https://www.kabum...|  2024-11-01|             3|         1|
+[2024-11-02T11:34:53.573+0000] {spark_submit.py:634} INFO - |       764|NOT_INFO|  4|    DDR5|675.91|https://www.kabum...|  2024-11-01|             3|         1|
+[2024-11-02T11:34:53.573+0000] {spark_submit.py:634} INFO - |       764|   GT730|  4|    DDR3|333.90|https://www.kabum...|  2024-11-01|             3|         1|
+[2024-11-02T11:34:53.574+0000] {spark_submit.py:634} INFO - |       764|  RX 580|  8|NOT_INFO|896.00|https://www.kabum...|  2024-10-21|             3|         1|
+[2024-11-02T11:34:53.574+0000] {spark_submit.py:634} INFO - |       764|  GTX550|  2|    DDR5|596.25|https://www.kabum...|  2024-10-21|             3|         1|
+[2024-11-02T11:34:53.575+0000] {spark_submit.py:634} INFO - |       764|NOT_INFO|  4|    DDR5|642.11|https://www.kabum...|  2024-10-21|             3|         1|
+[2024-11-02T11:34:53.575+0000] {spark_submit.py:634} INFO - |       764|   GT730|  4|    DDR3|341.90|https://www.kabum...|  2024-10-21|             3|         1|
+[2024-11-02T11:34:53.576+0000] {spark_submit.py:634} INFO - |       764|  GTX550|  2|    DDR5|536.63|https://www.kabum...|  2024-10-25|             3|         1|
+[2024-11-02T11:34:53.577+0000] {spark_submit.py:634} INFO - |       764|  RX 580|  8|NOT_INFO|896.00|https://www.kabum...|  2024-10-25|             3|         1|
+[2024-11-02T11:34:53.579+0000] {spark_submit.py:634} INFO - |       764|NOT_INFO|  4|    DDR5|642.11|https://www.kabum...|  2024-10-25|             3|         1|
+[2024-11-02T11:34:53.579+0000] {spark_submit.py:634} INFO - |       764|   GT730|  4|    DDR3|333.90|https://www.kabum...|  2024-10-25|             3|         1|
+[2024-11-02T11:34:53.580+0000] {spark_submit.py:634} INFO - |       764|  RX 580|  8|NOT_INFO|896.00|https://www.kabum...|  2024-10-26|             3|         1|
+[2024-11-02T11:34:53.580+0000] {spark_submit.py:634} INFO - |       764|  GTX550|  2|    DDR5|536.63|https://www.kabum...|  2024-10-26|             3|         1|
+[2024-11-02T11:34:53.580+0000] {spark_submit.py:634} INFO - |       764|NOT_INFO|  4|    DDR5|642.11|https://www.kabum...|  2024-10-26|             3|         1|
+[2024-11-02T11:34:53.581+0000] {spark_submit.py:634} INFO - |       764|   GT730|  4|    DDR3|333.90|https://www.kabum...|  2024-10-26|             3|         1|
+[2024-11-02T11:34:53.581+0000] {spark_submit.py:634} INFO - |       764|  RX 580|  8|NOT_INFO|896.00|https://www.kabum...|  2024-10-22|             3|         1|
+[2024-11-02T11:34:53.581+0000] {spark_submit.py:634} INFO - |       764|  GTX550|  2|    DDR5|536.63|https://www.kabum...|  2024-10-22|             3|         1|
+[2024-11-02T11:34:53.582+0000] {spark_submit.py:634} INFO - |       764|   GT730|  4|    DDR3|333.90|https://www.kabum...|  2024-10-22|             3|         1|
+[2024-11-02T11:34:53.582+0000] {spark_submit.py:634} INFO - |       764|NOT_INFO|  4|    DDR5|642.11|https://www.kabum...|  2024-10-22|             3|         1|
+[2024-11-02T11:34:53.583+0000] {spark_submit.py:634} INFO - +----------+--------+---+--------+------+--------------------+------------+--------------+----------+
+[2024-11-02T11:34:53.583+0000] {spark_submit.py:634} INFO - only showing top 20 rows
+[2024-11-02T11:34:53.583+0000] {spark_submit.py:634} INFO - 
+[2024-11-02T11:34:53.585+0000] {spark_submit.py:634} INFO - [2024-11-02T11:34:53.570+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-11-02T11:34:53.915+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO SparkContext: Invoking stop() from shutdown hook
+[2024-11-02T11:34:53.915+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO SparkContext: SparkContext is stopping with exitCode 0.
+[2024-11-02T11:34:53.923+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO SparkUI: Stopped Spark web UI at http://c9f99735a600:4040
+[2024-11-02T11:34:53.932+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+[2024-11-02T11:34:53.942+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO MemoryStore: MemoryStore cleared
+[2024-11-02T11:34:53.942+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO BlockManager: BlockManager stopped
+[2024-11-02T11:34:53.944+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO BlockManagerMaster: BlockManagerMaster stopped
+[2024-11-02T11:34:53.950+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+[2024-11-02T11:34:53.956+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO SparkContext: Successfully stopped SparkContext
+[2024-11-02T11:34:53.957+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO ShutdownHookManager: Shutdown hook called
+[2024-11-02T11:34:53.958+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO ShutdownHookManager: Deleting directory /tmp/spark-24607bee-b57a-469d-bcfd-0ed424ea37bc/pyspark-0ba6dd0c-bac0-4dc7-966d-717681ad9270
+[2024-11-02T11:34:53.961+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO ShutdownHookManager: Deleting directory /tmp/spark-24607bee-b57a-469d-bcfd-0ed424ea37bc
+[2024-11-02T11:34:53.965+0000] {spark_submit.py:634} INFO - 24/11/02 11:34:53 INFO ShutdownHookManager: Deleting directory /tmp/spark-524d55a6-56e3-462b-9adb-406a8b3002a5
+[2024-11-02T11:34:54.009+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-02T11:34:54.009+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=LoadWebScraping, task_id=insert, run_id=manual__2024-11-02T11:34:27.204190+00:00, execution_date=20241102T113427, start_date=20241102T113430, end_date=20241102T113454
+[2024-11-02T11:34:54.071+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-11-02T11:34:54.084+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-11-02T11:34:54.088+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

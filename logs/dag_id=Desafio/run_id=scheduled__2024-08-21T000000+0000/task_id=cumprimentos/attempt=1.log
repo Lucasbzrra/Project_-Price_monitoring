@@ -1,0 +1,14 @@
+[2024-08-22T18:06:38.416+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Desafio.cumprimentos scheduled__2024-08-21T00:00:00+00:00 [queued]>
+[2024-08-22T18:06:38.425+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Desafio.cumprimentos scheduled__2024-08-21T00:00:00+00:00 [queued]>
+[2024-08-22T18:06:38.426+0000] {taskinstance.py:2171} INFO - Starting attempt 1 of 1
+[2024-08-22T18:06:38.516+0000] {taskinstance.py:2192} INFO - Executing <Task(PythonOperator): cumprimentos> on 2024-08-21 00:00:00+00:00
+[2024-08-22T18:06:38.523+0000] {standard_task_runner.py:60} INFO - Started process 71 to run task
+[2024-08-22T18:06:38.532+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'Desafio', 'cumprimentos', 'scheduled__2024-08-21T00:00:00+00:00', '--job-id', '126', '--raw', '--subdir', 'DAGS_FOLDER/atividade_aula_4.py', '--cfg-path', '/tmp/tmpbm_biocb']
+[2024-08-22T18:06:38.535+0000] {standard_task_runner.py:88} INFO - Job 126: Subtask cumprimentos
+[2024-08-22T18:06:38.597+0000] {task_command.py:423} INFO - Running <TaskInstance: Desafio.cumprimentos scheduled__2024-08-21T00:00:00+00:00 [running]> on host aaa07c95d172
+[2024-08-22T18:06:38.716+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Desafio' AIRFLOW_CTX_TASK_ID='cumprimentos' AIRFLOW_CTX_EXECUTION_DATE='2024-08-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-08-21T00:00:00+00:00'
+[2024-08-22T18:06:38.718+0000] {logging_mixin.py:188} INFO - Boas-vindas ao Airflow!
+[2024-08-22T18:06:38.719+0000] {python.py:201} INFO - Done. Returned value was: None
+[2024-08-22T18:06:38.735+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=Desafio, task_id=cumprimentos, execution_date=20240821T000000, start_date=20240822T180638, end_date=20240822T180638
+[2024-08-22T18:06:38.786+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-08-22T18:06:38.815+0000] {taskinstance.py:3281} INFO - 0 downstream tasks scheduled from follow-on schedule check

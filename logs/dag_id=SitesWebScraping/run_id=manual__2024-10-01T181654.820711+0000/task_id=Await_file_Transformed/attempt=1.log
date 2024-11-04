@@ -1,0 +1,22 @@
+[2024-10-01T18:16:57.433+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-10-01T18:16:57.451+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: SitesWebScraping.Await_file_Transformed manual__2024-10-01T18:16:54.820711+00:00 [queued]>
+[2024-10-01T18:16:57.460+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: SitesWebScraping.Await_file_Transformed manual__2024-10-01T18:16:54.820711+00:00 [queued]>
+[2024-10-01T18:16:57.461+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2024-10-01T18:16:57.474+0000] {taskinstance.py:2888} INFO - Executing <Task(OperatorFileSensor): Await_file_Transformed> on 2024-10-01 18:16:54.820711+00:00
+[2024-10-01T18:16:57.479+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=73) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-01T18:16:57.480+0000] {standard_task_runner.py:72} INFO - Started process 74 to run task
+[2024-10-01T18:16:57.481+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'SitesWebScraping', 'Await_file_Transformed', 'manual__2024-10-01T18:16:54.820711+00:00', '--job-id', '585', '--raw', '--subdir', 'DAGS_FOLDER/DagWebScraping.py', '--cfg-path', '/tmp/tmptyjgmdrw']
+[2024-10-01T18:16:57.483+0000] {standard_task_runner.py:105} INFO - Job 585: Subtask Await_file_Transformed
+[2024-10-01T18:16:57.528+0000] {task_command.py:467} INFO - Running <TaskInstance: SitesWebScraping.Await_file_Transformed manual__2024-10-01T18:16:54.820711+00:00 [running]> on host eb305769d48a
+[2024-10-01T18:16:57.605+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='SitesWebScraping' AIRFLOW_CTX_TASK_ID='Await_file_Transformed' AIRFLOW_CTX_EXECUTION_DATE='2024-10-01T18:16:54.820711+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-01T18:16:54.820711+00:00'
+[2024-10-01T18:16:57.606+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-10-01T18:16:57.620+0000] {baseoperator.py:405} WARNING - OperatorFileSensor.execute cannot be called outside TaskInstance!
+[2024-10-01T18:43:56.510+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to removed. Terminating instance.
+[2024-10-01T18:43:56.512+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2024-10-01T18:43:56.515+0000] {process_utils.py:132} INFO - Sending 15 to group 74. PIDs of all processes in the group: [74]
+[2024-10-01T18:43:56.516+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 74
+[2024-10-01T18:43:56.517+0000] {taskinstance.py:3092} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-10-01T18:43:56.542+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-10-01T18:43:56.570+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=74, status='terminated', exitcode=0, started='18:16:57') (74) terminated with exit code 0

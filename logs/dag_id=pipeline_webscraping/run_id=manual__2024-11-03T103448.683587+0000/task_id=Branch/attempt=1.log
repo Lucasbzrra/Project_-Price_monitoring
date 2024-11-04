@@ -1,0 +1,24 @@
+[2024-11-03T10:42:31.629+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-03T10:42:31.648+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pipeline_webscraping.Branch manual__2024-11-03T10:34:48.683587+00:00 [queued]>
+[2024-11-03T10:42:31.660+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pipeline_webscraping.Branch manual__2024-11-03T10:34:48.683587+00:00 [queued]>
+[2024-11-03T10:42:31.660+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2024-11-03T10:42:31.673+0000] {taskinstance.py:2888} INFO - Executing <Task(BranchPythonOperator): Branch> on 2024-11-03 10:34:48.683587+00:00
+[2024-11-03T10:42:31.682+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1127) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-11-03T10:42:31.683+0000] {standard_task_runner.py:72} INFO - Started process 1129 to run task
+[2024-11-03T10:42:31.684+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pipeline_webscraping', 'Branch', 'manual__2024-11-03T10:34:48.683587+00:00', '--job-id', '267', '--raw', '--subdir', 'DAGS_FOLDER/DagWebScraping.py', '--cfg-path', '/tmp/tmpxy_zs_mx']
+[2024-11-03T10:42:31.686+0000] {standard_task_runner.py:105} INFO - Job 267: Subtask Branch
+[2024-11-03T10:42:31.727+0000] {task_command.py:467} INFO - Running <TaskInstance: pipeline_webscraping.Branch manual__2024-11-03T10:34:48.683587+00:00 [running]> on host f2a2c0e12dc6
+[2024-11-03T10:42:31.803+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pipeline_webscraping' AIRFLOW_CTX_TASK_ID='Branch' AIRFLOW_CTX_EXECUTION_DATE='2024-11-03T10:34:48.683587+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-03T10:34:48.683587+00:00'
+[2024-11-03T10:42:31.804+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-03T10:42:31.817+0000] {baseoperator.py:405} WARNING - BranchPythonOperator.execute cannot be called outside TaskInstance!
+[2024-11-03T10:42:31.831+0000] {python.py:240} INFO - Done. Returned value was: FileToDW
+[2024-11-03T10:42:31.831+0000] {branch.py:38} INFO - Branch into FileToDW
+[2024-11-03T10:42:31.832+0000] {skipmixin.py:230} INFO - Following branch ('FileToDW',)
+[2024-11-03T10:42:31.840+0000] {skipmixin.py:278} INFO - Skipping tasks [('Task_Submission_With_Error', -1)]
+[2024-11-03T10:42:31.871+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-03T10:42:31.871+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=pipeline_webscraping, task_id=Branch, run_id=manual__2024-11-03T10:34:48.683587+00:00, execution_date=20241103T103448, start_date=20241103T104231, end_date=20241103T104231
+[2024-11-03T10:42:31.898+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-11-03T10:42:31.921+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-11-03T10:42:31.926+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

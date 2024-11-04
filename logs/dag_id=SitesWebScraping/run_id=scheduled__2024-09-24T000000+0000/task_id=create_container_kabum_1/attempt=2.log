@@ -1,0 +1,48 @@
+[2024-09-25T21:37:03.096+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-25T21:37:03.112+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: SitesWebScraping.create_container_kabum_1 scheduled__2024-09-24T00:00:00+00:00 [queued]>
+[2024-09-25T21:37:03.120+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: SitesWebScraping.create_container_kabum_1 scheduled__2024-09-24T00:00:00+00:00 [queued]>
+[2024-09-25T21:37:03.121+0000] {taskinstance.py:2865} INFO - Starting attempt 2 of 2
+[2024-09-25T21:37:03.137+0000] {taskinstance.py:2888} INFO - Executing <Task(CreateContainerInDataLake): create_container_kabum_1> on 2024-09-24 00:00:00+00:00
+[2024-09-25T21:37:03.143+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=133) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-25T21:37:03.145+0000] {standard_task_runner.py:72} INFO - Started process 134 to run task
+[2024-09-25T21:37:03.145+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'SitesWebScraping', 'create_container_kabum_1', 'scheduled__2024-09-24T00:00:00+00:00', '--job-id', '86', '--raw', '--subdir', 'DAGS_FOLDER/DagWebScraping.py', '--cfg-path', '/tmp/tmpc_503bu0']
+[2024-09-25T21:37:03.147+0000] {standard_task_runner.py:105} INFO - Job 86: Subtask create_container_kabum_1
+[2024-09-25T21:37:03.198+0000] {task_command.py:467} INFO - Running <TaskInstance: SitesWebScraping.create_container_kabum_1 scheduled__2024-09-24T00:00:00+00:00 [running]> on host ede4b72e87e0
+[2024-09-25T21:37:03.274+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='SitesWebScraping' AIRFLOW_CTX_TASK_ID='create_container_kabum_1' AIRFLOW_CTX_EXECUTION_DATE='2024-09-24T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-09-24T00:00:00+00:00'
+[2024-09-25T21:37:03.276+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-25T21:37:03.290+0000] {baseoperator.py:405} WARNING - CreateContainerInDataLake.execute cannot be called outside TaskInstance!
+[2024-09-25T21:37:03.291+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-25T21:37:03.293+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'mkdir -p /opt/***/datalake/rawzone/kabum=2024-09-25']
+[2024-09-25T21:37:03.301+0000] {subprocess.py:86} INFO - Output:
+[2024-09-25T21:37:03.307+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-09-25T21:37:03.332+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-25T21:37:03.333+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=SitesWebScraping, task_id=create_container_kabum_1, run_id=scheduled__2024-09-24T00:00:00+00:00, execution_date=20240924T000000, start_date=20240925T213703, end_date=20240925T213703
+[2024-09-25T21:37:03.360+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-09-25T21:37:03.387+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-25T21:37:03.390+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2024-09-25T21:49:06.668+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-25T21:49:06.684+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: SitesWebScraping.create_container_kabum_1 scheduled__2024-09-24T00:00:00+00:00 [queued]>
+[2024-09-25T21:49:06.692+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: SitesWebScraping.create_container_kabum_1 scheduled__2024-09-24T00:00:00+00:00 [queued]>
+[2024-09-25T21:49:06.693+0000] {taskinstance.py:2865} INFO - Starting attempt 2 of 2
+[2024-09-25T21:49:06.709+0000] {taskinstance.py:2888} INFO - Executing <Task(CreateContainerInDataLake): create_container_kabum_1> on 2024-09-24 00:00:00+00:00
+[2024-09-25T21:49:06.714+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=76) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-25T21:49:06.716+0000] {standard_task_runner.py:72} INFO - Started process 77 to run task
+[2024-09-25T21:49:06.716+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'SitesWebScraping', 'create_container_kabum_1', 'scheduled__2024-09-24T00:00:00+00:00', '--job-id', '97', '--raw', '--subdir', 'DAGS_FOLDER/DagWebScraping.py', '--cfg-path', '/tmp/tmpe_6wied2']
+[2024-09-25T21:49:06.718+0000] {standard_task_runner.py:105} INFO - Job 97: Subtask create_container_kabum_1
+[2024-09-25T21:49:06.764+0000] {task_command.py:467} INFO - Running <TaskInstance: SitesWebScraping.create_container_kabum_1 scheduled__2024-09-24T00:00:00+00:00 [running]> on host ede4b72e87e0
+[2024-09-25T21:49:06.842+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='SitesWebScraping' AIRFLOW_CTX_TASK_ID='create_container_kabum_1' AIRFLOW_CTX_EXECUTION_DATE='2024-09-24T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-09-24T00:00:00+00:00'
+[2024-09-25T21:49:06.844+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-25T21:49:06.858+0000] {baseoperator.py:405} WARNING - CreateContainerInDataLake.execute cannot be called outside TaskInstance!
+[2024-09-25T21:49:06.859+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-25T21:49:06.860+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'mkdir -p /opt/***/datalake/rawzone/kabum=2024-09-25']
+[2024-09-25T21:49:06.868+0000] {subprocess.py:86} INFO - Output:
+[2024-09-25T21:49:06.874+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-09-25T21:49:06.905+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-25T21:49:06.905+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=SitesWebScraping, task_id=create_container_kabum_1, run_id=scheduled__2024-09-24T00:00:00+00:00, execution_date=20240924T000000, start_date=20240925T214906, end_date=20240925T214906
+[2024-09-25T21:49:06.931+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-09-25T21:49:06.955+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-25T21:49:06.959+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
