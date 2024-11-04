@@ -71,3 +71,4 @@ Este projeto implementa um pipeline de dados funcional usando **Airflow** e a DA
 ├── Dockerfile
 ├── Dockerfile.spark                     
 └── README.md                      
+![Extrac](https://github.com/user-attachments/assets/add022c0-93df-467d-8742-a8d0c77ecdf3)
