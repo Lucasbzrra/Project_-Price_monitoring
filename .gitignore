@@ -1,0 +1,9 @@
+logs/*
+datalake/*
+dags/ApiExecDag.py
+dags/BancoDeDadosDag.py
+dags/BrachDag.py
+dags/dados_climaticos.py
+dags/jobsSpark.py
+
+operators/OperatorCreateContainer.py
